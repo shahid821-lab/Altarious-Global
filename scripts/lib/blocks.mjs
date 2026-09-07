@@ -47,22 +47,75 @@ function shortLabel(t) {
 }
 
 /* ---------- D4 · operations board ---------- */
-export function boardSection(ctx, { verticals, subVerticals }) {
-  const feed = JSON.stringify([
+
+/** A widget is on unless the CMS has explicitly switched it off. */
+export function widgetEnabled(settings, key) {
+  const s = settings && typeof settings === 'object' ? settings[key] : null;
+  if (!s || typeof s !== 'object') return true;
+  return s.enabled !== false;
+}
+
+const BOARD_FALLBACK_TILES = [
+  { label: 'Vertical groups', value: 'auto:verticals' },
+  { label: 'Sub-vertical programs', value: 'auto:subVerticals' },
+  { label: 'Delivery', value: 'Real-time' },
+  { label: 'Product types', value: '3' },
+];
+
+const FEED_FALLBACK = {
+  label: 'Delivery feed · illustrative',
+  rows: [
     ['Auto Insurance', 'Quoted'], ['Medicare', 'Transferred'], ['Pest Control', 'Booked'],
     ['HVAC', 'Dispatched'], ['Personal Loans', 'Pre-qualified'], ['Roofing', 'Inspection set'],
     ['Final Expense', 'Application'], ['Solar', 'Site survey'], ['Legal', 'Case review'],
-  ]).replace(/"/g, '&quot;');
+  ],
+};
+
+/* `auto:` values are derived from live content and cannot be faked from the CMS;
+   every other value is rendered exactly as the administrator typed it. */
+function tileValue(raw, auto) {
+  const v = String(raw == null ? '' : raw).trim();
+  if (v.slice(0, 5) === 'auto:') {
+    const k = v.slice(5);
+    return Object.prototype.hasOwnProperty.call(auto, k) ? String(auto[k]) : '';
+  }
+  return v;
+}
+
+export function boardSection(ctx, opts = {}) {
+  const { verticals = [], subVerticals = [] } = opts;
+  const auto = { verticals: verticals.length, subVerticals: subVerticals.length };
+
+  const tiles = (opts.tiles != null ? opts.tiles : BOARD_FALLBACK_TILES)
+    .map((t) => {
+      if (!t || typeof t !== 'object') return null;
+      const label = String(t.label == null ? '' : t.label).trim();
+      const value = tileValue(t.value, auto);
+      if (!label || value === '') return null;
+      return `<div class="cell"><span class="k">${esc(label)}</span><span class="v">${esc(value)}</span></div>`;
+    })
+    .filter(Boolean)
+    .join('');
+
+  /* The delivery feed is illustrative and stays labelled as such. */
+  const src = opts.feed != null ? opts.feed : FEED_FALLBACK;
+  const rows = (src && Array.isArray(src.rows) ? src.rows : [])
+    .filter((r) => Array.isArray(r) && r.length >= 2 && String(r[0]).trim())
+    .map((r) => [String(r[0]), String(r[1])]);
+  const feedLabel = String((src && src.label) || FEED_FALLBACK.label).trim() || FEED_FALLBACK.label;
+  const feedCell = rows.length
+    ? `<div class="cell tall wide"><span class="k">${esc(feedLabel)}</span><div class="feed" data-feed="${JSON.stringify(rows).replace(/"/g, '&quot;')}"></div></div>`
+    : '';
+
+  if (!feedCell && !tiles) return '';
+
   const bars = [10, 16, 23, 30, 26, 19, 14, 10, 7, 5];
   return `<section class="section alt"><div class="container">
   <div class="section-head"><div data-reveal><p class="eyebrow">Delivery infrastructure</p><h2 class="section-title">Built like an operations desk</h2><p class="section-sub">Programs are configured, monitored and adjusted per vertical — routing, qualification and delivery all reported back to source.</p></div></div>
   <div class="board" data-reveal>
-    <div class="cell tall wide"><span class="k">Delivery feed · illustrative</span><div class="feed" data-feed="${feed}"></div></div>
-    <div class="cell"><span class="k">Vertical groups</span><span class="v">${verticals.length}</span></div>
-    <div class="cell"><span class="k">Sub-vertical programs</span><span class="v">${subVerticals.length}</span></div>
+    ${feedCell}
+    ${tiles}
     <div class="cell wide"><span class="k">Call duration mix</span><div class="bars">${bars.map((h, i) => `<i class="${i === 3 ? 'hi' : ''}" style="height:${h * 3}%"></i>`).join('')}</div></div>
-    <div class="cell"><span class="k">Delivery</span><span class="v">Real-time</span></div>
-    <div class="cell"><span class="k">Product types</span><span class="v">3</span></div>
   </div>
 </div></section>`;
 }

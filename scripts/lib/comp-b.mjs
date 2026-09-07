@@ -247,8 +247,28 @@ const GLOSSARY = [
   { term: 'DNC', kind: 'Compliance', title: 'DNC — Do Not Call', def: 'The federal and state registries of consumers who have opted out of telemarketing. Scrubbing against DNC before outbound contact is a legal requirement, not a courtesy.' },
 ];
 
-export function termTooltips() {
-  const payload = GLOSSARY.map((g) => ({ t: g.term, k: g.kind, h: g.title, d: g.def }));
+export function termTooltips(opts = {}) {
+  const o = opts || {};
+
+  /* CMS terms are { term, definition }. When the option is supplied it is the
+     only source: an empty list emits no payload rather than the built-in one. */
+  let payload;
+  if (o.terms != null) {
+    const terms = (Array.isArray(o.terms) ? o.terms : [])
+      .map((g) => {
+        if (!g || typeof g !== 'object') return null;
+        const term = String(g.term == null ? '' : g.term).trim();
+        const def = String(g.definition == null ? (g.def == null ? '' : g.def) : g.definition).trim();
+        if (!term || !def) return null;
+        return { t: term, k: String(g.kind == null ? '' : g.kind).trim(), h: String(g.title || term).trim(), d: def };
+      })
+      .filter(Boolean);
+    if (!terms.length) return '';
+    payload = terms;
+  } else {
+    payload = GLOSSARY.map((g) => ({ t: g.term, k: g.kind, h: g.title, d: g.def }));
+  }
+
   const json = JSON.stringify(payload).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026');
   return `<script type="application/json" class="ag-term-data" data-ag-term-data>${json}</script>`;
 }

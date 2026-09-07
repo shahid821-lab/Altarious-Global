@@ -468,12 +468,12 @@ export function onboardingTimeline(opts) {
     );
   }).join('');
 
-  const panels = TIMELINE.map((s, i) =>
+  const panels = TIMELINE_ROWS.map((s, i) =>
     '<div class="ag-timeline__panel' + (i === 0 ? ' is-on' : '') + '" id="ag-timeline-p' + i + '"' +
       ' role="tabpanel" aria-labelledby="ag-timeline-t' + i + '"' + (i === 0 ? '' : ' hidden') + '>' +
       '<h4>' + esc(s.title) + '</h4>' +
       '<p>' + esc(s.body) + '</p>' +
-      '<span class="ag-timeline__owner">Owner: ' + esc(s.owner) + '</span>' +
+      (s.owner ? '<span class="ag-timeline__owner">Owner: ' + esc(s.owner) + '</span>' : '') +
     '</div>'
   ).join('');
 
@@ -595,21 +595,56 @@ const MODELS = [
   }
 ];
 
+/* CMS model: { id, name, how, bestFor }. Price and meta lines only appear when
+   the source actually carries them — the component never invents a price. */
+function normaliseModels(models) {
+  return (Array.isArray(models) ? models : [])
+    .map((m) => {
+      if (!m || typeof m !== 'object') return null;
+      const key = String(m.id == null ? '' : m.id).trim();
+      const name = String(m.name == null ? '' : m.name).trim() ||
+        (PRODUCTS[key] ? PRODUCTS[key].name : '');
+      if (!name) return null;
+      return {
+        key,
+        name,
+        unit: String(m.unit == null ? (PRODUCTS[key] ? PRODUCTS[key].unit : '') : m.unit).trim(),
+        price: String(m.price == null ? '' : m.price).trim(),
+        how: String(m.how == null ? '' : m.how).trim(),
+        best: String(m.bestFor == null ? (m.best == null ? '' : m.best) : m.bestFor).trim(),
+        meta: String(m.meta == null ? '' : m.meta).trim()
+      };
+    })
+    .filter(Boolean);
+}
+
 export function commercialModels(opts) {
   const o = opts || {};
-  const rec = PRODUCTS[o.recommend] ? o.recommend : null;
 
-  const cards = MODELS.map((m) => {
-    const on = m.key === rec;
+  let list = MODELS.map((m) => ({
+    key: m.key, name: PRODUCTS[m.key].name, unit: PRODUCTS[m.key].unit,
+    price: m.price, how: m.how, best: m.best, meta: m.meta
+  }));
+  if (o.models != null) {
+    list = normaliseModels(o.models);
+    if (!list.length) return '';
+  }
+
+  /* `recommended` (CMS) takes precedence over the legacy `recommend` option. */
+  const wanted = String((o.recommended != null ? o.recommended : o.recommend) || '').trim();
+  const rec = list.some((m) => m.key === wanted) ? wanted : null;
+
+  const cards = list.map((m) => {
+    const on = !!rec && m.key === rec;
     return (
       '<article class="ag-models__card' + (on ? ' is-rec' : '') + '">' +
         (on ? '<span class="ag-models__badge">Recommended</span>' : '') +
-        '<span class="ag-models__unit">' + esc(PRODUCTS[m.key].unit) + '</span>' +
-        '<h4 class="ag-models__name">' + esc(PRODUCTS[m.key].name) + '</h4>' +
-        '<span class="ag-models__price">' + esc(m.price) + '</span>' +
+        (m.unit ? '<span class="ag-models__unit">' + esc(m.unit) + '</span>' : '') +
+        '<h4 class="ag-models__name">' + esc(m.name) + '</h4>' +
+        (m.price ? '<span class="ag-models__price">' + esc(m.price) + '</span>' : '') +
         '<p class="ag-models__body" data-how="' + attr(m.how) + '" data-best="' + attr(m.best) + '">' +
           esc(m.how) + '</p>' +
-        '<span class="ag-models__meta">' + esc(m.meta) + '</span>' +
+        (m.meta ? '<span class="ag-models__meta">' + esc(m.meta) + '</span>' : '') +
       '</article>'
     );
   }).join('');

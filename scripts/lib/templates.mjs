@@ -1,5 +1,5 @@
 import { esc, md, fmtDate } from './util.mjs';
-import { headlineLines, signalSection, boardSection, explorerSection, transferSection, articleToc, sparkline, faqSet } from './blocks.mjs';
+import { headlineLines, signalSection, boardSection, explorerSection, transferSection, articleToc, sparkline, faqSet, widgetEnabled } from './blocks.mjs';
 import { icon, SERVICE_ICON } from './icons.mjs';
 import { anchorRail, coverageGrid, productComparison, volumeCalculator, criteriaBuilder, onboardingTimeline, buyerMarquee, faqSearch, commercialModels, stickyEnquiryBar } from './comp-a.mjs';
 import { multiStepEnquiry, callWidget, keyTakeaways, relatedRail, termTooltips, factStrip, metricRibbon, commandPalette, consentBar } from './comp-b.mjs';
@@ -15,6 +15,12 @@ const FALLBACK = { insurance: '/assets/img/vertical-insurance.svg', 'home-servic
  * Emit a section only when its component actually rendered something.
  * Operational claims that are not configured in the CMS must leave no empty shell.
  */
+/** Read one widget's CMS slice, or null when the widget is switched off. */
+function cms(ctx, key) {
+  const s = ctx.settings || {};
+  return widgetEnabled(s, key) ? s[key] || null : null;
+}
+
 function sectionIf(html, wrap) {
   return html ? wrap(html) : '';
 }
@@ -138,7 +144,7 @@ ${page.body}
 </main>
 ${footer(ctx)}
 ${consentBar(site)}
-${page.glossary ? termTooltips() : ''}
+${page.glossary ? termTooltips({ terms: (ctx.settings?.glossary?.enabled !== false ? ctx.settings?.glossary?.terms : []) }) : ''}
 <script src="${ctx.assets?.js || '/assets/js/site.js'}" defer></script>
 ${site.turnstileSiteKey && page.hasForm ? '<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>' : ''}
 </body>
@@ -433,8 +439,8 @@ ${statsBand(h.stats)}
     .join('')}</div>
 </div></section>
 
-${boardSection(ctx, { verticals: verticals.filter((v) => v.active !== false), subVerticals: subVerticals.filter((s) => s.active !== false) })}
-<section class="section"><div class="container"><div data-reveal><p class="eyebrow">Choosing a product</p><h2 class="section-title">Which acquisition product fits your team</h2><p class="section-sub">The same campaign infrastructure delivers three formats. The right one depends on how your sales operation works.</p></div>${productComparison({ highlight: null })}</div></section>
+${sectionIf(boardSection(ctx, { verticals: verticals.filter((v) => v.active !== false), subVerticals: subVerticals.filter((s) => s.active !== false), tiles: cms(ctx, 'board')?.tiles, feed: cms(ctx, 'liveFeed') }), (h) => h)}
+<section class="section"><div class="container"><div data-reveal><p class="eyebrow">Choosing a product</p><h2 class="section-title">Which acquisition product fits your team</h2><p class="section-sub">The same campaign infrastructure delivers three formats. The right one depends on how your sales operation works.</p></div>${productComparison({ highlight: null, rows: cms(ctx, 'comparison')?.rows })}</div></section>
 ${featureGrid(h.valueProps, 'Why businesses work with us', '', { eyebrow: 'The difference' })}
 
 <section class="section"><div class="container">
@@ -489,8 +495,8 @@ ${hero({ ...s.hero, compact: true, terrain: 'page', terrainSeed: 'services', cru
   <div class="grid grid-3">${ctx.verticals.filter((v) => v.active !== false).map((v, i) => verticalCard(v, ctx.subVerticals.filter((x) => x.vertical === v.slug && x.active !== false).length, ctx, i)).join('')}</div>
 </div></section>
 ${sectionIf(coverageGrid({ product: null, states: ctx.settings?.coverage?.enabled ? ctx.settings.coverage : null }), (h) => `<section class="section"><div class="container"><div data-reveal><p class="eyebrow">Coverage</p><h2 class="section-title">Where programs run today</h2><p class="section-sub">Delivery is restricted to the states we are licensed or contracted to operate in.</p></div>${h}</div></section>`)}
-<section class="section alt"><div class="container"><div data-reveal><p class="eyebrow">Commercial</p><h2 class="section-title">How programs are priced</h2></div>${commercialModels({ recommend: 'inbound-calls' })}</div></section>
-<section class="section"><div class="container"><div data-reveal><p class="eyebrow">Getting started</p><h2 class="section-title">From first call to first delivery</h2></div>${onboardingTimeline()}</div></section>
+<section class="section alt"><div class="container"><div data-reveal><p class="eyebrow">Commercial</p><h2 class="section-title">How programs are priced</h2></div>${commercialModels({ recommended: cms(ctx, 'commercial')?.recommended, models: cms(ctx, 'commercial')?.models })}</div></section>
+<section class="section"><div class="container"><div data-reveal><p class="eyebrow">Getting started</p><h2 class="section-title">From first call to first delivery</h2></div>${onboardingTimeline({ steps: cms(ctx, 'onboarding')?.steps })}</div></section>
 ${ctaBand({ headline: 'Not sure which product fits?', text: 'Tell us about your sales operation and we will recommend the right mix of leads, calls and transfers.', button: ctx.site.ctas.secondary })}`;
   return layout(ctx, { path: '/services/', seo: s.seo, body, image: heroImg, crumbsInHero: true, breadcrumbs: crumbs });
 }
@@ -510,8 +516,8 @@ ${hero({ ...s.hero, compact: true, terrain: 'page', terrainSeed: 'svc-' + slug, 
 </div></section>
 ${featureGrid(s.features, 'What you get', '', { alt: true, eyebrow: 'Capabilities' })}
 ${slug === 'inbound-calls' || slug === 'live-transfers' ? signalSection(s.process, { title: 'How it works', alt: false }) : processSection(s.process, { title: 'How it works', image: photo(ctx, key === 'service-inbound-calls' ? 'brand-callcenter-agent' : 'brand-data-analytics', 'brand-team-meeting'), alt: '' })}
-${slug === 'inbound-calls' || slug === 'live-transfers' ? `<section class="section"><div class="container"><div data-reveal><p class="eyebrow">Model it</p><h2 class="section-title">What volume would mean for you</h2></div>${volumeCalculator({ vertical: null, subVertical: null, product: slug, avgValue: ctx.settings?.calculator?.defaultAvgValue || 900 })}</div></section>` : ''}
-<section class="section alt"><div class="container"><div data-reveal><p class="eyebrow">Commercial</p><h2 class="section-title">How this is priced</h2></div>${commercialModels({ recommend: slug })}</div></section>
+${slug === 'inbound-calls' || slug === 'live-transfers' ? `<section class="section"><div class="container"><div data-reveal><p class="eyebrow">Model it</p><h2 class="section-title">What volume would mean for you</h2></div>${volumeCalculator({ vertical: null, subVertical: null, product: slug, ranges: cms(ctx, 'calculator'), disclaimer: cms(ctx, 'calculator')?.disclaimer })}</div></section>` : ''}
+<section class="section alt"><div class="container"><div data-reveal><p class="eyebrow">Commercial</p><h2 class="section-title">How this is priced</h2></div>${commercialModels({ recommended: cms(ctx, 'commercial')?.recommended || slug, models: cms(ctx, 'commercial')?.models })}</div></section>
 ${related.length ? `<section class="section"><div class="container"><div data-reveal><p class="eyebrow">By vertical</p><h2 class="section-title">${esc(svc.name)} programs</h2><p class="section-sub">Dedicated product pages for every sub-vertical we support.</p></div>${ctx.verticals
     .filter((v) => v.active !== false)
     .map((v) => {
@@ -581,7 +587,7 @@ ${anchorRail([{ id: 'overview', label: 'Overview' }, { id: 'products', label: 'P
   <div data-reveal><p class="eyebrow">Products</p><h2 class="section-title">${esc(sv.name)} acquisition products</h2><p class="section-sub">Choose the delivery format that fits your sales operation, or run both.</p></div>
   <div class="grid grid-2">${prods.map((p, i) => productCard(p, sv, v, ctx, i, used)).join('')}</div>
 </div></section>
-<section class="section" id="qualification"><div class="container"><div data-reveal><p class="eyebrow">Qualification</p><h2 class="section-title">Build your filter</h2><p class="section-sub">Toggle the criteria you need and see how the program narrows.</p></div>${criteriaBuilder(sv)}</div></section>
+<section class="section" id="qualification"><div class="container"><div data-reveal><p class="eyebrow">Qualification</p><h2 class="section-title">Build your filter</h2><p class="section-sub">Toggle the criteria you need and see how the program narrows.</p></div>${criteriaBuilder(sv, { chips: cms(ctx, 'criteria')?.chips })}</div></section>
 <section class="section alt"><div class="container split even">
   <div class="prose" data-reveal><p class="eyebrow">Qualification</p><h2>What we screen for</h2><p>Standard criteria for ${esc(sv.name.toLowerCase())} programs. Every program is configured to your appetite.</p><ul class="checks">${sv.qualificationCriteria.map((h) => `<li>${esc(h)}</li>`).join('')}</ul></div>
   <div data-reveal="right"><p class="eyebrow">Demand</p><h2 style="margin-bottom:18px">What consumers search for</h2><ul class="tags big">${sv.keywords.map((k) => `<li>${esc(k)}</li>`).join('')}</ul></div>
@@ -639,10 +645,10 @@ ${anchorRail([{ id: 'overview', label: 'Overview' }, { id: 'process', label: 'Ho
 
 ${signalSection(p.process, { title: 'How it works', sub: `The path from campaign to delivered ${typeName.toLowerCase()}.`, alt: true })}
 ${p.type === 'live-transfers' ? transferSection(sv) : ''}
-<section class="section" id="qualification"><div class="container"><div data-reveal><p class="eyebrow">Qualification</p><h2 class="section-title">Set the filter for your desk</h2><p class="section-sub">Toggle criteria to see how tightly ${esc(p.name)} can be screened before delivery.</p></div>${criteriaBuilder(sv)}</div></section>
+<section class="section" id="qualification"><div class="container"><div data-reveal><p class="eyebrow">Qualification</p><h2 class="section-title">Set the filter for your desk</h2><p class="section-sub">Toggle criteria to see how tightly ${esc(p.name)} can be screened before delivery.</p></div>${criteriaBuilder(sv, { chips: cms(ctx, 'criteria')?.chips })}</div></section>
 ${featureGrid(p.benefits, 'Product benefits', '', { eyebrow: 'Benefits' })}
-<section class="section"><div class="container"><div data-reveal><p class="eyebrow">Model it</p><h2 class="section-title">What this volume would mean</h2></div>${volumeCalculator({ vertical: v.slug, subVertical: sv.slug, product: p.type, avgValue: ctx.settings?.calculator?.defaultAvgValue || 900 })}</div></section>
-<section class="section alt"><div class="container"><div data-reveal><p class="eyebrow">Compare</p><h2 class="section-title">${esc(sv.name)} across all three formats</h2></div>${productComparison({ highlight: p.type })}</div></section>
+<section class="section"><div class="container"><div data-reveal><p class="eyebrow">Model it</p><h2 class="section-title">What this volume would mean</h2></div>${volumeCalculator({ vertical: v.slug, subVertical: sv.slug, product: p.type, ranges: cms(ctx, 'calculator'), disclaimer: cms(ctx, 'calculator')?.disclaimer })}</div></section>
+<section class="section alt"><div class="container"><div data-reveal><p class="eyebrow">Compare</p><h2 class="section-title">${esc(sv.name)} across all three formats</h2></div>${productComparison({ highlight: p.type, rows: cms(ctx, 'comparison')?.rows })}</div></section>
 
 <section class="section alt knowledge" id="product-knowledge"><div class="container">
   <div class="section-head"><div data-reveal><p class="eyebrow">Product knowledge</p><h2 class="section-title">Related industry articles</h2><p class="section-sub">Industry knowledge supporting ${esc(p.name)}.</p></div><a class="link-arrow" href="/resources/${v.slug}/${sv.slug}/">More ${esc(sv.name)} articles</a></div>
@@ -789,7 +795,7 @@ ${hero({ ...c.hero, compact: true, terrain: 'page', terrainSeed: 'contact', crum
   </div>
   <div class="form-card" id="inquiry" data-reveal="right">${multiStepEnquiry(ctx, { sourcePage: 'Contact', sourceUrl: '/contact/' }, {})}</div>
 </div></section>
-<section class="section alt"><div class="container"><div data-reveal><p class="eyebrow">Getting started</p><h2 class="section-title">What happens after you send this</h2></div>${onboardingTimeline()}</div></section>
+<section class="section alt"><div class="container"><div data-reveal><p class="eyebrow">Getting started</p><h2 class="section-title">What happens after you send this</h2></div>${onboardingTimeline({ steps: cms(ctx, 'onboarding')?.steps })}</div></section>
 <section class="section"><div class="container narrow">${callWidget(ctx.site, { compact: false, hours: ctx.settings?.hours })}</div></section>`;
   return layout(ctx, { path: '/contact/', seo: c.seo, body, hasForm: true, image: heroImg, crumbsInHero: true, breadcrumbs: crumbs });
 }

@@ -549,6 +549,436 @@
     return out;
   }
 
+  /* ================= widgets =================
+     A friendlier view over the single `settings` record. Every editor here
+     reads the current settings, patches exactly one slice and PUTs the whole
+     object back, so no other widget's data is ever dropped. */
+
+  const getPath = (obj, p) => String(p).split('.').reduce((o, k) => (o == null ? o : o[k]), obj);
+  function setPath(obj, p, val) {
+    const parts = String(p).split('.');
+    let node = obj;
+    for (let i = 0; i < parts.length - 1; i++) { if (node[parts[i]] == null || typeof node[parts[i]] !== 'object') node[parts[i]] = {}; node = node[parts[i]]; }
+    node[parts[parts.length - 1]] = val;
+  }
+  const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
+
+  const WIDGETS = [
+    {
+      key: 'coverage', slice: 'coverage', name: 'Coverage map', where: 'Coverage section on product and service pages.',
+      count: (s) => plural(Object.keys((s && s['inbound-calls']) || {}).length + Object.keys((s && s['live-transfers']) || {}).length, 'live state'),
+      help: 'Set each state per product. Anything left as Not live is omitted from the map.',
+      custom: 'coverage',
+    },
+    {
+      key: 'hours', slice: 'hours', name: 'Operating hours', where: 'Call widget and contact page.',
+      count: (s) => (s && s.weekdays && s.weekdays.open ? `${s.weekdays.open}–${s.weekdays.close} ${s.timezoneLabel || ''}`.trim() : 'not set'),
+      fields: [
+        { k: 'timezone', t: 'text', l: 'Time zone (IANA)', help: 'e.g. America/New_York' },
+        { k: 'timezoneLabel', t: 'text', l: 'Time zone label', help: 'e.g. ET' },
+        { k: 'weekdays.open', t: 'text', l: 'Weekdays open (HH:MM)' },
+        { k: 'weekdays.close', t: 'text', l: 'Weekdays close (HH:MM)' },
+        { k: 'saturday.open', t: 'text', l: 'Saturday open (HH:MM, blank = closed)' },
+        { k: 'saturday.close', t: 'text', l: 'Saturday close (HH:MM)' },
+        { k: 'sunday.open', t: 'text', l: 'Sunday open (HH:MM, blank = closed)' },
+        { k: 'sunday.close', t: 'text', l: 'Sunday close (HH:MM)' },
+      ],
+      after: (slice) => {
+        for (const day of ['saturday', 'sunday']) if (slice[day] && !slice[day].open) slice[day] = null;
+      },
+    },
+    {
+      key: 'metrics', slice: 'metrics', name: 'Results ribbon', where: 'Figures ribbon on the Case Studies page.',
+      count: (s) => plural(((s && s.items) || []).length, 'figure'),
+      rows: {
+        path: 'items', type: 'obj', label: 'Published figures', add: 'figure',
+        help: 'Publish only figures you can evidence. An empty list hides the ribbon.',
+        cols: [
+          { k: 'value', l: 'Value', t: 'number', w: '90px' },
+          { k: 'suffix', l: 'Suffix', t: 'text', w: '90px' },
+          { k: 'label', l: 'Label', t: 'text' },
+          { k: 'bar', l: 'Bar 0–1', t: 'number', w: '90px', min: 0, max: 1 },
+        ],
+        required: 'label',
+      },
+    },
+    {
+      key: 'liveFeed', slice: 'liveFeed', name: 'Delivery activity feed', where: 'Activity panel on the home page.',
+      count: (s) => plural(((s && s.rows) || []).length, 'row'),
+      fields: [
+        { k: 'label', t: 'text', l: 'Panel label', help: 'Keep it honest, e.g. "Illustrative delivery activity".' },
+        { k: 'mode', t: 'select', l: 'Mode', options: [['simulated', 'Simulated (cycles the rows)'], ['static', 'Static (no cycling)'], ['off', 'Off']] },
+      ],
+      rows: {
+        path: 'rows', type: 'pair', label: 'Activity rows', add: 'row',
+        cols: [{ l: 'Product / vertical', t: 'text' }, { l: 'Status', t: 'text' }],
+      },
+    },
+    {
+      key: 'board', slice: 'board', name: 'Operations board tiles', where: 'Operations board on the home page.',
+      count: (s) => plural(((s && s.tiles) || []).length, 'tile'),
+      rows: {
+        path: 'tiles', type: 'obj', label: 'Tiles', add: 'tile', icon: true,
+        help: 'Values starting with "auto:" are derived from live content and cannot be typed over (auto:verticals, auto:subVerticals).',
+        cols: [{ k: 'label', l: 'Label', t: 'text' }, { k: 'value', l: 'Value', t: 'text' }],
+        required: 'label',
+      },
+    },
+    {
+      key: 'calculator', slice: 'calculator', name: 'Volume calculator', where: 'Volume model on the services and product pages.',
+      count: (s) => (s ? `${(s.callsPerDay || {}).min ?? '?'}–${(s.callsPerDay || {}).max ?? '?'} calls/day` : '—'),
+      fields: [
+        { k: 'defaultAvgValue', t: 'number', l: 'Default customer value ($)' },
+        { k: 'callsPerDay.min', t: 'number', l: 'Calls per day — min' },
+        { k: 'callsPerDay.max', t: 'number', l: 'Calls per day — max' },
+        { k: 'callsPerDay.default', t: 'number', l: 'Calls per day — default' },
+        { k: 'closeRate.min', t: 'number', l: 'Close rate % — min' },
+        { k: 'closeRate.max', t: 'number', l: 'Close rate % — max' },
+        { k: 'closeRate.default', t: 'number', l: 'Close rate % — default' },
+        { k: 'avgValue.min', t: 'number', l: 'Customer value $ — min' },
+        { k: 'avgValue.max', t: 'number', l: 'Customer value $ — max' },
+        { k: 'avgValue.default', t: 'number', l: 'Customer value $ — default' },
+        { k: 'disclaimer', t: 'textarea', l: 'Disclaimer' },
+      ],
+      validate: (slice) => {
+        const names = { callsPerDay: 'Calls per day', closeRate: 'Close rate', avgValue: 'Customer value' };
+        for (const k of Object.keys(names)) {
+          const r = slice[k] || {};
+          if (r.min == null && r.max == null && r.default == null) continue;
+          if (!Number.isFinite(r.min) || !Number.isFinite(r.max)) throw new Error(`${names[k]}: both a minimum and a maximum are required, as numbers.`);
+          if (r.min >= r.max) throw new Error(`${names[k]}: the minimum (${r.min}) must be lower than the maximum (${r.max}).`);
+          if (Number.isFinite(r.default) && (r.default < r.min || r.default > r.max)) throw new Error(`${names[k]}: the default (${r.default}) must sit between ${r.min} and ${r.max}.`);
+        }
+      },
+    },
+    {
+      key: 'comparison', slice: 'comparison', name: 'Product comparison', where: 'Web Leads / Inbound Calls / Live Transfers table on the services pages.',
+      count: (s) => plural(((s && s.rows) || []).length, 'row'),
+      rows: {
+        path: 'rows', type: 'obj', label: 'Comparison rows', add: 'row', stacked: true,
+        cols: [
+          { k: 'attribute', l: 'Attribute', t: 'text' },
+          { k: 'webLeads', l: 'Web Leads', t: 'text' },
+          { k: 'inboundCalls', l: 'Inbound Calls', t: 'text' },
+          { k: 'liveTransfers', l: 'Live Transfers', t: 'text' },
+        ],
+        required: 'attribute',
+      },
+    },
+    {
+      key: 'criteria', slice: 'criteria', name: 'Qualification chips', where: 'Qualification builder on sub-vertical and product pages.',
+      count: (s) => plural(((s && s.chips) || []).length, 'chip'),
+      rows: { path: 'chips', type: 'string', label: 'Chips', add: 'chip', cols: [{ l: 'Criterion', t: 'text' }], help: 'Sub-vertical criteria are appended automatically on the page.' },
+    },
+    {
+      key: 'onboarding', slice: 'onboarding', name: 'Onboarding timeline', where: 'Timeline on the services index and the contact page.',
+      count: (s) => plural(((s && s.steps) || []).length, 'step'),
+      rows: {
+        path: 'steps', type: 'obj', label: 'Steps', add: 'step', icon: true, stacked: true,
+        cols: [{ k: 'day', l: 'Day', t: 'text', w: '120px' }, { k: 'title', l: 'Title', t: 'text' }, { k: 'text', l: 'Text', t: 'textarea' }],
+        required: 'title',
+      },
+    },
+    {
+      key: 'commercial', slice: 'commercial', name: 'Commercial models', where: 'Pricing model cards on the services and contact pages.',
+      count: (s) => plural(((s && s.models) || []).length, 'model'),
+      fields: [{ k: 'recommended', t: 'text', l: 'Recommended model id', help: 'Must match one of the model ids below, or leave blank for none.' }],
+      rows: {
+        path: 'models', type: 'obj', label: 'Models', add: 'model', icon: true, stacked: true,
+        cols: [{ k: 'id', l: 'Id', t: 'text', w: '160px' }, { k: 'name', l: 'Name', t: 'text' }, { k: 'how', l: 'How it works', t: 'textarea' }, { k: 'bestFor', l: 'Best for', t: 'textarea' }],
+        required: 'name',
+      },
+    },
+    {
+      key: 'glossary', slice: 'glossary', name: 'Glossary terms', where: 'Definitions shown inline wherever the term appears in body copy.',
+      count: (s) => plural(((s && s.terms) || []).length, 'term'),
+      rows: {
+        path: 'terms', type: 'obj', label: 'Terms', add: 'term', stacked: true,
+        cols: [{ k: 'term', l: 'Term', t: 'text', w: '180px' }, { k: 'definition', l: 'Definition', t: 'textarea' }],
+        required: 'term',
+      },
+    },
+  ];
+  const widgetSpec = (key) => WIDGETS.find((w) => w.key === key);
+
+  async function loadSettings() {
+    try {
+      const r = await api('/api/admin/content?kind=settings&slug=settings');
+      return r.data || {};
+    } catch (e) {
+      if (/not found/i.test(e.message)) return DEFAULTS.settings(); /* first run: no record yet */
+      throw e;
+    }
+  }
+  async function saveSettings(sliceKey, sliceValue) {
+    const current = await loadSettings();
+    current[sliceKey] = sliceValue;
+    await api('/api/admin/content', { method: 'PUT', body: { kind: 'settings', slug: 'settings', prevSlug: 'settings', data: current } });
+  }
+
+  /* ----- icon library (fetched at runtime; degrades to a text input) ----- */
+  let ICONS = null; /* null = not loaded yet, [] = unavailable */
+  async function loadIcons() {
+    if (ICONS !== null) return ICONS;
+    try {
+      const res = await fetch('/admin/icons.json', { credentials: 'same-origin' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const j = await res.json();
+      ICONS = Array.isArray(j) ? j.filter((i) => i && i.key) : [];
+    } catch (e) { ICONS = []; }
+    return ICONS;
+  }
+
+  function iconPicker(value) {
+    const w = document.createElement('div');
+    w.className = 'icon-picker';
+    let current = value || '';
+    w.innerHTML = '<label class="icon-picker-label">Icon</label><div class="icon-fallback"><input type="text" class="icon-key" value="' + esc(current) + '" placeholder="Icon key (optional)" aria-label="Icon key"></div>';
+    const input = $('.icon-key', w);
+    w.getIcon = () => input.value.trim();
+    loadIcons().then((icons) => {
+      if (!icons.length) return; /* no icons.json: the plain text input stays */
+      const grid = document.createElement('div');
+      grid.className = 'icon-grid';
+      grid.setAttribute('role', 'group');
+      grid.setAttribute('aria-label', 'Choose an icon');
+      grid.innerHTML = '<button type="button" class="icon-opt' + (current ? '' : ' on') + '" data-icon="" aria-pressed="' + (current ? 'false' : 'true') + '" title="No icon">—</button>' +
+        icons.map((i) => '<button type="button" class="icon-opt' + (i.key === current ? ' on' : '') + '" data-icon="' + esc(i.key) + '" aria-pressed="' + (i.key === current ? 'true' : 'false') + '" title="' + esc(i.key) + '"><span class="icon-svg">' + (i.svg || '') + '</span><span class="icon-name">' + esc(i.key) + '</span></button>').join('');
+      grid.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-icon]');
+        if (!btn) return;
+        current = btn.dataset.icon;
+        input.value = current;
+        $$('.icon-opt', grid).forEach((b) => { const on = b.dataset.icon === current; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      });
+      input.addEventListener('input', () => {
+        current = input.value.trim();
+        $$('.icon-opt', grid).forEach((b) => { const on = b.dataset.icon === current; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      });
+      $('.icon-fallback', w).classList.add('with-grid');
+      w.insertBefore(grid, $('.icon-fallback', w));
+    });
+    return w;
+  }
+
+  /* ----- widgets index ----- */
+  async function widgetsIndex() {
+    const s = await loadSettings();
+    main.innerHTML = `
+      <div class="page-head"><div><h1>Widgets</h1><p class="muted tiny" style="margin:0">Every editable card, table and number shown on the public site. Empty widgets are hidden on the site rather than filled with invented content.</p></div>
+        <div class="actions"><a class="btn" href="#/edit/settings/settings">Operational Settings (raw)</a></div></div>
+      <div class="widgets">${WIDGETS.map((wd) => {
+        const slice = s[wd.slice] || {};
+        const on = slice.enabled !== false;
+        return `<div class="widget-card">
+          <div class="widget-card-head"><h2>${esc(wd.name)}</h2><span class="pill ${on ? 'qualified' : 'off'}">${on ? 'on' : 'off'}</span></div>
+          <p class="muted tiny widget-where">${esc(wd.where)}</p>
+          <p class="widget-count">${esc(wd.count(slice))}</p>
+          <a class="btn sm primary" href="#/widget/${wd.key}">Edit</a>
+        </div>`;
+      }).join('')}</div>`;
+  }
+
+  /* ----- one widget ----- */
+  function widgetRow(spec, value) {
+    const rs = spec.rows;
+    const item = document.createElement('div');
+    item.className = 'w-row' + (rs.stacked ? ' stacked' : '');
+    const cells = document.createElement('div');
+    cells.className = 'w-cells';
+    rs.cols.forEach((c, i) => {
+      const val = rs.type === 'obj' ? (value && value[c.k] != null ? value[c.k] : '') : rs.type === 'pair' ? ((value || [])[i] != null ? value[i] : '') : (value != null ? value : '');
+      const cell = document.createElement('div');
+      cell.className = 'w-cell';
+      if (c.w) cell.style.flex = '0 0 ' + c.w;
+      const id = 'wf-' + Math.random().toString(36).slice(2, 9);
+      cell.innerHTML = '<label for="' + id + '">' + esc(c.l) + '</label>' +
+        (c.t === 'textarea'
+          ? '<textarea id="' + id + '" data-cell="' + i + '">' + esc(val) + '</textarea>'
+          : '<input id="' + id + '" data-cell="' + i + '" type="' + (c.t === 'number' ? 'number' : 'text') + '"' + (c.t === 'number' ? ' step="any"' : '') + ' value="' + esc(val) + '">');
+      cells.appendChild(cell);
+    });
+    item.appendChild(cells);
+    if (rs.icon) {
+      const ip = iconPicker(value && value.icon);
+      item.appendChild(ip);
+      item.getIcon = () => ip.getIcon();
+    }
+    const ctl = document.createElement('div');
+    ctl.className = 'w-row-ctl';
+    ctl.innerHTML = '<button type="button" class="btn sm" data-up aria-label="Move up" title="Move up">↑</button>' +
+      '<button type="button" class="btn sm" data-down aria-label="Move down" title="Move down">↓</button>' +
+      '<button type="button" class="btn sm danger" data-rm aria-label="Remove row" title="Remove">×</button>';
+    item.appendChild(ctl);
+    return item;
+  }
+
+  async function widgetEditor(key) {
+    const spec = widgetSpec(key);
+    if (!spec) { main.innerHTML = '<div class="notice err">Unknown widget.</div>'; return; }
+    const settings = await loadSettings();
+    const slice = settings[spec.slice] || {};
+
+    main.innerHTML = `
+      <div class="page-head"><div><a class="tiny" href="#/widgets">‹ All widgets</a><h1>${esc(spec.name)}</h1><p class="muted tiny" style="margin:0">${esc(spec.where)}</p></div>
+        <div class="actions"><button class="btn primary" id="w-save">Save</button></div></div>
+      <form class="widget-editor" id="w-form">
+        <div class="card">
+          <div class="field inline"><input type="checkbox" id="w-enabled" ${slice.enabled !== false ? 'checked' : ''}><label for="w-enabled">Enabled — show this widget on the site</label></div>
+          ${spec.help ? `<span class="help">${esc(spec.help)}</span>` : ''}
+        </div>
+        <div class="card" id="w-fields" hidden></div>
+        <div class="card" id="w-rows" hidden></div>
+        <div class="card" id="w-custom" hidden></div>
+      </form>`;
+
+    /* simple fields */
+    const fieldsBox = $('#w-fields');
+    if (spec.fields && spec.fields.length) {
+      fieldsBox.hidden = false;
+      fieldsBox.innerHTML = '<h2>Settings</h2><div class="w-fields-grid"></div>';
+      const grid = $('.w-fields-grid', fieldsBox);
+      spec.fields.forEach((f) => {
+        const v = getPath(slice, f.k);
+        const id = 'wfld-' + f.k.replace(/\./g, '-');
+        const d = document.createElement('div');
+        d.className = 'field';
+        const label = '<label for="' + id + '">' + esc(f.l) + '</label>';
+        const help = f.help ? '<span class="help">' + esc(f.help) + '</span>' : '';
+        if (f.t === 'textarea') d.innerHTML = label + '<textarea id="' + id + '" data-fld="' + f.k + '">' + esc(v == null ? '' : v) + '</textarea>' + help;
+        else if (f.t === 'select') d.innerHTML = label + '<select id="' + id + '" data-fld="' + f.k + '">' + f.options.map(([ov, ol]) => '<option value="' + esc(ov) + '"' + (ov === v ? ' selected' : '') + '>' + esc(ol) + '</option>').join('') + '</select>' + help;
+        else d.innerHTML = label + '<input id="' + id + '" data-fld="' + f.k + '" type="' + (f.t === 'number' ? 'number' : 'text') + '"' + (f.t === 'number' ? ' step="any"' : '') + ' value="' + esc(v == null ? '' : v) + '">' + help;
+        if (f.t === 'textarea') d.classList.add('wide');
+        grid.appendChild(d);
+      });
+    }
+
+    /* repeatable rows */
+    const rowsBox = $('#w-rows');
+    let listEl = null;
+    if (spec.rows) {
+      const rs = spec.rows;
+      rowsBox.hidden = false;
+      rowsBox.innerHTML = '<h2>' + esc(rs.label) + '</h2>' + (rs.help ? '<span class="help">' + esc(rs.help) + '</span>' : '') +
+        '<div class="w-rows"></div><button type="button" class="btn sm" id="w-add">+ Add ' + esc(rs.add) + '</button>';
+      listEl = $('.w-rows', rowsBox);
+      const existing = getPath(slice, rs.path) || [];
+      existing.forEach((it) => listEl.appendChild(widgetRow(spec, it)));
+      $('#w-add').addEventListener('click', () => {
+        const el = widgetRow(spec, rs.type === 'obj' ? {} : rs.type === 'pair' ? [] : '');
+        listEl.appendChild(el);
+        const first = el.querySelector('input, textarea');
+        if (first) first.focus();
+      });
+      listEl.addEventListener('click', (e) => {
+        const row = e.target.closest('.w-row');
+        if (!row) return;
+        if (e.target.hasAttribute('data-rm')) { const nxt = row.nextElementSibling || row.previousElementSibling; row.remove(); if (nxt) { const b = nxt.querySelector('[data-rm]'); if (b) b.focus(); } }
+        else if (e.target.hasAttribute('data-up') && row.previousElementSibling) { listEl.insertBefore(row, row.previousElementSibling); e.target.focus(); }
+        else if (e.target.hasAttribute('data-down') && row.nextElementSibling) { listEl.insertBefore(row.nextElementSibling, row); e.target.focus(); }
+      });
+    }
+
+    /* coverage is a grid, not a row list */
+    const customBox = $('#w-custom');
+    if (spec.custom === 'coverage') {
+      customBox.hidden = false;
+      const cov = slice || {};
+      const grid = (prod) => US_STATES.map((ab) => {
+        const cur = (cov[prod] || {})[ab] || '';
+        return '<label class="cov-cell"><span>' + ab + '</span><select data-cov="' + prod + '" data-ab="' + ab + '" aria-label="' + ab + ' ' + prod + '">' +
+          COVERAGE_LEVELS.map(([v, t2]) => '<option value="' + v + '"' + (v === cur ? ' selected' : '') + '>' + t2 + '</option>').join('') + '</select></label>';
+      }).join('');
+      customBox.innerHTML = '<h2>State coverage</h2>' +
+        '<div class="cov-tabs"><button type="button" class="btn sm on" data-covtab="inbound-calls">Inbound Calls</button>' +
+        '<button type="button" class="btn sm" data-covtab="live-transfers">Live Transfers</button>' +
+        '<button type="button" class="btn sm" data-covbulk>Set all visible…</button></div>' +
+        '<div class="cov-grid" data-covpane="inbound-calls">' + grid('inbound-calls') + '</div>' +
+        '<div class="cov-grid" data-covpane="live-transfers" hidden>' + grid('live-transfers') + '</div>';
+      const show = (prod) => {
+        $$('[data-covpane]', customBox).forEach((el) => { el.hidden = el.dataset.covpane !== prod; });
+        $$('[data-covtab]', customBox).forEach((b) => b.classList.toggle('on', b.dataset.covtab === prod));
+      };
+      $$('[data-covtab]', customBox).forEach((b) => b.addEventListener('click', () => show(b.dataset.covtab)));
+      $('[data-covbulk]', customBox).addEventListener('click', () => {
+        const prod = $('[data-covtab].on', customBox).dataset.covtab;
+        const val = prompt('Set every state for this product to: blank (not live), limited, active or high', 'active');
+        if (val === null) return;
+        $$('[data-cov="' + prod + '"]', customBox).forEach((sel) => { sel.value = COVERAGE_LEVELS.some(([v]) => v === val) ? val : ''; });
+      });
+    }
+
+    function build() {
+      const out = JSON.parse(JSON.stringify(slice));
+      out.enabled = $('#w-enabled').checked;
+
+      (spec.fields || []).forEach((f) => {
+        const el = $('[data-fld="' + f.k + '"]', main);
+        if (!el) return;
+        const raw = el.value.trim();
+        if (f.t === 'number') {
+          if (raw === '') { setPath(out, f.k, undefined); return; }
+          const n = Number(raw);
+          if (!Number.isFinite(n)) throw new Error('"' + f.l + '" must be a number.');
+          setPath(out, f.k, n);
+        } else setPath(out, f.k, raw);
+      });
+
+      if (spec.rows) {
+        const rs = spec.rows;
+        const items = [];
+        $$('.w-row', listEl).forEach((row) => {
+          const inputs = $$('[data-cell]', row);
+          const vals = inputs.map((el) => el.value.trim());
+          if (rs.type === 'string') { if (vals[0]) items.push(vals[0]); return; }
+          if (rs.type === 'pair') { if (vals.some(Boolean)) items.push(vals); return; }
+          const obj = {};
+          rs.cols.forEach((c, i) => {
+            if (c.t === 'number') {
+              if (vals[i] === '') return;
+              let n = Number(vals[i]);
+              if (!Number.isFinite(n)) throw new Error('"' + c.l + '" must be a number (got "' + vals[i] + '").');
+              if (c.min != null) n = Math.max(c.min, n);
+              if (c.max != null) n = Math.min(c.max, n);
+              obj[c.k] = n;
+            } else obj[c.k] = vals[i];
+          });
+          if (rs.icon && row.getIcon) { const ic = row.getIcon(); if (ic) obj.icon = ic; }
+          const req = rs.required;
+          if (req && !obj[req]) return; /* an unfilled row is simply dropped */
+          items.push(obj);
+        });
+        setPath(out, rs.path, items);
+      }
+
+      if (spec.custom === 'coverage') {
+        ['inbound-calls', 'live-transfers'].forEach((prod) => {
+          const map = {};
+          $$('[data-cov="' + prod + '"]', main).forEach((sel) => { if (sel.value) map[sel.dataset.ab] = sel.value; });
+          out[prod] = map;
+        });
+      }
+
+      if (spec.after) spec.after(out);
+      if (spec.validate) spec.validate(out);
+      return out;
+    }
+
+    $('#w-save').addEventListener('click', async (e) => {
+      e.preventDefault();
+      const btn = e.target;
+      try {
+        const out = build();
+        btn.disabled = true;
+        await saveSettings(spec.slice, out);
+        toast('Saved. Press "Publish site" to update the website.', 'ok');
+        refreshPublish();
+      } catch (err) { toast(err.message, 'err'); }
+      finally { btn.disabled = false; }
+    });
+    $('#w-form').addEventListener('submit', (e) => e.preventDefault());
+  }
+
   /* ----- markdown tools ----- */
   function mdAction(kind, ta, upd, wrap) {
     const s = ta.selectionStart, e = ta.selectionEnd, sel = ta.value.slice(s, e);

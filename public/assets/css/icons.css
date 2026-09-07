@@ -1,0 +1,91 @@
+/* ===== Altarious icon system =========================================
+   Scoped strictly to `.ico` (emitted by scripts/lib/icons.mjs) and its two
+   internal layers, `.ico-bg` (gradient backing) and `.ico-fg` (currentColor
+   drawing). Nothing else on the page is touched.
+   The SVG ships correct presentation attributes on its own; this file adds
+   sizing, alignment, theme response and motion.
+   ==================================================================== */
+
+.ico {
+  /* one knob controls the whole mark */
+  --ico-size: 44px;
+  --ico-bg-opacity: 1;
+  --ico-stroke: 2.1;
+
+  display: inline-block;
+  width: var(--ico-size);
+  height: var(--ico-size);
+  flex: 0 0 auto;
+  vertical-align: middle;
+  overflow: visible;
+  color: inherit;                 /* foreground follows the text colour */
+  -webkit-user-select: none;
+  user-select: none;
+  transition: transform .38s cubic-bezier(.2, .8, .3, 1), opacity .28s ease;
+}
+
+/* The backing shape. Gradient itself lives in the SVG <defs> and is built from
+   --teal-400 / --blue-500, so it re-tints automatically with the theme. */
+.ico .ico-bg {
+  opacity: var(--ico-bg-opacity);
+  transition: opacity .28s ease;
+}
+
+.ico .ico-fg {
+  stroke: currentColor;
+  stroke-width: var(--ico-stroke);
+  vector-effect: non-scaling-stroke;
+}
+
+/* ---- size modifiers ------------------------------------------------- */
+.ico-sm { --ico-size: 28px; --ico-stroke: 2.4; }
+.ico-md { --ico-size: 44px; }
+.ico-lg { --ico-size: 56px; --ico-stroke: 1.95; }
+.ico-xl { --ico-size: 72px; --ico-stroke: 1.8; }
+
+/* ---- tone modifiers ------------------------------------------------- */
+.ico-brand { color: var(--brand, currentColor); }
+.ico-accent { color: var(--accent, currentColor); }
+.ico-flat { --ico-bg-opacity: 0; }        /* foreground only */
+.ico-solid { --ico-bg-opacity: 1.35; }    /* denser backing on pale surfaces */
+
+/* Dark theme: the ink is light, so the tinted backing needs a little more
+   presence to stay visible against --surface. */
+:root[data-theme="dark"] .ico,
+.theme-dark .ico { --ico-bg-opacity: 1.25; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .ico { --ico-bg-opacity: 1.25; }
+}
+
+/* ---- interaction ---------------------------------------------------- */
+.card:hover > .ico,
+.card:hover .ico,
+a:hover > .ico,
+.feature:hover .ico {
+  transform: translateY(-2px) scale(1.045);
+}
+
+.card:hover .ico .ico-bg,
+.feature:hover .ico .ico-bg { opacity: calc(var(--ico-bg-opacity) * 1.3); }
+
+@media (prefers-reduced-motion: reduce) {
+  .ico, .ico .ico-bg { transition: none; }
+  .card:hover .ico, .feature:hover .ico, a:hover > .ico { transform: none; }
+}
+
+/* ---- optional framed presentation ----------------------------------- */
+.ico-frame {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid var(--line, rgba(0, 0, 0, .1));
+  background: var(--surface-2, transparent);
+}
+
+/* Print: gradients rarely survive, so lean on the outline. */
+@media print {
+  .ico { --ico-bg-opacity: .45; }
+}

@@ -95,3 +95,44 @@ fieldset{ border:1px solid var(--line); border-radius:var(--r); padding:14px 16p
 .cov-cell span { font-family:ui-monospace,Consolas,monospace; font-weight:600; width:26px; color:var(--muted) }
 .cov-cell select { flex:1; font-size:.75rem; padding:4px 6px; border:1px solid var(--line); border-radius:6px; background:#fff }
 .objlist.metrics .item { grid-template-columns:90px 90px 1fr 80px auto }
+
+/* ---------- widgets section ---------- */
+.widgets { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:14px }
+.widgets .widget-card { background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:16px 18px; display:flex; flex-direction:column; gap:6px }
+.widgets .widget-card-head { display:flex; align-items:center; justify-content:space-between; gap:10px }
+.widgets .widget-card h2 { font-size:1rem; margin:0 }
+.widgets .widget-where { margin:0 }
+.widgets .widget-count { margin:2px 0 10px; font-weight:700; color:var(--ink) }
+.widgets .widget-card .btn { align-self:flex-start; margin-top:auto }
+
+.widget-editor { display:flex; flex-direction:column; gap:0 }
+.widget-editor .card { margin-bottom:16px }
+.widget-editor h2 { font-size:1rem; margin-bottom:10px }
+.widget-editor > .card > .help { display:block; color:var(--muted); font-size:.78rem; margin-top:6px }
+.widget-editor .w-fields-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:14px }
+.widget-editor .w-fields-grid .field.wide { grid-column:1/-1 }
+.widget-editor .w-rows { display:flex; flex-direction:column; gap:10px; margin-bottom:12px }
+.widget-editor .w-row { border:1px solid var(--line); border-radius:var(--r); background:#fcfdff; padding:12px; display:flex; gap:12px; align-items:flex-start }
+.widget-editor .w-row .w-cells { display:flex; gap:10px; flex:1; flex-wrap:wrap; min-width:0 }
+.widget-editor .w-row.stacked .w-cells { flex-direction:column }
+.widget-editor .w-cell { display:flex; flex-direction:column; gap:4px; flex:1 1 160px; min-width:0 }
+.widget-editor .w-cell label { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--muted) }
+.widget-editor .w-cell input, .widget-editor .w-cell textarea { width:100%; font:inherit; padding:7px 9px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:var(--text) }
+.widget-editor .w-cell textarea { min-height:56px; resize:vertical }
+.widget-editor .w-row-ctl { display:flex; flex-direction:column; gap:4px; flex:0 0 auto }
+.widget-editor .w-row-ctl .btn { padding:3px 8px; line-height:1.2 }
+.widget-editor .w-row-ctl .btn:focus-visible { outline:2px solid var(--blue); outline-offset:2px }
+
+.icon-picker { flex:0 0 220px; display:flex; flex-direction:column; gap:6px }
+.icon-picker .icon-picker-label { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--muted) }
+.icon-picker .icon-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(58px,1fr)); gap:6px; max-height:150px; overflow:auto; padding:8px; border:1px solid var(--line); border-radius:8px; background:#fff }
+.icon-picker .icon-opt { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; padding:6px 3px; border:1px solid transparent; border-radius:8px; background:#f8fafc; cursor:pointer; font:inherit; color:var(--muted) }
+.icon-picker .icon-opt:hover { background:#eef2f7 }
+.icon-picker .icon-opt.on { border-color:var(--teal); background:#f0fdfa; color:var(--ink) }
+.icon-picker .icon-opt:focus-visible { outline:2px solid var(--blue); outline-offset:1px }
+.icon-picker .icon-svg svg { width:20px; height:20px; display:block }
+.icon-picker .icon-name { font-size:.6rem; max-width:52px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+.icon-picker .icon-key { width:100%; font:inherit; font-size:.8rem; padding:6px 8px; border:1px solid #cbd5e1; border-radius:8px }
+.icon-picker .icon-fallback.with-grid .icon-key { font-family:ui-monospace,Consolas,monospace; font-size:.72rem }
+
+@media (max-width: 960px){ .widget-editor .w-row { flex-direction:column } .icon-picker { flex:1 1 auto } }
