@@ -818,3 +818,11 @@ html.js .hero.seq h1 .line:nth-child(4) > i { transition-delay: .27s; }
 @media (max-width: 1080px) {
   .nav-cta { display: none; }
 }
+
+
+/* illustrative figure marker — a simulated number must always carry it */
+.board .k .sim-tag {
+  font-style: normal; font-size: .58rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted); border: 1px solid var(--line); border-radius: var(--radius-pill);
+  padding: 2px 7px; margin-left: 6px; vertical-align: middle; white-space: nowrap;
+}

@@ -487,3 +487,47 @@
     if ('CSSViewTransitionRule' in w || CSS.supports('view-transition-name: none')) return; // native cross-document handles it
   })();
 })();
+
+
+/* ---------- illustrative activity figures ----------
+   The value is derived from the clock, never from the visitor, so two people looking
+   at the same moment see the same number. It is always rendered beside an
+   "Illustrative" tag — it must never read as live operational data. */
+(function () {
+  'use strict';
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-sim]'));
+  if (!els.length) return;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function valueFor(key, min, max, bucket) {
+    var h = 2166136261, s = key + ':' + bucket, i;
+    for (i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return min + (Math.abs(h) % (Math.floor(max - min) + 1));
+  }
+
+  function tick() {
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      var min = Number(el.getAttribute('data-sim-min'));
+      var max = Number(el.getAttribute('data-sim-max'));
+      var cad = Math.max(1, Number(el.getAttribute('data-sim-cadence')) || 15);
+      if (!isFinite(min) || !isFinite(max) || max < min) continue;
+      var bucket = Math.floor(Date.now() / (cad * 60000));
+      var target = valueFor(el.getAttribute('data-sim'), min, max, bucket);
+      var suffix = el.getAttribute('data-sim-suffix') || '';
+      var from = parseInt(String(el.textContent).replace(/[^0-9-]/g, ''), 10);
+      if (!isFinite(from) || reduced) { el.textContent = target + suffix; continue; }
+      if (from === target) continue;
+      (function (node, a, b, sfx) {
+        var start = Date.now(), dur = 700;
+        (function step() {
+          var p = Math.min(1, (Date.now() - start) / dur);
+          node.textContent = Math.round(a + (b - a) * (1 - Math.pow(1 - p, 3))) + sfx;
+          if (p < 1) setTimeout(step, 40);
+        })();
+      })(el, from, target, suffix);
+    }
+  }
+  setInterval(tick, 30000);
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) tick(); });
+})();

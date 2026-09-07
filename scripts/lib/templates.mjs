@@ -439,7 +439,7 @@ ${statsBand(h.stats)}
     .join('')}</div>
 </div></section>
 
-${sectionIf(boardSection(ctx, { verticals: verticals.filter((v) => v.active !== false), subVerticals: subVerticals.filter((s) => s.active !== false), tiles: cms(ctx, 'board')?.tiles, feed: cms(ctx, 'liveFeed') }), (h) => h)}
+${sectionIf(boardSection(ctx, { verticals: verticals.filter((v) => v.active !== false), subVerticals: subVerticals.filter((s) => s.active !== false), tiles: cms(ctx, 'board')?.tiles, feed: cms(ctx, 'liveFeed'), sim: cms(ctx, 'simulated') }), (h) => h)}
 <section class="section"><div class="container"><div data-reveal><p class="eyebrow">Choosing a product</p><h2 class="section-title">Which acquisition product fits your team</h2><p class="section-sub">The same campaign infrastructure delivers three formats. The right one depends on how your sales operation works.</p></div>${productComparison({ highlight: null, rows: cms(ctx, 'comparison')?.rows })}</div></section>
 ${featureGrid(h.valueProps, 'Why businesses work with us', '', { eyebrow: 'The difference' })}
 

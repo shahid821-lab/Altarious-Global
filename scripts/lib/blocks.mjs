@@ -71,8 +71,11 @@ const FEED_FALLBACK = {
   ],
 };
 
-/* `auto:` values are derived from live content and cannot be faked from the CMS;
-   every other value is rendered exactly as the administrator typed it. */
+/* `auto:` values are derived from live content and cannot be faked from the CMS.
+   `sim:` values are illustrative activity figures: the number comes from the clock,
+   never from the visitor, so everyone loading the page in the same window sees the
+   same figure. The tile is marked illustrative and the client script keeps it moving.
+   Every other value renders exactly as the administrator typed it. */
 function tileValue(raw, auto) {
   const v = String(raw == null ? '' : raw).trim();
   if (v.slice(0, 5) === 'auto:') {
@@ -82,15 +85,41 @@ function tileValue(raw, auto) {
   return v;
 }
 
+/** Deterministic value for an illustrative figure in a given time bucket. */
+export function simulatedValue(fig, bucket) {
+  const min = Number(fig.min), max = Number(fig.max);
+  if (!isFinite(min) || !isFinite(max) || max < min) return null;
+  let h = 2166136261;
+  const key = String(fig.key) + ':' + bucket;
+  for (let i = 0; i < key.length; i++) { h ^= key.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return min + (Math.abs(h) % (Math.floor(max - min) + 1));
+}
+
+/** The bucket index for "now" at the configured cadence. */
+export function simulatedBucket(cadenceMinutes) {
+  const m = Math.max(1, Number(cadenceMinutes) || 15);
+  return Math.floor(Date.now() / (m * 60000));
+}
+
 export function boardSection(ctx, opts = {}) {
   const { verticals = [], subVerticals = [] } = opts;
   const auto = { verticals: verticals.length, subVerticals: subVerticals.length };
+  const sim = opts.sim || {};
 
   const tiles = (opts.tiles != null ? opts.tiles : BOARD_FALLBACK_TILES)
     .map((t) => {
       if (!t || typeof t !== 'object') return null;
       const label = String(t.label == null ? '' : t.label).trim();
-      const value = tileValue(t.value, auto);
+      const raw = String(t.value == null ? '' : t.value).trim();
+      if (raw.slice(0, 4) === 'sim:') {
+        const fig = (sim.figures || []).find((f) => f && f.key === raw.slice(4));
+        if (!fig || sim.enabled === false) return null;
+        const seed = simulatedValue(fig, simulatedBucket(sim.cadenceMinutes));
+        if (seed == null) return null;
+        /* rendered at rest so the page is complete without JavaScript */
+        return `<div class="cell"><span class="k">${esc(label)} <em class="sim-tag">${esc(sim.label || 'Illustrative')}</em></span><span class="v" data-sim="${esc(fig.key)}" data-sim-min="${esc(fig.min)}" data-sim-max="${esc(fig.max)}" data-sim-cadence="${esc(sim.cadenceMinutes || 15)}" data-sim-suffix="${esc(fig.suffix || '')}">${esc(seed)}${esc(fig.suffix || '')}</span></div>`;
+      }
+      const value = tileValue(raw, auto);
       if (!label || value === '') return null;
       return `<div class="cell"><span class="k">${esc(label)}</span><span class="v">${esc(value)}</span></div>`;
     })

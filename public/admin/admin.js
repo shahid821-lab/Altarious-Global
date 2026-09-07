@@ -565,6 +565,34 @@
 
   const WIDGETS = [
     {
+      key: 'simulated', slice: 'simulated', name: 'Illustrative activity figures',
+      where: 'Operations board tiles whose value is sim:<key>.',
+      count: (s) => plural(((s && s.figures) || []).length, 'figure'),
+      help: 'Each figure moves within its range on a clock-driven cadence, so every visitor sees the SAME number at the same moment \u2014 it is never randomised per person. Figures always render beside the marker below so they cannot read as live operational data. Point a board tile at one with sim:<key>.',
+      fields: [
+        { k: 'label', t: 'text', l: 'Marker shown beside every figure', help: 'e.g. Illustrative' },
+        { k: 'cadenceMinutes', t: 'number', l: 'Change every (minutes)' },
+      ],
+      rows: {
+        path: 'figures',
+        add: () => ({ key: '', label: '', min: 0, max: 0, suffix: '' }),
+        cols: [
+          { k: 'key', l: 'Key (used as sim:key)' },
+          { k: 'label', l: 'Label' },
+          { k: 'min', l: 'Min', num: true },
+          { k: 'max', l: 'Max', num: true },
+          { k: 'suffix', l: 'Suffix' },
+        ],
+      },
+      validate: (slice) => {
+        for (const f of (slice.figures || [])) {
+          if (!f.key) return 'Every figure needs a key.';
+          if (!(Number(f.max) > Number(f.min))) return 'Figure "' + (f.key || 'untitled') + '": max must be greater than min.';
+        }
+        return null;
+      },
+    },
+    {
       key: 'coverage', slice: 'coverage', name: 'Coverage map', where: 'Coverage section on product and service pages.',
       count: (s) => plural(Object.keys((s && s['inbound-calls']) || {}).length + Object.keys((s && s['live-transfers']) || {}).length, 'live state'),
       help: 'Set each state per product. Anything left as Not live is omitted from the map.',
