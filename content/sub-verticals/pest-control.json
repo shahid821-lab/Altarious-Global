@@ -1,0 +1,59 @@
+{
+  "slug": "pest-control",
+  "vertical": "home-services",
+  "name": "Pest Control",
+  "active": true,
+  "order": 1,
+  "shortDescription": "Connect homeowners dealing with active infestations or seeking recurring protection with licensed pest control operators in their service area.",
+  "description": [
+    "Pest control demand is immediate and emotional. Homeowners search the moment they see termite swarmers, find bed bugs, hear rodents in the attic, discover a wasp nest near a doorway or notice ants and roaches in the kitchen. Seasonal patterns drive volume, with spring termite and ant activity, summer mosquito and stinging insect calls, and fall rodent intrusion, while real estate transactions generate steady demand for termite inspections and wood-destroying organism reports.",
+    "Altarious Global runs geo-targeted campaigns that reach homeowners at the point of discovery and delivers them to pest control companies through Inbound Calls and Live Transfers. Programs are built around service-area precision and pest-type screening, so operators receive calls they can schedule quickly and convert into one-time treatments or recurring service agreements."
+  ],
+  "consumerProfile": "Homeowners and property managers who have identified a pest problem and want a professional to resolve it, along with homeowners seeking quarterly or annual prevention plans. Top segments include households with termite or bed bug problems that require specialised treatment, families with children or pets who prefer professional service over DIY, and buyers and sellers needing termite inspections for a home sale.",
+  "intentSignals": [
+    "Searching for exterminators or pest control near me",
+    "Found evidence of termites, bed bugs, rodents or cockroaches",
+    "Seasonal surge in ants, mosquitoes, wasps or spiders around the home",
+    "Real estate transaction requiring a termite or WDO inspection",
+    "Previous pest control provider missed appointments or raised prices",
+    "Moving into a new home and wanting preventive treatment"
+  ],
+  "qualificationCriteria": [
+    "Property located within the operator's active service area",
+    "Homeowner, property manager or authorised decision maker",
+    "Type of pest problem identified for correct routing and pricing",
+    "Residential or commercial property type confirmed",
+    "Interested in scheduling an inspection or treatment",
+    "Not an existing customer of the receiving company"
+  ],
+  "keywords": [
+    "pest control near me",
+    "exterminator near me",
+    "termite treatment cost",
+    "bed bug exterminator",
+    "rodent control services",
+    "ant exterminator",
+    "termite inspection for home sale"
+  ],
+  "marketContext": "The residential pest control industry has consolidated rapidly, with national brands and private-equity-backed platforms acquiring regional operators and investing heavily in customer acquisition. Recurring service agreements have become the core business model, which makes the value of each new customer far greater than a single treatment and justifies competitive acquisition spend. Warmer seasons in many regions have extended pest activity, and consumer preference for professional treatment over DIY products remains strong, particularly for termites, bed bugs and rodents. Operators that answer quickly and schedule same-day inspections consistently win the customer.",
+  "inboundCallsAngle": "A homeowner who has just found termites or bed bugs is not going to fill out a form and wait for a callback; they want to speak to someone who can come out today. Inbound Call programs place local pest control offers in front of these homeowners and let them dial the operator directly, so the call arrives while the problem is fresh and the intent to book is at its peak. Operators with responsive scheduling can convert these calls into inspections and treatments at a high rate, and many become long-term recurring service customers.",
+  "liveTransfersAngle": "Live Transfers ensure that pest control operators receive only calls they can serve. Our team confirms the property address is within the service area, identifies the pest type, verifies that the caller is the homeowner or decision maker and confirms interest in scheduling before warm-transferring the call. This screening is valuable for operators with specialised capabilities, because termite, bed bug and wildlife calls can be routed to teams equipped for them, and out-of-area or renter-only calls are removed before they consume office staff time.",
+  "faq": [
+    {
+      "q": "Can calls be filtered by pest type?",
+      "a": "Yes. Screening identifies the pest problem so that operators can accept or exclude categories such as termites, bed bugs, wildlife or general pests based on their services."
+    },
+    {
+      "q": "How precisely can the service area be targeted?",
+      "a": "Targeting can be set by ZIP code, county or a radius around your branches, and expanded or tightened as your capacity changes."
+    },
+    {
+      "q": "Do programs support recurring service sales?",
+      "a": "Many callers with general pest problems are receptive to quarterly plans, and messaging can emphasise ongoing protection to attract customers suited to recurring agreements."
+    }
+  ],
+  "seo": {
+    "title": "Pest Control Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire pest control customers with active infestations through geo-targeted performance marketing, inbound calls and pest-type-screened live transfers."
+  }
+}

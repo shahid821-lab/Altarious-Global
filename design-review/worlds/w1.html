@@ -1,0 +1,379 @@
+<section class="stage w1">
+  <canvas class="w1-cables" aria-hidden="true"></canvas>
+
+  <div class="w1-vig" aria-hidden="true"></div>
+
+  <header class="w1-nav">
+    <span class="w1-brand"><i></i>Altarious&nbsp;Global</span>
+    <nav>
+      <a class="w1-on">Verticals</a><a>Products</a><a>Coverage</a><a>Contact</a>
+    </nav>
+    <span class="w1-cta">Get Volume</span>
+  </header>
+
+  <div class="w1-panelwrap">
+    <div class="w1-panel">
+      <div class="w1-kicker"><em></em><span class="w1-vname">Insurance</span></div>
+      <h1 class="w1-h1">Acquire high-intent customers.</h1>
+      <p class="w1-sub"><span class="w1-desc">Auto Insurance &amp; Medicare demand, patched live.</span></p>
+      <div class="w1-chips"><span>Inbound Calls</span><span>Live Transfers</span><span>Web Leads</span></div>
+      <div class="w1-meters">
+        <div class="w1-m"><b class="w1-v1">4.2k</b><i>calls / wk</i></div>
+        <div class="w1-m"><b class="w1-v2">38%</b><i>transfer rate</i></div>
+        <div class="w1-m"><b class="w1-v3">92s</b><i>avg. hold</i></div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="w1-jacks" role="list"></ul>
+
+<style>
+.w1{height:420px;position:relative;overflow:hidden;border-radius:10px;
+  background:
+    radial-gradient(120% 90% at 20% 0%, #2a2117 0%, rgba(0,0,0,0) 60%),
+    linear-gradient(180deg,#16130f 0%,#0d0b09 100%);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+  color:#f0e6d6;isolation:isolate;container-type:inline-size;}
+.w1 *{box-sizing:border-box;margin:0;}
+.w1 .w1-cables{position:absolute;inset:0;width:100%;height:100%;z-index:1;display:block;}
+.w1 .w1-vig{position:absolute;inset:0;z-index:5;pointer-events:none;
+  background:radial-gradient(115% 85% at 50% 45%,rgba(0,0,0,0) 40%,rgba(0,0,0,.62) 100%);
+  mix-blend-mode:multiply;}
+.w1 .w1-nav{position:absolute;top:0;left:0;right:0;z-index:6;height:38px;display:flex;align-items:center;
+  gap:12px;padding:0 14px;border-bottom:1px solid rgba(214,164,86,.18);
+  background:linear-gradient(180deg,rgba(26,21,15,.92),rgba(19,16,12,.55));backdrop-filter:blur(4px);}
+.w1 .w1-brand{font-family:"Archivo",system-ui,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.02em;
+  display:flex;align-items:center;gap:7px;white-space:nowrap;}
+.w1 .w1-brand i{width:9px;height:9px;border-radius:50%;background:#f0b552;
+  box-shadow:0 0 9px #e0952e,inset 0 -2px 2px rgba(0,0,0,.45);}
+.w1 .w1-nav nav{display:flex;gap:14px;margin-left:auto;}
+.w1 .w1-nav a{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#a2907a;white-space:nowrap;}
+.w1 .w1-nav a.w1-on{color:#f2c27a;}
+.w1 .w1-cta{margin-left:12px;font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;
+  padding:5px 9px;border-radius:4px;color:#150f08;font-weight:700;white-space:nowrap;
+  background:linear-gradient(180deg,#f4c878,#d69b3f);box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 3px 10px rgba(214,155,63,.25);}
+.w1 .w1-jacks{position:absolute;top:52px;left:14px;z-index:6;list-style:none;padding:0;
+  width:150px;display:flex;flex-direction:column;gap:5px;}
+.w1 .w1-jack{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:7px;cursor:pointer;
+  border:1px solid rgba(226,178,102,.13);background:linear-gradient(180deg,rgba(48,39,28,.72),rgba(26,21,16,.72));
+  transition:border-color .25s,background .25s,transform .25s;}
+.w1 .w1-jack:hover,.w1 .w1-jack.w1-act{border-color:rgba(244,198,120,.6);transform:translateX(3px);
+  background:linear-gradient(180deg,rgba(74,57,33,.85),rgba(35,27,18,.85));}
+.w1 .w1-hole{position:relative;flex:0 0 16px;height:16px;border-radius:50%;
+  background:radial-gradient(circle at 50% 38%,#3a2f21 0%,#0a0806 62%);
+  box-shadow:inset 0 0 0 2px #6b5333,inset 0 2px 3px rgba(0,0,0,.9),0 1px 0 rgba(255,220,160,.09);}
+.w1 .w1-hole::after{content:"";position:absolute;inset:4.5px;border-radius:50%;background:#f3bd68;
+  opacity:0;transition:opacity .25s;box-shadow:0 0 10px 2px rgba(243,189,104,.85);}
+.w1 .w1-jack:hover .w1-hole::after,.w1 .w1-jack.w1-act .w1-hole::after{opacity:1;}
+.w1 .w1-lab{min-width:0;}
+.w1 .w1-lab b{display:block;font-family:"Archivo",system-ui,sans-serif;font-size:10.5px;font-weight:600;
+  letter-spacing:.01em;color:#efe0c6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.w1 .w1-lab i{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;
+  font-size:8px;letter-spacing:.1em;color:#8d7a60;text-transform:uppercase;}
+.w1 .w1-panelwrap{position:absolute;top:52px;right:14px;bottom:14px;left:198px;z-index:6;}
+.w1 .w1-panel{height:100%;padding:16px 18px;border-radius:9px;display:flex;flex-direction:column;
+  border:1px solid rgba(226,178,102,.16);
+  background:linear-gradient(160deg,rgba(40,33,24,.92),rgba(18,15,12,.94));
+  box-shadow:0 16px 40px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,214,150,.08);}
+.w1 .w1-kicker{display:flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:8.5px;letter-spacing:.19em;text-transform:uppercase;color:#e0a94f;}
+.w1 .w1-kicker em{width:5px;height:5px;border-radius:50%;background:#f3bd68;box-shadow:0 0 8px #f3bd68;}
+.w1 .w1-h1{font-family:"Instrument Serif","Archivo",Georgia,serif;font-weight:400;font-size:31px;
+  line-height:1.06;margin:9px 0 7px;color:#fdf4e4;letter-spacing:-.01em;}
+.w1 .w1-sub{font-size:11.5px;line-height:1.45;color:#b0a08a;max-width:34ch;}
+.w1 .w1-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+.w1 .w1-chips span{font-size:9px;letter-spacing:.07em;text-transform:uppercase;padding:4px 8px;border-radius:20px;
+  color:#e8cd9c;border:1px solid rgba(226,178,102,.28);background:rgba(226,178,102,.06);white-space:nowrap;}
+.w1 .w1-meters{margin-top:auto;display:flex;gap:10px;padding-top:12px;border-top:1px solid rgba(226,178,102,.13);}
+.w1 .w1-m{flex:1;min-width:0;}
+.w1 .w1-m b{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:16px;color:#f6d69a;
+  font-weight:500;letter-spacing:-.02em;}
+.w1 .w1-m i{display:block;font-style:normal;font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:#8a7962;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+@container (max-width:520px){
+  .w1 .w1-jacks{width:120px;}
+  .w1 .w1-panelwrap{left:162px;right:10px;}
+  .w1 .w1-h1{font-size:22px;}
+  .w1 .w1-panel{padding:13px 14px;}
+  .w1 .w1-m b{font-size:14px;}
+  .w1 .w1-nav nav{display:none;}
+}
+@container (max-width:380px){
+  .w1 .w1-jacks{width:104px;left:9px;}
+  .w1 .w1-panelwrap{left:132px;}
+  .w1 .w1-h1{font-size:18px;margin:6px 0 5px;}
+  .w1 .w1-sub{font-size:10px;}
+  .w1 .w1-chips span{font-size:8px;padding:3px 6px;}
+  .w1 .w1-m b{font-size:12px;}
+  .w1 .w1-panel{padding:11px 12px;}
+  .w1 .w1-lab i{display:none;}
+  .w1 .w1-m i{font-size:7.5px;}
+  .w1 .w1-cta{display:none;}
+}
+@media (prefers-reduced-motion:reduce){
+  .w1 .w1-jack{transition:none;}
+}
+</style>
+
+<script>
+(function(){
+  var stage = document.currentScript.closest('.w1');
+  if(!stage || stage.dataset.init) return; stage.dataset.init = '1';
+
+  var VERTICALS = [
+    {name:'Insurance',   code:'INS-01', desc:'Auto Insurance & Medicare demand, patched live.',
+      chips:['Inbound Calls','Live Transfers','Web Leads'], m:['4.2k','38%','92s'],
+      lab:['calls / wk','transfer rate','avg. hold']},
+    {name:'Auto Insurance', code:'INS-02', desc:'Comparison-shopper intent, routed the moment it spikes.',
+      chips:['Inbound Calls','Live Transfers'], m:['1.9k','44%','71s'],
+      lab:['calls / wk','transfer rate','avg. hold']},
+    {name:'Medicare', code:'INS-03', desc:'AEP-season volume with compliant, screened callers.',
+      chips:['Inbound Calls','Live Transfers'], m:['2.3k','35%','118s'],
+      lab:['calls / wk','transfer rate','avg. hold']},
+    {name:'Home Services', code:'HSV-01', desc:'Pest Control and HVAC jobs, booked by phone.',
+      chips:['Inbound Calls','Web Leads'], m:['3.1k','41%','64s'],
+      lab:['calls / wk','book rate','avg. hold']},
+    {name:'Pest Control', code:'HSV-02', desc:'Same-day treatment demand in your service radius.',
+      chips:['Inbound Calls','Web Leads'], m:['1.4k','47%','58s'],
+      lab:['calls / wk','book rate','avg. hold']},
+    {name:'HVAC', code:'HSV-03', desc:'Emergency repair and replacement, weather-triggered.',
+      chips:['Inbound Calls','Live Transfers'], m:['1.7k','39%','69s'],
+      lab:['calls / wk','book rate','avg. hold']},
+    {name:'Web Leads', code:'WEB-01', desc:'Personal Loans and Legal forms, verified on delivery.',
+      chips:['Web Leads','Live Transfers'], m:['12k','61%','< 9s'],
+      lab:['leads / wk','contact rate','post speed']},
+    {name:'Personal Loans', code:'WEB-02', desc:'Credit-banded applicants, filtered before they land.',
+      chips:['Web Leads'], m:['6.8k','58%','< 9s'],
+      lab:['leads / wk','contact rate','post speed']},
+    {name:'Legal', code:'WEB-03', desc:'Case-qualified claimants, transferred to intake.',
+      chips:['Live Transfers','Web Leads'], m:['940','52%','2m'],
+      lab:['leads / wk','sign rate','avg. intake']}
+  ];
+
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  var list = stage.querySelector('.w1-jacks');
+  var canvas = stage.querySelector('.w1-cables');
+  var ctx = canvas.getContext('2d');
+  var elName = stage.querySelector('.w1-vname'),
+      elDesc = stage.querySelector('.w1-desc'),
+      elChips = stage.querySelector('.w1-chips'),
+      elPanel = stage.querySelector('.w1-panel'),
+      mV = [stage.querySelector('.w1-v1'),stage.querySelector('.w1-v2'),stage.querySelector('.w1-v3')],
+      mL = Array.prototype.slice.call(stage.querySelectorAll('.w1-m i'));
+
+  /* ---- jacks ---- */
+  var jackEls = VERTICALS.map(function(v,i){
+    var li = document.createElement('li');
+    li.className = 'w1-jack'; li.tabIndex = 0; li.dataset.i = i;
+    li.innerHTML = '<span class="w1-hole"></span><span class="w1-lab"><b></b><i></i></span>';
+    li.querySelector('b').textContent = v.name;
+    li.querySelector('i').textContent = v.code;
+    list.appendChild(li);
+    return li;
+  });
+
+  var active = 0;
+  function select(i){
+    if(i === active) return;
+    active = i;
+    var v = VERTICALS[i];
+    jackEls.forEach(function(el,k){ el.classList.toggle('w1-act', k===i); });
+    elName.textContent = v.name;
+    elDesc.textContent = v.desc;
+    elChips.innerHTML = '';
+    v.chips.forEach(function(c){ var s=document.createElement('span'); s.textContent=c; elChips.appendChild(s); });
+    mV.forEach(function(el,k){ el.textContent = v.m[k]; });
+    mL.forEach(function(el,k){ el.textContent = v.lab[k]; });
+    elPanel.animate(
+      [{opacity:.55, transform:'translateY(4px)'},{opacity:1, transform:'none'}],
+      {duration: reduced.matches ? 0 : 260, easing:'cubic-bezier(.2,.7,.3,1)'}
+    );
+    repatch();
+  }
+  jackEls.forEach(function(el){
+    var i = +el.dataset.i;
+    el.addEventListener('pointerenter', function(){ select(i); });
+    el.addEventListener('focus', function(){ select(i); });
+    el.addEventListener('click', function(){ select(i); });
+  });
+  jackEls[0].classList.add('w1-act');
+
+  /* ---- cables: verlet ropes ---- */
+  var W=0,H=0,dpr=1, SEG=13;
+  var ropes = VERTICALS.map(function(){ return {pts:[], target:null, ax:0, ay:0, pulse:Math.random()}; });
+
+  function measure(){
+    var r = stage.getBoundingClientRect();
+    W = Math.max(1, r.width); H = Math.max(1, r.height);
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    canvas.width = Math.round(W*dpr); canvas.height = Math.round(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    anchors();
+    ropes.forEach(function(rp,i){
+      var a = rp.a, b = rp.target;
+      for(var s=0;s<=SEG;s++){
+        var t=s/SEG;
+        var p = rp.pts[s] || (rp.pts[s]={});
+        p.x = a.x + (b.x-a.x)*t; p.y = a.y + (b.y-a.y)*t + Math.sin(t*Math.PI)*46;
+        p.px = p.x; p.py = p.y;
+      }
+    });
+  }
+
+  function anchors(){
+    var sr = stage.getBoundingClientRect();
+    var pr = elPanel.getBoundingClientRect();
+    var portX = pr.left - sr.left - 1;
+    ropes.forEach(function(rp,i){
+      var jr = jackEls[i].querySelector('.w1-hole').getBoundingClientRect();
+      rp.a = {x: jr.left - sr.left + jr.width/2, y: jr.top - sr.top + jr.height/2};
+      var t = (i+0.5)/VERTICALS.length;
+      rp.port = {x: portX, y: pr.top - sr.top + 14 + t*(pr.height-28)};
+      if(!rp.target) rp.target = {x: rp.port.x, y: rp.port.y};
+      else { rp.target.x = rp.port.x; rp.target.y = rp.port.y; }
+    });
+  }
+
+  function repatch(){
+    // active cable gets a kick so it swings into place
+    var rp = ropes[active];
+    if(!rp || !rp.pts.length) return;
+    for(var s=1;s<SEG;s++){ rp.pts[s].py -= 6 + Math.random()*5; }
+    rp.pulse = 0;
+  }
+
+  var pointer = {x:-999,y:-999,on:false};
+  stage.addEventListener('pointermove', function(e){
+    var r = stage.getBoundingClientRect();
+    pointer.x = e.clientX - r.left; pointer.y = e.clientY - r.top; pointer.on = true;
+  });
+  stage.addEventListener('pointerleave', function(){ pointer.on=false; pointer.x=pointer.y=-999; });
+
+  function step(dt){
+    var grav = 900*dt*dt;
+    for(var i=0;i<ropes.length;i++){
+      var rp = ropes[i], pts = rp.pts, isAct = (i===active);
+      var rest = Math.hypot(rp.target.x-rp.a.x, rp.target.y-rp.a.y) / SEG * (isAct ? 1.06 : 1.22);
+      for(var s=1;s<SEG;s++){
+        var p = pts[s];
+        var vx = (p.x-p.px)*0.985, vy = (p.y-p.py)*0.985;
+        p.px = p.x; p.py = p.y;
+        p.x += vx; p.y += vy + grav;
+        if(pointer.on){
+          var dx = p.x-pointer.x, dy = p.y-pointer.y, d2 = dx*dx+dy*dy;
+          if(d2 < 5200 && d2 > 0.01){ var d=Math.sqrt(d2), f=(1-d/72)*2.6; p.x += dx/d*f; p.y += dy/d*f; }
+        }
+      }
+      pts[0].x = rp.a.x; pts[0].y = rp.a.y;
+      pts[SEG].x = rp.target.x; pts[SEG].y = rp.target.y;
+      for(var it=0; it<4; it++){
+        for(var s2=0;s2<SEG;s2++){
+          var p1=pts[s2], p2=pts[s2+1];
+          var ddx=p2.x-p1.x, ddy=p2.y-p1.y, dd=Math.hypot(ddx,ddy)||1e-4;
+          var diff=(dd-rest)/dd*0.5;
+          var ox=ddx*diff, oy=ddy*diff;
+          if(s2!==0){ p1.x+=ox; p1.y+=oy; }
+          if(s2+1!==SEG){ p2.x-=ox; p2.y-=oy; }
+        }
+        pts[0].x=rp.a.x; pts[0].y=rp.a.y;
+        pts[SEG].x=rp.target.x; pts[SEG].y=rp.target.y;
+      }
+      rp.pulse += dt*(isAct?0.72:0.26);
+      if(rp.pulse>1.6) rp.pulse -= 1.6 + Math.random()*1.4;
+    }
+  }
+
+  function settle(){ for(var k=0;k<220;k++) step(1/60); }
+
+  function ropePath(pts){
+    ctx.beginPath();
+    ctx.moveTo(pts[0].x, pts[0].y);
+    for(var s=1;s<pts.length-1;s++){
+      var p=pts[s], n=pts[s+1];
+      ctx.quadraticCurveTo(p.x, p.y, (p.x+n.x)/2, (p.y+n.y)/2);
+    }
+    ctx.lineTo(pts[pts.length-1].x, pts[pts.length-1].y);
+  }
+  function at(pts,t){
+    var f = t*(pts.length-1), i = Math.min(pts.length-2, Math.floor(f)), u = f-i;
+    return {x: pts[i].x+(pts[i+1].x-pts[i].x)*u, y: pts[i].y+(pts[i+1].y-pts[i].y)*u};
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    // brass panel wall texture behind cables
+    ctx.save();
+    ctx.globalAlpha = .1; ctx.strokeStyle = '#d6a456'; ctx.lineWidth = 1;
+    for(var y=48;y<H;y+=13){ ctx.beginPath(); ctx.moveTo(0,y+.5); ctx.lineTo(W,y+.5); ctx.stroke(); }
+    ctx.restore();
+
+    for(var i=0;i<ropes.length;i++){
+      var rp = ropes[i], isAct = (i===active), pts = rp.pts;
+      ctx.lineCap='round'; ctx.lineJoin='round';
+      // shadow
+      ctx.save(); ctx.translate(0,3);
+      ropePath(pts); ctx.strokeStyle='rgba(0,0,0,.5)'; ctx.lineWidth = isAct?6:4.5; ctx.stroke();
+      ctx.restore();
+      // sheath
+      ropePath(pts);
+      ctx.strokeStyle = isAct ? 'rgba(206,150,66,.95)' : 'rgba(96,78,55,.7)';
+      ctx.lineWidth = isAct ? 4.4 : 3.2; ctx.stroke();
+      // highlight
+      ropePath(pts);
+      ctx.strokeStyle = isAct ? 'rgba(255,224,168,.72)' : 'rgba(190,164,120,.2)';
+      ctx.lineWidth = isAct ? 1.5 : 1; ctx.stroke();
+      // plug at panel
+      var e = pts[pts.length-1];
+      ctx.beginPath(); ctx.arc(e.x,e.y, isAct?4.6:3.4, 0, 6.2832);
+      ctx.fillStyle = isAct ? '#f5c87a' : '#5d4b33'; ctx.fill();
+
+      // pulse of light travelling jack -> panel
+      if(rp.pulse >= 0 && rp.pulse <= 1){
+        var t = rp.pulse, p = at(pts, t);
+        var fade = Math.sin(t*Math.PI);
+        var g = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y, isAct?15:9);
+        g.addColorStop(0,'rgba(255,232,180,'+(0.95*fade)+')');
+        g.addColorStop(.35,'rgba(244,190,104,'+(0.5*fade)+')');
+        g.addColorStop(1,'rgba(244,190,104,0)');
+        ctx.fillStyle = g;
+        ctx.beginPath(); ctx.arc(p.x,p.y, isAct?15:9, 0, 6.2832); ctx.fill();
+      }
+    }
+  }
+
+  /* ---- loop + lifecycle ---- */
+  var raf = 0, last = 0, acc = 0, running = false;
+  function frame(ts){
+    if(!running) return;
+    var dt = Math.min(0.05, (ts - last)/1000 || 0.016); last = ts;
+    acc += dt;
+    while(acc >= 1/120){ step(1/120); acc -= 1/120; }
+    draw();
+    raf = requestAnimationFrame(frame);
+  }
+  function start(){ if(running || reduced.matches) return; running = true; last = performance.now(); acc = 0; raf = requestAnimationFrame(frame); }
+  function stop(){ running = false; cancelAnimationFrame(raf); }
+
+  measure(); settle(); draw();
+
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ e.isIntersecting ? start() : stop(); });
+  }, {threshold:0.01});
+  io.observe(stage);
+
+  var ro = new ResizeObserver(function(){ measure(); settle(); draw(); });
+  ro.observe(stage);
+
+  document.addEventListener('visibilitychange', function(){ document.hidden ? stop() : start(); });
+  reduced.addEventListener('change', function(){ reduced.matches ? (stop(), settle(), draw()) : start(); });
+
+  // gentle auto-tour when idle, so it is alive at rest
+  var idle = setInterval(function(){
+    if(!running || pointer.on) return;
+    select((active+1) % VERTICALS.length);
+  }, 3600);
+  stage.addEventListener('pointerenter', function(){ /* user takes over */ });
+  window.addEventListener('pagehide', function(){ stop(); clearInterval(idle); io.disconnect(); ro.disconnect(); });
+})();
+</script>
+</section>

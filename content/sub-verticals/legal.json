@@ -1,0 +1,59 @@
+{
+  "slug": "legal",
+  "vertical": "web-leads",
+  "name": "Legal",
+  "active": true,
+  "order": 5,
+  "shortDescription": "Deliver case inquiries and calls from individuals seeking legal representation in personal injury, mass tort, family law and other practice areas.",
+  "description": [
+    "Legal acquisition connects people who have experienced an injury, dispute or life event with law firms equipped to represent them. The largest practice areas for consumer demand are personal injury, including motor vehicle accidents and premises liability; mass tort and product liability claims involving pharmaceuticals, medical devices and consumer products; family law, including divorce and custody; and areas such as employment, Social Security disability, immigration and estate planning. Prospective clients typically begin by describing their situation through an online case evaluation form, which makes web leads the primary intake channel.",
+    "Altarious Global runs performance marketing that captures these individuals as real-time case inquiries with practice area, incident details, jurisdiction and consent recorded on each lead, delivered directly to law firms and legal intake centres. Inbound Calls and Live Transfers complement the web lead flow by routing individuals who want to speak with someone immediately to the firm's intake team, which is particularly important for injury victims and people facing urgent family or employment matters."
+  ],
+  "consumerProfile": "Adults who have recently experienced a qualifying event, such as an accident with injuries, exposure to a product subject to litigation, a marital breakdown or a workplace issue, and who have not yet retained counsel. The most valuable segments are injured parties with clear liability and medical treatment, mass tort claimants who meet specific exposure and diagnosis criteria, and family law clients with contested matters.",
+  "intentSignals": [
+    "Searching for a personal injury lawyer, car accident attorney or divorce lawyer near me",
+    "Recently injured in a motor vehicle, workplace or premises accident",
+    "Diagnosed with a condition linked to a drug, device or product under active litigation",
+    "Received a settlement offer from an insurance company and wants it reviewed",
+    "Served with divorce papers or facing a custody or support dispute",
+    "Wrongfully terminated, denied disability benefits or facing an immigration deadline"
+  ],
+  "qualificationCriteria": [
+    "Practice area and nature of the legal issue identified",
+    "Incident or diagnosis date within the applicable statute of limitations",
+    "Located in a jurisdiction where the firm or its network is licensed to practise",
+    "Not currently represented by another attorney for the same matter",
+    "Practice-area-specific criteria met, such as injuries with medical treatment or a qualifying diagnosis for mass tort",
+    "Consent to be contacted captured and interest in a case evaluation confirmed"
+  ],
+  "keywords": [
+    "personal injury lawyer near me",
+    "car accident attorney",
+    "divorce lawyer near me",
+    "mass tort lawsuit",
+    "free case evaluation",
+    "workers compensation lawyer",
+    "how much is my injury case worth"
+  ],
+  "marketContext": "Legal services marketing has become one of the most competitive categories in digital advertising, driven by personal injury firms and mass tort campaigns that aggregate claimants for large-scale litigation. Consumers now expect to find and evaluate lawyers online, and intake speed is a decisive factor because injured or distressed individuals often contact several firms. Bar rules on advertising and solicitation vary by state and shape how leads may be generated and routed. Web leads provide scalable case inquiry volume, while calls are indispensable for intake because attorneys and intake specialists need to evaluate facts and sign clients quickly.",
+  "inboundCallsAngle": "Someone who has just been in an accident or served with legal papers frequently wants to talk to a person immediately. Inbound Call programs place practice-area-specific legal messaging in front of these individuals and route their calls directly to the law firm's intake team, complementing the web lead flow with prospects who need to speak now. Callers arrive with a fresh situation and a willingness to share details, allowing intake specialists to evaluate the case and begin the retainer process on the first call. Calls can be routed by practice area and jurisdiction so that each firm receives matters it handles in states where it practises.",
+  "liveTransfersAngle": "Live Transfers bring intake discipline to legal acquisition. Our team confirms the practice area, the nature and date of the incident or diagnosis, jurisdiction, representation status and consent before warm-transferring the individual to the law firm's intake team. For mass tort campaigns, screening applies the specific exposure, usage and diagnosis criteria the litigation requires, so firms receive claimants who fit the case profile. This pre-screen removes time-barred matters, represented parties and out-of-jurisdiction inquiries, and it complements web leads by converting form submissions and online researchers into live intake conversations with higher signed-retainer rates.",
+  "faq": [
+    {
+      "q": "Which practice areas can be targeted?",
+      "a": "Programs can be built for personal injury, motor vehicle accidents, mass tort and product liability, family law, employment, Social Security disability, immigration and other consumer practice areas, individually or in combination."
+    },
+    {
+      "q": "How are mass tort claimants qualified?",
+      "a": "Screening applies the litigation-specific criteria you provide, such as product usage period, diagnosis type and date, so that transferred claimants match the case profile before your intake team engages."
+    },
+    {
+      "q": "How do calls complement legal web leads?",
+      "a": "Web leads deliver case inquiry volume at scale, while Inbound Calls and Live Transfers route individuals who need to speak immediately to your intake team, improving contact rates and signed retainers."
+    }
+  ],
+  "seo": {
+    "title": "Legal Leads, Inbound Calls & Live Transfers for Law Firms",
+    "description": "Acquire personal injury, mass tort and family law clients through consented case inquiry web leads complemented by inbound calls and intake-screened live transfers routed to law firms."
+  }
+}

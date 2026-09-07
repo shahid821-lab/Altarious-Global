@@ -1,0 +1,59 @@
+{
+  "slug": "garage-door-services",
+  "vertical": "home-services",
+  "name": "Garage Door Services",
+  "active": true,
+  "order": 15,
+  "shortDescription": "Connect homeowners with broken springs, failed openers and replacement needs to garage door companies offering fast local service.",
+  "description": [
+    "Garage door problems arrive without warning and often leave a homeowner unable to leave for work or secure their home. Broken torsion springs, snapped cables, doors off track, failed openers and damaged panels after a vehicle impact are the most common calls, and most require same-day service. Beyond repair, homeowners also replace aging or dented doors to improve curb appeal, insulation and security, and new door installation is one of the higher-return exterior upgrades in real estate.",
+    "Altarious Global reaches homeowners at the moment of failure and during replacement planning with geo-targeted campaigns, then delivers them to garage door companies through Inbound Calls and Live Transfers. Screening captures the nature of the problem, door type and homeownership so that dispatchers can schedule repairs promptly and route replacement inquiries to estimators."
+  ],
+  "consumerProfile": "Homeowners with attached or detached garages, predominantly in suburban single-family homes, who have an inoperable door or are planning a replacement. The most valuable segments are emergency repair callers who need same-day service, homeowners replacing older doors for curb appeal or insulation, and owners upgrading to smart openers and modern hardware.",
+  "intentSignals": [
+    "Searching for garage door repair near me or garage door spring replacement",
+    "Door will not open or close, or is stuck partially open",
+    "Loud bang heard from garage indicating a broken spring",
+    "Garage door opener not responding or remote and keypad failures",
+    "Panel damage from a vehicle impact or storm",
+    "Researching new garage door cost or styles ahead of a home sale"
+  ],
+  "qualificationCriteria": [
+    "Property located within the company's service area",
+    "Homeowner or authorised decision maker for the property",
+    "Problem identified as spring, cable, track, opener, panel or full replacement",
+    "Door type and approximate age noted where known",
+    "Urgency level established, including whether the vehicle is trapped",
+    "Ready to schedule a service visit or replacement estimate"
+  ],
+  "keywords": [
+    "garage door repair near me",
+    "garage door spring replacement",
+    "garage door opener repair",
+    "garage door installation cost",
+    "emergency garage door repair",
+    "garage door off track",
+    "new garage door near me"
+  ],
+  "marketContext": "Garage door service is a highly local, search-driven category where speed and trust determine which company gets the job. The industry has attracted consolidation and franchise growth, and it has also faced consumer wariness due to bait-and-switch pricing by some operators, which rewards companies with transparent pricing and strong reviews. Repair demand is steady year-round with increases during cold weather when springs are more likely to fail, while replacement demand is supported by home sales and exterior renovation trends. Same-day availability is expected by most homeowners, making rapid call handling a core competitive requirement.",
+  "inboundCallsAngle": "A homeowner with a car trapped behind a stuck garage door at seven in the morning needs to speak with someone immediately. Inbound Call programs place local garage door offers in front of homeowners searching for repair and connect them directly to the company's dispatch line. Callers arrive with a clear, urgent problem, and companies that can commit to a same-day appointment window convert these calls at a very high rate. Replacement inquiries also arrive through the same channel and allow the office to schedule an in-home estimate while the homeowner is motivated.",
+  "liveTransfersAngle": "Live Transfers give garage door companies a filtered flow that respects technician routing. Our team confirms the service address, homeownership, the nature of the problem, door type and urgency before warm-transferring the call, so emergency repairs reach dispatch and replacement inquiries go to estimators. Screening removes out-of-area callers, renters who must go through a landlord and requests for parts or DIY advice, which keeps the office focused on bookable jobs. For companies that emphasise replacement sales, transfers can be weighted toward homeowners planning a new door.",
+  "faq": [
+    {
+      "q": "Can we prioritise repair calls or replacement inquiries?",
+      "a": "Yes. Screening identifies whether the homeowner needs a repair or a new door, and volume can be weighted toward the service mix that best fits your business."
+    },
+    {
+      "q": "Are emergency garage door calls delivered outside business hours?",
+      "a": "Delivery follows the schedule you set, so evening and weekend emergency calls can be included if you offer extended hours or excluded if you do not."
+    },
+    {
+      "q": "How is the service area defined?",
+      "a": "Targeting can be set by ZIP code, county or radius from your location and adjusted at any time as technician coverage changes."
+    }
+  ],
+  "seo": {
+    "title": "Garage Door Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire same-day garage door repair and replacement customers through geo-targeted performance marketing, inbound calls and dispatch-ready live transfers."
+  }
+}

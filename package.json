@@ -1,0 +1,16 @@
+{
+  "name": "altarious-global",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Altarious Global — PPC, lead generation, inbound calls & live transfers website. Static build + Cloudflare Pages Functions + D1. Zero dependencies.",
+  "type": "module",
+  "scripts": {
+    "scaffold": "node scripts/scaffold.mjs",
+    "build": "node scripts/build.mjs",
+    "dev": "npx wrangler pages dev dist --persist-to .wrangler/state --port 8788",
+    "db:local": "npx wrangler d1 execute altarious --local --persist-to .wrangler/state --file=db/schema.sql",
+    "db:remote": "npx wrangler d1 execute altarious --remote --file=db/schema.sql",
+    "deploy": "npm run build && npx wrangler pages deploy dist"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "appliance-repair",
+  "vertical": "home-services",
+  "name": "Appliance Repair",
+  "active": true,
+  "order": 14,
+  "shortDescription": "Reach households with broken refrigerators, washers, dryers, ovens and dishwashers and connect them with appliance repair technicians.",
+  "description": [
+    "Appliance repair is an urgent, everyday need. A refrigerator that stops cooling threatens hundreds of dollars of food, a broken washer disrupts a family's week, and a failed oven or dishwasher is an immediate inconvenience. Consumers search the same day the appliance fails, want a technician quickly, and weigh repair against replacement based on the appliance's age and the estimated cost. Brand-specific searches are common, as are searches for warranty and high-end appliance specialists.",
+    "Altarious Global reaches households at the moment of failure with geo-targeted campaigns and delivers them to appliance repair companies through Inbound Calls and Live Transfers. Screening captures the appliance type, brand, symptom and location so that dispatchers can schedule the right technician with the right parts and convert calls into completed service visits."
+  ],
+  "consumerProfile": "Homeowners and renters with a malfunctioning major appliance, including refrigerators, freezers, washers, dryers, ranges, ovens, dishwashers and microwaves. The most valuable segments are owners of premium and built-in appliances where repair is clearly preferable to replacement, households with multiple appliances of similar age, and landlords who need reliable repair partners for their properties.",
+  "intentSignals": [
+    "Searching for appliance repair near me or a specific appliance and brand repair",
+    "Refrigerator not cooling, freezer thawing or ice maker failing",
+    "Washer not draining, dryer not heating or making unusual noises",
+    "Oven not heating, range burner failure or dishwasher not cleaning",
+    "Appliance is out of manufacturer warranty and owner wants a repair estimate",
+    "Landlord or property manager needing service for a tenant's appliance"
+  ],
+  "qualificationCriteria": [
+    "Property located within the company's service area",
+    "Appliance type and brand identified",
+    "Symptom or failure described for technician preparation",
+    "Appliance approximate age and warranty status noted",
+    "Homeowner, tenant with authority or property manager confirmed",
+    "Ready to schedule a diagnostic visit and accept a service fee"
+  ],
+  "keywords": [
+    "appliance repair near me",
+    "refrigerator repair near me",
+    "washer repair",
+    "dryer repair near me",
+    "oven repair service",
+    "dishwasher repair near me",
+    "same day appliance repair"
+  ],
+  "marketContext": "Appliance repair has grown in importance as consumers hold onto appliances longer and as the cost and complexity of premium and smart appliances make repair more attractive than replacement. Supply chain disruptions in recent years increased replacement lead times and reinforced the repair option. The industry is fragmented among independent technicians, regional companies, manufacturer-authorised service networks and warranty administrators, and consumers rely on local search when an appliance fails. Companies that answer quickly, offer same-day or next-day appointments and communicate diagnostic fees clearly win the majority of these calls.",
+  "inboundCallsAngle": "Someone whose refrigerator has just stopped cooling is going to pick up the phone, not wait for an email reply. Inbound Call programs place local appliance repair offers in front of households searching at the moment of failure and connect them directly to the company's scheduling line. Callers arrive ready to book a diagnostic visit, and companies that can offer a prompt appointment window and a clear service fee convert these calls at a high rate. Programs can be filtered by appliance type and brand to match technician expertise and parts inventory.",
+  "liveTransfersAngle": "Live Transfers let appliance repair companies fill their schedules with jobs they can complete. Our team confirms the service address, the appliance type and brand, the symptom, approximate age and warranty status, and the caller's authority to book service before warm-transferring to the dispatcher. This screening removes out-of-area callers, brands the company does not service, appliances covered under manufacturer warranty that must go elsewhere and requests for DIY advice, so technicians are dispatched to viable repairs. Dispatchers receive the details needed to assign the right technician and parts.",
+  "faq": [
+    {
+      "q": "Can calls be filtered by appliance type or brand?",
+      "a": "Yes. Screening identifies the appliance and brand so that you can accept only the categories and manufacturers your technicians service, including premium brands if you specialise."
+    },
+    {
+      "q": "Do you screen out appliances still under manufacturer warranty?",
+      "a": "Warranty status is captured during screening, and consumers who must use an authorised warranty provider can be excluded unless you are an authorised servicer."
+    },
+    {
+      "q": "How quickly do consumers expect service?",
+      "a": "Most callers want same-day or next-day appointments, particularly for refrigeration failures, so programs work best for companies with responsive scheduling capacity."
+    }
+  ],
+  "seo": {
+    "title": "Appliance Repair Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire same-day appliance repair customers through geo-targeted performance marketing, inbound calls and appliance-screened live transfers for repair companies."
+  }
+}

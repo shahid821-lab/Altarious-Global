@@ -1,0 +1,88 @@
+<div class="demo c3">
+  <div class="c3-head">
+    <span class="c3-eyebrow">Products compared</span>
+    <h3 class="c3-title">Which delivery model fits</h3>
+  </div>
+
+  <div class="c3-scroll">
+    <table class="c3-table">
+      <caption class="c3-sr">Web Leads, Inbound Calls and Live Transfers compared across five attributes</caption>
+      <thead>
+        <tr>
+          <th scope="col" class="c3-rowhead"><span class="c3-sr">Attribute</span></th>
+          <th scope="col" data-col="1">Web Leads</th>
+          <th scope="col" data-col="2">Inbound Calls</th>
+          <th scope="col" data-col="3">Live Transfers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Cost model</th><td data-col="1" data-label="Web Leads">Per lead</td><td data-col="2" data-label="Inbound Calls">Per billable call</td><td data-col="3" data-label="Live Transfers">Per qualified transfer</td></tr>
+        <tr><th scope="row">Consumer intent</th><td data-col="1" data-label="Web Leads"><i class="c3-m c3-m2"></i>Moderate</td><td data-col="2" data-label="Inbound Calls"><i class="c3-m c3-m3"></i>High</td><td data-col="3" data-label="Live Transfers"><i class="c3-m c3-m4"></i>Highest</td></tr>
+        <tr><th scope="row">Speed to contact</th><td data-col="1" data-label="Web Leads">Minutes to hours</td><td data-col="2" data-label="Inbound Calls">Immediate</td><td data-col="3" data-label="Live Transfers">Already on the line</td></tr>
+        <tr><th scope="row">Agent effort</th><td data-col="1" data-label="Web Leads">Outbound dialling</td><td data-col="2" data-label="Inbound Calls">Answer and qualify</td><td data-col="3" data-label="Live Transfers">Pre&#8209;screened, close</td></tr>
+        <tr><th scope="row">Best&#8209;fit buyer</th><td data-col="1" data-label="Web Leads">Volume dialler teams</td><td data-col="2" data-label="Inbound Calls">Agencies &amp; contractors</td><td data-col="3" data-label="Live Transfers">Carriers &amp; law firms</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <style>
+    .c3 { font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg-2, #3D4757); }
+    .c3 *, .c3 *::before, .c3 *::after { box-sizing: border-box; }
+    .c3 .c3-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .c3 .c3-head { margin-bottom: 12px; }
+    .c3 .c3-eyebrow { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c3 .c3-title { margin: 3px 0 0; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 16px; font-weight: 650; letter-spacing: -.01em; color: var(--fg, #10151C); }
+    .c3 .c3-scroll { overflow-x: auto; }
+    .c3 .c3-table { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 420px; }
+    .c3 .c3-table th, .c3 .c3-table td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line, #DDE2E8); transition: background .18s ease, color .18s ease; }
+    .c3 .c3-table thead th { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3, #7A8494); font-weight: 500; border-bottom: 1px solid var(--line, #DDE2E8); padding-bottom: 8px; }
+    .c3 .c3-table tbody th { width: 30%; font-weight: 500; color: var(--fg-3, #7A8494); font-size: 12px; }
+    .c3 .c3-table tbody td { color: var(--fg-2, #3D4757); }
+    .c3 .c3-table tbody tr:last-child th, .c3 .c3-table tbody tr:last-child td { border-bottom: 0; }
+    .c3 .c3-table th[data-col], .c3 .c3-table td[data-col] { width: 23.3%; }
+    .c3 .c3-table [data-col].is-hot { background: color-mix(in srgb, var(--signal, #E0A02A) 12%, transparent); color: var(--fg, #10151C); }
+    .c3 .c3-table thead th[data-col].is-hot { color: var(--fg, #10151C); box-shadow: inset 0 -2px 0 var(--signal, #E0A02A); }
+    .c3 .c3-m { display: inline-block; width: 26px; height: 5px; border-radius: 3px; margin-right: 7px; vertical-align: middle; background: var(--line, #DDE2E8); position: relative; overflow: hidden; }
+    .c3 .c3-m::after { content: ""; position: absolute; inset: 0 auto 0 0; background: var(--live, #128C7E); border-radius: 3px; }
+    .c3 .c3-m2::after { width: 50%; }
+    .c3 .c3-m3::after { width: 78%; }
+    .c3 .c3-m4::after { width: 100%; }
+    @media (max-width: 520px) {
+      .c3 .c3-scroll { overflow-x: visible; }
+      .c3 .c3-table, .c3 .c3-table tbody, .c3 .c3-table tr, .c3 .c3-table th, .c3 .c3-table td { display: block; width: auto; min-width: 0; }
+      .c3 .c3-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+      .c3 .c3-table tbody tr { border-bottom: 1px solid var(--line, #DDE2E8); padding: 8px 0; }
+      .c3 .c3-table tbody tr:last-child { border-bottom: 0; }
+      .c3 .c3-table tbody th { width: auto; padding: 0 0 5px; border: 0; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+      .c3 .c3-table tbody td { border: 0; padding: 3px 0 3px 8px; display: flex; justify-content: space-between; gap: 10px; border-left: 2px solid var(--line, #DDE2E8); }
+      .c3 .c3-table tbody td::before { content: attr(data-label); color: var(--fg-3, #7A8494); font-size: 11px; order: -1; }
+      .c3 .c3-table tbody td.is-hot { border-left-color: var(--signal, #E0A02A); }
+    }
+    @media (prefers-reduced-motion: reduce) { .c3 .c3-table th, .c3 .c3-table td { transition: none; } }
+  </style>
+
+  <script>
+    (function () {
+      var root = document.currentScript.closest('.c3');
+      var table = root.querySelector('.c3-table');
+      var cells = Array.prototype.slice.call(table.querySelectorAll('[data-col]'));
+
+      function highlight(col) {
+        cells.forEach(function (c) { c.classList.toggle('is-hot', !!col && c.dataset.col === col); });
+      }
+
+      table.addEventListener('mouseover', function (e) {
+        var c = e.target.closest('[data-col]');
+        highlight(c ? c.dataset.col : null);
+      });
+      table.addEventListener('mouseleave', function () { highlight(null); });
+
+      // Keyboard: column headers are focusable and select their column.
+      table.querySelectorAll('thead th[data-col]').forEach(function (th) {
+        th.tabIndex = 0;
+        th.addEventListener('focus', function () { highlight(th.dataset.col); });
+        th.addEventListener('blur', function () { highlight(null); });
+      });
+    })();
+  </script>
+</div>

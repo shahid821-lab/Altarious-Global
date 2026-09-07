@@ -1,0 +1,59 @@
+{
+  "slug": "solar",
+  "vertical": "home-services",
+  "name": "Solar",
+  "active": true,
+  "order": 6,
+  "shortDescription": "Reach homeowners evaluating rooftop solar and battery storage and connect them with installers and dealers ready to schedule a consultation.",
+  "description": [
+    "Residential solar is a considered purchase driven by rising utility bills, incentive awareness and the desire for energy independence. Homeowners begin researching when their electricity rates increase, when a neighbour installs panels, when they hear about federal tax credits or state programs, or when frequent outages make battery storage appealing. The evaluation involves roof suitability, shading, utility net metering rules, financing structures and installer reputation, and most homeowners want a consultation before committing.",
+    "Altarious Global reaches homeowners during this research phase with performance marketing across search, social and content placements, then delivers them to solar installers, dealers and financing partners through Inbound Calls and Live Transfers. Screening confirms homeownership, roof ownership, utility bill range, credit expectations and shade conditions, so consultants meet with homeowners who are genuinely viable for a system."
+  ],
+  "consumerProfile": "Owners of single-family homes with suitable roofs and meaningful monthly electricity bills, typically in states with strong sun exposure, high utility rates or favourable incentive programs. The most valuable segments are homeowners with high bills and good credit, households considering an electric vehicle or heat pump, and residents of outage-prone areas interested in battery backup.",
+  "intentSignals": [
+    "Searching for solar panel cost, solar companies near me or solar tax credit",
+    "Electricity bill has increased noticeably in recent months",
+    "Researching home battery backup after power outages",
+    "Neighbours or friends recently installed solar",
+    "Planning to buy an electric vehicle or electrify home heating",
+    "Received a utility notice about rate increases or time-of-use pricing"
+  ],
+  "qualificationCriteria": [
+    "Owns a single-family home in a state and utility territory the installer serves",
+    "Roof is owned outright and in suitable condition, not a shared or HOA-restricted roof where prohibited",
+    "Monthly electricity bill meets the installer's minimum threshold",
+    "Credit profile expected to qualify for financing, or ability to purchase outright",
+    "Roof has limited shading and adequate usable area",
+    "Willing to schedule a consultation or site assessment"
+  ],
+  "keywords": [
+    "solar panels for home cost",
+    "solar companies near me",
+    "solar tax credit",
+    "home battery backup",
+    "is solar worth it",
+    "solar panel installation",
+    "solar financing options"
+  ],
+  "marketContext": "Residential solar has matured into a mainstream home improvement category, though it has passed through cycles of rapid growth and consolidation as financing conditions, net metering policies and incentive structures have shifted. Rising utility rates continue to support homeowner interest, and battery storage has become a central part of the value proposition in states with time-of-use pricing or grid reliability concerns. Consumers are increasingly informed and wary of high-pressure sales, which rewards installers that lead with transparent consultations. Qualification quality matters more than volume in solar, because site suitability and credit determine whether a lead can ever become an installation.",
+  "inboundCallsAngle": "Solar is complex enough that many homeowners prefer to ask questions before they book a site visit. Inbound Call programs place solar offers in front of homeowners researching panels, incentives and battery storage and invite them to call an installer directly. Callers arrive with genuine curiosity and usually with their utility bill in mind, giving consultants the chance to explain savings, financing and the installation process and to schedule an in-home or virtual consultation. This channel is well suited to installers with knowledgeable phone teams and a consultative sales approach.",
+  "liveTransfersAngle": "Live Transfers are especially valuable in solar because so many variables determine viability. Our team confirms homeownership, roof type and condition, shading, monthly utility bill, credit expectations and the utility territory before warm-transferring the homeowner to the installer's consultant. This pre-screen eliminates renters, homes with unsuitable roofs, bills below the economic threshold and consumers who cannot qualify for financing, so consultants spend their time with homeowners who can realistically move to a signed agreement. Transfers can also be routed by product interest, separating battery-focused inquiries from panel-only interest.",
+  "faq": [
+    {
+      "q": "Do you screen for utility bill size and credit?",
+      "a": "Yes. Screening captures the homeowner's approximate monthly electricity bill and their expectation of credit qualification, with thresholds set to your financing partners' requirements."
+    },
+    {
+      "q": "Can programs be limited to specific utility territories?",
+      "a": "Targeting can be set by state, county, ZIP code and utility territory so that transfers come from areas where your net metering and incentive assumptions apply."
+    },
+    {
+      "q": "How do you handle homeowners interested mainly in battery storage?",
+      "a": "Product interest is captured during screening, and battery-focused homeowners can be routed to consultants who specialise in storage or excluded if you only install panels."
+    }
+  ],
+  "seo": {
+    "title": "Solar Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire viable residential solar and battery storage customers through performance marketing, inbound calls and rigorously pre-qualified live transfers for installers."
+  }
+}

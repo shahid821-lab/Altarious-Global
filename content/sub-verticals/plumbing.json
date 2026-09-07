@@ -1,0 +1,59 @@
+{
+  "slug": "plumbing",
+  "vertical": "home-services",
+  "name": "Plumbing",
+  "active": true,
+  "order": 2,
+  "shortDescription": "Reach homeowners with urgent plumbing emergencies and planned repairs, and connect them with licensed plumbers ready to dispatch.",
+  "description": [
+    "Plumbing demand splits into emergencies and projects. Emergencies include burst pipes, sewer backups, water heater failures, clogged main lines and leaks that are actively damaging the home; the homeowner needs a plumber within hours. Projects include water heater replacement, repiping, fixture installation, sewer line repair and water treatment systems, where the homeowner is comparing quotes over days or weeks. Both create strong search activity, and both are highly local.",
+    "Altarious Global reaches homeowners across these situations with geo-targeted campaigns and delivers them to plumbing contractors through Inbound Calls and Live Transfers. Programs distinguish emergency from non-emergency demand, capture the service type and confirm the property is within the contractor's dispatch area, so the contractor's dispatchers and CSRs receive calls that turn into booked jobs."
+  ],
+  "consumerProfile": "Homeowners and property managers experiencing a plumbing failure or planning a plumbing project, concentrated in owner-occupied single-family homes. The most valuable segments are emergency callers with active leaks or no hot water, homeowners in older housing stock needing repiping or sewer work, and households replacing water heaters or installing tankless and water treatment systems.",
+  "intentSignals": [
+    "Searching for emergency plumber or plumber near me",
+    "Active leak, burst pipe or sewer backup in the home",
+    "Water heater not producing hot water or leaking",
+    "Recurring drain clogs or slow drains throughout the house",
+    "Low water pressure or discoloured water indicating pipe issues",
+    "Planning a bathroom or kitchen renovation requiring plumbing work"
+  ],
+  "qualificationCriteria": [
+    "Property located within the contractor's service and dispatch area",
+    "Homeowner or authorised decision maker for the property",
+    "Nature of the plumbing issue identified and urgency level established",
+    "Residential or light commercial property type confirmed",
+    "Ready to schedule a service visit or estimate",
+    "Not a request for DIY advice or parts only"
+  ],
+  "keywords": [
+    "plumber near me",
+    "emergency plumber",
+    "water heater repair",
+    "water heater replacement cost",
+    "drain cleaning services",
+    "sewer line repair",
+    "leak detection plumber"
+  ],
+  "marketContext": "Residential plumbing has become a highly competitive local services category as consolidators, franchise networks and private-equity platforms roll up independent contractors and invest in marketing and call center operations. Aging housing stock across much of the country is driving repiping, sewer replacement and water heater demand, while the shift toward tankless and high-efficiency systems has raised average ticket values. Homeowners rely almost entirely on search when a plumbing problem arises, and the contractor that answers first and can dispatch quickly typically wins the job.",
+  "inboundCallsAngle": "Plumbing problems are the definition of a call-first category. A homeowner standing in a flooded basement wants to talk to a dispatcher immediately, not submit a web form. Inbound Call programs place local plumbing offers in front of homeowners searching for help and connect them directly to the contractor's phone line. Emergency calls convert at exceptionally high rates when answered promptly, and project inquiries such as water heater replacement allow the CSR to book an in-home estimate on the spot. Call volume can be scheduled to match technician availability, including after-hours emergency coverage.",
+  "liveTransfersAngle": "Live Transfers give plumbing contractors a filtered flow that respects dispatch capacity. Our team confirms the service address is within the coverage area, identifies the issue and whether it is an emergency, verifies homeownership and confirms the caller wants to book service before warm-transferring to the contractor's CSR. This screening removes renters who need to contact their landlord, callers seeking only advice and out-of-area requests, and it lets contractors route emergency calls to on-call dispatch while project inquiries go to estimators.",
+  "faq": [
+    {
+      "q": "Can we receive emergency calls after hours?",
+      "a": "Yes. Delivery schedules are configured around your dispatch availability, including evenings and weekends if you offer emergency service, and can be paused when technicians are fully booked."
+    },
+    {
+      "q": "Can calls be filtered by service type?",
+      "a": "Screening identifies the plumbing issue so that you can prioritise water heaters, sewer work, drain cleaning or general repairs according to your capabilities and margins."
+    },
+    {
+      "q": "How is the service area defined?",
+      "a": "Targeting can be set by ZIP code, county or radius from your shop, and adjusted at any time as your technician coverage changes."
+    }
+  ],
+  "seo": {
+    "title": "Plumbing Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire emergency and project plumbing customers through geo-targeted performance marketing, inbound calls and dispatch-ready live transfers for licensed plumbers."
+  }
+}

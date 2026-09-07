@@ -1,0 +1,59 @@
+{
+  "slug": "real-estate",
+  "vertical": "web-leads",
+  "name": "Real Estate",
+  "active": true,
+  "order": 8,
+  "shortDescription": "Deliver buyer, seller and investor leads and calls to real estate brokerages, agents and home-buying companies.",
+  "description": [
+    "Real estate acquisition connects agents, brokerages and property investors with consumers at the start of a transaction. Buyers begin by searching listings, requesting home valuations and seeking pre-approval guidance; sellers research what their home is worth, how to sell quickly and whether to list with an agent or accept a cash offer; and homeowners in difficult situations, such as inherited properties, relocation or financial distress, look for a fast, certain sale. Most of these journeys begin with an online form, whether a home value request, a listing inquiry or a cash offer request, which makes web leads the core acquisition format.",
+    "Altarious Global runs performance marketing that captures these consumers as real-time web leads with transaction type, property location, timeline and consent recorded on every lead, delivered to brokerages, teams, agents and home-buying companies through direct integration. Inbound Calls and Live Transfers complement the web lead flow by connecting motivated sellers and buyers who want to speak with someone immediately, which accelerates appointments and listing agreements."
+  ],
+  "consumerProfile": "Homeowners considering a sale, prospective buyers preparing to enter the market and property owners seeking a cash offer, spanning all price tiers with concentration in owner-occupied single-family homes. The most valuable segments are sellers planning to list within the next few months, motivated sellers facing relocation, inheritance or financial pressure, and pre-approved buyers actively touring homes.",
+  "intentSignals": [
+    "Searching for what is my home worth, sell my house fast or real estate agents near me",
+    "Relocating for work or a life change within a defined timeframe",
+    "Inherited a property or managing an estate sale",
+    "Facing foreclosure, divorce or financial hardship requiring a sale",
+    "Recently pre-approved for a mortgage and touring homes",
+    "Landlord or investor looking to sell a rental property or buy investment property"
+  ],
+  "qualificationCriteria": [
+    "Transaction type identified as buying, selling, or requesting a cash offer",
+    "Property or target area located within the agent's or company's market",
+    "For sellers, ownership of the property confirmed and approximate value stated",
+    "Timeline for transacting within the buyer's target window",
+    "Not currently under contract with another agent or company",
+    "Consent to be contacted captured and interest in a consultation or offer confirmed"
+  ],
+  "keywords": [
+    "what is my home worth",
+    "sell my house fast",
+    "real estate agents near me",
+    "cash offer for my house",
+    "homes for sale near me",
+    "how to sell a house",
+    "we buy houses"
+  ],
+  "marketContext": "The residential real estate market has been marked by constrained inventory, elevated rates and shifting commission structures that have made agents and brokerages more deliberate about acquisition spend. Seller leads have become especially valuable because listings are scarce, and cash-offer companies and investors compete alongside traditional agents for motivated homeowners. Consumers now start almost every transaction online, expecting instant valuations and rapid follow-up. Web leads provide the volume that teams need to build pipelines, while phone conversations are where appointments are set, and the combination of both consistently produces more listing agreements than either alone.",
+  "inboundCallsAngle": "A homeowner who has decided to sell, or who needs to sell quickly because of a life event, often wants to speak with a professional immediately rather than wait for a callback. Inbound Call programs place real estate offers in front of sellers and buyers researching their options and invite them to call the brokerage or home-buying company directly, complementing the web lead flow with prospects ready for a conversation. Callers arrive with a property and a timeline in mind, allowing agents or acquisition specialists to schedule a listing appointment or present a cash offer process on the first call.",
+  "liveTransfersAngle": "Live Transfers deliver real estate teams appointment-ready conversations. Our team confirms the transaction type, property location and ownership, approximate value, timeline, representation status and consent before warm-transferring to the agent or acquisition team. This pre-screen removes consumers outside the market area, those already under contract with an agent and long-horizon browsers, so agents spend their time with sellers and buyers who are ready to move. Transfers complement web leads by dramatically improving contact rates, which are a persistent weakness of form-based real estate leads, and by getting motivated sellers on the phone before competing agents reach them.",
+  "faq": [
+    {
+      "q": "Can real estate leads be separated into buyers, sellers and cash-offer requests?",
+      "a": "Yes. Transaction type is captured on every lead, and programs can be dedicated to seller leads, buyer leads or motivated seller cash-offer requests according to your business model."
+    },
+    {
+      "q": "How precisely can market areas be targeted?",
+      "a": "Targeting can be set by metro, county or ZIP code so that leads and transfers come from the markets where your agents or acquisition team operate."
+    },
+    {
+      "q": "How do calls complement real estate web leads?",
+      "a": "Web leads such as home valuation requests build pipeline at scale, while Inbound Calls and Live Transfers connect motivated sellers and buyers directly with your team, raising appointment and listing rates."
+    }
+  ],
+  "seo": {
+    "title": "Real Estate Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire seller, buyer and cash-offer prospects through real-time, consented web leads complemented by inbound calls and appointment-ready live transfers for brokerages and investors."
+  }
+}

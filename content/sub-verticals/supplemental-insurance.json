@@ -1,0 +1,59 @@
+{
+  "slug": "supplemental-insurance",
+  "vertical": "insurance",
+  "name": "Supplemental Insurance",
+  "active": true,
+  "order": 10,
+  "shortDescription": "Reach consumers seeking dental, vision, accident, critical illness and hospital indemnity coverage to fill gaps in their primary plan.",
+  "description": [
+    "Supplemental insurance fills the gaps left by high-deductible health plans, Medicare and limited employer benefits. Consumers seek it when they face a dental procedure without coverage, need glasses or contacts, worry about out-of-pocket costs from an accident or hospital stay, or want a cash benefit if they are diagnosed with cancer or another critical illness. Many buyers are self-employed or work for employers that do not offer ancillary benefits, and they are searching for affordable, standalone products they can enroll in immediately.",
+    "Altarious Global reaches these consumers across search and social channels and connects them with licensed agents, carriers and benefits platforms through Inbound Calls and Live Transfers. Because supplemental products are often sold alongside health, Medicare and life coverage, programs can be configured either as standalone acquisition or as a complement to an agency's core lines, giving agents a natural path to multi-policy households."
+  ],
+  "consumerProfile": "Adults aged 25 to 75 who have a primary health plan with meaningful out-of-pocket exposure, or who lack dental and vision coverage entirely. Key segments include self-employed workers and gig earners, families enrolled in high-deductible plans, Medicare beneficiaries who want dental and vision, and hourly workers whose employers offer limited benefits.",
+  "intentSignals": [
+    "Searching for dental insurance, vision insurance or accident insurance plans",
+    "Facing an upcoming dental procedure or needing new glasses without coverage",
+    "Enrolled in a high-deductible health plan and concerned about out-of-pocket costs",
+    "Recently enrolled in Medicare and looking to add dental and vision benefits",
+    "Family history or recent diagnosis prompting interest in critical illness coverage",
+    "Employer does not offer dental, vision or supplemental benefits"
+  ],
+  "qualificationCriteria": [
+    "Age 18 or older and a resident of a state where the agent is licensed",
+    "Type of supplemental coverage sought identified, such as dental, vision, accident, critical illness or hospital indemnity",
+    "Current primary health or Medicare coverage status confirmed",
+    "Not seeking supplemental products as a replacement for major medical coverage",
+    "Approximate budget and number of people to be covered discussed",
+    "Interested in enrolling or receiving a quote today"
+  ],
+  "keywords": [
+    "dental insurance plans",
+    "vision insurance",
+    "accident insurance",
+    "critical illness insurance",
+    "hospital indemnity insurance",
+    "supplemental health insurance",
+    "dental and vision insurance for seniors"
+  ],
+  "marketContext": "As deductibles and coinsurance have shifted more medical cost onto consumers, supplemental products have moved from an employer add-on to an individually purchased safeguard. Dental and vision remain the most frequently searched categories because the need is immediate and tangible, while accident, critical illness and hospital indemnity plans have grown as consumers look for cash benefits that cover deductibles and lost income. Carriers value these products for their steady premiums and strong persistency, and agencies increasingly use them to round out health and Medicare households and increase revenue per client.",
+  "inboundCallsAngle": "Supplemental insurance is often a spontaneous, need-driven purchase: a consumer learns that a crown is not covered or receives a hospital bill and wants protection before it happens again. Inbound Call programs capture that urgency by presenting dental, vision, accident and critical illness offers to consumers searching for them and inviting a direct call to a licensed agent. Callers already know which gap they want to fill, so agents can present the appropriate product and complete enrollment efficiently, then review whether other supplemental or core coverages make sense for the household.",
+  "liveTransfersAngle": "Live Transfers let agencies sort supplemental demand by product before an agent is engaged. Our team confirms the consumer's state, age, the specific coverage they are seeking, their existing primary coverage and the number of people to insure, then warm-transfers to the agent or team best suited to that product. This pre-screen prevents consumers who actually need major medical from being handled as supplemental prospects, and identifies Medicare beneficiaries seeking dental and vision who may be candidates for a broader plan review. Agents receive focused, ready-to-enroll conversations.",
+  "faq": [
+    {
+      "q": "Can programs focus on a single product such as dental only?",
+      "a": "Yes. Campaigns and screening can be built around dental, vision, accident, critical illness or hospital indemnity individually, or around a bundled ancillary offering."
+    },
+    {
+      "q": "Do these programs work alongside Medicare or health campaigns?",
+      "a": "Supplemental programs pair well with health and Medicare acquisition, and transfers can be routed to the same agents to support cross-selling and multi-policy households."
+    },
+    {
+      "q": "How do you handle consumers who actually need major medical coverage?",
+      "a": "Screening confirms primary coverage status, and consumers who need comprehensive health insurance are routed separately or excluded, depending on your product line."
+    }
+  ],
+  "seo": {
+    "title": "Supplemental Insurance Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire dental, vision, accident and critical illness insurance customers through performance marketing, inbound calls and product-screened live transfers."
+  }
+}

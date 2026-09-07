@@ -1,0 +1,59 @@
+{
+  "slug": "cleaning-services",
+  "vertical": "home-services",
+  "name": "Cleaning Services",
+  "active": true,
+  "order": 13,
+  "shortDescription": "Connect households seeking recurring house cleaning, deep cleaning and move-out cleaning with professional cleaning companies.",
+  "description": [
+    "Residential cleaning demand comes from busy households, life transitions and one-time events. Consumers search for recurring weekly or biweekly cleaning when work and family schedules leave no time, for deep cleaning before holidays or after renovations, for move-in and move-out cleaning around a lease or sale, and for specialised services such as carpet, upholstery and post-construction cleaning. Recurring customers are the foundation of a cleaning business, and the first booking is the gateway to a long-term relationship.",
+    "Altarious Global reaches households at these moments with geo-targeted campaigns and delivers them to residential cleaning companies and franchises through Inbound Calls and Live Transfers. Screening captures service type, home size, frequency preference and location so that companies can quote accurately, book the first appointment and convert one-time requests into recurring schedules."
+  ],
+  "consumerProfile": "Dual-income households, busy professionals, families with young children, older adults who need help maintaining their homes, and tenants or sellers preparing a property for handover. The most valuable segments are households seeking recurring service in larger homes, and move-out or post-renovation deep cleaning customers who can be converted to ongoing plans.",
+  "intentSignals": [
+    "Searching for house cleaning services near me or maid service",
+    "Moving out of a rental or preparing a home for sale or new occupants",
+    "Preparing for holidays, guests or a special event",
+    "Recently completed a renovation and needs post-construction cleaning",
+    "Life change such as a new baby, new job or health issue reducing time for chores",
+    "Dissatisfied with a current cleaner's reliability or quality"
+  ],
+  "qualificationCriteria": [
+    "Home located within the company's service area",
+    "Type of cleaning identified as recurring, deep, move-in or move-out, or specialty",
+    "Approximate home size in bedrooms, bathrooms or square footage",
+    "Preferred frequency and start date stated",
+    "Homeowner or tenant authorised to book service",
+    "Ready to receive a quote and schedule a first cleaning"
+  ],
+  "keywords": [
+    "house cleaning services near me",
+    "maid service near me",
+    "deep cleaning service",
+    "move out cleaning service",
+    "recurring house cleaning",
+    "carpet cleaning near me",
+    "how much does house cleaning cost"
+  ],
+  "marketContext": "Demand for residential cleaning has grown as households prioritise time and outsource domestic work, and as the number of older adults living independently increases. The market is fragmented between national franchises, regional companies and independent operators, with online booking platforms adding price competition. Recurring service is the economic engine of the industry because acquisition cost is recovered over many visits, so companies value customers who can be converted from a first booking into a schedule. Consumers place a premium on reliability, trustworthy staff and clear pricing, and they typically choose the company that responds first with a confident quote.",
+  "inboundCallsAngle": "Consumers booking a cleaning service want to confirm availability, pricing and what is included, and many prefer to do so in a quick call rather than through an online form. Inbound Call programs place local cleaning offers in front of households searching for service and connect them directly to the company's booking team. Callers arrive ready to schedule, allowing the company to quote based on home size, secure a first appointment and present recurring options while the consumer is engaged. The channel suits companies with well-trained office staff who can close bookings on the phone.",
+  "liveTransfersAngle": "Live Transfers deliver cleaning companies bookable conversations. Our team confirms the home's location, the type of cleaning needed, home size, preferred frequency and desired start date before warm-transferring the call to the company's scheduler. This pre-screen removes out-of-area callers, commercial janitorial inquiries when the company is residential-only and requests for services the company does not offer, and it flags recurring-service interest so that the scheduler can prioritise long-term customers. The company receives a concise handoff and can quote and book immediately.",
+  "faq": [
+    {
+      "q": "Can programs prioritise recurring cleaning customers?",
+      "a": "Yes. Messaging can emphasise weekly and biweekly service, and screening identifies frequency preference so recurring-minded households can be prioritised."
+    },
+    {
+      "q": "Do you screen out commercial cleaning requests?",
+      "a": "Property type is confirmed during screening, so commercial or janitorial inquiries can be excluded or routed separately if you serve both markets."
+    },
+    {
+      "q": "Can move-out cleaning calls be delivered with short notice timing?",
+      "a": "Move-in and move-out requests are often time-sensitive, and screening captures the required date so that you can accept only those you have capacity to fulfil."
+    }
+  ],
+  "seo": {
+    "title": "Cleaning Services Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire recurring and deep cleaning customers through geo-targeted performance marketing, inbound calls and bookable live transfers for residential cleaning companies."
+  }
+}

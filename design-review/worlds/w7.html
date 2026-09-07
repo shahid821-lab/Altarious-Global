@@ -1,0 +1,240 @@
+<section class="stage w7">
+  <div class="paper">
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="nav">
+      <span class="mark">ALTARIOUS<i>GLOBAL</i></span>
+      <nav class="links">
+        <span class="on">Performance</span><span>Verticals</span><span>Products</span><span>Report</span>
+      </nav>
+      <span class="yr">FY 2025</span>
+    </header>
+
+    <div class="rule thick"></div>
+
+    <div class="body">
+      <div class="col col-a">
+        <p class="kicker">Annual Report — Section&nbsp;04</p>
+        <h1 class="display">Acquire<br><em>high-intent</em><br>customers.</h1>
+        <p class="lede">Audited performance across inbound calls, live transfers
+          and web leads<sup class="fn" data-note="Figures reconciled monthly against buyer-side CRM acceptance.">1</sup>.</p>
+
+        <div class="filters" role="group" aria-label="Vertical filter">
+          <button class="f on" data-k="ins">Insurance</button>
+          <button class="f" data-k="hs">Home Services</button>
+          <button class="f" data-k="wl">Web Leads</button>
+        </div>
+      </div>
+
+      <div class="col col-b">
+        <p class="metric-label">Answer rate <sup class="fn" data-note="Calls answered by a licensed agent within 20 seconds.">2</sup></p>
+        <div class="odo" id="w7odo" aria-label="Answer rate"></div>
+        <div class="rule"></div>
+
+        <table class="tbl">
+          <tbody>
+            <tr><th>Sub-vertical</th><th class="n">Vol.</th><th class="n">Δ</th></tr>
+            <tr><td data-r="s0">Auto Insurance</td><td class="n" data-r="v0">—</td><td class="n d" data-r="d0">—</td></tr>
+            <tr><td data-r="s1">Medicare</td><td class="n" data-r="v1">—</td><td class="n d" data-r="d1">—</td></tr>
+            <tr><td data-r="s2">Personal Loans</td><td class="n" data-r="v2">—</td><td class="n d" data-r="d2">—</td></tr>
+          </tbody>
+        </table>
+
+        <div class="spark" aria-hidden="true"><svg viewBox="0 0 260 40" preserveAspectRatio="none"><path id="w7sp" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></div>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+    <footer class="foot">
+      <span>Inbound Calls</span><span>Live Transfers</span><span>Web Leads</span>
+      <span class="ft-note" id="w7note">Hover a marker for notes.</span>
+    </footer>
+  </div>
+
+<style>
+.w7{height:420px;position:relative;overflow:hidden;border-radius:10px;width:100%;
+  font-family:"IBM Plex Sans",system-ui,sans-serif;color:#16130f;
+  background:#f3efe6;contain:content;}
+.w7 *{box-sizing:border-box;margin:0;padding:0;}
+.w7 .paper{position:absolute;inset:0;padding:16px 20px 12px;display:flex;flex-direction:column;
+  background:
+    radial-gradient(120% 90% at 12% 0%,#fbf8f1 0%,#f2ede2 55%,#eae4d6 100%);}
+.w7 .grain{position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;
+  background-image:radial-gradient(#0000000d 1px,transparent 1px);background-size:3px 3px;}
+.w7 .nav{display:flex;align-items:baseline;justify-content:space-between;gap:8px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9px;letter-spacing:.13em;
+  text-transform:uppercase;position:relative;z-index:2;}
+.w7 .mark{font-weight:600;color:#16130f;}
+.w7 .mark i{font-style:normal;color:#9a6b2f;margin-left:.35em;}
+.w7 .links{display:flex;gap:12px;color:#6d6559;}
+.w7 .links .on{color:#16130f;border-bottom:1px solid #9a6b2f;padding-bottom:2px;}
+.w7 .yr{color:#6d6559;}
+.w7 .rule{height:1px;background:#16130f;opacity:.18;margin:10px 0;position:relative;z-index:2;}
+.w7 .rule.thick{height:2px;opacity:.85;margin:9px 0 12px;}
+.w7 .body{flex:1;display:grid;grid-template-columns:1.02fr 1.28fr;gap:22px;position:relative;z-index:2;min-height:0;}
+.w7 .col-a{border-right:1px solid #16130f2e;padding-right:20px;display:flex;flex-direction:column;}
+.w7 .kicker{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:#9a6b2f;margin-bottom:8px;}
+.w7 .display{font-family:"Instrument Serif","Times New Roman",serif;font-weight:400;
+  font-size:38px;line-height:.94;letter-spacing:-.015em;}
+.w7 .display em{font-style:italic;color:#9a6b2f;}
+.w7 .lede{margin-top:10px;font-size:10.5px;line-height:1.5;color:#4a443b;max-width:26ch;}
+.w7 sup.fn{font-family:"IBM Plex Mono",monospace;font-size:7.5px;color:#9a6b2f;cursor:help;
+  vertical-align:super;padding:0 1px;border-bottom:1px dotted #9a6b2f;}
+.w7 .filters{margin-top:auto;display:flex;flex-wrap:wrap;gap:5px;}
+.w7 .f{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.08em;
+  text-transform:uppercase;padding:5px 8px;border:1px solid #16130f33;background:transparent;
+  color:#4a443b;cursor:pointer;border-radius:2px;transition:background .2s,color .2s,border-color .2s;}
+.w7 .f:hover{border-color:#9a6b2f;color:#16130f;}
+.w7 .f.on{background:#16130f;color:#f3efe6;border-color:#16130f;}
+.w7 .metric-label{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:#6d6559;}
+.w7 .odo{display:flex;align-items:flex-start;height:78px;overflow:hidden;margin:-4px 0 2px -3px;}
+.w7 .dg{height:78px;overflow:hidden;width:.62em;font-family:"IBM Plex Mono",monospace;
+  font-size:70px;font-weight:600;line-height:78px;letter-spacing:-.05em;color:#16130f;
+  font-variant-numeric:tabular-nums;}
+.w7 .dg.sym{width:auto;color:#9a6b2f;font-size:34px;line-height:86px;}
+.w7 .dg .strip{display:block;will-change:transform;}
+.w7 .dg .strip span{display:block;height:78px;}
+.w7 .tbl{width:100%;border-collapse:collapse;font-size:10px;}
+.w7 .tbl th{text-align:left;font-family:"IBM Plex Mono",monospace;font-weight:400;font-size:8px;
+  letter-spacing:.14em;text-transform:uppercase;color:#6d6559;padding:0 0 5px;
+  border-bottom:1px solid #16130f2e;}
+.w7 .tbl td{padding:5px 0;border-bottom:1px solid #16130f14;color:#2b2620;}
+.w7 .tbl .n{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;}
+.w7 .tbl .d{color:#9a6b2f;width:52px;}
+.w7 .spark{margin-top:9px;color:#9a6b2f;height:40px;}
+.w7 .spark svg{width:100%;height:40px;display:block;}
+.w7 .foot{display:flex;gap:14px;align-items:baseline;font-family:"IBM Plex Mono",monospace;
+  font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#6d6559;position:relative;z-index:2;}
+.w7 .ft-note{margin-left:auto;text-transform:none;letter-spacing:.02em;font-size:8.5px;
+  color:#4a443b;max-width:56%;text-align:right;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+@media (max-width:520px){
+  .w7 .body{grid-template-columns:1fr;gap:10px;}
+  .w7 .col-a{border-right:0;padding-right:0;}
+  .w7 .display{font-size:26px;}
+  .w7 .lede,.w7 .spark{display:none;}
+  .w7 .odo,.w7 .dg,.w7 .dg .strip span{height:52px;}
+  .w7 .dg{font-size:46px;line-height:52px;}
+  .w7 .dg.sym{font-size:22px;line-height:58px;}
+}
+@media (prefers-reduced-motion:reduce){.w7 .dg .strip{transition:none!important;}}
+</style>
+
+<script>
+(function(){
+  var cs=document.currentScript;
+  var root=cs?cs.closest('.w7'):null;
+  if(!root){var all=document.querySelectorAll('.stage.w7');root=all[all.length-1];}
+  if(!root||root.dataset.init)return;root.dataset.init='1';
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var odo=root.querySelector('#w7odo'),note=root.querySelector('#w7note'),
+      sp=root.querySelector('#w7sp'),btns=[].slice.call(root.querySelectorAll('.f'));
+
+  var DATA={
+    ins:{rate:92,rows:[['Auto Insurance','41,208','+6.4%'],['Medicare','27,950','+11.2%'],['Final Expense','9,140','+2.1%']],
+         curve:[.42,.5,.46,.58,.63,.61,.72,.78,.75,.86,.9,.92]},
+    hs:{rate:87,rows:[['Pest Control','18,470','+4.8%'],['HVAC','22,315','+9.6%'],['Roofing','7,880','-1.4%']],
+         curve:[.3,.36,.44,.4,.52,.6,.57,.66,.7,.74,.81,.87]},
+    wl:{rate:74,rows:[['Personal Loans','63,402','+14.9%'],['Legal','12,660','+7.3%'],['Solar','8,215','+3.0%']],
+         curve:[.22,.3,.28,.38,.35,.45,.5,.48,.58,.64,.69,.74]}
+  };
+
+  /* ---- odometer ---- */
+  var cells=[];
+  function buildCell(sym){
+    var d=document.createElement('div');d.className='dg'+(sym?' sym':'');
+    var s=document.createElement('div');s.className='strip';
+    if(sym){var e=document.createElement('span');e.textContent=sym;s.appendChild(e);}
+    else{for(var i=0;i<=9;i++){var q=document.createElement('span');q.textContent=i;s.appendChild(q);}}
+    d.appendChild(s);odo.appendChild(d);return {el:d,strip:s,cur:0,tgt:0};
+  }
+  cells.push(buildCell());cells.push(buildCell());cells.push(buildCell('%'));
+
+  function unit(){return odo.querySelector('.dg .strip span').offsetHeight||78;}
+  var target=0,anim=0;
+  function setRate(v,instant){
+    target=v;
+    var s=String(v).padStart(2,'0');
+    cells[0].tgt=+s[0];cells[1].tgt=+s[1];
+    if(instant||reduce){cells[0].cur=cells[0].tgt;cells[1].cur=cells[1].tgt;paint();}
+  }
+  function paint(){
+    var u=unit();
+    for(var i=0;i<2;i++)cells[i].strip.style.transform='translateY('+(-cells[i].cur*u)+'px)';
+  }
+  function stepOdo(dt){
+    var moving=false;
+    for(var i=0;i<2;i++){
+      var c=cells[i],d=c.tgt-c.cur;
+      if(Math.abs(d)>0.004){c.cur+=d*Math.min(1,dt*0.0085);moving=true;}
+      else c.cur=c.tgt;
+    }
+    if(moving||stepOdo.dirty){paint();stepOdo.dirty=moving;}
+  }
+
+  /* ---- sparkline ---- */
+  var curCurve=DATA.ins.curve.slice(),tgtCurve=curCurve.slice();
+  function drawSpark(){
+    var W=260,H=40,n=curCurve.length,p='';
+    for(var i=0;i<n;i++){
+      var x=(i/(n-1))*(W-2)+1,y=H-2-curCurve[i]*(H-6);
+      p+=(i?'L':'M')+x.toFixed(2)+' '+y.toFixed(2);
+    }
+    sp.setAttribute('d',p);
+  }
+  function stepSpark(dt){
+    var moving=false,k=Math.min(1,dt*0.006);
+    for(var i=0;i<curCurve.length;i++){
+      var d=tgtCurve[i]-curCurve[i];
+      if(Math.abs(d)>0.0015){curCurve[i]+=d*k;moving=true;}else curCurve[i]=tgtCurve[i];
+    }
+    if(moving||stepSpark.dirty){drawSpark();stepSpark.dirty=moving;}
+  }
+
+  function apply(k){
+    var d=DATA[k];
+    setRate(d.rate);
+    tgtCurve=d.curve.slice();stepSpark.dirty=true;stepOdo.dirty=true;
+    for(var i=0;i<3;i++){
+      var s=root.querySelector('[data-r="s'+i+'"]'),v=root.querySelector('[data-r="v'+i+'"]'),
+          dd=root.querySelector('[data-r="d'+i+'"]');
+      s.textContent=d.rows[i][0];v.textContent=d.rows[i][1];dd.textContent=d.rows[i][2];
+      dd.style.color=d.rows[i][2][0]==='-'?'#8a3b28':'#9a6b2f';
+    }
+    if(reduce){stepSpark(999);stepOdo(999);}
+  }
+
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.classList.toggle('on',x===b);});
+      apply(b.dataset.k);
+    });
+  });
+
+  /* ---- footnotes ---- */
+  var defNote='Hover a marker for notes.';
+  root.querySelectorAll('sup.fn').forEach(function(f){
+    f.addEventListener('mouseenter',function(){note.textContent=f.textContent+'. '+f.dataset.note;});
+    f.addEventListener('mouseleave',function(){note.textContent=defNote;});
+  });
+
+  /* ---- loop ---- */
+  apply('ins');setRate(92,true);drawSpark();
+  var raf=0,last=0,cyc=0,auto=0;
+  function frame(t){
+    var dt=Math.min(48,t-(last||t));last=t;
+    stepOdo(dt);stepSpark(dt);
+    auto+=dt;
+    if(auto>4200){auto=0;cyc=(cyc+1)%3;btns[cyc].click();}
+    raf=requestAnimationFrame(frame);
+  }
+  function start(){if(!raf&&!reduce){last=0;raf=requestAnimationFrame(frame);}}
+  function stop(){if(raf){cancelAnimationFrame(raf);raf=0;}}
+  if(reduce){stepOdo(999);stepSpark(999);}
+  else if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){es[0].isIntersecting?start():stop();},{threshold:.05}).observe(root);
+  }else start();
+})();
+</script>
+</section>

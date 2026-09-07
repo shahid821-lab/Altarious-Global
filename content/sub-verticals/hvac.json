@@ -1,0 +1,59 @@
+{
+  "slug": "hvac",
+  "vertical": "home-services",
+  "name": "HVAC",
+  "active": true,
+  "order": 3,
+  "shortDescription": "Connect homeowners needing heating and cooling repair, replacement or installation with licensed HVAC contractors in their service area.",
+  "description": [
+    "HVAC demand is driven by weather and equipment age. Homeowners call when the air conditioner stops cooling during the first heat wave, when the furnace fails on a cold night, or when a technician tells them an aging system is no longer worth repairing. Replacement decisions are high-ticket and involve financing, efficiency ratings, rebates and brand comparisons, while repair and maintenance demand is immediate and highly seasonal. Heat pump adoption, refrigerant transitions and utility incentive programs have added new reasons for homeowners to shop.",
+    "Altarious Global runs geo-targeted, season-aware campaigns that reach homeowners at these moments and delivers them to HVAC contractors through Inbound Calls and Live Transfers. Programs distinguish repair from replacement intent, confirm homeownership and service area, and can be scaled up during peak seasons when contractors need to fill their schedules with high-value installations."
+  ],
+  "consumerProfile": "Homeowners in single-family homes with central heating and cooling systems, particularly those with equipment more than ten years old. The highest-value segments are homeowners facing a system replacement, households seeking financing for a new installation, and owners in extreme-climate regions where a failed system creates immediate urgency.",
+  "intentSignals": [
+    "Searching for AC repair, furnace repair or HVAC company near me",
+    "Air conditioner or furnace has stopped working or is not maintaining temperature",
+    "System is more than ten to fifteen years old and repairs are becoming frequent",
+    "Researching new AC unit cost, heat pump installation or HVAC financing",
+    "Utility bills rising sharply due to inefficient equipment",
+    "Preparing a home for sale or purchase and needing system replacement"
+  ],
+  "qualificationCriteria": [
+    "Property located within the contractor's service area",
+    "Homeowner or authorised decision maker for the property",
+    "Type of need identified as repair, replacement, installation or maintenance",
+    "Single-family or multi-unit property type confirmed",
+    "Interest in scheduling a service call or in-home estimate",
+    "For replacement inquiries, openness to financing or a stated budget range"
+  ],
+  "keywords": [
+    "AC repair near me",
+    "HVAC companies near me",
+    "furnace repair",
+    "new AC unit cost",
+    "heat pump installation",
+    "HVAC replacement financing",
+    "air conditioner not cooling"
+  ],
+  "marketContext": "The residential HVAC industry is one of the most actively consolidated home services categories, with national platforms competing against strong regional independents for replacement business that carries substantial ticket values. Federal and utility incentives for high-efficiency and heat pump systems have expanded the replacement conversation, while refrigerant regulation changes have prompted many homeowners to replace rather than repair older equipment. Demand peaks sharply with the first extreme weather of each season, and contractors that can capture and convert calls during those windows fill their installation calendars for weeks.",
+  "inboundCallsAngle": "When a home reaches ninety degrees inside, the homeowner is going to call, and they are going to book with the first contractor who answers professionally and offers a same-day visit. Inbound Call programs place local HVAC offers in front of homeowners searching for repair or replacement and route the call directly to the contractor's CSR team. Repair calls convert immediately into service visits, and replacement inquiries allow the CSR to schedule a comfort advisor for an in-home estimate. Volume can be increased during heat waves and cold snaps and moderated in shoulder seasons.",
+  "liveTransfersAngle": "Live Transfers help HVAC contractors focus their highest-value resources on the right opportunities. Our team confirms the service address, homeownership, system type and whether the need is repair or replacement before warm-transferring to the contractor, so replacement-minded homeowners can be routed to comfort advisors while repair calls go to dispatch. Screening also removes renters, out-of-area callers and those seeking only a second opinion on a quote, which protects CSR and technician time during the busiest weeks of the year.",
+  "faq": [
+    {
+      "q": "Can we focus on replacement and installation rather than repair?",
+      "a": "Yes. Campaign messaging and screening can emphasise system replacement, heat pump installation and financing, and repair-only calls can be limited or excluded."
+    },
+    {
+      "q": "How do you handle seasonal volume swings?",
+      "a": "Programs can be scaled up ahead of and during peak heating and cooling seasons and reduced in shoulder months, with daily caps adjusted to your technician capacity."
+    },
+    {
+      "q": "Do you screen for homeownership?",
+      "a": "Homeownership or decision-maker status is confirmed during screening so that contractors are not routed renters who cannot authorise repairs or replacements."
+    }
+  ],
+  "seo": {
+    "title": "HVAC Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire HVAC repair and replacement customers through season-aware performance marketing, inbound calls and pre-qualified live transfers for licensed contractors."
+  }
+}

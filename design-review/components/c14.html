@@ -1,0 +1,130 @@
+<div class="demo c14">
+  <div class="wrap">
+    <div class="hd">
+      <div>
+        <span class="eyebrow">Keep reading</span>
+        <h3>Related from the desk</h3>
+      </div>
+      <div class="nav">
+        <button type="button" class="ar prev" aria-label="Scroll to previous articles"><svg viewBox="0 0 24 24"><path d="M15 5 8 12l7 7"/></svg></button>
+        <button type="button" class="ar next" aria-label="Scroll to next articles"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button>
+      </div>
+    </div>
+
+    <ul class="rail" tabindex="0" role="list" aria-label="Related articles">
+      <li><a class="card" href="#">
+        <span class="tag">Insurance</span>
+        <h4>Why Medicare inbound peaks in the AEP window</h4>
+        <p>What the October–December surge does to cost per call, and how to staff for it.</p>
+        <span class="meta">6 min · Inbound Calls</span></a></li>
+      <li><a class="card" href="#">
+        <span class="tag live">Live Transfers</span>
+        <h4>Building a warm bridge agents don't hang up on</h4>
+        <p>Script structure, hold discipline and the three checks that lift acceptance.</p>
+        <span class="meta">8 min · Live Transfers</span></a></li>
+      <li><a class="card" href="#">
+        <span class="tag">Home Services</span>
+        <h4>HVAC demand curves: selling heat in July</h4>
+        <p>Seasonality maps for Pest Control, HVAC and Roofing across US regions.</p>
+        <span class="meta">5 min · Web Leads</span></a></li>
+      <li><a class="card" href="#">
+        <span class="tag">Compliance</span>
+        <h4>One-to-one consent after the TCPA update</h4>
+        <p>What changed for Final Expense and Debt Relief lead sellers, in plain English.</p>
+        <span class="meta">9 min · Web Leads</span></a></li>
+      <li><a class="card" href="#">
+        <span class="tag">Web Leads</span>
+        <h4>Speed-to-lead: the first 60 seconds</h4>
+        <p>Personal Loans data on contact rate decay minute by minute after submit.</p>
+        <span class="meta">4 min · Web Leads</span></a></li>
+      <li><a class="card" href="#">
+        <span class="tag live">Legal</span>
+        <h4>Qualifying mass-tort calls without the churn</h4>
+        <p>Intake criteria that keep billable transfers high and refunds near zero.</p>
+        <span class="meta">7 min · Inbound Calls</span></a></li>
+    </ul>
+
+    <div class="prog"><span class="track"><i></i></span><span class="cnt"><b>1</b> / 6</span></div>
+  </div>
+
+  <style>
+    .c14{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--fg-2,#3D4757)}
+    .c14 *{box-sizing:border-box}
+    .c14 .wrap{display:flex;flex-direction:column;gap:10px}
+    .c14 .hd{display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+    .c14 .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c14 h3{margin:2px 0 0;font-family:Archivo,system-ui,sans-serif;font-size:16px;color:var(--fg,#141A22)}
+    .c14 .nav{display:flex;gap:6px;flex:0 0 auto}
+    .c14 .ar{width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#E2E6EC);background:var(--panel,#fff);color:var(--fg-2,#3D4757);cursor:pointer;display:grid;place-items:center;transition:.18s}
+    .c14 .ar:hover:not([disabled]){background:var(--fg,#141A22);color:var(--panel,#fff);border-color:var(--fg,#141A22)}
+    .c14 .ar:focus-visible{outline:2px solid var(--signal,#E8A33D);outline-offset:2px}
+    .c14 .ar[disabled]{opacity:.32;cursor:default}
+    .c14 .ar svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .c14 .rail{list-style:none;margin:0;padding:2px;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab}
+    .c14 .rail::-webkit-scrollbar{display:none}
+    .c14 .rail.drag{cursor:grabbing;scroll-snap-type:none}
+    .c14 .rail.drag a{pointer-events:none}
+    .c14 .rail:focus-visible{outline:2px solid var(--signal,#E8A33D);outline-offset:2px;border-radius:12px}
+    .c14 .rail li{flex:0 0 216px;scroll-snap-align:start}
+    .c14 .card{display:flex;flex-direction:column;gap:5px;height:100%;padding:12px;border:1px solid var(--line,#E2E6EC);border-radius:12px;background:var(--panel,#fff);text-decoration:none;transition:.2s}
+    .c14 .card:hover{border-color:var(--fg-3,#7A8798);transform:translateY(-2px)}
+    .c14 .tag{align-self:flex-start;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:99px;background:var(--panel-2,#F3F5F8);color:var(--fg-3,#7A8798)}
+    .c14 .tag.live{color:var(--live,#1FA9A0)}
+    .c14 .card h4{margin:2px 0 0;font-family:Archivo,system-ui,sans-serif;font-size:13.5px;line-height:1.32;color:var(--fg,#141A22)}
+    .c14 .card p{margin:0;font-size:11.5px;line-height:1.5;color:var(--fg-2,#3D4757);flex:1}
+    .c14 .meta{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:var(--fg-3,#7A8798);padding-top:4px;border-top:1px solid var(--line,#E2E6EC)}
+    .c14 .prog{display:flex;align-items:center;gap:10px}
+    .c14 .track{flex:1;height:2px;background:var(--panel-2,#F3F5F8);border-radius:99px;overflow:hidden}
+    .c14 .track i{display:block;height:100%;width:20%;background:var(--signal,#E8A33D);border-radius:99px;transition:.2s}
+    .c14 .cnt{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--fg-3,#7A8798)}
+    .c14 .cnt b{color:var(--fg,#141A22);font-weight:500}
+    @media (prefers-reduced-motion:reduce){.c14 *{transition:none!important}}
+  </style>
+
+  <script>
+  (function(){
+    var r=document.currentScript.closest('.c14');
+    var rail=r.querySelector('.rail'),items=[].slice.call(rail.children);
+    var prev=r.querySelector('.prev'),next=r.querySelector('.next');
+    var fill=r.querySelector('.track i'),cnt=r.querySelector('.cnt b');
+    var rm=matchMedia('(prefers-reduced-motion: reduce)');
+    function step(){return items[0].offsetWidth+10;}
+    function go(d){rail.scrollBy({left:d*step()*Math.max(1,Math.floor(rail.clientWidth/step())),behavior:rm.matches?'auto':'smooth'});}
+    prev.addEventListener('click',function(){go(-1);});
+    next.addEventListener('click',function(){go(1);});
+    function sync(){
+      var max=rail.scrollWidth-rail.clientWidth;
+      var p=max>0?rail.scrollLeft/max:0;
+      var vis=Math.max(1,Math.round(rail.clientWidth/step()));
+      var w=Math.min(100,Math.max(14,(vis/items.length)*100));
+      fill.style.width=w+'%';
+      fill.style.marginLeft=(p*(100-w))+'%';
+      prev.disabled=rail.scrollLeft<4;
+      next.disabled=rail.scrollLeft>=max-4;
+      cnt.textContent=Math.min(items.length,Math.round(rail.scrollLeft/step())+1);
+    }
+    rail.addEventListener('scroll',function(){requestAnimationFrame(sync);},{passive:true});
+    addEventListener('resize',sync);
+    rail.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'){e.preventDefault();go(1);}
+      else if(e.key==='ArrowLeft'){e.preventDefault();go(-1);}
+      else if(e.key==='Home'){e.preventDefault();rail.scrollTo({left:0,behavior:'smooth'});}
+      else if(e.key==='End'){e.preventDefault();rail.scrollTo({left:rail.scrollWidth,behavior:'smooth'});}
+    });
+    var down=false,sx=0,sl=0,moved=0;
+    rail.addEventListener('pointerdown',function(e){
+      if(e.pointerType==='touch')return;
+      down=true;moved=0;sx=e.clientX;sl=rail.scrollLeft;rail.setPointerCapture(e.pointerId);
+    });
+    rail.addEventListener('pointermove',function(e){
+      if(!down)return;var dx=e.clientX-sx;moved=Math.max(moved,Math.abs(dx));
+      if(moved>4)rail.classList.add('drag');
+      rail.scrollLeft=sl-dx;
+    });
+    function up(e){if(!down)return;down=false;rail.classList.remove('drag');try{rail.releasePointerCapture(e.pointerId);}catch(x){}}
+    rail.addEventListener('pointerup',up);rail.addEventListener('pointercancel',up);
+    rail.addEventListener('click',function(e){if(moved>4){e.preventDefault();e.stopPropagation();}moved=0;},true);
+    sync();
+  })();
+  </script>
+</div>

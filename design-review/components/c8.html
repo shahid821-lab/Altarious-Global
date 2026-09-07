@@ -1,0 +1,131 @@
+<div class="demo c8">
+  <div class="c8-head">
+    <div>
+      <span class="c8-eyebrow">Knowledge</span>
+      <h3 class="c8-title">Frequently asked</h3>
+    </div>
+    <div class="c8-search">
+      <svg class="c8-ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.4 10.4 14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <label class="c8-sr" for="c8-q">Search questions</label>
+      <input id="c8-q" class="c8-input" type="search" placeholder="Search: transfers, TCPA, billing…" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="c8-list" role="list"></div>
+  <p class="c8-empty" hidden>No questions match <b></b>. Try <button type="button" class="c8-sugg">live transfer</button> or <button type="button" class="c8-sugg">billing</button>.</p>
+  <p class="c8-count" aria-live="polite"></p>
+
+  <style>
+    .c8 { font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg-2, #3D4757); }
+    .c8 *, .c8 *::before, .c8 *::after { box-sizing: border-box; }
+    .c8 .c8-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .c8 .c8-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+    .c8 .c8-eyebrow { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c8 .c8-title { margin: 3px 0 0; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 16px; font-weight: 650; letter-spacing: -.01em; color: var(--fg, #10151C); }
+    .c8 .c8-search { position: relative; flex: 1 1 200px; max-width: 260px; }
+    .c8 .c8-ico { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; color: var(--fg-3, #7A8494); pointer-events: none; }
+    .c8 .c8-input { width: 100%; font: inherit; font-size: 12.5px; padding: 7px 10px 7px 28px; border: 1px solid var(--line, #DDE2E8); border-radius: 6px; background: var(--panel-2, #F3F5F8); color: var(--fg, #10151C); }
+    .c8 .c8-input::placeholder { color: var(--fg-3, #7A8494); }
+    .c8 .c8-input:focus { outline: 2px solid var(--signal, #E0A02A); outline-offset: 1px; border-color: transparent; }
+    .c8 .c8-list { max-height: 216px; overflow-y: auto; border-top: 1px solid var(--line, #DDE2E8); }
+    .c8 .c8-list::-webkit-scrollbar { width: 6px; }
+    .c8 .c8-list::-webkit-scrollbar-thumb { background: var(--line, #DDE2E8); border-radius: 6px; }
+    .c8 .c8-item { border-bottom: 1px solid var(--line, #DDE2E8); }
+    .c8 .c8-q { display: flex; align-items: flex-start; gap: 10px; width: 100%; text-align: left; font: inherit; font-size: 12.5px; line-height: 1.45; color: var(--fg-2, #3D4757); background: transparent; border: 0; padding: 10px 4px; cursor: pointer; }
+    .c8 .c8-q:hover { color: var(--fg, #10151C); }
+    .c8 .c8-q:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: -2px; border-radius: 4px; }
+    .c8 .c8-q[aria-expanded="true"] { color: var(--fg, #10151C); font-weight: 600; }
+    .c8 .c8-chev { flex: 0 0 auto; width: 10px; height: 10px; margin-top: 4px; border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor; transform: rotate(45deg); transition: transform .22s ease; opacity: .55; }
+    .c8 .c8-q[aria-expanded="true"] .c8-chev { transform: rotate(-135deg); opacity: 1; color: var(--signal, #E0A02A); }
+    .c8 .c8-a { padding: 0 4px 11px 24px; font-size: 12px; line-height: 1.62; color: var(--fg-3, #7A8494); margin: 0; }
+    .c8 .c8-a[hidden] { display: none; }
+    .c8 mark { background: color-mix(in srgb, var(--signal, #E0A02A) 40%, transparent); color: var(--fg, #10151C); border-radius: 2px; padding: 0 1px; }
+    .c8 .c8-empty { margin: 16px 0; padding: 14px; text-align: center; font-size: 12.5px; color: var(--fg-3, #7A8494); border: 1px dashed var(--line, #DDE2E8); border-radius: 6px; }
+    .c8 .c8-empty b { color: var(--fg, #10151C); }
+    .c8 .c8-sugg { font: inherit; font-size: 12px; border: 0; background: transparent; color: var(--live, #128C7E); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; padding: 1px 2px; border-radius: 3px; }
+    .c8 .c8-sugg:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: 1px; }
+    .c8 .c8-count { margin: 8px 0 0; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .08em; color: var(--fg-3, #7A8494); }
+    @media (prefers-reduced-motion: reduce) { .c8 .c8-chev { transition: none; } }
+  </style>
+
+  <script>
+    (function () {
+      var root = document.currentScript.closest('.c8');
+      var list = root.querySelector('.c8-list');
+      var input = root.querySelector('#c8-q');
+      var empty = root.querySelector('.c8-empty');
+      var emptyTerm = empty.querySelector('b');
+      var count = root.querySelector('.c8-count');
+
+      var faqs = [
+        ['What counts as a billable inbound call?', 'A call is billable once it passes your qualification screen and stays connected past the agreed buffer, typically 60 to 90 seconds. Short and duplicate calls are not billed.'],
+        ['How is a live transfer different from an inbound call?', 'On a live transfer an agent has already screened the consumer against your criteria and stays on the line to introduce them. Inbound calls route straight to your queue after an IVR screen.'],
+        ['Which verticals do you run?', 'Insurance (Auto Insurance, Medicare, Final Expense), Home Services (Pest Control, HVAC, Roofing) and Web Leads across Personal Loans, Debt Relief and Legal.'],
+        ['Can I cap daily volume?', 'Yes. Daily and hourly caps are set per campaign and per state, and you can pause instantly from your account without notice.'],
+        ['How do you handle TCPA and consent?', 'Consent is captured at source with the disclosure language agreed during onboarding, and the record is retained and available on request for every consumer.'],
+        ['What is your return policy?', 'Calls that fail the agreed criteria — wrong state, out of age band, no intent — are credited when raised within 72 hours with the call recording reference.'],
+        ['How fast can we go live?', 'Five business days from the scoping call: criteria and compliance on day two, routing on day three, test calls day four, first live call on day five.'],
+        ['Do you deliver into our CRM or dialler?', 'Yes. Web Leads post in real time to your endpoint, and call records deliver post-call with full disposition and duration data.'],
+        ['How is billing handled?', 'Weekly invoicing against a shared reconciliation report. Per call, per lead and per transfer rates are fixed for the term unless volume changes.'],
+        ['Can we buy in only some states?', 'Yes. Targeting is set state by state so you never pay for consumers outside the states you are licensed in.']
+      ];
+
+      function esc(s) { return s.replace(/[&<>]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c]; }); }
+      function mark(text, term) {
+        var safe = esc(text);
+        if (!term) return safe;
+        var re = new RegExp('(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
+        return safe.replace(re, '<mark>$1</mark>');
+      }
+
+      var items = faqs.map(function (f, i) {
+        var wrap = document.createElement('div');
+        wrap.className = 'c8-item';
+        wrap.setAttribute('role', 'listitem');
+        wrap.innerHTML =
+          '<button type="button" class="c8-q" aria-expanded="false" aria-controls="c8-a' + i + '">' +
+          '<span class="c8-chev" aria-hidden="true"></span><span class="c8-qt"></span></button>' +
+          '<p class="c8-a" id="c8-a' + i + '" hidden></p>';
+        list.appendChild(wrap);
+        var btn = wrap.querySelector('.c8-q');
+        btn.addEventListener('click', function () {
+          var open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+          wrap.querySelector('.c8-a').hidden = open;
+        });
+        return { el: wrap, q: f[0], a: f[1], qt: wrap.querySelector('.c8-qt'), at: wrap.querySelector('.c8-a'), btn: btn };
+      });
+
+      function render() {
+        var term = input.value.trim();
+        var lo = term.toLowerCase();
+        var shown = 0;
+        items.forEach(function (it) {
+          var hit = !lo || it.q.toLowerCase().indexOf(lo) > -1 || it.a.toLowerCase().indexOf(lo) > -1;
+          it.el.hidden = !hit;
+          if (hit) {
+            shown++;
+            it.qt.innerHTML = mark(it.q, term);
+            it.at.innerHTML = mark(it.a, term);
+            // Auto-open when the match is only in the answer.
+            if (lo && it.q.toLowerCase().indexOf(lo) === -1) {
+              it.btn.setAttribute('aria-expanded', 'true');
+              it.at.hidden = false;
+            }
+          }
+        });
+        empty.hidden = shown > 0;
+        emptyTerm.textContent = '"' + term + '"';
+        list.hidden = shown === 0;
+        count.textContent = shown + ' of ' + items.length + ' questions';
+      }
+
+      input.addEventListener('input', render);
+      root.querySelectorAll('.c8-sugg').forEach(function (b) {
+        b.addEventListener('click', function () { input.value = b.textContent; render(); input.focus(); });
+      });
+
+      render();
+    })();
+  </script>
+</div>

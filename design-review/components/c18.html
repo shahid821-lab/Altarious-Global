@@ -1,0 +1,114 @@
+<div class="demo c18">
+  <div class="wrap">
+    <div class="hd">
+      <div>
+        <span class="eyebrow">Case study · Medicare AEP</span>
+        <h3>Live transfer programme, 14 weeks</h3>
+      </div>
+      <button type="button" class="replay">
+        <span class="ri" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20 4v4h-4"/></svg></span>
+        <span>Replay</span>
+      </button>
+    </div>
+
+    <ul class="ribbon" role="list">
+      <li class="m" data-to="82" data-pct="82" data-suf="%" data-pre="">
+        <span class="lab">Transfer acceptance</span>
+        <b class="num">0</b>
+        <span class="bar"><i></i></span>
+        <span class="delta up">+21 pts vs. prior vendor</span>
+      </li>
+      <li class="m" data-to="58" data-pct="64" data-suf="" data-pre="$">
+        <span class="lab">Cost per accepted transfer</span>
+        <b class="num">0</b>
+        <span class="bar"><i></i></span>
+        <span class="delta down">−$17 blended</span>
+      </li>
+      <li class="m" data-to="9420" data-pct="94" data-suf="" data-pre="">
+        <span class="lab">Billable transfers</span>
+        <b class="num">0</b>
+        <span class="bar"><i></i></span>
+        <span class="delta up">Across 31 states</span>
+      </li>
+      <li class="m" data-to="1.9" data-pct="12" data-suf="%" data-pre="" data-dec="1">
+        <span class="lab">Billback rate</span>
+        <b class="num">0</b>
+        <span class="bar"><i></i></span>
+        <span class="delta down">Category median 6.4%</span>
+      </li>
+    </ul>
+
+    <p class="ft">Verified by buyer-side ASR audit · Oct 15 – Dec 7</p>
+  </div>
+
+  <style>
+    .c18{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--fg-2,#3D4757)}
+    .c18 *{box-sizing:border-box}
+    .c18 .wrap{border:1px solid var(--line,#E2E6EC);border-radius:14px;background:var(--panel,#fff);padding:15px;display:flex;flex-direction:column;gap:12px;min-height:250px}
+    .c18 .hd{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .c18 .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c18 h3{margin:2px 0 0;font-family:Archivo,system-ui,sans-serif;font-size:16px;color:var(--fg,#141A22)}
+    .c18 .replay{display:inline-flex;align-items:center;gap:6px;font:inherit;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:99px;border:1px solid var(--line,#E2E6EC);background:transparent;color:var(--fg-3,#7A8798);cursor:pointer;transition:.18s}
+    .c18 .replay:hover{color:var(--fg,#141A22);border-color:var(--fg-3,#7A8798)}
+    .c18 .replay:focus-visible{outline:2px solid var(--signal,#E8A33D);outline-offset:2px}
+    .c18 .replay svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s}
+    .c18 .replay.spin svg{transform:rotate(-360deg)}
+    .c18 .ribbon{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    @media (max-width:520px){.c18 .ribbon{grid-template-columns:repeat(2,1fr)}}
+    .c18 .m{display:flex;flex-direction:column;gap:4px;padding-left:10px;border-left:1px solid var(--line,#E2E6EC)}
+    .c18 .lab{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--fg-3,#7A8798);line-height:1.35;min-height:24px}
+    .c18 .num{font-family:Archivo,system-ui,sans-serif;font-size:clamp(20px,5vw,26px);font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--fg,#141A22);font-variant-numeric:tabular-nums}
+    .c18 .bar{display:block;height:3px;border-radius:99px;background:var(--panel-2,#F3F5F8);overflow:hidden;margin-top:3px}
+    .c18 .bar i{display:block;height:100%;width:0;border-radius:99px;background:var(--signal,#E8A33D);transition:width 1.15s cubic-bezier(.2,.75,.25,1)}
+    .c18 .m:nth-child(2) .bar i,.c18 .m:nth-child(4) .bar i{background:var(--live,#1FA9A0)}
+    .c18 .delta{font-size:10px;color:var(--fg-3,#7A8798);line-height:1.4}
+    .c18 .delta.up::before{content:"▲ ";color:var(--live,#1FA9A0);font-size:8px}
+    .c18 .delta.down::before{content:"▼ ";color:var(--signal,#E8A33D);font-size:8px}
+    .c18 .ft{margin:auto 0 0;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--fg-3,#7A8798);border-top:1px solid var(--line,#E2E6EC);padding-top:9px}
+    @media (prefers-reduced-motion:reduce){.c18 *{transition:none!important}}
+  </style>
+
+  <script>
+  (function(){
+    var r=document.currentScript.closest('.c18');
+    var ms=[].slice.call(r.querySelectorAll('.m')),btn=r.querySelector('.replay');
+    var rm=matchMedia('(prefers-reduced-motion: reduce)'),raf=[];
+    function fmt(v,d,pre,suf){
+      var s=d?v.toFixed(d):Math.round(v).toLocaleString('en-US');
+      return pre+s+suf;
+    }
+    function run(){
+      raf.forEach(cancelAnimationFrame);raf=[];
+      ms.forEach(function(m,i){
+        var to=parseFloat(m.dataset.to),dec=parseInt(m.dataset.dec||'0',10);
+        var pre=m.dataset.pre||'',suf=m.dataset.suf||'';
+        var num=m.querySelector('.num'),bar=m.querySelector('.bar i');
+        bar.style.width='0%';
+        if(rm.matches){num.textContent=fmt(to,dec,pre,suf);bar.style.width=m.dataset.pct+'%';return;}
+        num.textContent=fmt(0,dec,pre,suf);
+        var delay=i*110,dur=1100,t0=null;
+        setTimeout(function(){bar.style.width=m.dataset.pct+'%';},delay+30);
+        function tick(t){
+          if(t0===null)t0=t;
+          var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);
+          num.textContent=fmt(to*e,dec,pre,suf);
+          if(p<1)raf[i]=requestAnimationFrame(tick);
+        }
+        setTimeout(function(){raf[i]=requestAnimationFrame(tick);},delay);
+      });
+    }
+    btn.addEventListener('click',function(){
+      btn.classList.add('spin');setTimeout(function(){btn.classList.remove('spin');},520);
+      run();
+    });
+    var started=false;
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){if(e.isIntersecting&&!started){started=true;run();io.disconnect();}});
+      },{threshold:.35});
+      io.observe(r);
+      setTimeout(function(){if(!started){started=true;run();}},1800);
+    } else run();
+  })();
+  </script>
+</div>

@@ -1,0 +1,59 @@
+{
+  "slug": "debt-relief",
+  "vertical": "web-leads",
+  "name": "Debt Relief",
+  "active": true,
+  "order": 3,
+  "shortDescription": "Deliver consented web leads and calls from consumers with significant unsecured debt seeking settlement, consolidation or management programs.",
+  "description": [
+    "Debt relief demand comes from consumers who have reached a point where minimum payments no longer make progress on their balances. They are often carrying substantial credit card, medical or personal loan debt, may have missed payments or be receiving collection calls, and are searching for a structured way out: debt settlement, debt management plans, consolidation or, in some cases, bankruptcy alternatives. These consumers typically start with an online inquiry to understand their options before they are ready for a full consultation.",
+    "Altarious Global captures these consumers as real-time web leads with debt amount, debt type, payment status and consent recorded on each lead, delivered directly to debt relief providers, credit counselling agencies and law firms. Inbound Calls and Live Transfers complement the web lead flow by reaching consumers who want to speak with a specialist immediately, which is common in a category where financial stress creates urgency and a desire for reassurance."
+  ],
+  "consumerProfile": "Adults aged 30 to 65 with unsecured debt well above what they can repay on current terms, often across several credit cards and medical accounts. The most valuable segments are consumers with debt above the provider's minimum who are behind or about to fall behind on payments, have steady income to fund a program, and are motivated to avoid bankruptcy.",
+  "intentSignals": [
+    "Searching for debt relief programs, debt settlement or how to get out of credit card debt",
+    "Carrying multiple credit card balances with only minimum payments being made",
+    "Missed or late payments and receiving collection calls or letters",
+    "Recent income disruption, medical event or divorce affecting finances",
+    "Considering bankruptcy and looking for alternatives",
+    "Denied a consolidation loan due to credit or debt-to-income ratio"
+  ],
+  "qualificationCriteria": [
+    "Age 18 or older and a resident of a state where the provider is licensed to operate",
+    "Total unsecured debt at or above the provider's minimum threshold",
+    "Debt types confirmed as eligible, such as credit cards, medical bills or personal loans",
+    "Current payment status and hardship described",
+    "Source of income sufficient to fund a program",
+    "Consent to be contacted captured and interest in a consultation confirmed"
+  ],
+  "keywords": [
+    "debt relief programs",
+    "debt settlement companies",
+    "credit card debt relief",
+    "debt consolidation programs",
+    "how to get out of debt",
+    "debt management plan",
+    "national debt relief reviews"
+  ],
+  "marketContext": "Consumer debt levels and delinquency rates have risen, and many households that leaned on credit through periods of inflation are now searching for structured relief. The debt relief industry operates under state licensing requirements and federal rules governing advance fees and marketing claims, and reputable providers place significant weight on consent documentation and accurate representation of program outcomes. Web leads are the primary acquisition channel because consumers research discreetly before speaking to anyone, while calls are essential for conversion because enrolment requires a detailed financial conversation. Providers that combine both channels acquire more efficiently than those relying on forms alone.",
+  "inboundCallsAngle": "Consumers in financial distress often want to talk to someone right away once they decide to seek help. Inbound Call programs place debt relief messaging in front of consumers researching their options and invite them to call a specialist directly, complementing the web lead flow with prospects who are ready for a conversation now. Callers arrive with a sense of urgency and are usually prepared to discuss their balances and situation, which allows the provider's specialists to conduct a full consultation and, where appropriate, begin enrolment on the first call. Creative and scripts are written to avoid misleading claims about outcomes.",
+  "liveTransfersAngle": "Live Transfers ensure that debt relief specialists speak only with consumers who fit the program. Our team confirms the consumer's state, total unsecured debt, debt types, payment status, income and consent before warm-transferring to the provider's enrolment team. This pre-screen removes consumers below the debt minimum, those with only secured or ineligible debt and residents of states where the provider cannot operate, so specialists focus on enrolable consultations. Transfers complement web leads by converting hesitant online researchers into live conversations and by improving contact rates in a category where consumers are often difficult to reach after submitting a form.",
+  "faq": [
+    {
+      "q": "Can debt relief leads be filtered by debt amount and state?",
+      "a": "Yes. Total unsecured debt and state of residence are captured on every lead and applied as filters so that you receive only consumers who meet your minimum and are in states where you are licensed."
+    },
+    {
+      "q": "How do you handle compliance in debt relief marketing?",
+      "a": "Creative avoids guarantees or misleading claims about debt reduction, consent is captured and documented on each lead and call, and scripts leave program specifics to your enrolment specialists."
+    },
+    {
+      "q": "How do calls complement debt relief web leads?",
+      "a": "Web leads capture consumers researching discreetly, while Inbound Calls and Live Transfers deliver consumers ready to talk now, improving contact rates and enrolment efficiency across the program."
+    }
+  ],
+  "seo": {
+    "title": "Debt Relief Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire debt relief clients through consented, debt-qualified web leads complemented by inbound calls and pre-screened live transfers for settlement and counselling providers."
+  }
+}

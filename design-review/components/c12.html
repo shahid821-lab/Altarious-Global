@@ -1,0 +1,125 @@
+<div class="demo c12">
+  <div class="wrap">
+    <div class="left">
+      <span class="eyebrow">Talk to a buyer desk</span>
+      <a class="tel" href="tel:+18885550142">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 12l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3.5 5.2 2 2 0 0 1 5.5 3z"/></svg></span>
+        <span class="num">+1 (888) 555-0142</span>
+      </a>
+      <p class="note">Inbound calls &amp; live transfers · US &amp; CA coverage</p>
+      <div class="row">
+        <span class="pill" data-pill><i></i><b>—</b></span>
+        <button class="cb" type="button">Request a callback</button>
+      </div>
+      <p class="hint" aria-live="polite"></p>
+    </div>
+
+    <div class="right">
+      <div class="clocks">
+        <div class="clk">
+          <span class="k">Your time</span>
+          <b class="t" data-you>--:--</b>
+          <span class="z" data-youz></span>
+        </div>
+        <div class="clk">
+          <span class="k">Our desk</span>
+          <b class="t" data-us>--:--</b>
+          <span class="z">America/New_York</span>
+        </div>
+      </div>
+      <table class="hours">
+        <caption class="sr">Operating hours, Eastern Time</caption>
+        <tbody>
+          <tr data-d="1 2 3 4 5"><th scope="row">Mon–Fri</th><td>08:00 – 20:00</td></tr>
+          <tr data-d="6"><th scope="row">Saturday</th><td>09:00 – 15:00</td></tr>
+          <tr data-d="0"><th scope="row">Sunday</th><td class="off">Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <style>
+    .c12{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--fg-2,#3D4757)}
+    .c12 *{box-sizing:border-box}
+    .c12 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    .c12 .wrap{display:flex;gap:14px;flex-wrap:wrap;border:1px solid var(--line,#E2E6EC);border-radius:14px;background:var(--panel,#fff);padding:16px;min-height:236px}
+    .c12 .left{flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:9px}
+    .c12 .right{flex:1 1 190px;min-width:0;display:flex;flex-direction:column;gap:10px}
+    .c12 .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c12 .tel{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--fg,#141A22);font-family:Archivo,system-ui,sans-serif;font-size:clamp(17px,4.4vw,22px);font-weight:700;letter-spacing:-.01em;border-radius:8px}
+    .c12 .tel:hover .num{color:var(--live,#1FA9A0)}
+    .c12 .tel:focus-visible,.c12 .cb:focus-visible,.c12 .pill:focus-visible{outline:2px solid var(--signal,#E8A33D);outline-offset:3px}
+    .c12 .ico{flex:0 0 auto;width:32px;height:32px;border-radius:9px;background:var(--panel-2,#F3F5F8);border:1px solid var(--line,#E2E6EC);display:grid;place-items:center}
+    .c12 .ico svg{width:16px;height:16px;fill:none;stroke:var(--live,#1FA9A0);stroke-width:1.7;stroke-linejoin:round}
+    .c12 .note{margin:0;font-size:11.5px;color:var(--fg-3,#7A8798);line-height:1.5}
+    .c12 .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:2px}
+    .c12 .pill{display:inline-flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:99px;border:1px solid var(--line,#E2E6EC);color:var(--fg-2,#3D4757)}
+    .c12 .pill i{width:7px;height:7px;border-radius:50%;background:var(--fg-3,#7A8798)}
+    .c12 .pill.open i{background:var(--live,#1FA9A0);box-shadow:0 0 0 0 var(--live,#1FA9A0);animation:c12p 2s infinite}
+    .c12 .pill.open{color:var(--live,#1FA9A0);border-color:color-mix(in srgb,var(--live,#1FA9A0) 45%,transparent)}
+    .c12 .pill.shut i{background:var(--signal,#E8A33D)}
+    @keyframes c12p{70%{box-shadow:0 0 0 6px transparent}100%{box-shadow:0 0 0 0 transparent}}
+    .c12 .cb{font:inherit;font-size:12px;font-weight:600;padding:7px 13px;border-radius:99px;border:1px solid var(--line,#E2E6EC);background:transparent;color:var(--fg,#141A22);cursor:pointer;transition:.18s}
+    .c12 .cb:hover{background:var(--panel-2,#F3F5F8)}
+    .c12 .cb.ok{border-color:var(--live,#1FA9A0);color:var(--live,#1FA9A0)}
+    .c12 .hint{margin:0;font-size:11px;color:var(--fg-3,#7A8798);min-height:15px}
+    .c12 .clocks{display:flex;gap:8px}
+    .c12 .clk{flex:1;min-width:0;background:var(--panel-2,#F3F5F8);border:1px solid var(--line,#E2E6EC);border-radius:10px;padding:8px 9px;display:flex;flex-direction:column;gap:1px}
+    .c12 .k{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c12 .t{font-family:"IBM Plex Mono",monospace;font-size:16px;color:var(--fg,#141A22);font-weight:500;font-variant-numeric:tabular-nums}
+    .c12 .z{font-size:9.5px;color:var(--fg-3,#7A8798);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .c12 .hours{width:100%;border-collapse:collapse;font-size:11.5px}
+    .c12 .hours th,.c12 .hours td{text-align:left;padding:5px 0;border-bottom:1px solid var(--line,#E2E6EC);font-weight:400;color:var(--fg-2,#3D4757)}
+    .c12 .hours td{text-align:right;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--fg-3,#7A8798)}
+    .c12 .hours tr.now th,.c12 .hours tr.now td{color:var(--fg,#141A22);font-weight:600}
+    .c12 .hours tr.now th::before{content:"▸ ";color:var(--signal,#E8A33D)}
+    .c12 .hours td.off{color:var(--fg-3,#7A8798)}
+    @media (prefers-reduced-motion:reduce){.c12 *{animation:none!important;transition:none!important}}
+  </style>
+
+  <script>
+  (function(){
+    var r=document.currentScript.closest('.c12');
+    var TZ='America/New_York';
+    var youEl=r.querySelector('[data-you]'),youZ=r.querySelector('[data-youz]'),usEl=r.querySelector('[data-us]');
+    var pill=r.querySelector('[data-pill]'),hint=r.querySelector('.hint');
+    var fmt=function(tz){try{return new Intl.DateTimeFormat([],{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:tz});}catch(e){return new Intl.DateTimeFormat([],{hour:'2-digit',minute:'2-digit',hour12:false});}};
+    var fYou=fmt(undefined),fUs=fmt(TZ);
+    try{youZ.textContent=Intl.DateTimeFormat().resolvedOptions().timeZone||'Local time';}catch(e){youZ.textContent='Local time';}
+
+    function deskParts(d){
+      var s;
+      try{s=new Intl.DateTimeFormat('en-US',{timeZone:TZ,weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(d);}
+      catch(e){return {day:d.getDay(),mins:d.getHours()*60+d.getMinutes()};}
+      var g={};s.forEach(function(p){g[p.type]=p.value;});
+      var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+      return {day:map[g.weekday]!==undefined?map[g.weekday]:d.getDay(),mins:(+g.hour%24)*60+(+g.minute)};
+    }
+    var SCHED={1:[480,1200],2:[480,1200],3:[480,1200],4:[480,1200],5:[480,1200],6:[540,900],0:null};
+    function tick(){
+      var d=new Date();
+      youEl.textContent=fYou.format(d);
+      usEl.textContent=fUs.format(d);
+      var p=deskParts(d),win=SCHED[p.day],open=!!win&&p.mins>=win[0]&&p.mins<win[1];
+      pill.classList.toggle('open',open);pill.classList.toggle('shut',!open);
+      pill.querySelector('b').textContent=open?'Open now':'Closed — leave a callback';
+      r.querySelectorAll('.hours tr').forEach(function(tr){
+        tr.classList.toggle('now',tr.dataset.d.split(' ').indexOf(String(p.day))>-1);
+      });
+    }
+    tick();var iv=setInterval(tick,15000);
+
+    var cb=r.querySelector('.cb');
+    cb.addEventListener('click',function(){
+      cb.classList.add('ok');cb.textContent='Callback requested';
+      hint.textContent='We will ring you back on this number within 15 minutes of opening.';
+      setTimeout(function(){cb.classList.remove('ok');cb.textContent='Request a callback';hint.textContent='';},4200);
+    });
+    r.querySelector('.tel').addEventListener('click',function(){
+      hint.textContent='Dialling +1 (888) 555-0142 …';
+      setTimeout(function(){hint.textContent='';},3000);
+    });
+    new MutationObserver(function(m,o){if(!r.isConnected){clearInterval(iv);o.disconnect();}}).observe(document.body,{childList:true,subtree:true});
+  })();
+  </script>
+</div>

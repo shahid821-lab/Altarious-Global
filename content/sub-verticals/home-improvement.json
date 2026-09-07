@@ -1,0 +1,59 @@
+{
+  "slug": "home-improvement",
+  "vertical": "home-services",
+  "name": "Home Improvement",
+  "active": true,
+  "order": 9,
+  "shortDescription": "Reach homeowners planning exterior and interior improvement projects and connect them with contractors ready to provide in-home estimates.",
+  "description": [
+    "Home improvement covers the planned, value-adding projects homeowners undertake to protect, modernise and enjoy their property: siding, gutters, decks, fencing, flooring, painting, insulation, doors and similar upgrades. Unlike emergency repairs, these are considered purchases where the homeowner researches options, compares contractors and often seeks financing. Demand rises in spring and summer, ahead of a home sale, after a home purchase, and when homeowners choose to invest in their current home rather than move.",
+    "Altarious Global reaches homeowners during the planning phase with performance marketing tailored to each project type and delivers them to home improvement contractors through Inbound Calls and Live Transfers. Screening confirms homeownership, project type and scope, timeline and interest in an in-home estimate, so sales teams receive appointments with homeowners who are ready to move forward."
+  ],
+  "consumerProfile": "Owners of single-family homes, typically aged 35 to 70, who have equity or financing capacity and a specific improvement project in mind. The most valuable segments are homeowners planning exterior projects such as siding, gutters and decks, those preparing a home for sale, and long-tenured owners upgrading aging components of their property.",
+  "intentSignals": [
+    "Searching for a specific project such as siding installation, gutter guards or deck builders near me",
+    "Recently purchased a home and planning updates",
+    "Preparing to list a home for sale and improving curb appeal",
+    "Exterior components showing wear, rot, peeling or damage",
+    "Researching home improvement financing or contractor estimates",
+    "Received a home energy audit recommending insulation or door upgrades"
+  ],
+  "qualificationCriteria": [
+    "Owns a single-family home within the contractor's service area",
+    "Project type and approximate scope identified",
+    "Timeline for starting the project stated, typically within the next few months",
+    "Homeowner and any co-decision maker available for an in-home estimate",
+    "Budget expectation or openness to financing discussed",
+    "Not currently under contract with another contractor for the same project"
+  ],
+  "keywords": [
+    "home improvement contractors near me",
+    "siding installation cost",
+    "gutter installation near me",
+    "deck builders near me",
+    "fence installation cost",
+    "home improvement financing",
+    "exterior home renovation"
+  ],
+  "marketContext": "Spending on home improvement has remained resilient as homeowners with low mortgage rates choose to upgrade rather than move, and as an aging housing stock requires replacement of exterior components. Contractors in siding, gutters, decking and similar categories operate on an in-home estimate model where the quality of the appointment determines profitability, making qualification a central concern. Consumer financing has become a standard part of the sale and widens the addressable market. Competition from national brands and lead marketplaces is intense, which favours contractors who secure exclusive, well-qualified appointments rather than shared inquiries.",
+  "inboundCallsAngle": "Homeowners planning an improvement project often have questions about materials, timelines and cost before they book an estimate, and many prefer to ask them on the phone. Inbound Call programs place project-specific offers in front of homeowners researching siding, gutters, decks and other improvements and invite them to call the contractor directly. Callers arrive with a defined project in mind, allowing the contractor's appointment setters to answer questions and schedule an in-home consultation on the same call. Programs can be focused on the project types that carry the best margins for the contractor.",
+  "liveTransfersAngle": "Live Transfers deliver home improvement contractors qualified estimate opportunities. Our team confirms homeownership, property location, project type and scope, timeline and whether all decision makers can attend an estimate before warm-transferring the call to the contractor's scheduling team. This pre-screen removes renters, projects outside the contractor's offerings and homeowners who are merely gathering rough pricing, so in-home sales representatives spend their time with homeowners prepared to make a decision. Transfers can be segmented by project category for contractors with multiple product lines.",
+  "faq": [
+    {
+      "q": "Can programs target a single project type such as siding?",
+      "a": "Yes. Campaigns and screening can be dedicated to one project category or configured across several, matching the products and services you sell."
+    },
+    {
+      "q": "Do you confirm both decision makers for in-home estimates?",
+      "a": "Screening asks whether the homeowner and any co-owner can be present for the estimate, which is a common requirement for in-home sales models."
+    },
+    {
+      "q": "How do you handle seasonality?",
+      "a": "Volume can be increased in spring and summer when project demand peaks and moderated in slower months, with caps aligned to your sales team's capacity."
+    }
+  ],
+  "seo": {
+    "title": "Home Improvement Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire homeowners planning siding, gutter, deck and other improvement projects through performance marketing, inbound calls and estimate-ready live transfers."
+  }
+}

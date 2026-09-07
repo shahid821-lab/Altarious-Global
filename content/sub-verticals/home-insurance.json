@@ -1,0 +1,59 @@
+{
+  "slug": "home-insurance",
+  "vertical": "insurance",
+  "name": "Home Insurance",
+  "active": true,
+  "order": 6,
+  "shortDescription": "Reach homeowners comparing homeowners insurance at purchase, renewal or after a non-renewal notice, and connect them with licensed agents.",
+  "description": [
+    "Homeowners insurance shopping is concentrated around a few high-intent moments: closing on a new home when a lender requires proof of coverage, receiving a renewal with a sharp premium increase, being non-renewed or dropped by a carrier that is exiting a region, or filing a claim that changes the relationship with the current insurer. In many coastal and wildfire-exposed states, carrier withdrawals have left homeowners actively searching for any admitted or surplus lines option that will write their property.",
+    "Altarious Global reaches homeowners at these decision points through performance marketing and routes them into Inbound Call and Live Transfer programs for carriers, independent agencies and brokers. Screening captures the property details that matter for underwriting so that agents can quote quickly and bind coverage while the homeowner is ready to act."
+  ],
+  "consumerProfile": "Homeowners and buyers under contract who need to place or replace coverage on a primary residence, second home or rental property. The most valuable segments are recent purchasers with a closing date, homeowners facing renewal increases or non-renewal, and those bundling home and auto to reduce total premium.",
+  "intentSignals": [
+    "Searching for homeowners insurance quotes or rate comparisons",
+    "Under contract on a home purchase with a closing date approaching",
+    "Renewal notice received with a significant premium increase",
+    "Non-renewed or dropped by current carrier",
+    "Recently completed a major renovation, roof replacement or addition",
+    "Looking to bundle home and auto policies with one carrier"
+  ],
+  "qualificationCriteria": [
+    "Owns or is closing on a residential property in a state the buyer writes",
+    "Property type, approximate age and construction confirmed",
+    "Roof age and condition within the carrier's acceptable range",
+    "Current coverage status and reason for shopping stated",
+    "No recent unresolved claims that would exclude the risk",
+    "Policy decision maker interested in a quote today"
+  ],
+  "keywords": [
+    "homeowners insurance quotes",
+    "home insurance near me",
+    "cheap homeowners insurance",
+    "compare home insurance rates",
+    "home and auto insurance bundle",
+    "homeowners insurance for new home",
+    "high risk home insurance"
+  ],
+  "marketContext": "The homeowners insurance market has been reshaped by rising rebuilding costs, more frequent severe weather and carrier retrenchment in high-risk states. Premiums have climbed and many homeowners are receiving non-renewal notices for the first time, which has created an unusually large population of motivated shoppers who need help finding a carrier with appetite for their property. Independent agencies with access to multiple carriers and surplus lines markets are well positioned, and the ability to engage a homeowner quickly with an informed quote is a decisive competitive advantage.",
+  "inboundCallsAngle": "Homeowners insurance quotes depend on property details that are cumbersome to enter online, and consumers facing a closing deadline or a non-renewal want answers fast. Inbound Call programs let homeowners call a licensed agent directly after seeing a home insurance offer, arriving with a clear reason to shop and the information about their property at hand. Agents can gather roof age, construction type and prior claims in a single conversation and often bind coverage on the same call, which is particularly valuable for buyers who must deliver proof of insurance to a lender.",
+  "liveTransfersAngle": "Live Transfers for home insurance filter out properties that fall outside a carrier's appetite before an agent is engaged. Our team confirms state, property type, ownership status, roof age, current coverage and reason for shopping, then warm-transfers the homeowner to a licensed agent who can quote the risk. This is especially useful in markets where eligibility rules are strict on roof age, distance to coast or protection class, because the pre-screen prevents agents from spending time on properties they cannot write and routes harder risks to teams with surplus lines access.",
+  "faq": [
+    {
+      "q": "Can you exclude properties in high-risk areas we do not write?",
+      "a": "Yes. Targeting can be set by state, county or ZIP, and screening can capture coastal proximity or wildfire exposure so that transfers match your underwriting footprint."
+    },
+    {
+      "q": "Do you screen for roof age?",
+      "a": "Roof age and general condition are part of the standard screening, and thresholds can be adjusted to align with your carriers' guidelines."
+    },
+    {
+      "q": "Can programs prioritise new home purchases?",
+      "a": "Campaigns can emphasise consumers under contract with an upcoming closing, who typically have the highest urgency and bind rate."
+    }
+  ],
+  "seo": {
+    "title": "Home Insurance Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire homeowners insurance customers at purchase, renewal or non-renewal through performance marketing, inbound calls and pre-qualified live transfers."
+  }
+}

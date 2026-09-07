@@ -1,0 +1,59 @@
+{
+  "slug": "remodeling",
+  "vertical": "home-services",
+  "name": "Remodeling",
+  "active": true,
+  "order": 11,
+  "shortDescription": "Connect homeowners planning kitchen, bathroom and whole-home remodels with remodeling contractors and design-build firms.",
+  "description": [
+    "Remodeling is among the largest discretionary investments a homeowner makes. Kitchens and bathrooms lead the category, followed by basement finishing, additions, aging-in-place modifications and whole-home renovations. Homeowners typically plan for months, gather inspiration, set a budget and interview several contractors before signing. Triggers include buying an older home, growing families, preparing to age in place, accommodating a multigenerational household, or choosing to invest in the current home rather than move in a constrained housing market.",
+    "Altarious Global reaches homeowners during the planning phase with performance marketing tailored to project type and delivers them to remodeling contractors, design-build firms and bath and kitchen specialists through Inbound Calls and Live Transfers. Screening confirms homeownership, project type, budget range, timeline and decision-maker availability so that designers and estimators engage with homeowners who are prepared to invest."
+  ],
+  "consumerProfile": "Owners of single-family homes with significant equity or financing capacity, typically aged 35 to 70, planning a defined remodeling project. The most valuable segments are homeowners with realistic budgets for full kitchen or bathroom remodels, those planning additions or basement conversions, and older homeowners investing in accessibility modifications to remain in their homes.",
+  "intentSignals": [
+    "Searching for kitchen remodel cost, bathroom remodeling near me or remodeling contractors",
+    "Recently purchased an older home needing updates",
+    "Family growth or multigenerational living requiring more space",
+    "Planning to age in place and needs a walk-in shower or accessible layout",
+    "Gathering design inspiration and contractor estimates over recent weeks",
+    "Researching home equity or renovation financing options"
+  ],
+  "qualificationCriteria": [
+    "Owns a single-family home within the contractor's service area",
+    "Project type identified as kitchen, bathroom, basement, addition or whole-home",
+    "Budget range stated and above the contractor's minimum project size",
+    "Timeline for starting the project within the contractor's booking horizon",
+    "Homeowner and co-decision maker available for a design consultation",
+    "Not already under contract with another remodeler for the project"
+  ],
+  "keywords": [
+    "kitchen remodel cost",
+    "bathroom remodeling near me",
+    "remodeling contractors near me",
+    "home renovation contractors",
+    "basement finishing cost",
+    "walk in shower installation",
+    "home addition contractors"
+  ],
+  "marketContext": "Remodeling activity has stayed strong as homeowners with low fixed mortgage rates opt to improve their existing homes, and as the median age of housing stock continues to rise. Kitchen and bathroom projects remain the most in-demand, while accessibility and aging-in-place work is growing with the older population. The category is served by a mix of full-service design-build firms, franchise bath and kitchen specialists and independent contractors, all of whom depend on high-quality consultations because project sizes are large and sales cycles are long. Budget qualification is the single most important factor in remodeling acquisition, and contractors value partners who screen for it.",
+  "inboundCallsAngle": "Homeowners planning a remodel have many questions about process, timeline and realistic costs, and they often want to gauge a contractor's professionalism before inviting them into their home. Inbound Call programs place remodeling offers in front of homeowners researching kitchens, bathrooms and larger renovations and invite them to call the contractor directly. Callers arrive with a project vision and usually a budget in mind, giving the contractor's consultation team the opportunity to build rapport, set expectations and schedule a design consultation on the first call.",
+  "liveTransfersAngle": "Live Transfers protect remodelers from unqualified consultations, which are costly given the time designers and estimators invest. Our team confirms homeownership, property location, project type, budget range, timeline and decision-maker availability before warm-transferring the homeowner to the contractor. This pre-screen removes renters, small repair requests, projects below the contractor's minimum and homeowners with unrealistic budgets, so the sales team meets only with homeowners who can commit to a project of appropriate scale. Transfers can be segmented by project category to route bath, kitchen and addition inquiries to the right specialists.",
+  "faq": [
+    {
+      "q": "Do you qualify homeowners on budget?",
+      "a": "Yes. Screening captures the homeowner's budget range and applies a minimum threshold aligned with your typical project size, so consultations are focused on viable projects."
+    },
+    {
+      "q": "Can programs focus on bathroom or kitchen projects only?",
+      "a": "Campaigns and screening can be dedicated to bathrooms, kitchens, basements, additions or whole-home renovations, matching the services you specialise in."
+    },
+    {
+      "q": "How do you handle long project timelines?",
+      "a": "Timeline is captured during screening and you can set the window you accept, for example projects starting within the next six months, with longer-horizon inquiries excluded or flagged."
+    }
+  ],
+  "seo": {
+    "title": "Remodeling Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire budget-qualified kitchen, bathroom and whole-home remodeling customers through performance marketing, inbound calls and consultation-ready live transfers."
+  }
+}

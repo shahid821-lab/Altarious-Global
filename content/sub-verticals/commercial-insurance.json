@@ -1,0 +1,59 @@
+{
+  "slug": "commercial-insurance",
+  "vertical": "insurance",
+  "name": "Commercial Insurance",
+  "active": true,
+  "order": 7,
+  "shortDescription": "Connect business owners seeking commercial property, liability, auto and workers' compensation coverage with licensed commercial agents.",
+  "description": [
+    "Commercial insurance buyers shop when a contract, lease, lender or regulator requires proof of coverage, when a policy renews with a higher premium or reduced limits, or when the business changes in a way that its current program no longer fits: adding vehicles, hiring employees, opening a location or expanding into new services. Owners of small and mid-sized businesses frequently manage this themselves and turn to search when they need a certificate of insurance quickly or want to consolidate several policies with one agency.",
+    "Altarious Global runs targeted campaigns that reach owners and operators at these moments and delivers them to commercial agencies, wholesalers and carriers through Inbound Calls and Live Transfers. Screening captures industry, revenue band, employee count and the lines of coverage needed, so producers receive accounts that fit their appetite and can begin the submission process on the first call."
+  ],
+  "consumerProfile": "Owners, partners and operations managers of small and mid-sized businesses across contracting, trucking, hospitality, retail, professional services and light manufacturing. The highest-value segments are contractors and fleets that need coverage to satisfy a contract or DOT requirement, new businesses placing their first policy, and established firms consolidating multiple lines at renewal.",
+  "intentSignals": [
+    "Searching for business liability, commercial auto or workers' comp quotes",
+    "Needs a certificate of insurance for a contract, lease or license",
+    "Renewal received with a premium increase or reduced coverage",
+    "Recently hired employees, triggering workers' compensation requirements",
+    "Added commercial vehicles or obtained DOT authority",
+    "Opened a new location or expanded into a new service line"
+  ],
+  "qualificationCriteria": [
+    "Active business located in a state the agency is licensed to write",
+    "Industry class and primary operations confirmed",
+    "Approximate annual revenue and number of employees stated",
+    "Lines of coverage needed identified, such as GL, property, auto, workers' comp or BOP",
+    "Current coverage status and renewal date captured",
+    "Owner or authorised decision maker requesting a quote"
+  ],
+  "keywords": [
+    "commercial insurance quotes",
+    "general liability insurance for contractors",
+    "commercial auto insurance",
+    "workers comp insurance quotes",
+    "business owners policy",
+    "commercial property insurance",
+    "certificate of insurance fast"
+  ],
+  "marketContext": "Commercial insurance has moved through a prolonged hard market in several lines, with commercial auto, property in catastrophe-exposed regions and certain liability classes seeing sustained rate increases. Business owners are shopping more actively at renewal and are more receptive to an agency that can remarket their program across multiple carriers. At the same time, digital-first carriers and MGAs have made small commercial faster to quote and bind, rewarding agencies that can engage a prospect quickly. The combination of rate pressure and speed-to-quote has made phone-based acquisition highly effective for small and mid-market commercial accounts.",
+  "inboundCallsAngle": "Business owners are time-constrained and often need coverage to satisfy a deadline, whether a job start date, a lease signing or a DOT inspection. Inbound Call programs place commercial insurance messaging in front of owners searching for coverage and invite them to call a licensed producer immediately. The caller arrives with a concrete need and the basic facts about their operation, allowing the producer to qualify the class, gather submission details and often issue a certificate quickly. This channel suits agencies with strong small commercial carrier access and same-day bind capability.",
+  "liveTransfersAngle": "Live Transfers bring underwriting appetite into the qualification step. Our team confirms the business's state, industry class, revenue band, employee count, vehicles and the coverages requested before warm-transferring the owner to a producer, so accounts outside the agency's appetite, such as excluded classes or oversized risks, are filtered out in advance. This is valuable for agencies that specialise in particular niches, such as contractors, trucking or hospitality, because the pre-screen ensures each transfer is a prospect they can actually place, improving producer efficiency and close rate.",
+  "faq": [
+    {
+      "q": "Can programs target specific industries or classes?",
+      "a": "Yes. Campaigns can focus on contractors, transportation, restaurants, professional services or other classes that match your carrier appetite, and excluded classes can be screened out."
+    },
+    {
+      "q": "What business size do these programs typically reach?",
+      "a": "Most calls come from small and lower mid-market businesses, and revenue and employee-count filters can be applied to align with the accounts your producers prefer to write."
+    },
+    {
+      "q": "Can you screen by lines of coverage requested?",
+      "a": "Screening identifies the coverages the owner needs, so transfers can be routed to producers who handle general liability, commercial auto, workers' compensation or package policies."
+    }
+  ],
+  "seo": {
+    "title": "Commercial Insurance Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire small and mid-market commercial insurance accounts through performance marketing, inbound calls and appetite-screened live transfers for licensed producers."
+  }
+}

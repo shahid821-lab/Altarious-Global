@@ -1,0 +1,59 @@
+{
+  "slug": "personal-loans",
+  "vertical": "web-leads",
+  "name": "Personal Loans",
+  "active": true,
+  "order": 2,
+  "shortDescription": "Deliver real-time personal loan applicants and calls from consumers seeking to consolidate debt, cover expenses or finance major purchases.",
+  "description": [
+    "Personal loan demand is driven by consumers who need funds for a defined purpose: consolidating high-interest credit card balances, covering a medical or emergency expense, financing a home project or wedding, or bridging a short-term cash gap. These consumers search actively, compare rates and terms, and complete online applications quickly when they find a lender willing to consider their credit profile. The category is inherently web-lead driven, with the application form as the natural first step.",
+    "Altarious Global runs performance marketing that captures loan-seeking consumers as real-time web leads with loan amount, purpose, credit tier and consent captured on every record, delivered to lenders, marketplaces and credit unions through direct integration. Inbound Calls and Live Transfers complement this flow by reaching consumers who prefer to discuss their options with a loan officer, particularly those with larger loan amounts or more complex financial situations."
+  ],
+  "consumerProfile": "Employed adults aged 22 to 65 with a verifiable income who need funds ranging from a few thousand to tens of thousands of dollars. The most valuable segments are consumers with fair to excellent credit consolidating revolving debt, homeowners financing improvements without tapping equity, and borrowers with stable income seeking a fixed-rate alternative to credit cards.",
+  "intentSignals": [
+    "Searching for personal loans, debt consolidation loans or loan rates",
+    "Carrying multiple high-interest credit card balances",
+    "Facing an unexpected medical, auto or home repair expense",
+    "Planning a major purchase or event requiring financing",
+    "Recently checked credit score and researching borrowing options",
+    "Declined by a bank and seeking alternative lenders"
+  ],
+  "qualificationCriteria": [
+    "Age 18 or older and a US resident in a state where the lender operates",
+    "Requested loan amount within the lender's range",
+    "Stated loan purpose and self-reported credit tier",
+    "Employment status and monthly income meeting minimum requirements",
+    "Active checking account for disbursement and repayment",
+    "Consent to be contacted and to a credit inquiry captured"
+  ],
+  "keywords": [
+    "personal loans",
+    "debt consolidation loan",
+    "personal loan rates",
+    "personal loans for fair credit",
+    "unsecured personal loan",
+    "loans for bad credit",
+    "best personal loans online"
+  ],
+  "marketContext": "Household credit card balances have reached elevated levels and interest rates on revolving debt remain high, which sustains strong demand for fixed-rate personal loans as a consolidation tool. Fintech lenders, banks and credit unions compete intensely online, and marketplaces have made rate comparison routine for consumers. Lenders have tightened underwriting in recent cycles and now place a premium on lead quality, credit tier accuracy and consent documentation. The category remains one of the largest in consumer finance for web lead volume, with phone channels adding conversion lift for larger loan amounts and consumers who want to understand their options before applying.",
+  "inboundCallsAngle": "Not every borrower is comfortable completing a full application online, especially those seeking larger amounts or unsure whether they will qualify. Inbound Call programs place personal loan offers in front of these consumers and invite them to call a loan specialist directly, complementing the web lead flow with borrowers who want a conversation first. Callers arrive with a loan purpose and amount in mind, allowing the specialist to explain options, pre-qualify and guide them into the application. For lenders and credit unions with consultative sales teams, inbound calls often produce higher funded loan rates than forms alone.",
+  "liveTransfersAngle": "Live Transfers add a qualification step that is especially valuable in lending, where most inquiries fall outside any single lender's credit box. Our team confirms the borrower's state, requested amount, purpose, employment and income, credit tier and consent before warm-transferring to the lender's loan officer. This pre-screen filters out applicants who do not meet minimums and routes borrowers to the right product, so loan officers spend their time on fundable applications. Transfers complement web leads by capturing borrowers who would otherwise abandon a long form and by improving approval rates on the calls that reach the lender.",
+  "faq": [
+    {
+      "q": "Can personal loan leads be filtered by credit tier and loan amount?",
+      "a": "Yes. Self-reported credit tier, requested amount, income and purpose are captured on every lead and can be used to filter delivery to your credit box."
+    },
+    {
+      "q": "How is consent handled for personal loan leads?",
+      "a": "Each lead includes documented consent to be contacted and, where applicable, to a credit inquiry, with timestamp and source recorded for compliance review."
+    },
+    {
+      "q": "How do calls complement personal loan web leads?",
+      "a": "Web leads deliver application volume at scale, while Inbound Calls and Live Transfers reach borrowers who prefer to speak with a loan officer, typically improving funded rates for larger or more complex loans."
+    }
+  ],
+  "seo": {
+    "title": "Personal Loan Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire personal loan borrowers through real-time, consented web leads complemented by inbound calls and credit-screened live transfers for lenders and credit unions."
+  }
+}

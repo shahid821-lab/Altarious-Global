@@ -1,0 +1,59 @@
+{
+  "slug": "final-expense-insurance",
+  "vertical": "insurance",
+  "name": "Final Expense Insurance",
+  "active": true,
+  "order": 5,
+  "shortDescription": "Connect seniors planning for burial and end-of-life costs with licensed agents offering simplified issue final expense coverage.",
+  "description": [
+    "Final expense insurance serves older adults who want to make sure funeral, burial and outstanding medical costs do not fall on their children. The buyer is typically on a fixed income, may have health conditions that make traditional life insurance difficult to obtain, and values simplicity: modest face amounts, guaranteed or simplified issue underwriting, and premiums that never increase. Interest is often triggered by the death of a friend or relative, a conversation with adult children, or a realisation that an existing policy has lapsed or was never in place.",
+    "Altarious Global reaches this audience through carefully worded, respectful campaigns and connects them with licensed agents via Inbound Calls and Live Transfers. Every program is built with senior-market compliance in mind, including TCPA-consented contact, plain-language messaging that avoids misleading claims about government benefits or guaranteed approval, and routing exclusively to licensed agents."
+  ],
+  "consumerProfile": "Adults aged 50 to 85, frequently retired and living on Social Security or pension income, who want coverage that pays out quickly to a named beneficiary. Many have been declined for traditional life insurance or find medical exams impractical, and a meaningful segment are adult children researching coverage on behalf of aging parents.",
+  "intentSignals": [
+    "Searching for burial insurance or funeral cost coverage",
+    "Recently attended a funeral or experienced a loss in the family",
+    "Existing life insurance policy lapsed or term coverage expired",
+    "Declined for traditional life insurance due to health history",
+    "Researching life insurance for seniors with no medical exam",
+    "Adult child helping a parent plan for end-of-life expenses"
+  ],
+  "qualificationCriteria": [
+    "Age 50 to 85 and a resident of a state where the agent is licensed",
+    "Has an active checking or savings account for premium payment",
+    "Basic health questions answered for simplified or guaranteed issue placement",
+    "Not currently receiving hospice care or confined to a nursing facility",
+    "Understands coverage is a paid insurance product, not a government benefit",
+    "Interested in speaking with a licensed agent about coverage today"
+  ],
+  "keywords": [
+    "final expense insurance",
+    "burial insurance for seniors",
+    "funeral insurance quotes",
+    "life insurance for seniors over 60",
+    "guaranteed issue life insurance",
+    "no exam life insurance for seniors",
+    "burial insurance cost"
+  ],
+  "marketContext": "Funeral and burial costs have risen steadily, and a large proportion of older Americans have little or no life insurance in force, which sustains strong demand for affordable final expense products. The market has also drawn regulatory attention because of misleading mailers and aggressive telemarketing by some participants, and carriers now expect distribution partners to demonstrate compliant messaging and consent practices. Agencies that combine respectful marketing with well-trained licensed agents continue to grow, particularly through phone-based sales where seniors can ask questions and enroll without an in-home visit.",
+  "inboundCallsAngle": "Seniors overwhelmingly prefer to talk to a person, and many are uncomfortable entering personal information online. Inbound Call programs present clear, honest final expense messaging and invite the consumer to call when they are ready to learn about coverage. Because the senior initiates the call, the conversation begins with trust and documented intent, and the licensed agent can walk through health questions, face amounts and premiums at a comfortable pace. Creative and call scripts avoid references to government programs or free benefits so that expectations are accurate from the first ring.",
+  "liveTransfersAngle": "Live Transfers protect licensed agents from spending time on consumers who cannot be placed. Our team confirms age, state, banking method for premiums, basic health status and understanding that this is a paid insurance product before warm-transferring the call. For final expense, this pre-screen also helps route consumers between simplified issue and guaranteed issue products based on health responses, so the agent is prepared before the conversation begins. The approach supports both compliance and productivity, giving agents more time with seniors who are ready to apply.",
+  "faq": [
+    {
+      "q": "How do you keep final expense marketing compliant for the senior market?",
+      "a": "Messaging is plain-language and avoids implying government affiliation, free benefits or guaranteed approval. Consent to contact is captured and documented, and all calls are routed to licensed agents."
+    },
+    {
+      "q": "Can programs be filtered by age range?",
+      "a": "Yes. Age filters can be set to match your carrier's issue ages, for example 50 to 80, and consumers outside that range are excluded before transfer."
+    },
+    {
+      "q": "Do you screen for health conditions?",
+      "a": "Screening includes general health questions used to distinguish simplified issue from guaranteed issue candidates. Final eligibility is always determined by the carrier's application."
+    }
+  ],
+  "seo": {
+    "title": "Final Expense Insurance Leads, Inbound Calls & Live Transfers",
+    "description": "Compliant final expense customer acquisition for the senior market: TCPA-consented inbound calls and pre-qualified live transfers routed to licensed agents."
+  }
+}

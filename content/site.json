@@ -1,0 +1,28 @@
+{
+  "name": "Altarious Global",
+  "legalName": "Altarious Global",
+  "domain": "https://altariousglobal.com",
+  "tagline": "Performance-driven customer acquisition",
+  "positioning": "We help businesses acquire high-intent customers through performance-driven marketing, web leads, inbound calls and live transfers.",
+  "contact": {
+    "email": "hello@altariousglobal.com",
+    "phone": "+1 (000) 000-0000",
+    "address": "United States"
+  },
+  "turnstileSiteKey": "",
+  "ctas": {
+    "primary": "Request a Proposal",
+    "secondary": "Talk to Our Team",
+    "getStarted": "Get Started",
+    "moreInfo": "Request More Information",
+    "contact": "Contact Us"
+  },
+  "services": [
+    { "slug": "ppc-performance-marketing", "name": "PPC / Performance Marketing", "short": "Paid search, social and native campaigns engineered for measurable acquisition outcomes." },
+    { "slug": "web-lead-generation", "name": "Web Lead Generation", "short": "Form, real-time and qualified web leads delivered directly into your sales workflow." },
+    { "slug": "inbound-calls", "name": "Inbound Calls", "short": "Consumers who pick up the phone and call about your product, routed to your team in real time." },
+    { "slug": "live-transfers", "name": "Live Transfers", "short": "Consumers qualified by our team and warm-transferred to your agents, ready to buy." }
+  ],
+  "footerNote": "Altarious Global provides performance marketing, lead generation, inbound call and live transfer programs to businesses and advertisers. Results vary by vertical, geography and campaign configuration.",
+  "social": []
+}

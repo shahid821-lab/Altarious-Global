@@ -1,0 +1,115 @@
+<div class="demo c6">
+  <div class="c6-head">
+    <span class="c6-eyebrow">Onboarding</span>
+    <h3 class="c6-title">Scoping call to first live call in five days</h3>
+  </div>
+
+  <div class="c6-track" role="tablist" aria-label="Onboarding days">
+    <div class="c6-line" aria-hidden="true"><span class="c6-line-fill"></span></div>
+    <button type="button" class="c6-day is-on" role="tab" aria-selected="true" aria-controls="c6-p1" id="c6-t1" data-i="0"><span class="c6-dot"></span><span class="c6-d">Day 1</span><span class="c6-l">Scoping</span></button>
+    <button type="button" class="c6-day" role="tab" aria-selected="false" aria-controls="c6-p2" id="c6-t2" tabindex="-1" data-i="1"><span class="c6-dot"></span><span class="c6-d">Day 2</span><span class="c6-l">Criteria</span></button>
+    <button type="button" class="c6-day" role="tab" aria-selected="false" aria-controls="c6-p3" id="c6-t3" tabindex="-1" data-i="2"><span class="c6-dot"></span><span class="c6-d">Day 3</span><span class="c6-l">Routing</span></button>
+    <button type="button" class="c6-day" role="tab" aria-selected="false" aria-controls="c6-p4" id="c6-t4" tabindex="-1" data-i="3"><span class="c6-dot"></span><span class="c6-d">Day 4</span><span class="c6-l">Test calls</span></button>
+    <button type="button" class="c6-day" role="tab" aria-selected="false" aria-controls="c6-p5" id="c6-t5" tabindex="-1" data-i="4"><span class="c6-dot"></span><span class="c6-d">Day 5</span><span class="c6-l">Go live</span></button>
+  </div>
+
+  <div class="c6-panels">
+    <div class="c6-panel is-on" id="c6-p1" role="tabpanel" aria-labelledby="c6-t1">
+      <h4>Scoping call</h4>
+      <p>Thirty minutes on your vertical, licensed states, daily capacity and buying hours. We agree the sub&#8209;vertical — Auto Insurance, Medicare, HVAC — and the product mix.</p>
+      <span class="c6-owner">Owner: Account lead</span>
+    </div>
+    <div class="c6-panel" id="c6-p2" role="tabpanel" aria-labelledby="c6-t2" hidden>
+      <h4>Criteria &amp; compliance</h4>
+      <p>We lock qualification rules, disclosure language and TCPA posture, then set the buffer and billable duration thresholds in writing.</p>
+      <span class="c6-owner">Owner: Compliance</span>
+    </div>
+    <div class="c6-panel" id="c6-p3" role="tabpanel" aria-labelledby="c6-t3" hidden>
+      <h4>Routing build</h4>
+      <p>Tracking numbers provisioned per state and per campaign, IVR screening scripted, and your CRM or dialler wired up for post&#8209;call delivery.</p>
+      <span class="c6-owner">Owner: Delivery engineering</span>
+    </div>
+    <div class="c6-panel" id="c6-p4" role="tabpanel" aria-labelledby="c6-t4" hidden>
+      <h4>Test calls</h4>
+      <p>Live end&#8209;to&#8209;end tests through your queue during real buying hours. We check audio, hold time, transfer handoff and billing records together.</p>
+      <span class="c6-owner">Owner: Both teams</span>
+    </div>
+    <div class="c6-panel" id="c6-p5" role="tabpanel" aria-labelledby="c6-t5" hidden>
+      <h4>First live call</h4>
+      <p>Campaigns switch on at a capped daily volume. Daily reporting from call one, with pacing reviewed at the end of week one.</p>
+      <span class="c6-owner">Owner: Account lead</span>
+    </div>
+  </div>
+
+  <style>
+    .c6 { font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg-2, #3D4757); }
+    .c6 *, .c6 *::before, .c6 *::after { box-sizing: border-box; }
+    .c6 .c6-head { margin-bottom: 16px; }
+    .c6 .c6-eyebrow { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c6 .c6-title { margin: 3px 0 0; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 16px; font-weight: 650; letter-spacing: -.01em; color: var(--fg, #10151C); }
+    .c6 .c6-track { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-bottom: 16px; }
+    .c6 .c6-line { position: absolute; left: 10%; right: 10%; top: 5px; height: 2px; background: var(--line, #DDE2E8); border-radius: 2px; }
+    .c6 .c6-line-fill { display: block; height: 100%; width: 0%; background: var(--signal, #E0A02A); border-radius: 2px; transition: width .34s cubic-bezier(.4,0,.2,1); }
+    .c6 .c6-day { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 0 2px 4px; border: 0; background: transparent; cursor: pointer; font: inherit; color: var(--fg-3, #7A8494); border-radius: 6px; transition: color .18s ease; }
+    .c6 .c6-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--panel, #FFF); border: 2px solid var(--line, #DDE2E8); transition: border-color .2s ease, background .2s ease, transform .2s ease; }
+    .c6 .c6-d { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .06em; }
+    .c6 .c6-l { font-size: 11.5px; line-height: 1.2; text-align: center; }
+    .c6 .c6-day:hover { color: var(--fg-2, #3D4757); }
+    .c6 .c6-day:hover .c6-dot { border-color: var(--fg-3, #7A8494); }
+    .c6 .c6-day.is-done .c6-dot { border-color: var(--signal, #E0A02A); background: var(--signal, #E0A02A); }
+    .c6 .c6-day.is-on { color: var(--fg, #10151C); }
+    .c6 .c6-day.is-on .c6-l { font-weight: 600; }
+    .c6 .c6-day.is-on .c6-dot { border-color: var(--signal, #E0A02A); background: var(--panel, #FFF); transform: scale(1.28); box-shadow: 0 0 0 3px color-mix(in srgb, var(--signal, #E0A02A) 22%, transparent); }
+    .c6 .c6-day:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: 2px; }
+    .c6 .c6-panels { border: 1px solid var(--line, #DDE2E8); border-left: 3px solid var(--signal, #E0A02A); border-radius: 6px; background: var(--panel-2, #F3F5F8); padding: 13px 15px; min-height: 118px; }
+    .c6 .c6-panel h4 { margin: 0 0 5px; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 14px; font-weight: 650; color: var(--fg, #10151C); }
+    .c6 .c6-panel p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.6; color: var(--fg-2, #3D4757); }
+    .c6 .c6-owner { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c6 .c6-panel.is-on { animation: c6-in .26s ease both; }
+    @keyframes c6-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+    @media (max-width: 420px) { .c6 .c6-l { font-size: 10px; } .c6 .c6-line { left: 9%; right: 9%; } }
+    @media (prefers-reduced-motion: reduce) {
+      .c6 .c6-panel.is-on { animation: none; }
+      .c6 .c6-line-fill, .c6 .c6-dot, .c6 .c6-day { transition: none; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      var root = document.currentScript.closest('.c6');
+      var days = Array.prototype.slice.call(root.querySelectorAll('.c6-day'));
+      var panels = Array.prototype.slice.call(root.querySelectorAll('.c6-panel'));
+      var lineFill = root.querySelector('.c6-line-fill');
+
+      function select(i, focus) {
+        days.forEach(function (d, j) {
+          var on = j === i;
+          d.classList.toggle('is-on', on);
+          d.classList.toggle('is-done', j < i);
+          d.setAttribute('aria-selected', on ? 'true' : 'false');
+          d.tabIndex = on ? 0 : -1;
+        });
+        panels.forEach(function (p, j) {
+          p.hidden = j !== i;
+          p.classList.toggle('is-on', j === i);
+        });
+        lineFill.style.width = (i / (days.length - 1) * 100) + '%';
+        if (focus) days[i].focus();
+      }
+
+      days.forEach(function (d, i) {
+        d.addEventListener('click', function () { select(i); });
+        d.addEventListener('keydown', function (e) {
+          var k = e.key, n = null;
+          if (k === 'ArrowRight' || k === 'ArrowDown') n = (i + 1) % days.length;
+          else if (k === 'ArrowLeft' || k === 'ArrowUp') n = (i - 1 + days.length) % days.length;
+          else if (k === 'Home') n = 0;
+          else if (k === 'End') n = days.length - 1;
+          if (n !== null) { e.preventDefault(); select(n, true); }
+        });
+      });
+
+      select(0);
+    })();
+  </script>
+</div>

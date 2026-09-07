@@ -1,0 +1,109 @@
+<div class="demo c9">
+  <div class="c9-head">
+    <div>
+      <span class="c9-eyebrow">Commercial models</span>
+      <h3 class="c9-title">Pay for what you actually get</h3>
+    </div>
+    <div class="c9-toggle" role="tablist" aria-label="Card detail mode">
+      <button type="button" class="c9-tab is-on" role="tab" aria-selected="true" data-mode="how">How it works</button>
+      <button type="button" class="c9-tab" role="tab" aria-selected="false" data-mode="best">Best for</button>
+    </div>
+  </div>
+
+  <div class="c9-cards"></div>
+
+  <style>
+    .c9 { font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg-2, #3D4757); }
+    .c9 *, .c9 *::before, .c9 *::after { box-sizing: border-box; }
+    .c9 .c9-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+    .c9 .c9-eyebrow { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c9 .c9-title { margin: 3px 0 0; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 16px; font-weight: 650; letter-spacing: -.01em; color: var(--fg, #10151C); }
+    .c9 .c9-toggle { display: inline-flex; padding: 3px; gap: 3px; border: 1px solid var(--line, #DDE2E8); border-radius: 999px; background: var(--panel-2, #F3F5F8); }
+    .c9 .c9-tab { border: 0; background: transparent; cursor: pointer; padding: 5px 12px; border-radius: 999px; font: inherit; font-size: 11.5px; color: var(--fg-3, #7A8494); transition: color .18s ease, background .18s ease; }
+    .c9 .c9-tab:hover { color: var(--fg-2, #3D4757); }
+    .c9 .c9-tab.is-on { background: var(--panel, #FFF); color: var(--fg, #10151C); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+    .c9 .c9-tab:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: 2px; }
+    .c9 .c9-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .c9 .c9-card { position: relative; border: 1px solid var(--line, #DDE2E8); border-radius: 8px; background: var(--panel, #FFF); padding: 14px 13px 13px; display: flex; flex-direction: column; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+    .c9 .c9-card:hover { border-color: var(--fg-3, #7A8494); box-shadow: 0 6px 18px rgba(0,0,0,.08); transform: translateY(-2px); }
+    .c9 .c9-card.is-rec { border-color: var(--signal, #E0A02A); box-shadow: 0 0 0 1px color-mix(in srgb, var(--signal, #E0A02A) 40%, transparent); }
+    .c9 .c9-badge { position: absolute; top: -9px; right: 10px; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; background: var(--signal, #E0A02A); color: #1A1206; font-weight: 600; }
+    .c9 .c9-unit { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c9 .c9-name { margin: 5px 0 2px; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 15px; font-weight: 650; letter-spacing: -.01em; color: var(--fg, #10151C); }
+    .c9 .c9-price { font-size: 11.5px; color: var(--live, #128C7E); font-family: "IBM Plex Mono", ui-monospace, monospace; margin-bottom: 9px; }
+    .c9 .c9-body { font-size: 12px; line-height: 1.58; color: var(--fg-2, #3D4757); margin: 0; min-height: 76px; }
+    .c9 .c9-body.is-swap { animation: c9-fade .24s ease both; }
+    @keyframes c9-fade { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+    .c9 .c9-meta { margin-top: 10px; padding-top: 9px; border-top: 1px dashed var(--line, #DDE2E8); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 9.5px; letter-spacing: .06em; color: var(--fg-3, #7A8494); }
+    @media (max-width: 520px) { .c9 .c9-cards { grid-template-columns: 1fr; } .c9 .c9-body { min-height: 0; } }
+    @media (prefers-reduced-motion: reduce) { .c9 .c9-card, .c9 .c9-tab { transition: none; } .c9 .c9-body.is-swap { animation: none; } }
+  </style>
+
+  <script>
+    (function () {
+      var root = document.currentScript.closest('.c9');
+      var wrap = root.querySelector('.c9-cards');
+
+      var models = [
+        {
+          unit: 'Per lead', name: 'Web Leads', price: 'from $9 / lead', rec: false,
+          how: 'Consumers complete a form on a compliant landing page. The record posts to your CRM in real time with consent, timestamp and source.',
+          best: 'Dialler teams with spare outbound capacity who want the lowest entry cost per record and can work volume quickly.',
+          meta: 'Personal Loans · Debt Relief · Legal'
+        },
+        {
+          unit: 'Per call', name: 'Inbound Calls', price: 'from $28 / call', rec: true,
+          how: 'Paid search sends the consumer straight to your queue after an IVR screen. Billing starts once the call passes the agreed buffer.',
+          best: 'Independent agencies and contractors with agents on the phones during set hours who want intent without the dial time.',
+          meta: 'Auto Insurance · HVAC · Pest Control'
+        },
+        {
+          unit: 'Per transfer', name: 'Live Transfers', price: 'from $62 / transfer', rec: false,
+          how: 'Our agent screens against your criteria, then warm-transfers the consumer and introduces them before dropping off the line.',
+          best: 'Carriers, law firms and lenders where agent time is expensive and only fully qualified conversations are worth taking.',
+          meta: 'Medicare · Final Expense · Legal'
+        }
+      ];
+
+      var mode = 'how';
+      var cards = models.map(function (m) {
+        var el = document.createElement('article');
+        el.className = 'c9-card' + (m.rec ? ' is-rec' : '');
+        el.innerHTML =
+          (m.rec ? '<span class="c9-badge">Recommended</span>' : '') +
+          '<span class="c9-unit">' + m.unit + '</span>' +
+          '<h4 class="c9-name">' + m.name + '</h4>' +
+          '<span class="c9-price">' + m.price + '</span>' +
+          '<p class="c9-body"></p>' +
+          '<span class="c9-meta">' + m.meta + '</span>';
+        wrap.appendChild(el);
+        return { body: el.querySelector('.c9-body'), data: m };
+      });
+
+      function render(animate) {
+        cards.forEach(function (c) {
+          c.body.textContent = c.data[mode];
+          if (animate) {
+            c.body.classList.remove('is-swap');
+            void c.body.offsetWidth;
+            c.body.classList.add('is-swap');
+          }
+        });
+      }
+
+      root.querySelectorAll('.c9-tab').forEach(function (t) {
+        t.addEventListener('click', function () {
+          root.querySelectorAll('.c9-tab').forEach(function (o) {
+            var on = o === t;
+            o.classList.toggle('is-on', on);
+            o.setAttribute('aria-selected', on ? 'true' : 'false');
+          });
+          mode = t.dataset.mode;
+          render(true);
+        });
+      });
+
+      render(false);
+    })();
+  </script>
+</div>

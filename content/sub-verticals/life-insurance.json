@@ -1,0 +1,59 @@
+{
+  "slug": "life-insurance",
+  "vertical": "insurance",
+  "name": "Life Insurance",
+  "active": true,
+  "order": 4,
+  "shortDescription": "Reach consumers protecting their families with term and permanent life coverage and connect them with licensed life agents.",
+  "description": [
+    "Life insurance demand is triggered by responsibility. Consumers begin shopping when they marry, have a child, buy a home, take on a mortgage, start a business or lose employer group coverage. Others revisit their protection when an existing term policy nears expiration, when a health scare prompts action, or when they realise their workplace benefit would not sustain their family. These moments create genuine intent, but the purchase involves underwriting, health questions and product choices that most consumers want to talk through with a professional.",
+    "Altarious Global reaches these consumers across search, social and content placements while they research term, whole and universal life options, then delivers them to licensed agents, brokerages and carriers through Inbound Calls and Live Transfers. The result is a steady flow of protection-minded consumers who are ready to discuss coverage amounts, term lengths and application steps."
+  ],
+  "consumerProfile": "Adults aged 25 to 65 with dependents, a mortgage or other financial obligations that would burden their family. High-value segments include new parents, recent homebuyers, self-employed professionals without group coverage, and consumers in their fifties and sixties whose original term policy is expiring.",
+  "intentSignals": [
+    "Searching for term life or whole life insurance quotes",
+    "Recently married, had a child or purchased a home",
+    "Existing term policy approaching expiration",
+    "Lost employer-provided group life coverage",
+    "Started a business or took on a business loan requiring coverage",
+    "Researching life insurance without a medical exam"
+  ],
+  "qualificationCriteria": [
+    "Age 18 to 75 and a resident of a state where the agent is licensed",
+    "US citizen or permanent resident",
+    "Has dependents, a mortgage or another stated need for coverage",
+    "Basic health status confirmed for underwriting class placement",
+    "Desired coverage amount and product type discussed",
+    "Interested in receiving a quote and starting an application today"
+  ],
+  "keywords": [
+    "term life insurance quotes",
+    "whole life insurance",
+    "life insurance rates by age",
+    "no medical exam life insurance",
+    "life insurance for parents",
+    "best life insurance companies",
+    "mortgage protection life insurance"
+  ],
+  "marketContext": "A significant share of American households acknowledge they are underinsured, and awareness of that gap increased in recent years. Simplified issue and accelerated underwriting have shortened the path from quote to policy, making phone-based sales more viable than ever. Carriers and brokerages compete for consumers at the moment a life event creates urgency, and those that engage quickly with a licensed agent tend to convert best. Because the need spans every income bracket and region, life insurance supports large-scale, nationally distributed acquisition programs.",
+  "inboundCallsAngle": "Life insurance carries emotional weight and technical complexity, and consumers frequently want a human conversation before committing. Inbound Call programs invite consumers who are researching coverage to call a licensed agent directly, so the first interaction happens while their motivation is highest. Callers typically arrive with a specific need in mind, whether it is protecting a mortgage, replacing an expiring term policy or covering a business obligation, which allows the agent to move directly into needs analysis and quoting. This channel works especially well for agencies offering accelerated underwriting and instant decision products.",
+  "liveTransfersAngle": "Live Transfers give life agencies a qualified conversation instead of a cold one. Our team confirms the consumer's age, state, citizenship status, general health profile and the reason they are seeking coverage before warm-transferring to a licensed agent. This filtering matters in life insurance because underwriting appetite varies widely between carriers; a pre-screen can route tobacco users, consumers with specific conditions or higher coverage requests to the agents best equipped to place them. Agents receive consumers who are ready to discuss coverage rather than spending time on unqualified contacts.",
+  "faq": [
+    {
+      "q": "Can programs be focused on specific products such as term life only?",
+      "a": "Yes. Campaign messaging and screening can be tailored to term, whole, universal or final expense products, or to a combination that matches your carrier appointments."
+    },
+    {
+      "q": "Do you screen for health conditions before transferring?",
+      "a": "Screening includes general health and tobacco questions so that consumers are routed to agents whose carriers are likely to accept them, though final underwriting always remains with the carrier."
+    },
+    {
+      "q": "What coverage amounts do consumers typically request?",
+      "a": "Requests vary from modest final expense amounts to substantial term policies covering a mortgage or income replacement. Programs can be tuned to emphasise the coverage ranges your agency prefers."
+    }
+  ],
+  "seo": {
+    "title": "Life Insurance Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire protection-minded life insurance customers through performance marketing, inbound calls and pre-qualified live transfers delivered to licensed agents."
+  }
+}

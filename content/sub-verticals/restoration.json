@@ -1,0 +1,59 @@
+{
+  "slug": "restoration",
+  "vertical": "home-services",
+  "name": "Restoration",
+  "active": true,
+  "order": 8,
+  "shortDescription": "Connect property owners recovering from fire, smoke, mould, storm and water events with full-service restoration contractors.",
+  "description": [
+    "Property restoration covers the full recovery after a loss: fire and smoke damage, mould remediation, storm and wind damage, biohazard cleanup and the reconstruction that follows water mitigation. Homeowners and commercial property owners in these situations are often overwhelmed, dealing with an insurance adjuster, displaced from their property and unsure who to trust. They search for a contractor who can handle everything from emergency board-up and contents cleaning to rebuilding, and who understands how to work with their insurer.",
+    "Altarious Global reaches property owners at these moments through geo-targeted campaigns, including rapid response in areas affected by storms or wildfires, and delivers them to restoration contractors through Inbound Calls and Live Transfers. Screening captures the type of loss, property type, insurance status and the stage of the claim so that project managers engage with owners who need the full scope of restoration services."
+  ],
+  "consumerProfile": "Homeowners, landlords, HOAs and commercial property managers dealing with a recent property loss that requires professional remediation and rebuilding. The most valuable segments are insured fire and major water losses that include reconstruction, mould remediation cases discovered during a sale or renovation, and multi-property owners affected by a regional storm event.",
+  "intentSignals": [
+    "Searching for fire damage restoration, mould remediation or restoration company near me",
+    "Recent house fire, kitchen fire or smoke event in the property",
+    "Visible mould growth or a failed mould inspection during a home sale",
+    "Storm, tornado, hurricane or wildfire damage in the area",
+    "Insurance adjuster has approved a claim and owner is selecting a contractor",
+    "Water mitigation completed and property needs reconstruction"
+  ],
+  "qualificationCriteria": [
+    "Property located within the contractor's service area",
+    "Owner, property manager or authorised representative of the property",
+    "Type of loss identified as fire, smoke, mould, storm, water or biohazard",
+    "Residential or commercial property type confirmed",
+    "Insurance claim status established, whether filed, approved or self-pay",
+    "Ready to schedule an on-site assessment or estimate"
+  ],
+  "keywords": [
+    "restoration company near me",
+    "fire damage restoration",
+    "mold remediation near me",
+    "smoke damage cleanup",
+    "storm damage restoration",
+    "mold removal cost",
+    "disaster restoration services"
+  ],
+  "marketContext": "The restoration industry has grown steadily as severe weather, wildfire exposure and aging housing stock increase both the frequency and cost of property losses. National franchise systems and private-equity-backed platforms dominate insurer program work, but many contractors are seeking direct, retail customers to avoid the pricing pressure and administrative burden of third-party administrator networks. Mould remediation has become a distinct growth segment driven by real estate transactions and health awareness. Property owners consistently choose the contractor who responds first with clear communication, which makes direct acquisition a strategic priority for independent and regional restoration firms.",
+  "inboundCallsAngle": "After a fire or the discovery of mould, property owners want a human voice who can tell them what happens next. Inbound Call programs place local restoration offers in front of owners searching for help and connect them directly with the contractor's intake team. Callers arrive at a moment of high need and high trust-seeking, and contractors who respond with empathy, a clear process and a prompt site visit typically secure the project. Because inbound callers come directly rather than through an insurer network, contractors retain control of pricing and scope.",
+  "liveTransfersAngle": "Live Transfers help restoration contractors allocate project managers to the losses that matter most. Our team confirms the property location, ownership or management authority, type and extent of the loss, property type and insurance claim status before warm-transferring the call. This screening separates full-scope insured losses from small self-pay jobs, routes mould inquiries to certified remediation teams and identifies commercial properties that require different handling. Intake staff receive a well-documented handoff and can schedule an assessment with confidence that the project fits the contractor's capabilities.",
+  "faq": [
+    {
+      "q": "Can programs focus on specific loss types such as fire or mould?",
+      "a": "Yes. Campaigns and screening can be configured around fire and smoke, mould remediation, storm damage or reconstruction, individually or in combination."
+    },
+    {
+      "q": "Can restoration calls be activated after a regional disaster?",
+      "a": "Response campaigns can be deployed in affected areas within days of a storm or wildfire event, with screening tuned to the type of damage that occurred."
+    },
+    {
+      "q": "Do you distinguish insured from self-pay losses?",
+      "a": "Insurance claim status is captured during screening so that you can prioritise insured, full-scope projects or accept self-pay work according to your business model."
+    }
+  ],
+  "seo": {
+    "title": "Restoration Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire fire, mould, storm and reconstruction restoration customers directly through geo-targeted performance marketing, inbound calls and loss-screened live transfers."
+  }
+}

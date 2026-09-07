@@ -1,0 +1,59 @@
+{
+  "slug": "education",
+  "vertical": "web-leads",
+  "name": "Education",
+  "active": true,
+  "order": 6,
+  "shortDescription": "Deliver consented inquiries and calls from adult learners exploring degree programs, certifications, trade schools and online courses.",
+  "description": [
+    "Education acquisition serves adult learners and career changers exploring their next step: completing a bachelor's degree online, earning a master's to advance at work, enrolling in a nursing, healthcare or IT certification, attending a trade school for a skilled profession, or obtaining a professional licence. These prospects research programs, compare costs, financial aid and schedules, and typically begin by requesting information through a form, which makes web leads the foundational channel for schools and education providers.",
+    "Altarious Global runs performance marketing that captures prospective students as real-time web leads with program interest, education level, start-date preference and consent recorded on every record, delivered to colleges, universities, career schools and online education providers. Inbound Calls and Live Transfers complement the web lead flow by connecting prospects who want to speak with an admissions advisor immediately, which accelerates enrolment for motivated learners with near-term start dates."
+  ],
+  "consumerProfile": "Adults aged 22 to 55 who are working, changing careers or re-entering the workforce and are considering further education to improve their earnings or job security. The most valuable segments are prospects with a defined program interest and a start-date preference within the next few months, those eligible for financial aid or employer tuition benefits, and learners pursuing high-demand fields such as healthcare, technology and skilled trades.",
+  "intentSignals": [
+    "Searching for online degree programs, nursing programs near me or trade schools",
+    "Recently laid off or seeking a career change into a higher-paying field",
+    "Employer offers tuition assistance and the prospect wants to use it",
+    "Stalled in career due to lack of a degree or credential",
+    "Researching financial aid, FAFSA or program costs",
+    "Military service member or veteran exploring education benefits"
+  ],
+  "qualificationCriteria": [
+    "Age 18 or older and a US resident in a state where the institution is authorised to enrol students",
+    "Highest level of education completed meets the program's admission requirement",
+    "Specific program or field of interest identified",
+    "Preferred start date within the institution's enrolment horizon",
+    "Citizenship or residency status compatible with the program and financial aid",
+    "Consent to be contacted by the institution captured and documented"
+  ],
+  "keywords": [
+    "online degree programs",
+    "online colleges",
+    "nursing programs near me",
+    "trade schools near me",
+    "medical assistant program",
+    "online MBA programs",
+    "IT certification courses"
+  ],
+  "marketContext": "Higher education is undergoing a shift toward flexible, career-aligned learning as adults seek credentials that lead directly to employment. Online programs, accelerated certificates and skilled trades training have grown while traditional enrolment has faced demographic headwinds, intensifying competition for adult learners. Regulatory scrutiny of education marketing, including rules on misrepresentation, incentive compensation and consent, has raised the bar for lead generation partners. Institutions value inquiries with clear program intent and documented consent, and they increasingly pair web lead programs with phone channels because admissions conversations remain the point where interest becomes an application.",
+  "inboundCallsAngle": "Prospective students often have practical questions about cost, schedule, accreditation and time to completion that they want answered before they commit to an application. Inbound Call programs place program-specific education messaging in front of these prospects and invite them to call an admissions advisor directly, complementing the web lead flow with learners who are ready for a substantive conversation. Callers arrive with a program in mind and often a start-date goal, allowing advisors to assess fit, explain financial aid and schedule the next step on the first call. This channel is especially effective for career schools and programs with rolling start dates.",
+  "liveTransfersAngle": "Live Transfers help admissions teams focus on prospects who are eligible and motivated. Our team confirms the prospect's state, education level, program interest, preferred start date, residency status and consent before warm-transferring to the institution's admissions advisor. This pre-screen removes prospects who do not meet admission requirements, live outside authorised states or are exploring fields the institution does not offer, so advisors engage only with viable applicants. Transfers complement web leads by improving contact rates, which are a persistent challenge in education, and by moving high-intent prospects into the admissions process faster.",
+  "faq": [
+    {
+      "q": "Can education leads be filtered by program and education level?",
+      "a": "Yes. Program interest and highest education completed are captured on every lead, so delivery can be restricted to the programs you offer and the applicants who meet admission requirements."
+    },
+    {
+      "q": "How is consent handled for education inquiries?",
+      "a": "Each lead includes documented consent naming the institution that will contact the prospect, with timestamp and source recorded to support compliance with contact and marketing regulations."
+    },
+    {
+      "q": "How do calls complement education web leads?",
+      "a": "Web leads generate inquiry volume across programs, while Inbound Calls and Live Transfers connect motivated prospects directly with admissions advisors, raising contact rates and shortening time to application."
+    }
+  ],
+  "seo": {
+    "title": "Education Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire adult learners for degree, certificate and trade programs through consented web leads complemented by inbound calls and admissions-screened live transfers."
+  }
+}

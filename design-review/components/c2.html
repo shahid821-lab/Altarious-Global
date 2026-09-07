@@ -1,0 +1,139 @@
+<div class="demo c2">
+  <div class="c2-head">
+    <div>
+      <span class="c2-eyebrow">Coverage map</span>
+      <h3 class="c2-title">Where we deliver</h3>
+    </div>
+    <div class="c2-toggle" role="tablist" aria-label="Product">
+      <button type="button" class="c2-tab is-on" role="tab" aria-selected="true" data-product="calls">Inbound Calls</button>
+      <button type="button" class="c2-tab" role="tab" aria-selected="false" data-product="transfers">Live Transfers</button>
+    </div>
+  </div>
+
+  <div class="c2-grid" role="grid" aria-label="US state coverage"></div>
+
+  <div class="c2-foot">
+    <ul class="c2-legend" role="list">
+      <li><i class="c2-sw c2-l3"></i>High volume</li>
+      <li><i class="c2-sw c2-l2"></i>Active</li>
+      <li><i class="c2-sw c2-l1"></i>Limited</li>
+      <li><i class="c2-sw c2-l0"></i>Not live</li>
+    </ul>
+    <span class="c2-count" aria-live="polite"></span>
+  </div>
+
+  <div class="c2-tip" role="status" hidden></div>
+
+  <style>
+    .c2 { font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg-2, #3D4757); position: relative; }
+    .c2 *, .c2 *::before, .c2 *::after { box-sizing: border-box; }
+    .c2 .c2-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+    .c2 .c2-eyebrow { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c2 .c2-title { margin: 3px 0 0; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 16px; font-weight: 650; letter-spacing: -.01em; color: var(--fg, #10151C); }
+    .c2 .c2-toggle { display: inline-flex; padding: 3px; gap: 3px; border: 1px solid var(--line, #DDE2E8); border-radius: 999px; background: var(--panel-2, #F3F5F8); }
+    .c2 .c2-tab { border: 0; background: transparent; cursor: pointer; padding: 5px 12px; border-radius: 999px; font: inherit; font-size: 11.5px; color: var(--fg-3, #7A8494); transition: color .18s ease, background .18s ease; }
+    .c2 .c2-tab:hover { color: var(--fg-2, #3D4757); }
+    .c2 .c2-tab.is-on { background: var(--panel, #FFF); color: var(--fg, #10151C); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+    .c2 .c2-tab:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: 2px; }
+    .c2 .c2-grid { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px; }
+    .c2 .c2-cell { position: relative; display: flex; align-items: center; justify-content: center; height: 28px; border: 1px solid transparent; border-radius: 4px; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; font-weight: 500; cursor: default; padding: 0; transition: transform .15s ease, box-shadow .15s ease; }
+    .c2 .c2-cell:hover, .c2 .c2-cell:focus-visible { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,.14); outline: none; z-index: 2; }
+    .c2 .c2-cell:focus-visible { border-color: var(--signal, #E0A02A); }
+    .c2 .c2-l3 { background: color-mix(in srgb, var(--live, #128C7E) 82%, transparent); color: #fff; }
+    .c2 .c2-l2 { background: color-mix(in srgb, var(--live, #128C7E) 46%, transparent); color: var(--fg, #10151C); }
+    .c2 .c2-l1 { background: color-mix(in srgb, var(--signal, #E0A02A) 38%, transparent); color: var(--fg, #10151C); }
+    .c2 .c2-l0 { background: var(--panel-2, #F3F5F8); color: var(--fg-3, #7A8494); border-color: var(--line, #DDE2E8); }
+    .c2 .c2-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+    .c2 .c2-legend { display: flex; gap: 14px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; font-size: 11px; color: var(--fg-3, #7A8494); }
+    .c2 .c2-legend li { display: flex; align-items: center; gap: 6px; }
+    .c2 .c2-sw { width: 11px; height: 11px; border-radius: 3px; display: inline-block; border: 1px solid transparent; }
+    .c2 .c2-count { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; color: var(--fg-2, #3D4757); }
+    .c2 .c2-tip { position: absolute; z-index: 5; pointer-events: none; padding: 7px 10px; border-radius: 6px; border: 1px solid var(--line, #DDE2E8); background: var(--panel, #FFF); box-shadow: 0 8px 20px rgba(0,0,0,.16); font-size: 11.5px; line-height: 1.45; color: var(--fg-2, #3D4757); white-space: nowrap; transform: translate(-50%, -100%); }
+    .c2 .c2-tip b { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: .06em; color: var(--fg, #10151C); }
+    .c2 .c2-tip span { color: var(--fg-3, #7A8494); }
+    @media (max-width: 420px) { .c2 .c2-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); } }
+    @media (prefers-reduced-motion: reduce) { .c2 .c2-cell, .c2 .c2-tab { transition: none; } }
+  </style>
+
+  <script>
+    (function () {
+      var root = document.currentScript.closest('.c2');
+      var grid = root.querySelector('.c2-grid');
+      var tip = root.querySelector('.c2-tip');
+      var count = root.querySelector('.c2-count');
+      var names = {AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",CT:"Connecticut",DE:"Delaware",FL:"Florida",GA:"Georgia",HI:"Hawaii",ID:"Idaho",IL:"Illinois",IN:"Indiana",IA:"Iowa",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",ME:"Maine",MD:"Maryland",MA:"Massachusetts",MI:"Michigan",MN:"Minnesota",MS:"Mississippi",MO:"Missouri",MT:"Montana",NE:"Nebraska",NV:"Nevada",NH:"New Hampshire",NJ:"New Jersey",NM:"New Mexico",NY:"New York",NC:"North Carolina",ND:"North Dakota",OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",SC:"South Carolina",SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VT:"Vermont",VA:"Virginia",WA:"Washington",WV:"West Virginia",WI:"Wisconsin",WY:"Wyoming"};
+      var abbrs = Object.keys(names);
+      var labels = ["Not live", "Limited", "Active", "High volume"];
+
+      // Deterministic per-product coverage levels.
+      function level(ab, product) {
+        var seed = 0, key = ab + product;
+        for (var i = 0; i < key.length; i++) seed = (seed * 31 + key.charCodeAt(i)) % 9973;
+        var big = "CA TX FL NY PA IL OH GA NC MI".indexOf(ab) > -1;
+        if (big) return product === 'calls' ? 3 : (seed % 4 === 0 ? 2 : 3);
+        var r = seed % 100;
+        if (product === 'calls') return r < 12 ? 0 : r < 40 ? 1 : r < 78 ? 2 : 3;
+        return r < 26 ? 0 : r < 58 ? 1 : r < 88 ? 2 : 3;
+      }
+
+      var cells = abbrs.map(function (ab) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'c2-cell';
+        b.textContent = ab;
+        b.dataset.ab = ab;
+        b.setAttribute('role', 'gridcell');
+        grid.appendChild(b);
+        return b;
+      });
+
+      var product = 'calls';
+
+      function render() {
+        var pname = product === 'calls' ? 'Inbound Calls' : 'Live Transfers';
+        var live = 0;
+        cells.forEach(function (b) {
+          var lv = level(b.dataset.ab, product);
+          if (lv > 0) live++;
+          b.className = 'c2-cell c2-l' + lv;
+          b.dataset.level = lv;
+          b.setAttribute('aria-label', names[b.dataset.ab] + ': ' + labels[lv] + ', ' + pname);
+        });
+        count.textContent = live + ' / 50 states live · ' + pname;
+        hide();
+      }
+
+      function show(b) {
+        var lv = +b.dataset.level;
+        tip.innerHTML = '<b>' + names[b.dataset.ab] + ' · ' + b.dataset.ab + '</b>' + labels[lv] +
+          ' <span>·</span> ' + (product === 'calls' ? 'Inbound Calls' : 'Live Transfers');
+        tip.hidden = false;
+        var r = b.getBoundingClientRect(), rr = root.getBoundingClientRect();
+        var x = r.left - rr.left + r.width / 2;
+        var maxX = rr.width - 8;
+        tip.style.left = Math.max(8, Math.min(maxX, x)) + 'px';
+        tip.style.top = (r.top - rr.top - 6) + 'px';
+      }
+      function hide() { tip.hidden = true; }
+
+      grid.addEventListener('mouseover', function (e) { var b = e.target.closest('.c2-cell'); if (b) show(b); });
+      grid.addEventListener('mouseleave', hide);
+      grid.addEventListener('focusin', function (e) { var b = e.target.closest('.c2-cell'); if (b) show(b); });
+      grid.addEventListener('focusout', hide);
+
+      root.querySelectorAll('.c2-tab').forEach(function (t) {
+        t.addEventListener('click', function () {
+          root.querySelectorAll('.c2-tab').forEach(function (o) {
+            var on = o === t;
+            o.classList.toggle('is-on', on);
+            o.setAttribute('aria-selected', on ? 'true' : 'false');
+          });
+          product = t.dataset.product;
+          render();
+        });
+      });
+
+      render();
+    })();
+  </script>
+</div>

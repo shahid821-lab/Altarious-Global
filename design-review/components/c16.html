@@ -1,0 +1,105 @@
+<div class="demo c16">
+  <div class="wrap">
+    <div class="hd">
+      <div>
+        <span class="eyebrow">Vertical intelligence</span>
+        <h3 class="name">Medicare</h3>
+      </div>
+      <label class="sel">
+        <span class="sr">Choose a sub-vertical</span>
+        <select>
+          <optgroup label="Insurance">
+            <option>Auto Insurance</option><option selected>Medicare</option><option>Final Expense</option>
+          </optgroup>
+          <optgroup label="Home Services">
+            <option>Pest Control</option><option>HVAC</option><option>Roofing</option>
+          </optgroup>
+          <optgroup label="Web Leads">
+            <option>Personal Loans</option><option>Debt Relief</option><option>Legal</option>
+          </optgroup>
+        </select>
+      </label>
+    </div>
+
+    <dl class="strip">
+      <div class="fact" data-f="season"><dt>Seasonality</dt><dd class="v"></dd><dd class="sub"></dd>
+        <div class="spark" aria-hidden="true"><svg viewBox="0 0 120 28" preserveAspectRatio="none"><polyline points=""/></svg></div></div>
+      <div class="fact" data-f="ticket"><dt>Avg ticket</dt><dd class="v"></dd><dd class="sub"></dd></div>
+      <div class="fact" data-f="buyer"><dt>Buyer type</dt><dd class="v"></dd><dd class="sub"></dd></div>
+      <div class="fact" data-f="peak"><dt>Peak hours</dt><dd class="v"></dd><dd class="sub"></dd></div>
+    </dl>
+
+    <p class="ft"><span class="dotl"></span><span class="prod"></span> · figures are 12-month blended medians across US campaigns</p>
+  </div>
+
+  <style>
+    .c16{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--fg-2,#3D4757)}
+    .c16 *{box-sizing:border-box}
+    .c16 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    .c16 .wrap{border:1px solid var(--line,#E2E6EC);border-radius:14px;background:var(--panel,#fff);padding:15px;display:flex;flex-direction:column;gap:12px;min-height:240px}
+    .c16 .hd{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .c16 .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c16 .name{margin:2px 0 0;font-family:Archivo,system-ui,sans-serif;font-size:19px;letter-spacing:-.01em;color:var(--fg,#141A22)}
+    .c16 select{font:inherit;font-size:12px;padding:7px 10px;border-radius:9px;border:1px solid var(--line,#E2E6EC);background:var(--panel-2,#F3F5F8);color:var(--fg,#141A22);cursor:pointer;max-width:170px}
+    .c16 select:focus-visible{outline:2px solid var(--signal,#E8A33D);outline-offset:2px}
+    .c16 .strip{margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    @media (max-width:520px){.c16 .strip{grid-template-columns:repeat(2,1fr)}}
+    .c16 .fact{position:relative;overflow:hidden;background:var(--panel-2,#F3F5F8);border:1px solid var(--line,#E2E6EC);border-radius:11px;padding:9px 10px;display:flex;flex-direction:column;gap:2px;min-height:84px}
+    .c16 dt{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c16 dd{margin:0}
+    .c16 .v{font-family:Archivo,system-ui,sans-serif;font-size:15px;font-weight:700;line-height:1.2;color:var(--fg,#141A22)}
+    .c16 .sub{font-size:10px;line-height:1.4;color:var(--fg-3,#7A8798)}
+    .c16 .swap .v,.c16 .swap .sub{animation:c16up .34s cubic-bezier(.2,.7,.2,1) both}
+    .c16 .swap .sub{animation-delay:.04s}
+    @keyframes c16up{from{opacity:0;transform:translateY(7px)}}
+    .c16 .spark{position:absolute;left:0;right:0;bottom:0;height:24px;opacity:.5}
+    .c16 .spark svg{width:100%;height:100%}
+    .c16 .spark polyline{fill:none;stroke:var(--signal,#E8A33D);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:260;stroke-dashoffset:0;transition:stroke-dashoffset .6s ease}
+    .c16 .spark.draw polyline{stroke-dashoffset:260}
+    .c16 .ft{margin:auto 0 0;display:flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--fg-3,#7A8798);border-top:1px solid var(--line,#E2E6EC);padding-top:9px;flex-wrap:wrap}
+    .c16 .dotl{width:6px;height:6px;border-radius:50%;background:var(--live,#1FA9A0);flex:0 0 auto}
+    .c16 .prod{color:var(--fg-2,#3D4757)}
+    @media (prefers-reduced-motion:reduce){.c16 *{animation:none!important;transition:none!important}.c16 .spark.draw polyline{stroke-dashoffset:0}}
+  </style>
+
+  <script>
+  (function(){
+    var r=document.currentScript.closest('.c16');
+    var D={
+      'Auto Insurance':{season:['Steady','Slight Q1 lift at renewal'],ticket:['$32 / call','Inbound, 90s billable'],buyer:['Carrier & agency','Regional agents dominate'],peak:['10:00 – 14:00','Local time, weekdays'],prod:'Inbound Calls · Live Transfers',curve:[6,6,7,6,6,5,5,5,6,6,7,7]},
+      'Medicare':{season:['Sharp AEP peak','Oct 15 – Dec 7 dominates'],ticket:['$58 / transfer','Live transfer, 120s buffer'],buyer:['FMO & carrier','National field marketing orgs'],peak:['09:00 – 12:00','Senior callers skew early'],prod:'Live Transfers · Inbound Calls',curve:[3,3,3,3,3,3,3,4,6,10,10,7]},
+      'Final Expense':{season:['Flat year-round','Mild summer softness'],ticket:['$41 / transfer','Age & state qualified'],buyer:['IMO & call centre','Volume buyers, tight filters'],peak:['11:00 – 15:00','Mid-week strongest'],prod:'Live Transfers',curve:[6,6,6,6,5,5,4,5,6,6,6,6]},
+      'Pest Control':{season:['Spring surge','Apr–Aug carries the year'],ticket:['$46 / call','Recurring contract intent'],buyer:['Regional operator','Franchise networks'],peak:['08:00 – 11:00','Homeowner morning window'],prod:'Inbound Calls · Web Leads',curve:[2,3,5,8,10,10,9,8,6,4,3,2]},
+      'HVAC':{season:['Twin peaks','Jul heat, Jan freeze'],ticket:['$72 / call','Replacement intent priced up'],buyer:['Dealer & contractor','Install-focused buyers'],peak:['07:00 – 10:00','Emergency calls skew early'],prod:'Inbound Calls',curve:[9,7,4,3,5,8,10,9,5,3,5,8]},
+      'Roofing':{season:['Storm driven','Follows hail & wind events'],ticket:['$95 / lead','High ticket, slow close'],buyer:['Contractor & restoration','Territory exclusive'],peak:['09:00 – 13:00','Post-storm spikes'],prod:'Web Leads · Inbound Calls',curve:[3,4,6,9,10,8,7,7,6,5,4,3]},
+      'Personal Loans':{season:['Jan & Sep lifts','Debt reset and back-to-school'],ticket:['$18 / lead','Ping-tree distributed'],buyer:['Lender & marketplace','Bid-based routing'],peak:['12:00 – 16:00','Afternoon applications'],prod:'Web Leads',curve:[9,7,6,6,6,6,6,7,8,6,6,7]},
+      'Debt Relief':{season:['Q1 heavy','Post-holiday statement shock'],ticket:['$54 / transfer','Min $10k unsecured'],buyer:['Settlement firm','Licence-state filtered'],peak:['10:00 – 15:00','Weekday only'],prod:'Live Transfers · Web Leads',curve:[10,9,8,6,5,5,5,5,6,6,6,7]},
+      'Legal':{season:['Campaign driven','Tracks active tort windows'],ticket:['$185 / lead','Signed-retainer intent'],buyer:['Firm & aggregator','Case-type exclusive'],peak:['09:00 – 12:00','Business hours only'],prod:'Web Leads · Live Transfers',curve:[6,6,7,7,6,6,6,7,7,7,6,6]}
+    };
+    var sel=r.querySelector('select'),name=r.querySelector('.name'),prod=r.querySelector('.prod');
+    var facts={};r.querySelectorAll('.fact').forEach(function(f){facts[f.dataset.f]=f;});
+    var poly=r.querySelector('.spark polyline'),spark=r.querySelector('.spark');
+    var rm=matchMedia('(prefers-reduced-motion: reduce)');
+    function pts(c){
+      var mx=Math.max.apply(null,c),n=c.length;
+      return c.map(function(v,i){return (i*(120/(n-1))).toFixed(1)+','+(26-(v/mx)*22).toFixed(1);}).join(' ');
+    }
+    function render(k){
+      var d=D[k];if(!d)return;
+      name.textContent=k;prod.textContent=d.prod;
+      ['season','ticket','buyer','peak'].forEach(function(f,i){
+        var el=facts[f];el.classList.remove('swap');void el.offsetWidth;
+        el.querySelector('.v').textContent=d[f][0];
+        el.querySelector('.sub').textContent=d[f][1];
+        el.querySelector('.v').style.animationDelay=(i*45)+'ms';
+        el.querySelector('.sub').style.animationDelay=(i*45+40)+'ms';
+        el.classList.add('swap');
+      });
+      poly.setAttribute('points',pts(d.curve));
+      if(!rm.matches){spark.classList.add('draw');requestAnimationFrame(function(){requestAnimationFrame(function(){spark.classList.remove('draw');});});}
+    }
+    sel.addEventListener('change',function(){render(sel.value);});
+    render(sel.value);
+  })();
+  </script>
+</div>

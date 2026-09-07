@@ -1,0 +1,59 @@
+{
+  "slug": "mortgage",
+  "vertical": "web-leads",
+  "name": "Mortgage",
+  "active": true,
+  "order": 7,
+  "shortDescription": "Deliver real-time purchase, refinance and home equity leads and calls to lenders, brokers and loan officers.",
+  "description": [
+    "Mortgage demand is shaped by interest rates, home prices and life events. Consumers shop for a purchase loan when they begin house hunting or receive an accepted offer, for a refinance when rates fall or they want to eliminate mortgage insurance, and for home equity loans and lines of credit when they want to fund renovations or consolidate debt without giving up a low first-mortgage rate. Reverse mortgages serve older homeowners seeking to access equity. These consumers compare rates and lenders online and typically begin with a quote request form, making web leads the core acquisition channel.",
+    "Altarious Global runs performance marketing that captures borrowers as real-time web leads with loan purpose, property details, estimated credit, loan amount and consent recorded on every record, delivered to lenders, brokers and loan officers through direct integration. Inbound Calls and Live Transfers complement the web lead flow by connecting borrowers who want to discuss their scenario with a loan officer immediately, which is common for first-time buyers and homeowners with complex situations."
+  ],
+  "consumerProfile": "Homebuyers and homeowners aged 25 to 70 with income and credit profiles suited to conventional, FHA, VA, jumbo or home equity products. The most valuable segments are pre-approval seekers who are actively house hunting, homeowners with substantial equity seeking cash-out or HELOC financing, and borrowers whose current rate is high enough to benefit from a refinance when the market moves.",
+  "intentSignals": [
+    "Searching for mortgage rates, mortgage pre-approval or best mortgage lenders",
+    "Actively house hunting or under contract on a home purchase",
+    "Existing rate is above current market rates and considering a refinance",
+    "Researching HELOC or home equity loan to fund renovations or consolidate debt",
+    "Veteran or service member exploring VA loan benefits",
+    "Older homeowner researching reverse mortgage options"
+  ],
+  "qualificationCriteria": [
+    "Age 18 or older and seeking financing for a property in a state where the lender is licensed",
+    "Loan purpose identified as purchase, refinance, cash-out, HELOC or reverse mortgage",
+    "Estimated property value and requested loan amount within the lender's range",
+    "Self-reported credit score range and employment status",
+    "For purchase, stage in the buying process and timeline established",
+    "Consent to be contacted captured and documented"
+  ],
+  "keywords": [
+    "mortgage rates today",
+    "mortgage pre approval",
+    "refinance mortgage rates",
+    "HELOC rates",
+    "home equity loan",
+    "FHA loan requirements",
+    "VA home loan lenders"
+  ],
+  "marketContext": "The mortgage market has been defined by elevated rates that suppressed refinance activity and constrained purchase volume, pushing lenders to compete fiercely for every qualified borrower while home equity products have grown as homeowners tap accumulated equity. Any downward movement in rates triggers rapid surges in refinance demand, rewarding lenders that can scale acquisition quickly. Compliance requirements around consent, disclosures and lead handling remain stringent. Web leads deliver the volume lenders need to feed loan officer pipelines, and phone channels increase conversion by connecting borrowers with a loan officer before a competitor does.",
+  "inboundCallsAngle": "Mortgage borrowers, particularly first-time buyers and homeowners with complex income or credit, often want to talk through their scenario before submitting an application. Inbound Call programs place mortgage offers in front of consumers researching rates and products and invite them to call a loan officer directly, complementing the web lead flow with borrowers ready for a conversation. Callers arrive with a purpose and property in mind, enabling the loan officer to pre-qualify, discuss product options and begin the application on the first call. Speed to conversation is a critical advantage in a market where borrowers contact multiple lenders.",
+  "liveTransfersAngle": "Live Transfers give mortgage lenders and brokers pre-qualified borrower conversations. Our team confirms the property state, loan purpose, estimated value and loan amount, credit range, employment and consent before warm-transferring to a licensed loan officer. This pre-screen removes borrowers outside the lender's footprint, below credit minimums or seeking products the lender does not offer, and it routes purchase, refinance and home equity inquiries to the appropriate team. Transfers complement web leads by improving contact rates, which decline sharply with every minute after a form is submitted, and by delivering borrowers at the moment they are ready to engage.",
+  "faq": [
+    {
+      "q": "Can mortgage leads be filtered by loan purpose, credit and state?",
+      "a": "Yes. Loan purpose, property state, estimated credit range and loan amount are captured on every lead, and delivery is filtered to your licensing footprint and product set."
+    },
+    {
+      "q": "How quickly are mortgage web leads delivered?",
+      "a": "Leads are delivered in real time through API or CRM integration as soon as the borrower submits, so loan officers can follow up within minutes."
+    },
+    {
+      "q": "How do calls complement mortgage web leads?",
+      "a": "Web leads feed loan officer pipelines at scale, while Inbound Calls and Live Transfers connect borrowers who want to talk immediately, improving contact rates and application starts."
+    }
+  ],
+  "seo": {
+    "title": "Mortgage Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire purchase, refinance and home equity borrowers through real-time, consented web leads complemented by inbound calls and pre-qualified live transfers for lenders."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "business-services",
+  "vertical": "web-leads",
+  "name": "Business Services",
+  "active": true,
+  "order": 9,
+  "shortDescription": "Deliver B2B leads and calls from business owners seeking financing, payroll, merchant services, software and professional support.",
+  "description": [
+    "Business services acquisition reaches owners and decision makers who need a solution to run or grow their company: working capital and equipment financing, merchant processing and point-of-sale systems, payroll and HR platforms, business formation and registered agent services, accounting and bookkeeping, commercial telecom and business insurance. These buyers research during working hours, compare providers and typically request a quote or demo through an online form, making web leads the foundation of acquisition in this category.",
+    "Altarious Global runs performance marketing that captures these decision makers as real-time web leads with business type, size, service need and consent recorded on every record, delivered to service providers, lenders and software companies through direct integration. Inbound Calls and Live Transfers complement the web lead flow by connecting owners who want to speak with a specialist immediately, which is especially valuable for financing, where speed and clarity often determine which provider wins the account."
+  ],
+  "consumerProfile": "Owners, founders and operations leaders of small and mid-sized businesses across retail, restaurants, contracting, professional services, healthcare practices and e-commerce. The most valuable segments are established businesses with revenue seeking financing or processing services, growing companies adding employees and needing payroll or HR support, and new ventures forming an entity and setting up operations.",
+  "intentSignals": [
+    "Searching for small business loans, merchant services or payroll services for small business",
+    "Needs working capital for inventory, expansion or cash flow gaps",
+    "Opening a new location or launching a business requiring formation and setup services",
+    "Hiring employees and needing payroll, benefits or HR compliance support",
+    "Dissatisfied with current processing fees, software or service provider",
+    "Received a large order or contract requiring equipment or financing"
+  ],
+  "qualificationCriteria": [
+    "Active or forming business located in the United States within the provider's coverage",
+    "Business type, time in operation and approximate monthly revenue stated",
+    "Specific service need identified, such as financing, processing, payroll or formation",
+    "Owner or authorised decision maker confirmed",
+    "Timeline for making a decision within the provider's target window",
+    "Consent to be contacted captured and documented"
+  ],
+  "keywords": [
+    "small business loans",
+    "business line of credit",
+    "merchant services for small business",
+    "payroll services for small business",
+    "LLC formation service",
+    "equipment financing",
+    "business credit card processing"
+  ],
+  "marketContext": "Small businesses have become a major focus for financial and technology providers, and the market for business services is crowded with fintech lenders, payment processors, software platforms and traditional banks competing for the same owners. Access to capital remains a top concern for small business owners, and alternative lenders have expanded rapidly to serve businesses that banks decline. Decision makers are busy and compare options quickly, which rewards providers that respond within minutes. Web leads capture demand efficiently during research, and phone channels convert it, particularly for financing and services where the owner needs to discuss terms.",
+  "inboundCallsAngle": "Business owners are pressed for time and often prefer a direct conversation to a lengthy online process, especially when seeking financing or switching a critical service like payroll or payment processing. Inbound Call programs place business services messaging in front of owners searching for solutions and invite them to call a specialist directly, complementing the web lead flow with decision makers ready to talk. Callers arrive with a defined need and basic facts about their business, enabling the specialist to qualify, quote and move toward an agreement on the first call. Delivery is scheduled to match business hours and sales team availability.",
+  "liveTransfersAngle": "Live Transfers deliver business services providers qualified decision-maker conversations. Our team confirms the business type, time in operation, revenue range, the specific service need, decision-maker status and consent before warm-transferring to the provider's sales team. This pre-screen removes businesses that do not meet minimums, such as revenue or time-in-business thresholds for financing, and routes each inquiry to the right product specialist. Transfers complement web leads by overcoming the low contact rates common with B2B forms and by getting providers on the phone with owners before competitors respond.",
+  "faq": [
+    {
+      "q": "Can business services leads be filtered by revenue and time in business?",
+      "a": "Yes. Monthly revenue, time in operation and business type are captured on every lead and can be used to filter delivery to the accounts your products are designed for."
+    },
+    {
+      "q": "Which services can programs be built around?",
+      "a": "Programs can focus on business financing, merchant services, payroll and HR, business formation, accounting, telecom or a combination, with screening tailored to each."
+    },
+    {
+      "q": "How do calls complement business services web leads?",
+      "a": "Web leads capture demand during research, while Inbound Calls and Live Transfers connect owners who want to talk immediately with your specialists, improving contact and close rates."
+    }
+  ],
+  "seo": {
+    "title": "Business Services Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire small business customers for financing, payroll, merchant services and more through consented web leads complemented by inbound calls and decision-maker-screened live transfers."
+  }
+}

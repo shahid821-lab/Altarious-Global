@@ -1,0 +1,1114 @@
+PRODUCT REQUIREMENTS DOCUMENT (PRD)
+PPC, Performance Marketing, Lead Generation, Inbound Calls &
+Live Transfers Website
+1. PROJECT SUMMARY
+Build a modern, premium, professional website for a company operating in the PPC, Performance
+Marketing, Lead Generation, Pay Per Call, Inbound Calls, and Live Transfer industry.
+The website's primary purpose is to:
+Attract potential business clients.
+Showcase the company's customer acquisition capabilities.
+Demonstrate expertise across multiple industry verticals.
+Explain available acquisition products.
+Generate qualified business inquiries.
+Build topical authority through industry-specific product knowledge and SEO content.
+The website must be structured as a scalable PPC and Customer Acquisition platform, not simply a
+generic corporate website.
+2. PRIMARY BUSINESS POSITIONING
+The company provides customer acquisition solutions through:
+PPC / Performance Marketing
+Web Lead Generation
+Inbound Calls
+Qualified Calls
+Live Transfers
+Customer Acquisition Campaigns
+The primary business message throughout the website should communicate:
+We help businesses acquire high-intent customers through performance-driven marketing,
+web leads, inbound calls, and live transfers.
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+• 
+• 
+• 
+• 
+• 
+• 
+1
+
+=====PAGE=====
+3. PRIMARY WEBSITE OBJECTIVES
+Objective 1 — Client Acquisition
+Convert businesses and advertisers into qualified inquiries.
+Primary conversion actions:
+Request a Proposal
+Get Started
+Talk to Our Team
+Contact Us
+Objective 2 — Service Showcase
+Clearly explain:
+What products/services are available.
+Which verticals are supported.
+How web leads work.
+How inbound calls work.
+How live transfers work.
+Objective 3 — Industry Authority
+Demonstrate deep knowledge of each vertical through:
+Dedicated vertical pages.
+Dedicated product pages.
+Embedded knowledge articles.
+SEO-focused supporting content.
+Objective 4 — Lead Collection
+Capture potential client inquiries through forms.
+Each inquiry should be:
+Validated.
+Protected against spam.
+Stored.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+2
+
+=====PAGE=====
+Available for administration.
+Capable of generating an internal notification.
+4. CORE INDUSTRY VERTICALS
+The initial website must support three major vertical groups:
+A. Insurance
+B. Home Services
+C. Web Leads
+Each vertical is a major content pillar .
+Each vertical must have:
+A dedicated landing page.
+Sub-vertical/product pages.
+Inbound Call pages.
+Live Transfer pages.
+Embedded supporting knowledge articles.
+Dedicated SEO article pages.
+The architecture must allow additional verticals to be added later .
+5. CORE PRODUCT TYPES
+The primary acquisition products are:
+1. Web Leads
+Customer information is captured and delivered as a lead.
+Examples:
+Form leads
+Real-time leads
+Qualified leads
+High-intent leads
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+3
+
+=====PAGE=====
+2. Inbound Calls
+Customers actively call regarding a product or service.
+The website should explain:
+High-intent calls.
+Qualified calls.
+Industry-specific calls.
+Real-time delivery.
+3. Live Transfers
+A consumer is qualified and transferred directly to the client or designated destination.
+The website should explain:
+Consumer acquisition.
+Qualification.
+Call verification where applicable.
+Direct connection.
+Real-time transfer .
+6. CORE INFORMATION ARCHITECTURE
+The website must use the following hierarchy.
+HOME
+│
+├── SERVICES
+│   ├── PPC / Performance Marketing
+│   ├── Web Lead Generation
+│   ├── Inbound Calls
+│   └── Live Transfers
+│
+├── VERTICALS
+│
+│   ├── INSURANCE
+│   │   │
+│   │   ├── Insurance Overview
+│   │   │
+│   │   ├── [Insurance Sub-Vertical]
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+4
+
+=====PAGE=====
+│   │   │      ├── Inbound Calls
+│   │   │      │      ├── Embedded Article 1
+│   │   │      │      └── Embedded Article 2
+│   │   │      │
+│   │   │      └── Live Transfers
+│   │   │             ├── Embedded Article 1
+│   │   │             └── Embedded Article 2
+│   │   │
+│   │   └── Additional Insurance Sub-Verticals
+│   │
+│   ├── HOME SERVICES
+│   │   │
+│   │   ├── Home Services Overview
+│   │   │
+│   │   ├── [Home Service Sub-Vertical]
+│   │   │      ├── Inbound Calls
+│   │   │      │      ├── Embedded Article 1
+│   │   │      │      └── Embedded Article 2
+│   │   │
+│   │   │      └── Live Transfers
+│   │   │             ├── Embedded Article 1
+│   │   │             └── Embedded Article 2
+│   │   │
+│   │   └── Additional Home Service Sub-Verticals
+│   │
+│   └── WEB LEADS
+│       │
+│       ├── Web Leads Overview
+│       │
+│       ├── [Web Lead Vertical]
+│       │      ├── Inbound Calls
+│       │      │      ├── Embedded Article 1
+│       │      │      └── Embedded Article 2
+│       │      │
+│       │      └── Live Transfers
+│       │             ├── Embedded Article 1
+│       │             └── Embedded Article 2
+│       │
+│       └── Additional Web Lead Verticals
+│
+├── ABOUT US
+│
+├── CASE STUDIES / RESULTS
+│
+└── CONTACT
+5
+
+=====PAGE=====
+7. VERTICAL ARCHITECTURE
+IMPORTANT PRINCIPLE
+The website must not create one generic "Inbound Calls" page and one generic "Live Transfers" page for all
+industries.
+Instead, every supported sub-vertical must have its own dedicated acquisition product pages.
+Example:
+Insurance
+   ↓
+Auto Insurance
+   ├── Auto Insurance Inbound Calls
+   └── Auto Insurance Live Transfers
+Another example:
+Home Services
+   ↓
+Pest Control
+   ├── Pest Control Inbound Calls
+   └── Pest Control Live Transfers
+This structure allows:
+Better SEO targeting.
+Clearer client messaging.
+More specific product information.
+Scalable content.
+8. INSURANCE VERTICALS
+The website architecture should support all major and well-known insurance verticals.
+Initial structure should support at minimum the following categories, with the ability to add or remove
+categories.
+• 
+• 
+• 
+• 
+6
+
+=====PAGE=====
+Insurance Categories
+Auto Insurance
+Health Insurance
+Medicare
+Life Insurance
+Final Expense Insurance
+Home Insurance
+Commercial Insurance
+Renters Insurance
+Business Insurance
+Supplemental Insurance
+The final active vertical list can be controlled through the CMS/admin system.
+Example Page Structure
+/insurance/
+/insurance/auto-insurance/
+/insurance/auto-insurance/inbound-calls/
+/insurance/auto-insurance/live-transfers/
+9. HOME SERVICES VERTICALS
+The website architecture should support all major and well-known home services verticals.
+Initial structure should support categories such as:
+Pest Control
+Plumbing
+HVAC
+Roofing
+Electrical
+Solar
+Water Damage
+Restoration
+Home Improvement
+Windows
+Remodeling
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+7
+
+=====PAGE=====
+Landscaping
+Cleaning Services
+Appliance Repair
+Garage Door Services
+The exact active verticals should be manageable through the CMS.
+Example Page Structure
+/home-services/
+/home-services/pest-control/
+/home-services/pest-control/inbound-calls/
+/home-services/pest-control/live-transfers/
+10. WEB LEAD VERTICALS
+The Web Leads category represents verticals where customer acquisition is primarily based on web-
+generated leads.
+The architecture should support multiple lead-generation verticals.
+Examples may include:
+Financial Services
+Personal Loans
+Debt Relief
+Credit Repair
+Legal
+Education
+Mortgage
+Real Estate
+Business Services
+Consumer Services
+The exact active categories must remain configurable.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+8
+
+=====PAGE=====
+Example Page Structure
+/web-leads/
+/web-leads/personal-loans/
+/web-leads/personal-loans/inbound-calls/
+/web-leads/personal-loans/live-transfers/
+11. PRODUCT PAGE REQUIREMENTS
+Every individual Inbound Call or Live Transfer page must be a dedicated product landing page.
+Example:
+Auto Insurance Inbound Calls
+This is a product page.
+The page must explain:
+Product overview.
+Target consumer .
+Consumer intent.
+How calls are generated.
+Qualification approach.
+Delivery process.
+Why businesses should use the product.
+Inquiry CTA.
+Related knowledge articles.
+12. REQUIRED PRODUCT PAGE TEMPLATE
+Every Inbound Call and Live Transfer product page should use a consistent reusable template.
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+9
+
+=====PAGE=====
+Section 1 — Hero
+Include:
+Product name.
+Vertical.
+Clear value proposition.
+Primary CTA.
+Example structure:
+Auto Insurance Inbound Calls
+Connect with high-intent consumers actively looking for auto insurance solutions.
+CTA:
+Request More Information
+Section 2 — Product Overview
+Explain:
+What the product is.
+Who it is suitable for .
+The general customer acquisition objective.
+Section 3 — How It Works
+Visual process.
+Example:
+PPC / Traffic Acquisition
+        ↓
+Consumer Interest
+        ↓
+Call Initiated
+        ↓
+Qualification
+        ↓
+Inbound Call Delivered
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+10
+
+=====PAGE=====
+For Live Transfers:
+Traffic Acquisition
+        ↓
+Consumer Interest
+        ↓
+Qualification
+        ↓
+Live Connection
+        ↓
+Transfer to Client
+Section 4 — Product Benefits
+Examples:
+High-intent consumers
+Real-time opportunities
+Industry targeting
+Faster customer acquisition
+Qualified consumer engagement
+Content must remain configurable per product.
+Section 5 — PRODUCT KNOWLEDGE ARTICLES
+This is a mandatory section.
+Every product page must contain a Related Product Knowledge section.
+The section must display at least 2 related article cards.
+Example:
+AUTO INSURANCE INBOUND CALLS PAGE
+Product Information
+How It Works
+Benefits
+Inquiry CTA
+-----------------------------
+• 
+• 
+• 
+• 
+• 
+11
+
+=====PAGE=====
+PRODUCT KNOWLEDGE
+[ Article Card 1 ]
+Understanding Auto Insurance Call Intent
+Short article description.
+[Read Article]
+[ Article Card 2 ]
+How Auto Insurance Inbound Calls Support Customer Acquisition
+Short article description.
+[Read Article]
+These articles are previews/cards embedded on the product page.
+The full article is NOT displayed directly inside the product landing page.
+When a user clicks:
+Read Article
+They must be taken to a dedicated SEO article page.
+13. ARTICLE PAGE ARCHITECTURE
+Every knowledge article must have its own dedicated page.
+Example:
+/insurance/auto-insurance/inbound-calls/
+The above page contains article previews.
+Clicking an article opens:
+12
+
+=====PAGE=====
+/resources/insurance/auto-insurance/inbound-calls/understanding-auto-insurance-
+call-intent/
+or another clean SEO-friendly URL structure approved during implementation.
+14. ARTICLE PAGE REQUIREMENTS
+Each article page must contain:
+Article Header
+Article title
+Relevant vertical/category
+Publication date
+Optional author
+Featured image
+Article Content
+SEO-friendly article content with:
+Proper H1
+H2 sections
+H3 sections where needed
+Relevant internal links
+Related product links
+Related articles
+Related CTA
+Each article should link the reader back to the relevant product page.
+Example:
+Interested in Auto Insurance Inbound Calls?
+CTA:
+Talk to Our Team
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+13
+
+=====PAGE=====
+Related Articles
+Display related knowledge articles.
+15. ARTICLE CONTENT REQUIREMENT
+Mandatory Requirement
+Every Inbound Call product page must have:
+Minimum 2 related knowledge articles.
+Every Live Transfer product page must have:
+Minimum 2 related knowledge articles.
+Therefore, the content system must support a relationship:
+Vertical
+   ↓
+Sub-Vertical
+   ↓
+Product Type
+   ↓
+Product Page
+   ↓
+Related Articles
+16. CONTENT RELATIONSHIP MODEL
+The system should model content relationships logically.
+Example:
+Category:
+Insurance
+Sub-Vertical:
+Auto Insurance
+14
+
+=====PAGE=====
+Product:
+Inbound Calls
+Related Articles:
+1. Understanding Auto Insurance Call Intent
+2. How Auto Insurance Inbound Calls Support Customer Acquisition
+Another example:
+Category:
+Home Services
+Sub-Vertical:
+Pest Control
+Product:
+Live Transfers
+Related Articles:
+1. Understanding Pest Control Customer Intent
+2. How Live Transfers Can Support Pest Control Customer Acquisition
+The developer should build the content structure so related articles can be dynamically associated with:
+Parent vertical.
+Sub-vertical.
+Product type.
+17. CONTENT MANAGEMENT SYSTEM
+REQUIREMENTS
+The admin/CMS must support the following content entities.
+Verticals
+Fields:
+Name
+Description
+Slug
+Featured image
+SEO metadata
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+15
+
+=====PAGE=====
+Sub-Verticals
+Fields:
+Name
+Parent vertical
+Description
+Slug
+Featured image
+SEO metadata
+Products
+Fields:
+Product type
+Parent vertical
+Parent sub-vertical
+Product content
+Benefits
+Process
+CTA
+SEO metadata
+Articles
+Fields:
+Article title
+Slug
+Parent vertical
+Parent sub-vertical
+Related product
+Short excerpt
+Featured image
+Full content
+Author
+Publication date
+SEO title
+Meta description
+Keywords where required
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+16
+
+=====PAGE=====
+18. RELATIONSHIP REQUIREMENT
+The developer should implement relationships so the system can automatically display related articles.
+Example:
+If an article is assigned:
+Vertical:
+Insurance
+Sub-Vertical:
+Auto Insurance
+Product:
+Inbound Calls
+Then the article should automatically become available for display in:
+Insurance
+→ Auto Insurance
+→ Inbound Calls
+The product page should dynamically display the assigned related articles.
+19. MINIMUM CONTENT RULE
+At launch:
+Every active Inbound Call product page must contain at least 2 associated articles.
+Every active Live Transfer product page must contain at least 2 associated articles.
+The implementation should not hard-code article cards.
+Article cards must be dynamically generated from the related content relationship.
+17
+
+=====PAGE=====
+20. MAIN WEBSITE SITEMAP
+HOME
+ABOUT
+SERVICES
+│
+├── PPC / Performance Marketing
+├── Web Lead Generation
+├── Inbound Calls
+└── Live Transfers
+VERTICALS
+│
+├── INSURANCE
+│   │
+│   ├── Insurance Overview
+│   │
+│   ├── Auto Insurance
+│   │   ├── Inbound Calls
+│   │   │   ├── Article Preview 1
+│   │   │   └── Article Preview 2
+│   │   │
+│   │   └── Live Transfers
+│   │       ├── Article Preview 1
+│   │       └── Article Preview 2
+│   │
+│   ├── Health Insurance
+│   │   ├── Inbound Calls
+│   │   └── Live Transfers
+│   │
+│   ├── Medicare
+│   ├── Life Insurance
+│   ├── Final Expense
+│   └── Additional Insurance Verticals
+│
+├── HOME SERVICES
+│   │
+│   ├── Home Services Overview
+│   │
+│   ├── Pest Control
+│   │   ├── Inbound Calls
+18
+
+=====PAGE=====
+│   │   └── Live Transfers
+│   │
+│   ├── HVAC
+│   ├── Plumbing
+│   ├── Roofing
+│   ├── Electrical
+│   └── Additional Home Services
+│
+└── WEB LEADS
+    │
+    ├── Web Leads Overview
+    │
+    ├── Personal Loans
+    │   ├── Inbound Calls
+    │   └── Live Transfers
+    │
+    ├── Debt Relief
+    ├── Legal
+    ├── Education
+    └── Additional Web Lead Verticals
+CASE STUDIES / RESULTS
+CONTACT
+21. CONTACT & CLIENT OUTREACH
+The primary website conversion objective is business inquiries.
+The website should include CTAs throughout the website.
+Primary CTA options:
+Get Started
+Request a Proposal
+Request More Information
+Talk to Our Team
+Contact Us
+• 
+• 
+• 
+• 
+• 
+19
+
+=====PAGE=====
+Required Form Fields
+At minimum:
+Full Name
+Company Name
+Business Email
+Phone Number
+Service/Product of Interest
+Vertical of Interest
+Message
+The page source and selected product should also be captured where possible.
+Example:
+Source Page:
+Auto Insurance Inbound Calls
+Vertical:
+Insurance
+Sub-Vertical:
+Auto Insurance
+Product:
+Inbound Calls
+22. FORM SUBMISSION REQUIREMENTS
+Every submission must:
+Validate required fields.
+Have spam protection.
+Store the inquiry.
+Generate an internal notification.
+Record submission date/time.
+Record the originating page.
+Record selected product and vertical.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+20
+
+=====PAGE=====
+23. BASIC ADMIN AREA
+A basic administration area is required for:
+Content Management
+Add/edit verticals.
+Add/edit sub-verticals.
+Add/edit product pages.
+Add/edit articles.
+Manage article relationships.
+Inquiry Management
+View inquiries.
+Search inquiries.
+Filter inquiries.
+View source page.
+Update inquiry status.
+Suggested statuses:
+New
+Contacted
+Qualified
+Closed
+24. OPTIONAL FUTURE LOGIN AREAS
+The architecture should allow future expansion for:
+Client accounts
+Client login
+Client dashboard
+Agent accounts
+Agent dashboard
+Campaign reporting
+These features should remain modular and should not interfere with the public website architecture.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+21
+
+=====PAGE=====
+25. SEO REQUIREMENTS
+SEO is a major requirement because the website will contain multiple industry and product pages.
+Every page must support:
+SEO title
+Meta description
+SEO-friendly slug
+Canonical URL
+Proper heading structure
+Internal linking
+Structured content
+XML sitemap
+Internal Linking Structure
+The website should create strong contextual relationships.
+Example:
+Insurance Overview
+        ↓
+Auto Insurance
+        ↓
+Auto Insurance Inbound Calls
+        ↓
+Related SEO Articles
+The articles should link back to:
+Product pages
+Parent sub-vertical
+Relevant vertical
+This creates a logical topical content structure.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+22
+
+=====PAGE=====
+26. UI/UX DIRECTION
+The website must look:
+Premium
+Modern
+Professional
+Corporate
+Data-driven
+Performance-focused
+Avoid:
+Generic call center appearance
+Cheap affiliate website appearance
+Overly aggressive sales pages
+Generic template layouts
+The visual style should communicate:
+Expertise
+Trust
+Scale
+Performance
+Technology
+Professionalism
+27. RESPONSIVE REQUIREMENTS
+The website must be fully functional on:
+Desktop
+Laptop
+Tablet
+Mobile
+The following require particular mobile attention:
+Navigation
+Vertical browsing
+Article cards
+Forms
+CTAs
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+23
+
+=====PAGE=====
+28. PERFORMANCE REQUIREMENTS
+The website must prioritize:
+Fast loading
+Optimized images
+Efficient asset loading
+Good mobile performance
+SEO-friendly rendering
+The architecture should support a potentially large number of vertical, product, and article pages.
+29. SCALABILITY REQUIREMENT
+The system must be scalable.
+Adding a new structure should not require major redevelopment.
+Example:
+New Vertical
+→ Add Sub-Vertical
+→ Add Inbound Calls Product
+→ Add Live Transfers Product
+→ Add Related Articles
+The system should support this through content/data management rather than requiring manually coded
+pages for every future vertical.
+30. MVP REQUIREMENTS
+The initial implementation must include:
+Public Website
+Homepage
+About
+Services
+Verticals
+Insurance structure
+Home Services structure
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+24
+
+=====PAGE=====
+Web Leads structure
+Inbound Call product pages
+Live Transfer product pages
+Article page templates
+Contact pages/forms
+Knowledge Content
+Every active product page must support:
+Minimum 2 embedded article cards.
+Dedicated article pages.
+Administration
+Content management.
+Article management.
+Product/article relationships.
+Inquiry management.
+31. ACCEPTANCE CRITERIA
+The implementation is complete when:
+Navigation
+Users can navigate from Vertical → Sub-Vertical → Product.
+Product pages correctly display related articles.
+Content
+Each active product page displays at least 2 related article cards.
+Article cards open dedicated article pages.
+Articles link back to the relevant product/vertical.
+Forms
+Forms submit successfully.
+Inquiries are stored.
+Required metadata is captured.
+Spam protection is active.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+25
+
+=====PAGE=====
+Administration
+New verticals can be created.
+New sub-verticals can be created.
+Product pages can be created.
+Articles can be assigned to products.
+Related articles dynamically appear .
+SEO
+Every page supports metadata.
+URLs are SEO-friendly.
+Article pages support proper heading structures.
+Internal linking is implemented.
+Responsive Design
+Website functions correctly across desktop and mobile.
+32. FINAL IMPLEMENTATION PRINCIPLE
+The website should be built around the following scalable content model:
+INDUSTRY VERTICAL
+        ↓
+SUB-VERTICAL
+        ↓
+PRODUCT TYPE
+        ↓
+PRODUCT PAGE
+        ↓
+RELATED PRODUCT KNOWLEDGE
+        ↓
+DEDICATED SEO ARTICLE PAGE
+Example:
+INSURANCE
+    ↓
+AUTO INSURANCE
+    ↓
+INBOUND CALLS
+    ↓
+AUTO INSURANCE INBOUND CALLS PRODUCT PAGE
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+26
+
+=====PAGE=====
+    ↓
+2 RELATED ARTICLE CARDS
+    ↓
+DEDICATED SEO ARTICLE PAGES
+And:
+HOME SERVICES
+    ↓
+PEST CONTROL
+    ↓
+LIVE TRANSFERS
+    ↓
+PEST CONTROL LIVE TRANSFERS PRODUCT PAGE
+    ↓
+2 RELATED ARTICLE CARDS
+    ↓
+DEDICATED SEO ARTICLE PAGES
+The entire website should follow this modular and scalable architecture.
+The priority is to create a professional PPC and customer acquisition website that combines:
+Client Outreach + Product Showcase + Industry Vertical Pages + Inbound Calls + Live Transfers +
+Product Knowledge + SEO Authority.
+27

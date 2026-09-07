@@ -1,0 +1,29 @@
+{
+  "slug": "home-services",
+  "name": "Home Services",
+  "order": 2,
+  "active": true,
+  "tagline": "Homeowners with an urgent problem, connected to the contractor who can fix it.",
+  "description": "Inbound call and live transfer programs for pest control, plumbing, HVAC, roofing, electrical, solar, restoration, remodeling and other home service contractors.",
+  "intro": [
+    "Home services demand is local, seasonal and frequently urgent. A homeowner with a leaking pipe, a failed air conditioner or a termite problem searches, finds a provider and calls, often within minutes. Altarious Global captures that demand with geo-targeted performance campaigns and delivers it to contractors as inbound calls or qualified live transfers.",
+    "Each home service trade has its own dedicated acquisition pages because booking behaviour, ticket size and qualification differ by trade. Programs are configured to your service area, the jobs you want and the hours your dispatch team answers the phone."
+  ],
+  "featuredImage": "/assets/img/photos/vertical-home-services.jpg",
+  "highlights": [
+    "Service-area targeting down to the ZIP code",
+    "Homeowner and job-type qualification",
+    "Emergency and scheduled-service call routing",
+    "Volume caps and schedules matched to your crews"
+  ],
+  "seo": {
+    "title": "Home Services Leads, Inbound Calls & Live Transfers",
+    "description": "Home services customer acquisition: inbound calls and live transfers for pest control, plumbing, HVAC, roofing, electrical, solar, restoration, remodeling and more.",
+    "keywords": [
+      "home services leads",
+      "contractor inbound calls",
+      "home services live transfers",
+      "pay per call home services"
+    ]
+  }
+}

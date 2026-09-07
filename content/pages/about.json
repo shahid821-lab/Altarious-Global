@@ -1,0 +1,44 @@
+{
+  "seo": {
+    "title": "About Altarious Global",
+    "description": "Altarious Global is a performance marketing and customer acquisition company delivering web leads, inbound calls and live transfers to businesses across insurance, home services and web lead verticals."
+  },
+  "hero": {
+    "eyebrow": "About Us",
+    "headline": "A customer acquisition partner built on performance.",
+    "subheadline": "Altarious Global exists to solve one problem for our clients: finding customers who are ready to buy, and connecting them to your team at the right moment."
+  },
+  "sections": [
+    {
+      "title": "What we do",
+      "body": [
+        "We plan, run and optimise performance marketing campaigns across paid search, paid social, native and comparison placements. The demand those campaigns generate is delivered to clients in the format that fits their sales operation: web leads posted to a CRM, inbound calls routed to a sales line, or live transfers warm-connected by our team.",
+        "Our work spans three vertical groups, Insurance, Home Services and Web Leads, each broken down into dedicated sub-vertical programs with their own qualification logic, traffic strategy and knowledge content."
+      ]
+    },
+    {
+      "title": "How we think",
+      "body": [
+        "Volume without intent is expensive noise. We measure success by the conversations and policies, jobs and funded loans our clients close, not by the number of records delivered. That principle shapes everything from the keywords we bid on to the questions our qualification team asks before a transfer.",
+        "We are also relentlessly specific. A generic inbound calls page tells a Medicare agency nothing useful. So every sub-vertical we support has its own product pages and its own knowledge articles explaining consumer intent, qualification and delivery for that exact market."
+      ]
+    },
+    {
+      "title": "Compliance and quality",
+      "body": [
+        "Consumer consent, transparent disclosures and accurate advertising are foundational to durable acquisition programs, particularly in regulated categories such as insurance, lending and Medicare. We document consent, monitor traffic sources and give clients the visibility they need to satisfy their own compliance obligations."
+      ]
+    }
+  ],
+  "values": [
+    { "title": "Expertise", "text": "Deep, sub-vertical level knowledge of consumer behaviour and buyer requirements." },
+    { "title": "Trust", "text": "Transparent sourcing, documented consent and honest reporting." },
+    { "title": "Scale", "text": "Infrastructure built to add verticals, geographies and volume without friction." },
+    { "title": "Performance", "text": "Commercial models aligned to the outcomes you actually care about." }
+  ],
+  "cta": {
+    "headline": "Let's talk about your acquisition goals.",
+    "text": "Whether you need a handful of qualified calls a day or a national web lead program, our team can scope it.",
+    "button": "Talk to Our Team"
+  }
+}

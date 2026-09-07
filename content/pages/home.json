@@ -1,0 +1,39 @@
+{
+  "seo": {
+    "title": "Altarious Global | PPC, Lead Generation, Inbound Calls & Live Transfers",
+    "description": "Altarious Global helps businesses acquire high-intent customers through performance-driven marketing, web leads, inbound calls and live transfers across insurance, home services and web lead verticals."
+  },
+  "hero": {
+    "eyebrow": "Performance Marketing & Customer Acquisition",
+    "headline": "Acquire high-intent customers. At scale. On performance.",
+    "subheadline": "We run the campaigns, qualify the demand and deliver it to your team as web leads, inbound calls and live transfers, across insurance, home services and web lead verticals.",
+    "primaryCta": "Request a Proposal",
+    "secondaryCta": "Explore Verticals"
+  },
+  "stats": [
+    { "value": "3", "label": "Core vertical groups" },
+    { "value": "35+", "label": "Sub-vertical programs" },
+    { "value": "Real-time", "label": "Lead and call delivery" },
+    { "value": "Performance", "label": "Pricing model" }
+  ],
+  "trustBar": ["Carriers & Agencies", "Home Service Contractors", "Law Firms", "Lenders & Brokers", "Education Providers", "Call Centers & BPOs"],
+  "valueProps": [
+    { "title": "Intent, not volume", "text": "Every program is built to find consumers at the moment they are actively comparing, requesting or buying, so your team spends time on conversations that can close." },
+    { "title": "Vertical-specific expertise", "text": "Auto insurance shoppers, homeowners with a leaking roof and debt relief prospects behave differently. Our programs, qualification and content are built per sub-vertical." },
+    { "title": "Real-time delivery", "text": "Leads post instantly to your CRM. Calls ring your team the moment the consumer dials. Live transfers arrive warm, with the consumer already on the line." },
+    { "title": "Measured and accountable", "text": "Every call and lead is tracked to its source with full reporting, so you can see what is working and scale it with confidence." }
+  ],
+  "howItWorks": [
+    { "title": "Define the program", "text": "We align on vertical, geography, qualification criteria, schedule and volume targets." },
+    { "title": "Acquire demand", "text": "Performance campaigns across search, social, native and comparison placements reach consumers with active intent." },
+    { "title": "Qualify", "text": "Consumers are screened against your criteria, by form logic for web leads or by our team for live transfers." },
+    { "title": "Deliver in real time", "text": "Web leads post to your CRM; inbound calls and live transfers route to your agents while intent is highest." },
+    { "title": "Optimise", "text": "Source-level reporting feeds continuous optimisation of traffic, qualification and routing." }
+  ],
+  "verticalsIntro": "Three vertical groups, each with dedicated sub-vertical programs and product pages for Inbound Calls and Live Transfers.",
+  "cta": {
+    "headline": "Ready to scale customer acquisition?",
+    "text": "Tell us about your business, the verticals you serve and the volume you need. We will come back with a proposal.",
+    "button": "Request a Proposal"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "financial-services",
+  "vertical": "web-leads",
+  "name": "Financial Services",
+  "active": true,
+  "order": 1,
+  "shortDescription": "Generate real-time web leads and calls from consumers seeking banking, investment, tax and financial planning services.",
+  "description": [
+    "Financial services acquisition spans a broad set of consumer needs: opening new deposit or brokerage accounts, seeking tax preparation or tax resolution help, exploring retirement and annuity options, comparing credit cards, and looking for a financial advisor after a life event such as an inheritance, job change or approaching retirement. Consumers in this category research heavily online, compare providers and typically begin their engagement by completing a form or requesting a consultation, which makes web leads the primary acquisition vehicle.",
+    "Altarious Global runs performance marketing across search, social and content placements to capture these consumers as real-time web leads delivered directly into the client's CRM, with strict consent capture and data validation. Inbound Calls and Live Transfers complement the web lead flow by reaching consumers who prefer to speak with a representative, ensuring that both self-directed and conversation-first prospects are captured."
+  ],
+  "consumerProfile": "Adults aged 25 to 70 with income or assets to manage, ranging from young professionals opening their first investment account to pre-retirees seeking planning advice and households facing a tax problem. The most valuable segments are consumers with investable assets seeking an advisor, taxpayers with unresolved IRS balances, and consumers comparing high-yield savings, CDs and annuity products.",
+  "intentSignals": [
+    "Searching for a financial advisor near me or retirement planning help",
+    "Owes back taxes or received an IRS notice and seeks resolution services",
+    "Approaching retirement or recently changed jobs with a 401(k) to roll over",
+    "Comparing high-yield savings accounts, CDs or annuity rates",
+    "Received an inheritance, settlement or other lump sum",
+    "Researching credit card offers or new banking relationships"
+  ],
+  "qualificationCriteria": [
+    "Age 18 or older and a US resident in a state the client serves",
+    "Specific financial need identified, such as advisory, tax resolution, banking or investment product",
+    "Investable assets, income range or tax debt amount within the client's target thresholds",
+    "Explicit consent to be contacted captured and documented",
+    "Valid contact information verified in real time",
+    "Interested in a consultation or account opening within a defined timeframe"
+  ],
+  "keywords": [
+    "financial advisor near me",
+    "tax relief services",
+    "IRS tax debt help",
+    "retirement planning advisor",
+    "best high yield savings account",
+    "annuity rates",
+    "401k rollover options"
+  ],
+  "marketContext": "Consumer demand for financial guidance has increased as households navigate market volatility, a complex tax environment and the transition of a large cohort into retirement. Digital-first banks and brokerages have trained consumers to open accounts online, while advisory and tax resolution firms still depend on a consultation to convert. Compliance expectations are high across the category, with regulators scrutinising marketing claims and consent practices, and firms increasingly favour acquisition partners that provide verified, consented leads rather than volume alone. Web leads remain the dominant format, with phone channels adding depth for higher-value, advice-driven services.",
+  "inboundCallsAngle": "While most financial services prospects begin online, a meaningful share want to speak with someone before sharing financial details, particularly those with tax problems or significant assets. Inbound Call programs place financial services offers in front of these consumers and invite them to call the firm directly, complementing the web lead flow with conversation-first prospects. Callers arrive with a specific concern, allowing representatives to conduct an initial consultation immediately. For tax resolution and advisory firms, inbound calls often represent the most engaged and highest-value segment of the acquisition mix.",
+  "liveTransfersAngle": "Live Transfers give financial services firms a qualified conversation to complement the volume of web leads. Our team confirms the consumer's state, the specific financial need, relevant thresholds such as asset range or tax debt amount, and consent before warm-transferring to a licensed or appropriately credentialed representative. This pre-screen ensures that advisors and enrollment specialists spend time on prospects who meet minimums and that consumers with needs outside the firm's scope are not transferred. Transfers work particularly well for high-touch services where a first conversation sets the tone of the relationship.",
+  "faq": [
+    {
+      "q": "How are financial services web leads delivered?",
+      "a": "Leads are delivered in real time through API, CRM integration or secure posting, with consent language, timestamp and source captured on each record and validation applied before delivery."
+    },
+    {
+      "q": "Can leads be filtered by asset level or tax debt amount?",
+      "a": "Yes. Form and screening questions capture the relevant thresholds so that leads and transfers match your minimums, whether that is investable assets, income or the size of a tax liability."
+    },
+    {
+      "q": "How do calls complement web leads in this category?",
+      "a": "Web leads capture self-directed researchers at scale, while Inbound Calls and Live Transfers reach consumers who prefer to talk first, giving you coverage of both behaviours within one program."
+    }
+  ],
+  "seo": {
+    "title": "Financial Services Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire financial services customers through real-time, consented web leads complemented by inbound calls and pre-qualified live transfers for advisory, tax and banking firms."
+  }
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin · Altarious Global</title>
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+<div id="app" class="app">
+  <section id="login" class="login" hidden>
+    <form id="login-form" class="login-card">
+      <h1>Altarious Global</h1>
+      <p class="muted">Content &amp; inquiry administration</p>
+      <label>Password<input type="password" name="password" autocomplete="current-password" required autofocus></label>
+      <button class="btn primary" type="submit">Sign in</button>
+      <p id="login-msg" class="msg"></p>
+    </form>
+  </section>
+
+  <div id="shell" class="shell" hidden>
+    <aside class="side">
+      <div class="side-brand">Altarious <span>Admin</span></div>
+      <nav id="side-nav">
+        <a href="#/dashboard" data-view="dashboard">Dashboard</a>
+        <a href="#/inquiries" data-view="inquiries">Inquiries <span id="badge-new" class="badge" hidden></span></a>
+        <div class="side-group">Content</div>
+        <a href="#/list/vertical" data-view="list:vertical">Verticals</a>
+        <a href="#/list/sub-vertical" data-view="list:sub-vertical">Sub-Verticals</a>
+        <a href="#/list/product" data-view="list:product">Products</a>
+        <a href="#/list/article" data-view="list:article">Articles</a>
+        <a href="#/list/page" data-view="list:page">Site Pages</a>
+        <a href="#/edit/site/site" data-view="site">Site Settings</a>
+        <a href="#/edit/settings/settings" data-view="settings">Operational Settings</a>
+      </nav>
+      <div class="side-foot">
+        <button id="btn-publish" class="btn primary full">Publish site</button>
+        <p id="publish-status" class="tiny muted"></p>
+        <a href="/" target="_blank" rel="noopener" class="tiny">View website ↗</a> · <a href="#" id="logout" class="tiny">Sign out</a>
+      </div>
+    </aside>
+    <main id="main" class="main"></main>
+  </div>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-card">
+      <div class="modal-head"><h3 id="modal-title">Insert link</h3><button id="modal-close" class="icon-btn" aria-label="Close">×</button></div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+</div>
+<script src="/admin/admin.js"></script>
+</body>
+</html>

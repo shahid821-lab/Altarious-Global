@@ -1,0 +1,76 @@
+<div class="demo c13">
+  <aside class="box" aria-labelledby="c13h">
+    <div class="top">
+      <div class="ttl">
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14M5 10h9M5 15h12M5 20h7"/></svg></span>
+        <h3 id="c13h">Key takeaways</h3>
+      </div>
+      <button type="button" class="copy" aria-live="polite">
+        <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 5.5A2.5 2.5 0 0 0 13.5 4h-7A2.5 2.5 0 0 0 4 6.5v7A2.5 2.5 0 0 0 5.5 16"/></svg></span>
+        <span class="ct">Copy summary</span>
+      </button>
+    </div>
+
+    <ul class="pts">
+      <li><span class="n">01</span><p><b>Inbound calls out-convert web leads roughly 8&times;</b> because intent is already established — the prospect dialled you, so the qualification job is confirmation rather than persuasion.</p></li>
+      <li><span class="n">02</span><p><b>A warm bridge protects the buyer's minutes.</b> Screening for state, age band and coverage before the transfer keeps agent talk-time on billable conversations instead of on triage.</p></li>
+      <li><span class="n">03</span><p><b>TCPA-compliant consent is the whole asset.</b> One-to-one written consent with trusted-form capture is what makes a Medicare or Final Expense transfer sellable at all.</p></li>
+    </ul>
+
+    <p class="why"><span class="wl">Why this matters</span> Media cost is not the lever — accepted-transfer rate is. Two points of qualification lift moves more margin for an Auto Insurance or HVAC buyer than a ten-percent cut in CPC ever will.</p>
+  </aside>
+
+  <style>
+    .c13{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--fg-2,#3D4757)}
+    .c13 *{box-sizing:border-box}
+    .c13 .box{border:1px solid var(--line,#E2E6EC);border-left:3px solid var(--signal,#E8A33D);border-radius:12px;background:var(--panel,#fff);padding:14px 16px;display:flex;flex-direction:column;gap:11px}
+    .c13 .top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .c13 .ttl{display:flex;align-items:center;gap:8px}
+    .c13 h3{margin:0;font-family:Archivo,system-ui,sans-serif;font-size:15px;letter-spacing:.01em;color:var(--fg,#141A22)}
+    .c13 .mark{width:22px;height:22px;border-radius:6px;background:var(--panel-2,#F3F5F8);display:grid;place-items:center}
+    .c13 .mark svg{width:13px;height:13px;fill:none;stroke:var(--signal,#E8A33D);stroke-width:2;stroke-linecap:round}
+    .c13 .copy{display:inline-flex;align-items:center;gap:6px;font:inherit;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:99px;border:1px solid var(--line,#E2E6EC);background:transparent;color:var(--fg-3,#7A8798);cursor:pointer;transition:.2s}
+    .c13 .copy:hover{color:var(--fg,#141A22);border-color:var(--fg-3,#7A8798)}
+    .c13 .copy:focus-visible{outline:2px solid var(--signal,#E8A33D);outline-offset:2px}
+    .c13 .copy.done{color:var(--live,#1FA9A0);border-color:var(--live,#1FA9A0)}
+    .c13 .copy svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .c13 .pts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+    .c13 .pts li{display:flex;gap:10px;align-items:flex-start}
+    .c13 .n{flex:0 0 auto;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--fg-3,#7A8798);padding-top:2px;letter-spacing:.06em}
+    .c13 .pts p{margin:0;font-size:12.5px;line-height:1.62;color:var(--fg-2,#3D4757)}
+    .c13 .pts b{color:var(--fg,#141A22);font-weight:600}
+    .c13 .why{margin:0;padding-top:10px;border-top:1px dashed var(--line,#E2E6EC);font-size:12.5px;line-height:1.6;color:var(--fg-2,#3D4757)}
+    .c13 .wl{display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--live,#1FA9A0);margin-bottom:3px}
+    @media (max-width:400px){.c13 .copy .ct{display:none}}
+    @media (prefers-reduced-motion:reduce){.c13 *{transition:none!important}}
+  </style>
+
+  <script>
+  (function(){
+    var r=document.currentScript.closest('.c13');
+    var btn=r.querySelector('.copy'),lbl=btn.querySelector('.ct'),t;
+    function text(){
+      var out=['Key takeaways'];
+      r.querySelectorAll('.pts li p').forEach(function(p,i){out.push((i+1)+'. '+p.textContent.trim());});
+      out.push('');out.push('Why this matters: '+r.querySelector('.why').textContent.replace(/^Why this matters\s*/,'').trim());
+      return out.join('\n');
+    }
+    function flash(msg){
+      btn.classList.add('done');lbl.textContent=msg;
+      clearTimeout(t);t=setTimeout(function(){btn.classList.remove('done');lbl.textContent='Copy summary';},2200);
+    }
+    function fallback(s){
+      var ta=document.createElement('textarea');ta.value=s;ta.setAttribute('readonly','');
+      ta.style.cssText='position:fixed;top:0;left:-9999px';r.appendChild(ta);ta.select();
+      var ok=false;try{ok=document.execCommand('copy');}catch(e){}
+      r.removeChild(ta);flash(ok?'Copied':'Press Ctrl+C');
+    }
+    btn.addEventListener('click',function(){
+      var s=text();
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(s).then(function(){flash('Copied');},function(){fallback(s);});
+      } else fallback(s);
+    });
+  })();
+  </script>
+</div>

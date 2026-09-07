@@ -1,0 +1,17 @@
+# Cloudflare Pages project configuration (free plan).
+# Build command: node scripts/build.mjs   Output directory: dist
+name = "altarious-global"
+pages_build_output_dir = "dist"
+compatibility_date = "2025-06-01"
+
+# D1 (free SQLite). Create with:  npx wrangler d1 create altarious
+# then paste the database_id printed by that command below.
+[[d1_databases]]
+binding = "DB"
+database_name = "altarious"
+database_id = "00000000-0000-0000-0000-000000000000" # REPLACE with the id printed by `wrangler d1 create altarious`
+
+# Non-secret vars. Secrets (ADMIN_PASSWORD, SESSION_SECRET, TURNSTILE_SECRET_KEY, RESEND_API_KEY,
+# NOTIFY_WEBHOOK_URL, DEPLOY_HOOK_URL) are set in the Pages dashboard → Settings → Variables and Secrets.
+[vars]
+SITE_NAME = "Altarious Global"

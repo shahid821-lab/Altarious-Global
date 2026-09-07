@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "title": "Case Studies & Results",
+    "description": "How Altarious Global customer acquisition programs deliver results across insurance, home services and web lead verticals."
+  },
+  "hero": {
+    "eyebrow": "Case Studies / Results",
+    "headline": "Programs built for outcomes.",
+    "subheadline": "Illustrative examples of how our inbound call, live transfer and web lead programs are structured for clients. Specific performance data is shared under NDA during the proposal process."
+  },
+  "items": [
+    {
+      "title": "Regional auto insurance agency scales inbound calls across three states",
+      "vertical": "Insurance",
+      "product": "Inbound Calls",
+      "challenge": "An independent agency with licensed agents in three states needed a predictable flow of quote-ready drivers during business hours without paying for out-of-footprint traffic.",
+      "approach": "State-restricted call-only search campaigns, IVR qualification for coverage status, and schedule-based routing to the agency's sales line.",
+      "outcome": "A steady, capped daily volume of inbound calls from in-footprint drivers, with source-level reporting the agency used to expand into a fourth state.",
+      "link": "/insurance/auto-insurance/inbound-calls/"
+    },
+    {
+      "title": "Pest control operator fills the spring schedule with live transfers",
+      "vertical": "Home Services",
+      "product": "Live Transfers",
+      "challenge": "A multi-branch pest control company wanted booked-appointment-ready homeowners in its service area during peak season, without tying up dispatchers on unqualified calls.",
+      "approach": "ZIP-targeted campaigns, homeowner and pest-type qualification by our team, and warm transfers to the branch closest to the caller.",
+      "outcome": "Qualified homeowners delivered to the right branch, with dispatch time spent only on consumers who confirmed a service need and property ownership.",
+      "link": "/home-services/pest-control/live-transfers/"
+    },
+    {
+      "title": "Consumer lender adds inbound calls to a web lead program",
+      "vertical": "Web Leads",
+      "product": "Inbound Calls",
+      "challenge": "A personal loan platform with a strong web lead flow wanted to reach consumers who prefer to talk before applying.",
+      "approach": "Call extensions and click-to-call placements layered onto existing lead campaigns, with duration-based qualification and routing to the lender's loan specialists.",
+      "outcome": "A new inbound call channel running alongside real-time web leads, reported and optimised in the same dashboard.",
+      "link": "/web-leads/personal-loans/inbound-calls/"
+    }
+  ],
+  "cta": {
+    "headline": "Want results like these in your vertical?",
+    "text": "Every program starts with a conversation about your criteria, capacity and goals.",
+    "button": "Request a Proposal"
+  }
+}

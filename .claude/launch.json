@@ -1,0 +1,20 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pages-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "wrangler",
+        "pages",
+        "dev",
+        "dist",
+        "--persist-to",
+        ".wrangler/state",
+        "--port",
+        "8788"
+      ],
+      "port": 8788
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+<div class="demo c7">
+  <div class="c7-head">
+    <span class="c7-eyebrow">Who we deliver to</span>
+    <h3 class="c7-title">Buyers on the network</h3>
+  </div>
+
+  <div class="c7-marquee" tabindex="0" role="group" aria-label="Buyer types, scrolling. Hover or focus to pause.">
+    <div class="c7-belt">
+      <ul class="c7-set" role="list"></ul>
+      <ul class="c7-set" aria-hidden="true"></ul>
+    </div>
+    <span class="c7-fade c7-fade-l" aria-hidden="true"></span>
+    <span class="c7-fade c7-fade-r" aria-hidden="true"></span>
+  </div>
+
+  <div class="c7-marquee c7-rev" tabindex="0" role="group" aria-label="Verticals, scrolling. Hover or focus to pause.">
+    <div class="c7-belt c7-belt-2">
+      <ul class="c7-set c7-set-alt" role="list"></ul>
+      <ul class="c7-set c7-set-alt" aria-hidden="true"></ul>
+    </div>
+    <span class="c7-fade c7-fade-l" aria-hidden="true"></span>
+    <span class="c7-fade c7-fade-r" aria-hidden="true"></span>
+  </div>
+
+  <div class="c7-marquee" tabindex="0" role="group" aria-label="Products, scrolling. Hover or focus to pause.">
+    <div class="c7-belt c7-belt-3">
+      <ul class="c7-set c7-set-third" role="list"></ul>
+      <ul class="c7-set c7-set-third" aria-hidden="true"></ul>
+    </div>
+    <span class="c7-fade c7-fade-l" aria-hidden="true"></span>
+    <span class="c7-fade c7-fade-r" aria-hidden="true"></span>
+  </div>
+
+  <p class="c7-note">Paused on hover or keyboard focus.</p>
+
+  <style>
+    .c7 { font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg-2, #3D4757); }
+    .c7 *, .c7 *::before, .c7 *::after { box-sizing: border-box; }
+    .c7 .c7-head { margin-bottom: 16px; }
+    .c7 .c7-eyebrow { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c7 .c7-title { margin: 3px 0 0; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 16px; font-weight: 650; letter-spacing: -.01em; color: var(--fg, #10151C); }
+    .c7 .c7-marquee { position: relative; overflow: hidden; padding: 6px 0; margin-bottom: 10px; border-radius: 6px; }
+    .c7 .c7-marquee:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: 3px; }
+    .c7 .c7-belt { display: flex; width: max-content; animation: c7-slide 26s linear infinite; }
+    .c7 .c7-belt-2 { animation: c7-slide 34s linear infinite reverse; }
+    .c7 .c7-marquee:hover .c7-belt, .c7 .c7-marquee:focus-within .c7-belt { animation-play-state: paused; }
+    @keyframes c7-slide { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+    .c7 .c7-set { display: flex; gap: 8px; padding: 0 8px 0 0; margin: 0; list-style: none; }
+    .c7 .c7-set li { flex: 0 0 auto; display: flex; align-items: center; gap: 8px; white-space: nowrap; padding: 8px 14px; border: 1px solid var(--line, #DDE2E8); border-radius: 999px; background: var(--panel, #FFF); font-size: 12.5px; color: var(--fg-2, #3D4757); }
+    .c7 .c7-set li b { font-weight: 600; color: var(--fg, #10151C); }
+    .c7 .c7-set li i { width: 6px; height: 6px; border-radius: 50%; background: var(--live, #128C7E); flex: 0 0 auto; }
+    .c7 .c7-set li em { font-style: normal; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; color: var(--fg-3, #7A8494); }
+    .c7 .c7-set-alt li { background: var(--panel-2, #F3F5F8); }
+    .c7 .c7-set-alt li i { background: var(--signal, #E0A02A); }
+    .c7 .c7-belt-3 { animation: c7-slide 30s linear infinite; }
+    .c7 .c7-set-third li { border-style: dashed; }
+    .c7 .c7-set-third li i { background: var(--fg-3, #7A8494); }
+    .c7 .c7-fade { position: absolute; top: 0; bottom: 0; width: 40px; pointer-events: none; z-index: 2; }
+    .c7 .c7-fade-l { left: 0; background: linear-gradient(to right, var(--panel, #FFF), transparent); }
+    .c7 .c7-fade-r { right: 0; background: linear-gradient(to left, var(--panel, #FFF), transparent); }
+    .c7 .c7-note { margin: 4px 0 0; font-size: 10.5px; color: var(--fg-3, #7A8494); }
+    @media (prefers-reduced-motion: reduce) {
+      .c7 .c7-belt, .c7 .c7-belt-2 { animation: none; }
+      .c7 .c7-marquee { overflow-x: auto; }
+      .c7 .c7-note::after { content: " Reduced motion: scroll the rows manually."; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      var root = document.currentScript.closest('.c7');
+      var buyers = [
+        ['Carriers', '12 live'], ['Independent Agencies', '46 live'], ['Contractors', '31 live'],
+        ['Law Firms', '9 live'], ['Lenders', '17 live'], ['Education Providers', '6 live'], ['BPOs', '11 live']
+      ];
+      var verticals = [
+        ['Auto Insurance', 'Calls'], ['Medicare', 'Transfers'], ['Final Expense', 'Transfers'],
+        ['Pest Control', 'Calls'], ['HVAC', 'Calls'], ['Roofing', 'Web Leads'],
+        ['Personal Loans', 'Web Leads'], ['Debt Relief', 'Transfers'], ['Legal', 'Transfers']
+      ];
+      var products = [
+        ['Inbound Calls', 'per call'], ['Live Transfers', 'per transfer'], ['Web Leads', 'per lead'],
+        ['Warm handoff', 'agent screened'], ['Real-time post', 'to your CRM'], ['State targeting', '50 states']
+      ];
+
+      function build(sel, rows) {
+        root.querySelectorAll(sel).forEach(function (ul) {
+          ul.innerHTML = '';
+          rows.forEach(function (r) {
+            var li = document.createElement('li');
+            li.innerHTML = '<i></i><b>' + r[0] + '</b><em>' + r[1] + '</em>';
+            ul.appendChild(li);
+          });
+        });
+      }
+
+      // Two identical sets side by side; the belt travels exactly -50%, so the
+      // second set lands where the first began and the loop is seamless.
+      build('.c7-set:not(.c7-set-alt):not(.c7-set-third)', buyers);
+      build('.c7-set-alt', verticals);
+      build('.c7-set-third', products);
+    })();
+  </script>
+</div>

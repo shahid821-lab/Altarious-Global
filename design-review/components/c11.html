@@ -1,0 +1,169 @@
+<div class="demo c11">
+  <form class="wrap" novalidate>
+    <div class="head">
+      <span class="eyebrow">Enquiry</span>
+      <ol class="steps" aria-label="Progress">
+        <li class="step is-on" data-s="0"><span class="dot">1</span><span class="lbl">About you</span></li>
+        <li class="step" data-s="1"><span class="dot">2</span><span class="lbl">What you need</span></li>
+        <li class="step" data-s="2"><span class="dot">3</span><span class="lbl">Volume</span></li>
+      </ol>
+      <div class="bar"><i style="width:33.33%"></i></div>
+    </div>
+
+    <div class="panes">
+      <fieldset class="pane is-on" data-p="0">
+        <legend class="sr">About you</legend>
+        <label class="f"><span>Full name</span>
+          <input type="text" name="name" autocomplete="name" placeholder="Jordan Reyes">
+          <em class="err" aria-live="polite"></em>
+        </label>
+        <label class="f"><span>Work email</span>
+          <input type="email" name="email" autocomplete="email" placeholder="jordan@agency.com">
+          <em class="err" aria-live="polite"></em>
+        </label>
+      </fieldset>
+
+      <fieldset class="pane" data-p="1" hidden>
+        <legend class="sr">What you need</legend>
+        <span class="lg">Vertical</span>
+        <div class="chips" role="radiogroup" aria-label="Vertical">
+          <button type="button" role="radio" aria-checked="true" class="chip is-on">Insurance</button>
+          <button type="button" role="radio" aria-checked="false" class="chip">Home Services</button>
+          <button type="button" role="radio" aria-checked="false" class="chip">Web Leads</button>
+        </div>
+        <label class="f"><span>Sub-vertical</span>
+          <select name="sub">
+            <option value="">Select one…</option>
+            <option>Auto Insurance</option><option>Medicare</option><option>Final Expense</option>
+            <option>Pest Control</option><option>HVAC</option><option>Roofing</option>
+            <option>Personal Loans</option><option>Debt Relief</option><option>Legal</option>
+          </select>
+          <em class="err" aria-live="polite"></em>
+        </label>
+      </fieldset>
+
+      <fieldset class="pane" data-p="2" hidden>
+        <legend class="sr">Volume</legend>
+        <span class="lg">Product</span>
+        <div class="chips" role="radiogroup" aria-label="Product">
+          <button type="button" role="radio" aria-checked="true" class="chip is-on">Inbound Calls</button>
+          <button type="button" role="radio" aria-checked="false" class="chip">Live Transfers</button>
+          <button type="button" role="radio" aria-checked="false" class="chip">Web Leads</button>
+        </div>
+        <label class="f rng"><span>Weekly volume <b class="val">250</b></span>
+          <input type="range" name="vol" min="25" max="2000" step="25" value="250">
+        </label>
+      </fieldset>
+
+      <div class="pane done" data-p="3" hidden>
+        <div class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5 9.5 18 20 6.5"/></svg></div>
+        <h4>Enquiry received</h4>
+        <p class="sum"></p>
+        <button type="button" class="btn ghost restart">Start another</button>
+      </div>
+    </div>
+
+    <div class="foot">
+      <button type="button" class="btn ghost back" disabled>Back</button>
+      <button type="button" class="btn next">Next</button>
+    </div>
+  </form>
+
+  <style>
+    .c11{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--fg-2,#3D4757);container-type:inline-size}
+    .c11 *{box-sizing:border-box}
+    .c11 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    .c11 .wrap{border:1px solid var(--line,#E2E6EC);border-radius:14px;background:var(--panel,#fff);padding:14px;display:flex;flex-direction:column;gap:12px;min-height:288px}
+    .c11 .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c11 .head{display:flex;flex-direction:column;gap:8px}
+    .c11 .steps{list-style:none;margin:0;padding:0;display:flex;gap:6px;flex-wrap:wrap}
+    .c11 .step{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--fg-3,#7A8798);flex:1 1 auto;min-width:0}
+    .c11 .step .lbl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .c11 .step .dot{flex:0 0 auto;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;font-family:"IBM Plex Mono",monospace;font-size:10px;border:1px solid var(--line,#E2E6EC);color:var(--fg-3,#7A8798)}
+    .c11 .step.is-on{color:var(--fg,#141A22);font-weight:600}
+    .c11 .step.is-on .dot{background:var(--signal,#E8A33D);border-color:var(--signal,#E8A33D);color:#1b1206}
+    .c11 .step.is-done .dot{background:var(--live,#1FA9A0);border-color:var(--live,#1FA9A0);color:#04211f}
+    .c11 .bar{height:3px;border-radius:99px;background:var(--panel-2,#F3F5F8);overflow:hidden}
+    .c11 .bar i{display:block;height:100%;background:var(--signal,#E8A33D);transition:width .35s cubic-bezier(.2,.7,.2,1)}
+    .c11 .panes{flex:1}
+    .c11 .pane{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;animation:c11in .25s ease both}
+    @keyframes c11in{from{opacity:0;transform:translateX(8px)}}
+    .c11 .f{display:flex;flex-direction:column;gap:4px;font-size:11px}
+    .c11 .f>span,.c11 .lg{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c11 input[type=text],.c11 input[type=email],.c11 select{width:100%;font:inherit;font-size:13px;padding:8px 10px;border-radius:9px;border:1px solid var(--line,#E2E6EC);background:var(--panel-2,#F3F5F8);color:var(--fg,#141A22)}
+    .c11 input:focus-visible,.c11 select:focus-visible,.c11 .chip:focus-visible,.c11 .btn:focus-visible,.c11 input[type=range]:focus-visible{outline:2px solid var(--signal,#E8A33D);outline-offset:2px}
+    .c11 .f.bad input,.c11 .f.bad select{border-color:#d4553f}
+    .c11 .err{font-style:normal;font-size:10.5px;color:#d4553f;min-height:13px;font-family:"IBM Plex Mono",monospace}
+    .c11 .chips{display:flex;gap:6px;flex-wrap:wrap}
+    .c11 .chip{font:inherit;font-size:12px;padding:6px 11px;border-radius:99px;border:1px solid var(--line,#E2E6EC);background:transparent;color:var(--fg-2,#3D4757);cursor:pointer;transition:.18s}
+    .c11 .chip.is-on{background:var(--fg,#141A22);border-color:var(--fg,#141A22);color:var(--panel,#fff)}
+    .c11 .rng .val{font-family:"IBM Plex Mono",monospace;color:var(--live,#1FA9A0);font-size:12px}
+    .c11 input[type=range]{width:100%;accent-color:var(--signal,#E8A33D)}
+    .c11 .foot{display:flex;gap:8px;justify-content:flex-end;border-top:1px solid var(--line,#E2E6EC);padding-top:10px}
+    .c11 .btn{font:inherit;font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:9px;border:1px solid transparent;background:var(--fg,#141A22);color:var(--panel,#fff);cursor:pointer;transition:.18s}
+    .c11 .btn.ghost{background:transparent;border-color:var(--line,#E2E6EC);color:var(--fg-2,#3D4757)}
+    .c11 .btn[disabled]{opacity:.4;cursor:not-allowed}
+    .c11 .done{align-items:center;text-align:center;gap:6px;padding:6px 0}
+    .c11 .done h4{margin:0;font-family:Archivo,system-ui,sans-serif;font-size:17px;color:var(--fg,#141A22)}
+    .c11 .sum{margin:0;font-size:12px;color:var(--fg-3,#7A8798);line-height:1.5;max-width:36ch}
+    .c11 .tick{width:38px;height:38px;border-radius:50%;background:var(--live,#1FA9A0);display:grid;place-items:center}
+    .c11 .tick svg{width:20px;height:20px;fill:none;stroke:#04211f;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:24;animation:c11d .5s .1s ease both}
+    @keyframes c11d{from{stroke-dashoffset:24}to{stroke-dashoffset:0}}
+    @media (prefers-reduced-motion:reduce){.c11 *{animation:none!important;transition:none!important}}
+  </style>
+
+  <script>
+  (function(){
+    var r=document.currentScript.closest('.c11');
+    var panes=[].slice.call(r.querySelectorAll('.pane')),steps=[].slice.call(r.querySelectorAll('.step'));
+    var bar=r.querySelector('.bar i'),back=r.querySelector('.back'),next=r.querySelector('.next'),i=0;
+
+    r.querySelectorAll('.chips').forEach(function(g){
+      g.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;
+        g.querySelectorAll('.chip').forEach(function(c){c.classList.toggle('is-on',c===b);c.setAttribute('aria-checked',c===b);});});
+    });
+    var rng=r.querySelector('input[type=range]'),val=r.querySelector('.val');
+    rng.addEventListener('input',function(){val.textContent=rng.value;});
+
+    function show(n){
+      i=n;
+      panes.forEach(function(p,k){p.hidden=k!==n;if(k===n)p.classList.add('is-on');});
+      steps.forEach(function(s,k){s.classList.toggle('is-on',k===n);s.classList.toggle('is-done',k<n||n===3);});
+      bar.style.width=(Math.min(n+1,3)/3*100)+'%';
+      var end=n===3;
+      r.querySelector('.foot').hidden=end;
+      back.disabled=n===0;
+      next.textContent=n===2?'Submit enquiry':'Next';
+      var f=panes[n].querySelector('input,select,button');if(f&&n>0)f.focus();
+    }
+    function fail(el,msg){var f=el.closest('.f');f.classList.add('bad');f.querySelector('.err').textContent=msg;el.focus();return false;}
+    function clear(p){p.querySelectorAll('.f').forEach(function(f){f.classList.remove('bad');var e=f.querySelector('.err');if(e)e.textContent='';});}
+    function valid(n){
+      var p=panes[n];clear(p);
+      if(n===0){
+        var nm=p.querySelector('[name=name]'),em=p.querySelector('[name=email]');
+        if(nm.value.trim().length<2)return fail(nm,'Please enter your name.');
+        if(!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(em.value.trim()))return fail(em,'Enter a valid work email.');
+      }
+      if(n===1){var s=p.querySelector('[name=sub]');if(!s.value)return fail(s,'Choose a sub-vertical.');}
+      return true;
+    }
+    next.addEventListener('click',function(){
+      if(!valid(i))return;
+      if(i===2){
+        var v=r.querySelector('[data-p="1"] .chip.is-on').textContent;
+        var sub=r.querySelector('[name=sub]').value;
+        var pr=r.querySelector('[data-p="2"] .chip.is-on').textContent;
+        r.querySelector('.sum').textContent=pr+' for '+sub+' ('+v+') — about '+rng.value+' per week. A specialist will reply within one business day.';
+        show(3);
+      } else show(i+1);
+    });
+    back.addEventListener('click',function(){if(i>0)show(i-1);});
+    r.querySelector('.restart').addEventListener('click',function(){
+      r.querySelector('form').reset();val.textContent=rng.value;panes.forEach(clear);show(0);
+    });
+    r.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.tagName==='INPUT'){e.preventDefault();next.click();}});
+    show(0);
+  })();
+  </script>
+</div>

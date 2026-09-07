@@ -1,0 +1,59 @@
+{
+  "slug": "electrical",
+  "vertical": "home-services",
+  "name": "Electrical",
+  "active": true,
+  "order": 5,
+  "shortDescription": "Connect homeowners needing electrical repairs, panel upgrades and EV charger installation with licensed electricians in their service area.",
+  "description": [
+    "Residential electrical demand comes from both safety concerns and upgrades. Homeowners call when breakers trip repeatedly, outlets spark or stop working, lights flicker, or an inspector flags outdated wiring or a recalled panel. A growing share of demand is upgrade-driven: panel replacements to support modern loads, EV charger installation, whole-home generators, smart home wiring and lighting projects. Because electrical work is licensed and permitted in most jurisdictions, homeowners rarely attempt it themselves and turn to search for a qualified professional.",
+    "Altarious Global reaches homeowners across these needs with geo-targeted campaigns and delivers them to electrical contractors through Inbound Calls and Live Transfers. Screening captures the type of work, homeownership and service area so that contractors can route emergency repairs to dispatch and larger projects to estimators, converting calls into scheduled jobs efficiently."
+  ],
+  "consumerProfile": "Homeowners in single-family homes, especially older properties with original wiring or undersized panels, as well as owners adding electric vehicles, generators or major appliances. High-value segments include panel upgrade and EV charger customers, homeowners with code or insurance-driven remediation needs, and those planning renovations that require new circuits.",
+  "intentSignals": [
+    "Searching for electrician near me or emergency electrician",
+    "Breakers tripping frequently, flickering lights or burning smell near outlets",
+    "Purchased an electric vehicle and needs a home charger installed",
+    "Home inspection or insurer flagged outdated wiring or panel",
+    "Planning a renovation, addition or hot tub requiring new circuits",
+    "Frequent power outages prompting interest in a standby generator"
+  ],
+  "qualificationCriteria": [
+    "Property located within the electrician's licensed service area",
+    "Homeowner or authorised decision maker for the property",
+    "Type of electrical work identified as repair, panel upgrade, installation or inspection",
+    "Urgency level established for safety-related issues",
+    "Interested in scheduling a service visit or estimate",
+    "Not seeking DIY guidance or parts-only assistance"
+  ],
+  "keywords": [
+    "electrician near me",
+    "emergency electrician",
+    "electrical panel upgrade cost",
+    "EV charger installation",
+    "whole house generator installation",
+    "electrical repair services",
+    "rewiring a house cost"
+  ],
+  "marketContext": "Residential electrical work is expanding beyond traditional repair as homes electrify. Electric vehicle adoption, heat pump installations, induction cooking and battery storage all place new demands on panels and wiring, and many homes built decades ago cannot support them without upgrades. Incentive programs at the federal and utility level have accelerated this shift. Meanwhile, a shortage of licensed electricians has kept demand ahead of supply in many markets, which allows contractors to be selective about the jobs they take and increases the value of well-qualified, high-ticket project inquiries.",
+  "inboundCallsAngle": "Electrical issues that involve sparks, burning smells or lost power are safety emergencies, and homeowners want to reach a licensed electrician right away. Inbound Call programs place local electrical offers in front of homeowners searching for help and connect them directly to the contractor's office. Emergency calls convert into same-day visits, while upgrade inquiries such as EV chargers and panel replacements allow the CSR to book an estimate on the spot. The channel suits contractors that maintain responsive scheduling and want to grow both service and project revenue.",
+  "liveTransfersAngle": "Live Transfers help electrical contractors direct their licensed workforce to the right jobs. Our team confirms the service address, homeownership, the nature of the electrical work and its urgency before warm-transferring the call, so safety issues reach dispatch quickly and project inquiries are routed to estimators. Screening filters out renters, out-of-area callers and requests for minor tasks that fall below the contractor's minimum, and it flags high-value opportunities such as panel upgrades, generators and EV installations for priority handling.",
+  "faq": [
+    {
+      "q": "Can we focus on EV charger and panel upgrade work?",
+      "a": "Yes. Campaigns and screening can emphasise installation and upgrade projects, and repair-only calls can be limited to match your business mix."
+    },
+    {
+      "q": "Do you deliver emergency electrical calls after hours?",
+      "a": "Delivery schedules follow your availability, so after-hours emergency calls can be included if you offer that service, or held to business hours if you do not."
+    },
+    {
+      "q": "How do you confirm the caller is in our service area?",
+      "a": "The property address is confirmed during screening and matched against the ZIP codes or radius you define, and out-of-area callers are excluded before transfer."
+    }
+  ],
+  "seo": {
+    "title": "Electrical Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire electrical repair, panel upgrade and EV charger customers through geo-targeted performance marketing, inbound calls and pre-screened live transfers."
+  }
+}

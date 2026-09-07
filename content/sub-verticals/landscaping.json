@@ -1,0 +1,59 @@
+{
+  "slug": "landscaping",
+  "vertical": "home-services",
+  "name": "Landscaping",
+  "active": true,
+  "order": 12,
+  "shortDescription": "Reach homeowners seeking landscape design, hardscaping, lawn care and tree services and connect them with local landscaping companies.",
+  "description": [
+    "Landscaping demand ranges from recurring lawn maintenance to substantial outdoor living projects. Homeowners search for weekly mowing and seasonal cleanups, irrigation repair and installation, tree trimming and removal, and larger investments such as patios, retaining walls, outdoor kitchens, drainage solutions and full landscape redesigns. Demand is strongly seasonal, peaking in spring and early summer, with storm events driving tree service calls and new home purchases prompting complete yard installations.",
+    "Altarious Global reaches homeowners across these needs with geo-targeted, seasonally timed campaigns and delivers them to landscaping companies, hardscape contractors and tree services through Inbound Calls and Live Transfers. Screening captures the type of service, property size, homeownership and project timeline so that companies can route maintenance inquiries to their service teams and design and hardscape projects to estimators."
+  ],
+  "consumerProfile": "Homeowners with yards who either lack the time or equipment for maintenance or are planning to invest in their outdoor space, concentrated in suburban single-family homes. The most valuable segments are homeowners seeking hardscape and outdoor living projects, new homeowners installing landscaping from scratch, and households looking for recurring maintenance contracts.",
+  "intentSignals": [
+    "Searching for landscaping companies near me, lawn care services or tree removal",
+    "Recently purchased a home with an unfinished or neglected yard",
+    "Planning a patio, retaining wall, outdoor kitchen or fire pit",
+    "Storm damage to trees or drainage problems causing yard flooding",
+    "Spring season prompting cleanup, mulching and lawn treatment needs",
+    "Irrigation system malfunctioning or preparing for seasonal start-up"
+  ],
+  "qualificationCriteria": [
+    "Property located within the company's service area",
+    "Homeowner or authorised decision maker for the property",
+    "Type of service identified as maintenance, design and installation, hardscape, tree service or irrigation",
+    "Approximate property size or project scope described",
+    "Timeline for service or project start stated",
+    "Interested in scheduling an estimate or recurring service"
+  ],
+  "keywords": [
+    "landscaping companies near me",
+    "lawn care services near me",
+    "hardscape contractors",
+    "tree removal near me",
+    "patio installation cost",
+    "landscape design near me",
+    "irrigation repair"
+  ],
+  "marketContext": "Outdoor living has become a major focus of home investment, with homeowners treating patios, kitchens and landscaped gardens as extensions of their living space. The landscaping industry remains highly fragmented, with a small number of national maintenance providers alongside thousands of local companies, which makes local search the primary battleground for new customers. Recurring maintenance contracts provide stable revenue, while hardscape and design projects carry the highest ticket values. Labour constraints mean many companies must be selective about the work they accept, which increases the value of qualified project inquiries over general service requests.",
+  "inboundCallsAngle": "Homeowners looking for landscaping help usually want a quick conversation about availability and pricing before they commit to an estimate visit. Inbound Call programs place local landscaping offers in front of homeowners searching for maintenance, tree work or outdoor projects and connect them directly to the company's office. Callers arrive with a specific need, whether that is a storm-damaged tree, a new patio or a season of lawn care, and companies with responsive scheduling can book estimates or sign maintenance customers on the first call.",
+  "liveTransfersAngle": "Live Transfers help landscaping companies match inquiries to the right team. Our team confirms the property location, homeownership, the type of service or project, approximate scope and timeline before warm-transferring the call, so maintenance requests go to the service department and design, hardscape and tree projects are routed to estimators. Screening removes out-of-area callers, renters without authority and requests for services the company does not provide, which keeps office staff focused on booking work that fits the company's capacity and margins.",
+  "faq": [
+    {
+      "q": "Can programs focus on hardscape and design projects rather than maintenance?",
+      "a": "Yes. Campaign messaging and screening can prioritise patios, retaining walls, outdoor living and landscape design, and maintenance inquiries can be limited or excluded."
+    },
+    {
+      "q": "How do you handle seasonal demand?",
+      "a": "Volume can be scaled up in spring and summer and adjusted for fall cleanup and storm-driven tree work, with caps set to your crew capacity."
+    },
+    {
+      "q": "Can tree service calls be delivered separately?",
+      "a": "Tree trimming and removal inquiries can be routed to a dedicated team or excluded entirely if you do not offer tree services."
+    }
+  ],
+  "seo": {
+    "title": "Landscaping Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire landscaping, hardscape, lawn care and tree service customers through geo-targeted, seasonal performance marketing, inbound calls and screened live transfers."
+  }
+}

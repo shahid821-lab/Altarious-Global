@@ -1,0 +1,124 @@
+<div class="demo c10">
+  <div class="c10-stage">
+    <div class="c10-scroll" tabindex="0" aria-label="Product page content, scrollable">
+      <span class="c10-eyebrow">Insurance · Auto Insurance</span>
+      <h3 class="c10-title">Inbound Calls for Auto Insurance</h3>
+      <p>Consumers searching for cover right now, screened against your states and age bands, connected straight to a licensed agent on your floor.</p>
+      <p>Volume is capped daily and paused instantly on request. You are billed only once a call clears the agreed buffer, so short and duplicate calls never reach an invoice.</p>
+      <p>Scroll on — the enquiry bar appears once you are past 40% of this column.</p>
+      <p>Targeting is set state by state. Nothing is delivered outside the states where you hold a licence, and hours follow your floor, not ours.</p>
+      <p>Every consumer's consent record is retained with the disclosure language agreed during onboarding and available on request.</p>
+      <p>Weekly reconciliation, fixed rates for the term, and a named account lead from the scoping call onward.</p>
+    </div>
+
+    <div class="c10-bar" hidden>
+      <span class="c10-tag">Auto Insurance <i aria-hidden="true">·</i> Inbound Calls</span>
+      <span class="c10-copy">Ready for volume in your states?</span>
+      <span class="c10-actions">
+        <button type="button" class="c10-cta">Enquire</button>
+        <button type="button" class="c10-x" aria-label="Dismiss enquiry bar">
+          <svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 2 10 10M10 2 2 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </span>
+    </div>
+  </div>
+
+  <p class="c10-status" aria-live="polite"></p>
+
+  <style>
+    .c10 { font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg-2, #3D4757); }
+    .c10 *, .c10 *::before, .c10 *::after { box-sizing: border-box; }
+    .c10 .c10-stage { position: relative; border: 1px solid var(--line, #DDE2E8); border-radius: 8px; overflow: hidden; }
+    .c10 .c10-scroll { height: 250px; overflow-y: auto; padding: 16px 18px 60px; scroll-behavior: smooth; }
+    .c10 .c10-scroll:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: -2px; }
+    .c10 .c10-scroll::-webkit-scrollbar { width: 6px; }
+    .c10 .c10-scroll::-webkit-scrollbar-thumb { background: var(--line, #DDE2E8); border-radius: 6px; }
+    .c10 .c10-eyebrow { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c10 .c10-title { margin: 4px 0 10px; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 17px; font-weight: 650; letter-spacing: -.015em; color: var(--fg, #10151C); }
+    .c10 .c10-scroll p { margin: 0 0 12px; font-size: 12.5px; line-height: 1.65; color: var(--fg-2, #3D4757); }
+    .c10 .c10-bar { position: absolute; left: 8px; right: 8px; bottom: 8px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 9px 10px 9px 12px; border: 1px solid var(--line, #DDE2E8); border-radius: 8px; background: var(--panel, #FFF); box-shadow: 0 -2px 18px rgba(0,0,0,.12); transform: translateY(130%); opacity: 0; transition: transform .34s cubic-bezier(.4,0,.2,1), opacity .28s ease; }
+    .c10 .c10-bar.is-in { transform: translateY(0); opacity: 1; }
+    .c10 .c10-tag { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--fg, #10151C); padding: 4px 9px; border-radius: 999px; background: color-mix(in srgb, var(--signal, #E0A02A) 20%, transparent); border: 1px solid color-mix(in srgb, var(--signal, #E0A02A) 45%, transparent); white-space: nowrap; }
+    .c10 .c10-tag i { font-style: normal; opacity: .55; margin: 0 2px; }
+    .c10 .c10-copy { flex: 1 1 120px; font-size: 12.5px; color: var(--fg-2, #3D4757); }
+    .c10 .c10-actions { display: flex; align-items: center; gap: 6px; margin-left: auto; }
+    .c10 .c10-cta { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; padding: 7px 14px; border-radius: 6px; border: 0; background: var(--live, #128C7E); color: #fff; transition: filter .18s ease; }
+    .c10 .c10-cta:hover { filter: brightness(1.08); }
+    .c10 .c10-x { display: flex; align-items: center; justify-content: center; width: 26px; height: 26px; padding: 0; cursor: pointer; border-radius: 6px; border: 1px solid var(--line, #DDE2E8); background: transparent; color: var(--fg-3, #7A8494); }
+    .c10 .c10-x svg { width: 11px; height: 11px; }
+    .c10 .c10-x:hover { color: var(--fg, #10151C); border-color: var(--fg-3, #7A8494); }
+    .c10 .c10-cta:focus-visible, .c10 .c10-x:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: 2px; }
+    .c10 .c10-status { margin: 8px 0 0; min-height: 15px; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .06em; color: var(--fg-3, #7A8494); }
+    .c10 .c10-status button { font: inherit; border: 0; background: transparent; color: var(--live, #128C7E); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; padding: 1px 3px; border-radius: 3px; }
+    .c10 .c10-status button:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: 1px; }
+    @media (max-width: 420px) {
+      .c10 .c10-copy { display: none; }
+      .c10 .c10-scroll { height: 220px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .c10 .c10-bar { transition: opacity .01s linear; transform: none; }
+      .c10 .c10-scroll { scroll-behavior: auto; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      var root = document.currentScript.closest('.c10');
+      var scroller = root.querySelector('.c10-scroll');
+      var bar = root.querySelector('.c10-bar');
+      var status = root.querySelector('.c10-status');
+      var dismissed = false;
+      var visible = false;
+
+      function progress() {
+        var max = scroller.scrollHeight - scroller.clientHeight;
+        return max <= 0 ? 1 : scroller.scrollTop / max;
+      }
+
+      function show() {
+        if (bar.hidden) { bar.hidden = false; void bar.offsetWidth; }
+        bar.classList.add('is-in');
+        visible = true;
+      }
+      function hide() {
+        bar.classList.remove('is-in');
+        visible = false;
+        var done = function () { if (!visible) bar.hidden = true; };
+        setTimeout(done, 360);
+      }
+
+      function restoreLink() {
+        status.innerHTML = 'Enquiry bar dismissed for this session. <button type="button">Restore</button>';
+        status.querySelector('button').addEventListener('click', function () {
+          dismissed = false;
+          status.textContent = '';
+          update();
+        });
+      }
+
+      function update() {
+        if (dismissed) { if (visible) hide(); return; }
+        var p = progress();
+        if (p >= 0.4 && !visible) show();
+        else if (p < 0.4 && visible) hide();
+        if (!dismissed) {
+          status.textContent = 'Scroll progress ' + Math.round(p * 100) + '% · bar shows past 40%';
+        }
+      }
+
+      scroller.addEventListener('scroll', update, { passive: true });
+
+      root.querySelector('.c10-x').addEventListener('click', function () {
+        dismissed = true;
+        hide();
+        restoreLink();
+        scroller.focus();
+      });
+      root.querySelector('.c10-cta').addEventListener('click', function () {
+        status.textContent = 'Enquiry started · tagged Auto Insurance / Inbound Calls';
+      });
+
+      update();
+    })();
+  </script>
+</div>

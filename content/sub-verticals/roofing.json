@@ -1,0 +1,59 @@
+{
+  "slug": "roofing",
+  "vertical": "home-services",
+  "name": "Roofing",
+  "active": true,
+  "order": 4,
+  "shortDescription": "Reach homeowners needing roof repair or full replacement, including storm damage and insurance claims, and connect them with licensed roofers.",
+  "description": [
+    "Roofing is a high-ticket, low-frequency purchase that homeowners make under pressure. Demand comes from active leaks, visible storm damage after hail or wind events, aging shingles flagged during a home inspection or insurance renewal, and insurer requirements to replace an older roof to keep coverage. Homeowners typically gather several estimates, care deeply about warranties and material choices, and often need help navigating an insurance claim or financing.",
+    "Altarious Global reaches homeowners at these decision points through geo-targeted campaigns, including rapid deployment into storm-affected areas, and routes them into Inbound Call and Live Transfer programs for roofing contractors. Screening confirms homeownership, roof type, the nature of the problem and whether an insurance claim is involved, so estimators arrive at appointments with qualified, ready-to-decide homeowners."
+  ],
+  "consumerProfile": "Owners of single-family homes with roofs approaching or past their expected service life, and homeowners in regions recently affected by hail, wind or hurricane events. The most valuable segments are full replacement candidates, storm damage claimants working with their insurer, and homeowners whose carrier has required a roof replacement to maintain coverage.",
+  "intentSignals": [
+    "Searching for roofing contractors or roof replacement cost",
+    "Active leak or water stains on ceilings after rain",
+    "Recent hail, wind or hurricane event in the area",
+    "Missing, curling or granule-shedding shingles observed",
+    "Insurance carrier requiring roof replacement or inspection to renew coverage",
+    "Home inspection during a sale flagged the roof's condition"
+  ],
+  "qualificationCriteria": [
+    "Owns a single-family or small multi-family property within the service area",
+    "Roof type and approximate age identified",
+    "Nature of the need established as repair, replacement or storm damage inspection",
+    "Whether an insurance claim has been or will be filed",
+    "Homeowner available to schedule an on-site inspection or estimate",
+    "Not currently under contract with another roofing company"
+  ],
+  "keywords": [
+    "roofing contractors near me",
+    "roof replacement cost",
+    "roof repair near me",
+    "storm damage roof repair",
+    "hail damage roof inspection",
+    "roof leak repair",
+    "metal roofing installation"
+  ],
+  "marketContext": "Roofing has become one of the most valuable home services categories for customer acquisition because ticket sizes are large and a significant share of replacements are funded by insurance claims. Severe convective storms have grown more frequent and costly across the central and southern United States, creating concentrated bursts of demand that well-prepared contractors can capture. At the same time, insurers have tightened underwriting on roof age, pushing many homeowners to replace proactively. Material costs and labour availability have kept margins under pressure, which rewards contractors who acquire qualified appointments efficiently rather than chasing every inquiry.",
+  "inboundCallsAngle": "A homeowner watching water drip through a ceiling, or looking at shingles scattered across the lawn after a storm, wants to speak to a roofer immediately. Inbound Call programs place local roofing offers in front of these homeowners and connect them directly to the contractor's office, where staff can schedule an inspection while urgency is highest. In storm-affected markets, inbound programs can be activated within days of an event to reach homeowners before out-of-town crews saturate the area, and calls arrive with the homeowner already expecting an inspection appointment.",
+  "liveTransfersAngle": "Live Transfers give roofing contractors qualified appointments rather than raw inquiries. Our team confirms homeownership, property location, roof type and age, the nature of the damage and whether an insurance claim is involved before warm-transferring the call to the contractor's scheduling team. This screening eliminates renters, out-of-area callers and minor repair requests when the contractor is focused on replacements, and it flags insurance claim opportunities so that the right estimator or claims specialist can be assigned. The result is a higher inspection-to-contract ratio and better use of sales capacity.",
+  "faq": [
+    {
+      "q": "Can programs be launched quickly after a storm event?",
+      "a": "Yes. Storm response campaigns can be deployed in affected ZIP codes within days, with screening tuned to identify hail or wind damage and insurance claim intent."
+    },
+    {
+      "q": "Can we focus only on full replacements?",
+      "a": "Screening captures the scope of the need, so contractors can prioritise replacement candidates and limit or exclude minor repair calls."
+    },
+    {
+      "q": "Do you identify insurance claim opportunities?",
+      "a": "Screening asks whether damage is storm-related and whether a claim has been or will be filed, so transfers can be routed to team members experienced with insurance work."
+    }
+  ],
+  "seo": {
+    "title": "Roofing Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire roof repair and replacement customers, including storm damage claims, through geo-targeted performance marketing, inbound calls and qualified live transfers."
+  }
+}

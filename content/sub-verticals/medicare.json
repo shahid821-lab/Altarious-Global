@@ -1,0 +1,59 @@
+{
+  "slug": "medicare",
+  "vertical": "insurance",
+  "name": "Medicare",
+  "active": true,
+  "order": 3,
+  "shortDescription": "Connect Medicare-eligible beneficiaries reviewing Advantage, Supplement and Part D options with licensed, compliant agents.",
+  "description": [
+    "Medicare is a structured, deadline-driven market. Beneficiaries first engage when they approach age 65 and enter their Initial Enrollment Period, then re-evaluate every year during the Annual Enrollment Period and, for Advantage members, the Open Enrollment Period in the first quarter. Between those windows, changes in health, prescriptions, provider networks, retirement from employer coverage or a move to a new county trigger Special Enrollment Periods and fresh shopping activity.",
+    "Altarious Global runs compliance-focused acquisition programs that reach beneficiaries as they research their options and connect them with licensed agents through Inbound Calls and Live Transfers. Every campaign is built around TCPA-consented contact, clear and non-misleading messaging, and routing exclusively to licensed agents who can present Medicare Advantage, Medicare Supplement and Part D plans appropriately."
+  ],
+  "consumerProfile": "Adults turning 65 within the coming months, beneficiaries already enrolled in Original Medicare or an Advantage plan who are reviewing alternatives, and individuals under 65 who qualify through disability. Strong segments include retirees leaving employer group coverage, beneficiaries whose plan is changing its network or drug formulary, and dual-eligible individuals seeking plans with additional benefits.",
+  "intentSignals": [
+    "Searching for Medicare Advantage or Medicare Supplement plans",
+    "Turning 65 within the next three to six months",
+    "Annual Enrollment Period or Open Enrollment Period is active",
+    "Received an Annual Notice of Change showing higher costs or a dropped provider",
+    "Retiring and losing employer or union health coverage",
+    "Moved to a new county where current plan is not offered"
+  ],
+  "qualificationCriteria": [
+    "Medicare-eligible by age or confirmed disability status",
+    "Enrolled in or eligible for Medicare Part A and Part B",
+    "Located in a county where the agent has plan availability and licensing",
+    "Currently in a valid enrollment period or has a qualifying Special Enrollment event",
+    "Expressed interest in reviewing plan options with a licensed agent",
+    "Consent to be contacted captured and documented per TCPA and CMS requirements"
+  ],
+  "keywords": [
+    "Medicare Advantage plans",
+    "Medicare Supplement plans",
+    "Medigap plans near me",
+    "turning 65 Medicare",
+    "Medicare Part D plans",
+    "compare Medicare plans",
+    "Medicare open enrollment"
+  ],
+  "marketContext": "The Medicare population continues to expand as the baby boomer generation ages in, and a growing share of beneficiaries choose Advantage plans over Original Medicare. Regulatory oversight has intensified, with CMS rules governing marketing language, third-party marketing organizations and recorded sales calls. Serious buyers now prioritize acquisition partners that can demonstrate consent capture, compliant creative and clean routing to licensed agents. Demand is highly concentrated in the fall enrollment period, but Turning-65 and Special Enrollment activity provides a steady baseline throughout the year.",
+  "inboundCallsAngle": "Medicare beneficiaries strongly prefer speaking with a person, and many are more comfortable calling a number than completing an online form. Inbound Call programs place clearly worded, compliant Medicare messaging in front of beneficiaries researching plans and invite them to call when they are ready. The beneficiary initiates the conversation, which supports consent documentation and allows the licensed agent to conduct the required scope of appointment and needs assessment from the start. Volume can be scaled significantly during the Annual Enrollment Period and held at sustainable levels the rest of the year.",
+  "liveTransfersAngle": "Live Transfers for Medicare add a screening layer that confirms eligibility before a licensed agent is engaged. Our team verifies Medicare Part A and B status, county of residence, current plan type and the enrollment period or qualifying event the beneficiary falls under, then warm-transfers only those who can actually enroll. Screening scripts avoid plan-specific claims and leave all benefit discussions to the licensed agent, which keeps the program aligned with CMS marketing guidelines while ensuring the agent spends time with beneficiaries who are ready to review options.",
+  "faq": [
+    {
+      "q": "How is Medicare compliance handled in these programs?",
+      "a": "Campaign creative avoids misleading benefit claims, consent to contact is captured and recorded, screening scripts do not discuss plan specifics, and calls are routed only to licensed agents. Buyers can review creative and scripts before launch."
+    },
+    {
+      "q": "Can we target only Turning-65 beneficiaries?",
+      "a": "Yes. Programs can be configured around Initial Enrollment Period consumers, Annual Enrollment Period shoppers, Special Enrollment events, or a blend based on your agency's focus."
+    },
+    {
+      "q": "Do you filter by county-level plan availability?",
+      "a": "Targeting can be set at the county or ZIP level so that transferred beneficiaries live in areas where you have contracted plans and appropriate licensing."
+    }
+  ],
+  "seo": {
+    "title": "Medicare Leads, Inbound Calls & Live Transfers",
+    "description": "Compliance-focused Medicare customer acquisition: TCPA-consented inbound calls and pre-qualified live transfers routed to licensed agents during every enrollment period."
+  }
+}

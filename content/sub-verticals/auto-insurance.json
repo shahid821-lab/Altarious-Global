@@ -1,0 +1,59 @@
+{
+  "slug": "auto-insurance",
+  "vertical": "insurance",
+  "name": "Auto Insurance",
+  "active": true,
+  "order": 1,
+  "shortDescription": "Connect with drivers actively comparing auto insurance quotes and ready to speak with a licensed agent.",
+  "description": [
+    "Auto insurance is one of the highest-volume, most competitive consumer insurance categories. Drivers shop when premiums rise at renewal, after purchasing a vehicle, after moving to a new state, or when a change in driving record forces a fresh comparison. Each of these moments creates a short window of intent where the consumer is actively seeking a better rate and is willing to talk to a carrier or agency.",
+    "Altarious Global runs performance marketing across search, social and comparison placements to reach these drivers at the exact moment of comparison, then routes them into Inbound Call and Live Transfer programs that carriers, agencies and brokers can plug directly into their sales operations."
+  ],
+  "consumerProfile": "Licensed drivers aged 18 to 70 who own or lease at least one vehicle and are currently uninsured, approaching renewal, or dissatisfied with their premium. The strongest segments are households with multiple vehicles, recent movers, and drivers whose rates increased after a claim or ticket.",
+  "intentSignals": [
+    "Searching for auto insurance quotes or rate comparisons",
+    "Renewal notice received with a premium increase",
+    "Recently purchased, financed or leased a vehicle",
+    "Moved to a new state or ZIP code",
+    "Currently uninsured and needs proof of coverage",
+    "Rate increase after an accident, ticket or lapse"
+  ],
+  "qualificationCriteria": [
+    "Valid driver's license and vehicle to insure",
+    "Located in a state the buyer is licensed to write",
+    "Currently insured or uninsured status confirmed",
+    "Interested in receiving a quote today",
+    "Age 18 or older and the policy decision maker",
+    "Not already a customer of the receiving carrier"
+  ],
+  "keywords": [
+    "auto insurance quotes",
+    "cheap car insurance",
+    "car insurance near me",
+    "compare auto insurance rates",
+    "SR-22 insurance",
+    "full coverage car insurance",
+    "auto insurance for new drivers"
+  ],
+  "marketContext": "Auto insurance premiums have risen sharply across the United States, pushing record numbers of drivers to shop their coverage every renewal cycle. Carriers and independent agencies compete intensely for these shoppers, and the buyers who win are those who reach the driver during the comparison window with a fast, accurate quote. Because the purchase is mandatory in almost every state, demand is constant and geographically broad, which makes auto insurance an ideal vertical for scalable call and lead programs.",
+  "inboundCallsAngle": "Drivers comparing auto insurance frequently prefer to call rather than fill out long quote forms, particularly when they have a complicated situation such as an SR-22 requirement, multiple vehicles or a recent claim. Inbound calls capture that preference: the consumer sees an auto insurance offer, dials in themselves, and arrives on the agent's line with the intent to get a quote. For agencies with licensed staff ready to bind coverage, an inbound call is often the shortest path from first contact to a written policy.",
+  "liveTransfersAngle": "Live transfers add a qualification layer in front of the agent. Our team confirms the driver's state, vehicle, coverage status and interest in a quote before warm-transferring the call, so the agent spends time only with consumers who match the carrier's appetite. This is especially valuable for captive agents and carriers with strict underwriting guidelines, because the pre-screen removes out-of-footprint and non-qualifying drivers before they consume agent time.",
+  "faq": [
+    {
+      "q": "Which states can auto insurance calls be targeted to?",
+      "a": "Campaigns can be filtered to the specific states and ZIP codes where your agency or carrier is licensed to write auto policies, so you only receive consumers you can actually quote."
+    },
+    {
+      "q": "Can calls be filtered by coverage status?",
+      "a": "Yes. Programs can prioritise currently insured shoppers, uninsured drivers, or both, depending on your underwriting appetite and pricing strategy."
+    },
+    {
+      "q": "What hours are auto insurance calls delivered?",
+      "a": "Delivery follows your operating schedule. Calls are routed only during the hours and days your licensed agents are available to answer, and routing can be paused or capped at any time."
+    }
+  ],
+  "seo": {
+    "title": "Auto Insurance Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire high-intent auto insurance customers through performance marketing, inbound calls and live transfers. State-targeted, qualified and delivered in real time."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "index": {
+    "seo": {
+      "title": "Services | PPC, Web Leads, Inbound Calls & Live Transfers",
+      "description": "Altarious Global services: PPC and performance marketing, web lead generation, inbound calls and live transfers for businesses that want high-intent customers."
+    },
+    "hero": {
+      "eyebrow": "Services",
+      "headline": "Four ways to acquire customers. One performance engine.",
+      "subheadline": "Every service runs on the same campaign, qualification and delivery infrastructure. Choose the format that fits your sales operation, or combine them."
+    }
+  },
+  "items": {
+    "ppc-performance-marketing": {
+      "seo": { "title": "PPC & Performance Marketing Services", "description": "Paid search, paid social and native performance marketing campaigns engineered for measurable customer acquisition across insurance, home services and web lead verticals." },
+      "hero": { "eyebrow": "Service", "headline": "PPC / Performance Marketing", "subheadline": "Paid media engineered around acquisition outcomes, not impressions." },
+      "overview": [
+        "Performance marketing is the engine behind every product we deliver. We plan and run paid search, paid social, native and comparison campaigns with a single objective: reach consumers at the moment of active intent and convert that intent into a lead, a call or a transfer for our clients.",
+        "Because we operate across dozens of sub-verticals, our media teams bring category benchmarks, keyword intelligence and creative learnings to every new program, and every campaign is measured to the outcome it produced."
+      ],
+      "features": [
+        { "title": "Search, social and native", "text": "Full-funnel paid media across the channels where your consumers compare and decide." },
+        { "title": "Intent-led keyword strategy", "text": "Campaign structures built around the search terms and moments that signal real purchase intent." },
+        { "title": "Conversion-optimised landing pages", "text": "Fast, compliant, mobile-first pages designed to convert traffic into leads and calls." },
+        { "title": "Source-level attribution", "text": "Every lead and call traced back to the campaign, keyword and creative that generated it." },
+        { "title": "Compliance built in", "text": "Consent capture, disclosures and creative review appropriate to regulated verticals." },
+        { "title": "Continuous optimisation", "text": "Bid, budget, creative and qualification adjustments driven by delivered outcomes." }
+      ],
+      "process": [
+        { "title": "Discovery", "text": "Understand your product, geography, acceptance criteria and economics." },
+        { "title": "Campaign build", "text": "Keyword, audience, creative and landing page development." },
+        { "title": "Launch and learn", "text": "Controlled launch with rapid feedback loops on quality and cost." },
+        { "title": "Scale", "text": "Expand channels, geographies and budgets against proven performance." }
+      ],
+      "cta": { "headline": "Need a performance marketing partner?", "text": "Tell us about your acquisition targets and we will scope a campaign plan.", "button": "Request a Proposal" }
+    },
+    "web-lead-generation": {
+      "seo": { "title": "Web Lead Generation Services", "description": "Form leads, real-time leads, qualified leads and high-intent web leads delivered directly to your CRM with validation, consent capture and duplicate suppression." },
+      "hero": { "eyebrow": "Service", "headline": "Web Lead Generation", "subheadline": "Customer information captured online and delivered to your team as a validated, real-time lead." },
+      "overview": [
+        "Web leads are consumers who complete a form expressing interest in a product or service. We generate them through performance campaigns and conversion-focused landing pages, then validate, de-duplicate and post each record to your CRM, dialer or lead management platform in real time.",
+        "Lead programs are configured to your acceptance criteria, including geography, product interest, and field-level requirements, and are available across every sub-vertical we support."
+      ],
+      "features": [
+        { "title": "Form leads", "text": "Consumers who complete a request form on a conversion-optimised landing page." },
+        { "title": "Real-time leads", "text": "Posted to your systems within seconds of submission so your team can follow up while intent is highest." },
+        { "title": "Qualified leads", "text": "Form logic screens for your key criteria before a lead is accepted." },
+        { "title": "High-intent leads", "text": "Traffic strategies weighted toward consumers actively comparing or requesting a quote." },
+        { "title": "Validation and de-duplication", "text": "Phone, email and address validation with duplicate suppression across your program." },
+        { "title": "Consent documentation", "text": "TCPA-aware consent language and records retained for every lead." }
+      ],
+      "process": [
+        { "title": "Traffic acquisition", "text": "Performance campaigns reach consumers with active intent." },
+        { "title": "Consumer interest", "text": "The consumer lands on a fast, relevant page and starts a request." },
+        { "title": "Form and validation", "text": "Data is captured, validated and screened against your criteria." },
+        { "title": "Real-time delivery", "text": "The lead posts to your CRM or dialer instantly." }
+      ],
+      "cta": { "headline": "Want web leads that convert?", "text": "Share your acceptance criteria and volume targets and we will design a program.", "button": "Get Started" }
+    },
+    "inbound-calls": {
+      "seo": { "title": "Inbound Call Generation | Pay Per Call", "description": "High-intent, qualified, industry-specific inbound calls delivered in real time to your sales team. Pay per call programs across insurance, home services and web lead verticals." },
+      "hero": { "eyebrow": "Service", "headline": "Inbound Calls", "subheadline": "Consumers who actively pick up the phone and call about your product, routed to your team in real time." },
+      "overview": [
+        "An inbound call is the strongest intent signal in marketing. The consumer has seen an offer, decided they want to talk, and dialled. We generate these calls through click-to-call and call-only campaigns and route them to your agents the moment they connect.",
+        "Every sub-vertical we support has a dedicated inbound call product page, because the consumer, the qualification and the buyer requirements differ in each market."
+      ],
+      "features": [
+        { "title": "High-intent calls", "text": "Consumers who chose to call rather than browse or fill out a form." },
+        { "title": "Qualified calls", "text": "IVR and duration-based qualification options to filter out non-prospects." },
+        { "title": "Industry-specific calls", "text": "Dedicated programs for every sub-vertical, from auto insurance to pest control to personal loans." },
+        { "title": "Real-time delivery", "text": "Calls ring your sales line the instant the consumer dials." },
+        { "title": "Geo and schedule routing", "text": "Route by state, ZIP, time of day and agent availability." },
+        { "title": "Call tracking and recording", "text": "Full visibility into source, duration and outcome for every call." }
+      ],
+      "process": [
+        { "title": "PPC / Traffic acquisition", "text": "Call-focused campaigns reach consumers actively searching." },
+        { "title": "Consumer interest", "text": "The consumer sees a relevant offer with a prominent number." },
+        { "title": "Call initiated", "text": "The consumer dials from the ad or landing page." },
+        { "title": "Qualification", "text": "Optional IVR or duration filters screen the call." },
+        { "title": "Inbound call delivered", "text": "The call rings your team in real time." }
+      ],
+      "cta": { "headline": "Ready for calls that close?", "text": "Tell us which verticals and states you cover and we will scope an inbound call program.", "button": "Request More Information" }
+    },
+    "live-transfers": {
+      "seo": { "title": "Live Transfer Lead Generation", "description": "Consumers qualified by our team and warm-transferred directly to your agents. Live transfer programs across insurance, home services and web lead verticals." },
+      "hero": { "eyebrow": "Service", "headline": "Live Transfers", "subheadline": "A consumer, qualified and on the line, warm-transferred to your team while intent is at its peak." },
+      "overview": [
+        "Live transfers put a qualification layer in front of your agents. Our team engages the consumer, confirms they meet your criteria, and warm-transfers the call directly to your designated destination, so your agents speak only with consumers who match.",
+        "Live transfer programs are available for every sub-vertical we support, each with criteria and scripts tailored to that market."
+      ],
+      "features": [
+        { "title": "Consumer acquisition", "text": "Performance campaigns generate consumers with active interest." },
+        { "title": "Qualification", "text": "Our team confirms your criteria before any transfer is attempted." },
+        { "title": "Call verification", "text": "Verification steps where the vertical or client requires them." },
+        { "title": "Direct connection", "text": "Warm handoff with the consumer already on the line and expecting your agent." },
+        { "title": "Real-time transfer", "text": "Transfers occur immediately after qualification, during your hours." },
+        { "title": "Volume control", "text": "Daily caps, schedules and pause controls managed to your capacity." }
+      ],
+      "process": [
+        { "title": "Traffic acquisition", "text": "Performance campaigns generate consumer engagement." },
+        { "title": "Consumer interest", "text": "The consumer responds and speaks with our team." },
+        { "title": "Qualification", "text": "Criteria confirmed and verified where required." },
+        { "title": "Live connection", "text": "Our agent bridges the call to your destination." },
+        { "title": "Transfer to client", "text": "Your agent takes over with a qualified consumer on the line." }
+      ],
+      "cta": { "headline": "Want qualified consumers on the line?", "text": "Tell us your criteria and capacity and we will design a live transfer program.", "button": "Talk to Our Team" }
+    }
+  }
+}

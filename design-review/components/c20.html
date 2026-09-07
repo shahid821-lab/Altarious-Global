@@ -1,0 +1,147 @@
+<div class="demo c20">
+  <div class="stagearea">
+    <div class="bar" role="region" aria-label="Cookie and consent preferences">
+      <div class="top">
+        <span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 4 4 0 0 1-5-5 3 3 0 0 1-4-4z"/><circle cx="9.5" cy="10" r="1"/><circle cx="14" cy="14.5" r="1"/><circle cx="9" cy="15" r="1"/></svg></span>
+        <div class="txt">
+          <h3>We use cookies</h3>
+          <p>Necessary cookies keep the call routing and forms working. Analytics and marketing cookies help us measure which campaigns produce qualified transfers. You choose.</p>
+        </div>
+        <button type="button" class="x" aria-label="Close and keep necessary only">
+          <svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+
+      <div class="opts">
+        <label class="opt locked">
+          <input type="checkbox" checked disabled data-k="necessary">
+          <span class="sw" aria-hidden="true"><i></i></span>
+          <span class="ol"><b>Necessary</b><em>Always on</em></span>
+        </label>
+        <label class="opt">
+          <input type="checkbox" data-k="analytics">
+          <span class="sw" aria-hidden="true"><i></i></span>
+          <span class="ol"><b>Analytics</b><em>Traffic &amp; call quality</em></span>
+        </label>
+        <label class="opt">
+          <input type="checkbox" data-k="marketing">
+          <span class="sw" aria-hidden="true"><i></i></span>
+          <span class="ol"><b>Marketing</b><em>Campaign attribution</em></span>
+        </label>
+      </div>
+
+      <div class="acts">
+        <button type="button" class="btn ghost" data-a="reject">Necessary only</button>
+        <button type="button" class="btn ghost" data-a="save">Save choices</button>
+        <button type="button" class="btn solid" data-a="all">Accept all</button>
+      </div>
+    </div>
+
+    <div class="saved" hidden>
+      <div class="stick">
+        <span class="ok" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span>
+        <div>
+          <b>Preferences saved</b>
+          <p class="state"></p>
+        </div>
+        <button type="button" class="again">Change</button>
+      </div>
+    </div>
+    <span class="sr" aria-live="polite"></span>
+  </div>
+
+  <style>
+    .c20{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--fg-2,#3D4757)}
+    .c20 *{box-sizing:border-box}
+    .c20 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    .c20 .stagearea{display:flex;align-items:flex-end;min-height:236px}
+    .c20 .bar{width:100%;border:1px solid var(--line,#E2E6EC);border-radius:14px;background:var(--panel,#fff);padding:14px 15px;display:flex;flex-direction:column;gap:11px;box-shadow:0 16px 34px -26px rgba(10,16,24,.55);animation:c20up .28s cubic-bezier(.2,.7,.2,1) both}
+    @keyframes c20up{from{opacity:0;transform:translateY(12px)}}
+    .c20 .top{display:flex;gap:11px;align-items:flex-start}
+    .c20 .badge{flex:0 0 auto;width:30px;height:30px;border-radius:9px;background:var(--panel-2,#F3F5F8);border:1px solid var(--line,#E2E6EC);display:grid;place-items:center}
+    .c20 .badge svg{width:17px;height:17px;fill:none;stroke:var(--signal,#E8A33D);stroke-width:1.5;stroke-linejoin:round}
+    .c20 .txt{flex:1;min-width:0}
+    .c20 h3{margin:0 0 3px;font-family:Archivo,system-ui,sans-serif;font-size:15px;color:var(--fg,#141A22)}
+    .c20 .txt p{margin:0;font-size:11.5px;line-height:1.55;color:var(--fg-2,#3D4757)}
+    .c20 .x{flex:0 0 auto;width:24px;height:24px;border-radius:6px;border:0;background:none;color:var(--fg-3,#7A8798);cursor:pointer;display:grid;place-items:center}
+    .c20 .x:hover{background:var(--panel-2,#F3F5F8);color:var(--fg,#141A22)}
+    .c20 .x svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+    .c20 .opts{display:flex;gap:8px;flex-wrap:wrap}
+    .c20 .opt{flex:1 1 150px;display:flex;align-items:center;gap:9px;padding:8px 10px;border:1px solid var(--line,#E2E6EC);border-radius:10px;background:var(--panel-2,#F3F5F8);cursor:pointer;transition:.18s}
+    .c20 .opt.locked{cursor:default;opacity:.85}
+    .c20 .opt:has(input:checked){border-color:color-mix(in srgb,var(--live,#1FA9A0) 55%,transparent)}
+    .c20 .opt input{position:absolute;opacity:0;width:1px;height:1px}
+    .c20 .sw{flex:0 0 auto;width:30px;height:17px;border-radius:99px;background:var(--line,#E2E6EC);position:relative;transition:.2s}
+    .c20 .sw i{position:absolute;top:2px;left:2px;width:13px;height:13px;border-radius:50%;background:var(--panel,#fff);transition:.2s;box-shadow:0 1px 3px rgba(10,16,24,.3)}
+    .c20 .opt input:checked+.sw{background:var(--live,#1FA9A0)}
+    .c20 .opt input:checked+.sw i{transform:translateX(13px)}
+    .c20 .opt input:focus-visible+.sw{outline:2px solid var(--signal,#E8A33D);outline-offset:2px}
+    .c20 .ol{display:flex;flex-direction:column;min-width:0}
+    .c20 .ol b{font-size:12px;color:var(--fg,#141A22);font-weight:600}
+    .c20 .ol em{font-style:normal;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c20 .acts{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+    .c20 .btn{font:inherit;font-size:12px;font-weight:600;padding:8px 14px;border-radius:9px;cursor:pointer;transition:.18s;border:1px solid var(--line,#E2E6EC);background:transparent;color:var(--fg-2,#3D4757)}
+    .c20 .btn.ghost:hover{background:var(--panel-2,#F3F5F8);color:var(--fg,#141A22)}
+    .c20 .btn.solid{background:var(--fg,#141A22);border-color:var(--fg,#141A22);color:var(--panel,#fff)}
+    .c20 .btn.solid:hover{background:var(--live,#1FA9A0);border-color:var(--live,#1FA9A0);color:#04211f}
+    .c20 .btn:focus-visible,.c20 .x:focus-visible,.c20 .again:focus-visible{outline:2px solid var(--signal,#E8A33D);outline-offset:2px}
+    .c20 .saved{width:100%;animation:c20up .28s cubic-bezier(.2,.7,.2,1) both}
+    .c20 .stick{display:flex;align-items:center;gap:11px;border:1px solid var(--line,#E2E6EC);border-radius:12px;background:var(--panel,#fff);padding:12px 14px}
+    .c20 .ok{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--live,#1FA9A0);display:grid;place-items:center}
+    .c20 .ok svg{width:14px;height:14px;fill:none;stroke:#04211f;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+    .c20 .stick b{font-family:Archivo,system-ui,sans-serif;font-size:13px;color:var(--fg,#141A22)}
+    .c20 .state{margin:1px 0 0;font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--fg-3,#7A8798)}
+    .c20 .again{margin-left:auto;font:inherit;font-size:11.5px;font-weight:600;padding:6px 12px;border-radius:99px;border:1px solid var(--line,#E2E6EC);background:transparent;color:var(--fg-2,#3D4757);cursor:pointer;flex:0 0 auto}
+    .c20 .again:hover{background:var(--panel-2,#F3F5F8)}
+    @media (prefers-reduced-motion:reduce){.c20 *{animation:none!important;transition:none!important}}
+  </style>
+
+  <script>
+  (function(){
+    var r=document.currentScript.closest('.c20');
+    var bar=r.querySelector('.bar'),saved=r.querySelector('.saved'),state=r.querySelector('.state');
+    var live=r.querySelector('.sr'),KEY='ag_consent_demo_c20';
+    var an=r.querySelector('[data-k=analytics]'),mk=r.querySelector('[data-k=marketing]');
+
+    function store(o){try{localStorage.setItem(KEY,JSON.stringify(o));}catch(e){r._mem=o;}}
+    function load(){try{var v=localStorage.getItem(KEY);return v?JSON.parse(v):(r._mem||null);}catch(e){return r._mem||null;}}
+    function clr(){try{localStorage.removeItem(KEY);}catch(e){}r._mem=null;}
+
+    function label(o){
+      var on=['necessary'];if(o.analytics)on.push('analytics');if(o.marketing)on.push('marketing');
+      return on.join(' · ')+'  ·  saved '+new Date(o.at).toLocaleString([], {month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+    }
+    function showSaved(o){
+      state.textContent=label(o);
+      bar.hidden=true;saved.hidden=false;
+      saved.classList.remove('x');void saved.offsetWidth;
+      live.textContent='Consent preferences saved: '+label(o);
+    }
+    function showBar(o){
+      if(o){an.checked=!!o.analytics;mk.checked=!!o.marketing;}
+      saved.hidden=true;bar.hidden=false;
+      bar.style.animation='none';void bar.offsetWidth;bar.style.animation='';
+    }
+    function commit(o){o.necessary=true;o.at=Date.now();store(o);showSaved(o);}
+
+    r.querySelectorAll('[data-a]').forEach(function(b){
+      b.addEventListener('click',function(){
+        var a=b.dataset.a;
+        if(a==='all'){an.checked=true;mk.checked=true;commit({analytics:true,marketing:true});}
+        else if(a==='reject'){an.checked=false;mk.checked=false;commit({analytics:false,marketing:false});}
+        else commit({analytics:an.checked,marketing:mk.checked});
+      });
+    });
+    r.querySelector('.x').addEventListener('click',function(){
+      an.checked=false;mk.checked=false;commit({analytics:false,marketing:false});
+    });
+    r.querySelector('.again').addEventListener('click',function(){
+      var o=load();showBar(o);
+      var f=bar.querySelector('input:not([disabled])');if(f)f.focus();
+    });
+
+    var ex=load();
+    if(ex&&typeof ex.at==='number')showSaved(ex);else showBar(null);
+  })();
+  </script>
+</div>

@@ -1,0 +1,59 @@
+{
+  "slug": "consumer-services",
+  "vertical": "web-leads",
+  "name": "Consumer Services",
+  "active": true,
+  "order": 10,
+  "shortDescription": "Deliver consented web leads and calls for subscription, home, lifestyle and household services sold directly to consumers.",
+  "description": [
+    "Consumer services covers the broad set of direct-to-consumer offerings that households compare and buy online: home security and alarm monitoring, internet and TV providers, home warranties, moving services, meal and subscription plans, identity protection, pet insurance, extended auto warranties and similar programs. Consumers in these categories typically arrive with a specific need, such as a move, a new home or a service that has let them down, and begin by requesting a quote or comparing plans through a form, which makes web leads the primary acquisition vehicle.",
+    "Altarious Global runs performance marketing that captures these consumers as real-time web leads with service interest, location, timing and consent recorded on every record, delivered to service providers and their sales centres through direct integration. Inbound Calls and Live Transfers complement the web lead flow by connecting consumers who prefer to speak with a representative to compare plans, ask questions and enrol, which is common for services that involve contracts, installation or bundled pricing."
+  ],
+  "consumerProfile": "Adults aged 25 to 65 managing a household who are setting up, switching or upgrading a service. The most valuable segments are recent movers and new homeowners who need several services at once, consumers whose current contract is ending or whose provider has raised prices, and households seeking protection products such as home warranties, security systems and identity monitoring.",
+  "intentSignals": [
+    "Searching for home security systems, internet providers in my area or home warranty companies",
+    "Moving to a new home within the coming weeks",
+    "Current service contract ending or a recent price increase from the provider",
+    "Recent break-in, appliance failure or identity theft incident in the household or neighbourhood",
+    "Comparing plans and reading reviews for a specific service category",
+    "Purchased a home and researching protection and utility services"
+  ],
+  "qualificationCriteria": [
+    "Age 18 or older and a resident in a service area where the provider operates",
+    "Specific service category and need identified",
+    "Homeowner or renter status and property type confirmed where relevant",
+    "Timing of need established, such as move-in date or contract end date",
+    "Authorised to make the purchasing decision for the household",
+    "Consent to be contacted captured and interest in a quote or enrolment confirmed"
+  ],
+  "keywords": [
+    "home security systems",
+    "internet providers in my area",
+    "home warranty companies",
+    "moving companies near me",
+    "identity theft protection",
+    "pet insurance quotes",
+    "extended car warranty"
+  ],
+  "marketContext": "Direct-to-consumer services have expanded rapidly as households subscribe to more services and expect to compare and purchase them online. Categories such as home security, connectivity, home warranties and protection products are highly competitive, with national brands and aggregators investing heavily in digital acquisition. Consumers are sensitive to contract terms and pricing transparency, and several categories operate under specific marketing and consent regulations. Web leads supply efficient volume during the comparison stage, while phone conversations are where plans are explained and sales are closed, so providers that integrate both channels achieve better conversion and customer quality.",
+  "inboundCallsAngle": "Many consumer services involve installation, contracts or bundle options that consumers want to discuss before they commit. Inbound Call programs place service-specific offers in front of consumers comparing providers and invite them to call the provider's sales team directly, complementing the web lead flow with prospects ready to enrol. Callers arrive with a clear need and often a deadline, such as a move-in date, allowing representatives to present the right plan, schedule installation and close the sale on the first call. Programs can be run per service category and scheduled to match sales centre hours.",
+  "liveTransfersAngle": "Live Transfers give consumer services providers pre-screened, sales-ready conversations. Our team confirms the consumer's service area, the specific service need, homeowner or renter status, timing and consent before warm-transferring to the provider's representative. This pre-screen removes consumers outside the service footprint, those seeking categories the provider does not offer and browsers without a near-term need, so sales teams focus on enrolable prospects. Transfers complement web leads by lifting contact rates and by delivering consumers at the moment they are ready to compare plans and make a decision.",
+  "faq": [
+    {
+      "q": "Which consumer service categories can be targeted?",
+      "a": "Programs can be built for home security, internet and TV, home warranties, moving, identity protection, pet insurance, vehicle protection and other direct-to-consumer services, each with tailored screening."
+    },
+    {
+      "q": "Can leads be filtered by service area and homeowner status?",
+      "a": "Yes. Location and homeowner or renter status are captured on every lead so that delivery matches your serviceable footprint and eligibility requirements."
+    },
+    {
+      "q": "How do calls complement consumer services web leads?",
+      "a": "Web leads capture consumers comparing options at scale, while Inbound Calls and Live Transfers connect those ready to enrol with your representatives, improving conversion for contract and installation-based services."
+    }
+  ],
+  "seo": {
+    "title": "Consumer Services Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire customers for home security, connectivity, warranties and other consumer services through consented web leads complemented by inbound calls and pre-screened live transfers."
+  }
+}

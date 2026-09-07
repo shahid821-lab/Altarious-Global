@@ -1,0 +1,59 @@
+{
+  "slug": "credit-repair",
+  "vertical": "web-leads",
+  "name": "Credit Repair",
+  "active": true,
+  "order": 4,
+  "shortDescription": "Deliver consented web leads and calls from consumers with damaged credit seeking to dispute inaccuracies and rebuild their scores.",
+  "description": [
+    "Credit repair demand arises when a consumer's credit score stands between them and a goal: a mortgage pre-approval, an auto loan, an apartment application or a lower insurance premium. Consumers discover inaccurate or outdated items on their reports, collections they do not recognise, or the lasting effects of past late payments, and they search for help disputing errors and rebuilding their profile. Most begin with an online inquiry or free consultation request, making web leads the natural entry point.",
+    "Altarious Global captures these consumers as real-time web leads with credit score range, credit goal and consent recorded on each lead, delivered to credit repair organisations and credit counselling firms through direct integration. Inbound Calls and Live Transfers complement the web lead flow by reaching consumers who want to discuss their situation with a specialist right away, often because a lender has just declined them or a home purchase is on the line."
+  ],
+  "consumerProfile": "Adults aged 21 to 60 with fair to poor credit scores who have a near-term financing goal. The most valuable segments are prospective homebuyers who were told to improve their score before qualifying, consumers with collections or charge-offs they believe are inaccurate, and individuals rebuilding after a bankruptcy, divorce or period of unemployment.",
+  "intentSignals": [
+    "Searching for credit repair services, how to fix my credit or remove collections from credit report",
+    "Recently declined for a mortgage, auto loan or credit card",
+    "Discovered errors, unfamiliar accounts or outdated items on a credit report",
+    "Preparing to buy a home and needs a higher score to qualify",
+    "Rebuilding credit after bankruptcy, foreclosure or repossession",
+    "Received a credit monitoring alert about a score drop"
+  ],
+  "qualificationCriteria": [
+    "Age 18 or older and a resident of a state where the provider is permitted to operate",
+    "Self-reported credit score range within the provider's target",
+    "Specific credit goal identified, such as home purchase, auto financing or general improvement",
+    "Negative items present on the credit report, such as collections, late payments or inaccuracies",
+    "Ability to pay a monthly service fee confirmed",
+    "Consent to be contacted captured and interest in a consultation confirmed"
+  ],
+  "keywords": [
+    "credit repair services",
+    "how to fix my credit",
+    "credit repair companies near me",
+    "remove collections from credit report",
+    "improve credit score fast",
+    "credit repair for mortgage approval",
+    "dispute credit report errors"
+  ],
+  "marketContext": "Rising costs of borrowing have made credit scores more consequential for consumers, and a large share of the population has scores that limit their access to affordable financing. Credit repair is governed by the Credit Repair Organizations Act and state regulations, which restrict advance fees and prohibit misleading promises, so established providers emphasise compliant marketing and realistic expectations. Demand is closely tied to the housing and auto markets, with spikes when consumers are declined for financing. Web leads dominate initial inquiries, while phone conversations are essential to enrolment because consumers need to understand the process and pricing before committing.",
+  "inboundCallsAngle": "A consumer who has just been declined for a mortgage wants answers today, and many prefer to call rather than wait for a follow-up on a form. Inbound Call programs place credit repair messaging in front of consumers searching for help and invite them to call a specialist directly, complementing the web lead flow with prospects who are ready to act. Callers arrive with a specific goal and often with their credit report in hand, allowing the specialist to review their situation, set realistic expectations and enrol them on the first call. Creative is written to comply with restrictions on guarantees and outcome claims.",
+  "liveTransfersAngle": "Live Transfers help credit repair organisations focus on consumers who are a genuine fit. Our team confirms the consumer's state, credit score range, credit goal, presence of negative items, ability to pay the service fee and consent before warm-transferring to the provider's consultant. This pre-screen removes consumers whose situation is not suited to credit repair, such as those with only accurate recent delinquencies, and residents of states where the provider does not operate. Transfers complement web leads by turning hesitant online inquiries into live consultations and by raising contact and enrolment rates across the program.",
+  "faq": [
+    {
+      "q": "Can credit repair leads be filtered by credit score range?",
+      "a": "Yes. Self-reported score range and credit goal are captured on every lead, and delivery can be filtered to the profiles your program is designed to help."
+    },
+    {
+      "q": "How is compliance addressed in credit repair marketing?",
+      "a": "Creative and scripts avoid guarantees about score improvement or item removal, consent is documented on each lead and call, and program details are left to your consultants to present."
+    },
+    {
+      "q": "How do calls complement credit repair web leads?",
+      "a": "Web leads capture consumers researching options, while Inbound Calls and Live Transfers reach those with urgent goals such as a pending home purchase, improving enrolment speed and rates."
+    }
+  ],
+  "seo": {
+    "title": "Credit Repair Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire credit repair clients through consented, score-qualified web leads complemented by inbound calls and pre-screened live transfers for compliant credit repair organisations."
+  }
+}

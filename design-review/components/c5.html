@@ -1,0 +1,126 @@
+<div class="demo c5">
+  <div class="c5-head">
+    <span class="c5-eyebrow">Medicare · Live Transfers</span>
+    <h3 class="c5-title">Build your qualification filter</h3>
+  </div>
+
+  <div class="c5-chips" role="group" aria-label="Qualification criteria">
+    <button type="button" class="c5-chip" data-key="licensed" aria-pressed="false">State licensed</button>
+    <button type="button" class="c5-chip" data-key="age" aria-pressed="false">Age 65+</button>
+    <button type="button" class="c5-chip" data-key="insured" aria-pressed="false">Currently insured</button>
+    <button type="button" class="c5-chip" data-key="homeowner" aria-pressed="false">Homeowner</button>
+    <button type="button" class="c5-chip" data-key="decision" aria-pressed="false">Decision maker</button>
+  </div>
+
+  <div class="c5-panel">
+    <span class="c5-k">Your filter</span>
+    <p class="c5-sentence" aria-live="polite">Send us <b>every consumer</b> in your licensed states.</p>
+    <div class="c5-meter">
+      <div class="c5-bar"><span class="c5-fill"></span></div>
+      <div class="c5-nums">
+        <strong class="c5-vol">1,850</strong>
+        <span class="c5-unit">est. transfers / month</span>
+      </div>
+    </div>
+    <button type="button" class="c5-reset">Clear all</button>
+  </div>
+
+  <style>
+    .c5 { font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg-2, #3D4757); }
+    .c5 *, .c5 *::before, .c5 *::after { box-sizing: border-box; }
+    .c5 .c5-head { margin-bottom: 12px; }
+    .c5 .c5-eyebrow { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c5 .c5-title { margin: 3px 0 0; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 16px; font-weight: 650; letter-spacing: -.01em; color: var(--fg, #10151C); }
+    .c5 .c5-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+    .c5 .c5-chip { font: inherit; font-size: 12px; cursor: pointer; padding: 6px 12px 6px 24px; border-radius: 999px; border: 1px solid var(--line, #DDE2E8); background: var(--panel, #FFF); color: var(--fg-2, #3D4757); position: relative; transition: border-color .18s ease, color .18s ease, background .18s ease; }
+    .c5 .c5-chip::before { content: ""; position: absolute; left: 9px; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; border: 1px solid var(--line, #DDE2E8); transition: background .18s ease, border-color .18s ease; }
+    .c5 .c5-chip:hover { border-color: var(--fg-3, #7A8494); color: var(--fg, #10151C); }
+    .c5 .c5-chip[aria-pressed="true"] { border-color: var(--live, #128C7E); color: var(--fg, #10151C); font-weight: 600; background: color-mix(in srgb, var(--live, #128C7E) 10%, transparent); }
+    .c5 .c5-chip[aria-pressed="true"]::before { background: var(--live, #128C7E); border-color: var(--live, #128C7E); }
+    .c5 .c5-chip:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: 2px; }
+    .c5 .c5-panel { position: relative; border: 1px solid var(--line, #DDE2E8); border-radius: 8px; background: var(--panel-2, #F3F5F8); padding: 13px 15px 15px; }
+    .c5 .c5-k { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c5 .c5-sentence { margin: 6px 0 13px; font-size: 13.5px; line-height: 1.6; color: var(--fg-2, #3D4757); min-height: 44px; }
+    .c5 .c5-sentence b { color: var(--fg, #10151C); font-weight: 600; box-shadow: inset 0 -6px 0 color-mix(in srgb, var(--signal, #E0A02A) 30%, transparent); }
+    .c5 .c5-meter { display: flex; align-items: center; gap: 12px; }
+    .c5 .c5-bar { flex: 1; height: 6px; border-radius: 4px; background: var(--line, #DDE2E8); overflow: hidden; }
+    .c5 .c5-fill { display: block; height: 100%; width: 100%; border-radius: 4px; background: var(--live, #128C7E); transition: width .38s cubic-bezier(.4,0,.2,1); }
+    .c5 .c5-nums { text-align: right; white-space: nowrap; }
+    .c5 .c5-vol { font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: -.02em; color: var(--fg, #10151C); font-variant-numeric: tabular-nums; }
+    .c5 .c5-unit { display: block; font-size: 10px; color: var(--fg-3, #7A8494); }
+    .c5 .c5-reset { position: absolute; top: 10px; right: 12px; font: inherit; font-size: 11px; cursor: pointer; border: 0; background: transparent; color: var(--fg-3, #7A8494); text-decoration: underline; text-underline-offset: 3px; padding: 2px 4px; border-radius: 4px; }
+    .c5 .c5-reset:hover { color: var(--fg, #10151C); }
+    .c5 .c5-reset:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: 2px; }
+    @media (max-width: 400px) { .c5 .c5-meter { flex-direction: column; align-items: stretch; gap: 8px; } .c5 .c5-nums { text-align: left; } }
+    @media (prefers-reduced-motion: reduce) { .c5 .c5-fill, .c5 .c5-chip, .c5 .c5-chip::before { transition: none; } }
+  </style>
+
+  <script>
+    (function () {
+      var root = document.currentScript.closest('.c5');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var chips = Array.prototype.slice.call(root.querySelectorAll('.c5-chip'));
+      var sentence = root.querySelector('.c5-sentence');
+      var fill = root.querySelector('.c5-fill');
+      var vol = root.querySelector('.c5-vol');
+      var BASE = 1850;
+
+      var spec = {
+        licensed:  { phrase: 'in states where you hold a licence', factor: 0.72 },
+        age:       { phrase: 'aged 65 or over',                    factor: 0.55 },
+        insured:   { phrase: 'who currently hold cover',           factor: 0.68 },
+        homeowner: { phrase: 'who own their home',                 factor: 0.63 },
+        decision:  { phrase: 'able to make the decision today',    factor: 0.80 }
+      };
+
+      var shown = BASE;
+      function setVolume(target) {
+        if (reduce) { shown = target; vol.textContent = Math.round(target).toLocaleString('en-US'); return; }
+        var from = shown, start = performance.now();
+        if (vol._raf) cancelAnimationFrame(vol._raf);
+        if (vol._t) clearTimeout(vol._t);
+        // Safety net: settle on the exact value even if frames are throttled.
+        vol._t = setTimeout(function () { shown = target; vol.textContent = Math.round(target).toLocaleString('en-US'); }, 460);
+        (function step(t) {
+          var p = Math.min(1, (t - start) / 380);
+          var e = 1 - Math.pow(1 - p, 3);
+          shown = from + (target - from) * e;
+          vol.textContent = Math.round(shown).toLocaleString('en-US');
+          if (p < 1) vol._raf = requestAnimationFrame(step); else shown = target;
+        })(start);
+      }
+
+      function render() {
+        var on = chips.filter(function (c) { return c.getAttribute('aria-pressed') === 'true'; });
+        var factor = 1;
+        on.forEach(function (c) { factor *= spec[c.dataset.key].factor; });
+
+        var text;
+        if (!on.length) {
+          text = 'Send us <b>every consumer</b> in your licensed states.';
+        } else {
+          var parts = on.map(function (c) { return spec[c.dataset.key].phrase; });
+          var joined = parts.length === 1 ? parts[0]
+            : parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
+          text = 'Only transfer consumers <b>' + joined + '</b>.';
+        }
+        sentence.innerHTML = text;
+        fill.style.width = Math.max(6, factor * 100) + '%';
+        setVolume(BASE * factor);
+      }
+
+      chips.forEach(function (c) {
+        c.addEventListener('click', function () {
+          c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+          render();
+        });
+      });
+      root.querySelector('.c5-reset').addEventListener('click', function () {
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+        render();
+      });
+
+      render();
+    })();
+  </script>
+</div>

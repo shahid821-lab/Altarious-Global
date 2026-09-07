@@ -1,0 +1,244 @@
+<section class="stage w10">
+  <canvas class="bloom" aria-hidden="true"></canvas>
+  <div class="shaft" aria-hidden="true"></div>
+  <div class="vig" aria-hidden="true"></div>
+
+  <div class="scene">
+    <div class="deck">
+
+      <header class="nav" style="--z:60px">
+        <span class="mark">ALTARIOUS <i>GLOBAL</i></span>
+        <span class="clock">02:14 <em>UTC</em> · NIGHT OPS</span>
+      </header>
+
+      <div class="head" style="--z:44px">
+        <p class="kick">ROUTING · LIVE</p>
+        <h1>Acquire high-intent<br>customers.</h1>
+      </div>
+
+      <article class="panel p1" style="--z:30px">
+        <div class="ph"><span>ROUTING STATUS</span><span class="ok">NOMINAL</span></div>
+        <ul class="rows">
+          <li><b>Auto Insurance</b><i class="on"></i><span>INBOUND CALLS</span></li>
+          <li><b>Medicare</b><i class="on"></i><span>LIVE TRANSFERS</span></li>
+          <li><b>Pest Control</b><i class="on"></i><span>WEB LEADS</span></li>
+          <li><b>HVAC</b><i class="wait"></i><span>QUEUED</span></li>
+          <li><b>Personal Loans</b><i class="on"></i><span>INBOUND CALLS</span></li>
+          <li><b>Legal</b><i class="on"></i><span>LIVE TRANSFERS</span></li>
+        </ul>
+      </article>
+
+      <article class="panel p2" style="--z:52px">
+        <div class="ph"><span>QUEUE DEPTH</span><span class="num" id="w10q">18</span></div>
+        <div class="spark"><svg viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true">
+          <path class="sfill" d=""></path><path class="sline" d=""></path></svg></div>
+        <div class="kv"><span>ACTIVE AGENTS</span><b id="w10a">42</b></div>
+        <div class="kv"><span>ACCEPT RATE</span><b id="w10r">38.4%</b></div>
+      </article>
+
+      <article class="panel p3" style="--z:70px">
+        <div class="ph"><span>VERTICALS</span></div>
+        <div class="chips"><span>Insurance</span><span>Home Services</span><span>Web Leads</span></div>
+        <button type="button" class="connect">Connect<i></i></button>
+      </article>
+
+      <footer class="foot" style="--z:20px">
+        <span>INBOUND CALLS · LIVE TRANSFERS · WEB LEADS</span><span class="dimx">TIER-1 · US</span>
+      </footer>
+    </div>
+  </div>
+
+<style>
+.w10{
+  --ink:#eef2f6; --dim:#7d8794; --acc:#4ea8ff; --warm:#ffb347; --ok:#43e39a;
+  width:100%; max-width:640px; height:420px; position:relative; overflow:hidden;
+  border-radius:10px; background:#050608; color:var(--ink);
+  font-family:"Archivo","IBM Plex Sans",system-ui,sans-serif; contain:content; isolation:isolate;
+}
+.w10 *{box-sizing:border-box;margin:0;padding:0}
+.w10 .bloom{position:absolute;inset:0;width:100%;height:100%;z-index:0;
+  filter:blur(26px) saturate(1.25);opacity:.85}
+.w10 .shaft{position:absolute;top:-40%;left:-10%;width:60%;height:190%;z-index:1;
+  background:linear-gradient(100deg,transparent,rgba(78,168,255,.10) 40%,rgba(180,220,255,.16) 52%,transparent 70%);
+  filter:blur(16px);transform:rotate(12deg);animation:w10sh 19s ease-in-out infinite alternate;pointer-events:none}
+@keyframes w10sh{from{transform:rotate(10deg) translateX(-8%)}to{transform:rotate(16deg) translateX(52%)}}
+.w10 .vig{position:absolute;inset:0;z-index:5;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 40%,transparent 40%,rgba(0,0,0,.72) 100%)}
+.w10 .scene{position:absolute;inset:0;z-index:3;perspective:900px;perspective-origin:50% 45%}
+.w10 .deck{position:absolute;inset:0;padding:13px 15px;transform-style:preserve-3d;
+  transition:transform .5s cubic-bezier(.2,.8,.2,1);
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}
+.w10 .deck>*{transform:translateZ(var(--z,0px));position:absolute}
+
+.w10 .nav{top:13px;left:15px;right:15px;display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:8px;border-bottom:1px solid rgba(238,242,246,.10)}
+.w10 .mark{font-size:10px;letter-spacing:.18em;font-weight:700}
+.w10 .mark i{font-style:normal;color:var(--dim);font-weight:400}
+.w10 .clock,.w10 .kick,.w10 .ph,.w10 .rows,.w10 .kv,.w10 .foot,.w10 .chips span{
+  font-family:"IBM Plex Mono",ui-monospace,monospace}
+.w10 .clock{font-size:8px;letter-spacing:.14em;color:var(--dim)}
+.w10 .clock em{font-style:normal;opacity:.55}
+.w10 .head{top:48px;left:15px}
+.w10 .kick{font-size:7.5px;letter-spacing:.24em;color:var(--acc);margin-bottom:6px;
+  text-shadow:0 0 12px rgba(78,168,255,.8)}
+.w10 h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:26px;
+  line-height:1.03;letter-spacing:-.01em;text-shadow:0 0 26px rgba(190,220,255,.22)}
+
+.w10 .panel{border:1px solid rgba(238,242,246,.11);border-radius:8px;
+  background:linear-gradient(155deg,rgba(255,255,255,.075),rgba(255,255,255,.018) 55%,rgba(255,255,255,.045));
+  -webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);
+  padding:8px 9px;overflow:hidden}
+.w10 .panel::after{content:"";position:absolute;inset:0;border-radius:8px;pointer-events:none;
+  background:linear-gradient(150deg,rgba(255,255,255,.16),transparent 38%);opacity:.5}
+.w10 .p1{left:15px;top:150px;width:min(240px,44%);}
+.w10 .p2{right:15px;top:112px;width:min(214px,40%)}
+.w10 .p3{right:15px;top:250px;width:min(214px,40%)}
+.w10 .ph{display:flex;justify-content:space-between;font-size:7px;letter-spacing:.16em;
+  color:var(--dim);border-bottom:1px solid rgba(238,242,246,.09);padding-bottom:5px;margin-bottom:6px}
+.w10 .ph .ok{color:var(--ok)}
+.w10 .ph .num{color:var(--ink);font-size:9px}
+.w10 .rows{list-style:none;display:grid;gap:4px}
+.w10 .rows li{display:flex;align-items:center;gap:6px;font-size:7.5px;letter-spacing:.06em}
+.w10 .rows b{flex:1;font-weight:500;color:var(--ink);font-size:8px}
+.w10 .rows span{color:var(--dim);font-size:6.5px;letter-spacing:.12em}
+.w10 .rows i{width:5px;height:5px;border-radius:50%;flex:0 0 auto;background:var(--ok);
+  box-shadow:0 0 8px var(--ok)}
+.w10 .rows i.wait{background:var(--warm);box-shadow:0 0 8px var(--warm);
+  animation:w10bl 1.6s ease-in-out infinite}
+@keyframes w10bl{50%{opacity:.25}}
+.w10 .spark{height:34px;margin:2px 0 6px}
+.w10 .spark svg{width:100%;height:100%;display:block;overflow:visible}
+.w10 .sline{fill:none;stroke:var(--acc);stroke-width:1.4;vector-effect:non-scaling-stroke;
+  filter:drop-shadow(0 0 4px rgba(78,168,255,.9))}
+.w10 .sfill{fill:rgba(78,168,255,.16);stroke:none}
+.w10 .kv{display:flex;justify-content:space-between;font-size:7px;letter-spacing:.13em;
+  color:var(--dim);padding:3px 0;border-top:1px solid rgba(238,242,246,.07)}
+.w10 .kv b{color:var(--ink);font-weight:500}
+.w10 .chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:9px}
+.w10 .chips span{font-size:6.5px;letter-spacing:.1em;padding:3px 6px;border-radius:99px;
+  border:1px solid rgba(238,242,246,.14);color:var(--ink)}
+.w10 .connect{position:relative;width:100%;border:1px solid rgba(78,168,255,.65);border-radius:6px;
+  background:linear-gradient(180deg,rgba(78,168,255,.42),rgba(78,168,255,.16));
+  color:#f2f9ff;font-family:"Archivo",system-ui,sans-serif;font-size:10.5px;font-weight:600;
+  letter-spacing:.06em;padding:8px 0;cursor:pointer;
+  box-shadow:0 0 18px rgba(78,168,255,.45),inset 0 1px 0 rgba(255,255,255,.4);
+  animation:w10pulse 2.8s ease-in-out infinite}
+.w10 .connect i{position:absolute;left:50%;top:50%;width:190px;height:120px;margin:-60px 0 0 -95px;
+  border-radius:50%;background:radial-gradient(closest-side,rgba(78,168,255,.42),transparent 72%);
+  filter:blur(16px);pointer-events:none;animation:w10pulse 2.8s ease-in-out infinite}
+@keyframes w10pulse{0%,100%{box-shadow:0 0 14px rgba(78,168,255,.35),inset 0 1px 0 rgba(255,255,255,.35);opacity:.94}
+  50%{box-shadow:0 0 34px rgba(78,168,255,.75),inset 0 1px 0 rgba(255,255,255,.5);opacity:1}}
+.w10 .foot{left:15px;bottom:12px;right:15px;display:flex;justify-content:space-between;
+  font-size:6.5px;letter-spacing:.16em;color:var(--dim);border-top:1px solid rgba(238,242,246,.09);padding-top:7px}
+.w10 .dimx{opacity:.6}
+@media (max-width:430px){
+  .w10 h1{font-size:20px}
+  .w10 .p1{top:140px;width:46%}
+  .w10 .p2{top:120px;width:44%}
+  .w10 .p3{top:236px;width:44%}
+  .w10 .rows li:nth-child(n+5){display:none}
+  .w10 .chips span:nth-child(3){display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .w10 .shaft,.w10 .connect,.w10 .connect i,.w10 .rows i.wait{animation:none}
+  .w10 .deck{transition:none}
+}
+</style>
+
+<script>
+(function(){
+  var root=document.currentScript.closest('.w10'); if(!root) return;
+  var cv=root.querySelector('.bloom'), ctx=cv.getContext('2d');
+  var deck=root.querySelector('.deck');
+  var sl=root.querySelector('.sline'), sf=root.querySelector('.sfill');
+  var qEl=root.querySelector('#w10q'), aEl=root.querySelector('#w10a'), rEl=root.querySelector('#w10r');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var dpr=Math.min(devicePixelRatio||1,2), W=0,H=0, t=0, raf=0, live=false;
+
+  var lights=[
+    {x:.22,y:.36,r:.42,c:'78,168,255',a:.30,sx:.7,sy:.5},
+    {x:.80,y:.30,r:.34,c:'120,200,255',a:.22,sx:-.5,sy:.8},
+    {x:.78,y:.78,r:.30,c:'78,168,255',a:.34,sx:.4,sy:-.6},
+    {x:.45,y:.85,r:.36,c:'255,179,71',a:.10,sx:-.8,sy:.3}
+  ];
+
+  function size(){
+    var r=root.getBoundingClientRect(); W=r.width|0; H=r.height|0;
+    cv.width=Math.max(1,(W*dpr*0.45)|0); cv.height=Math.max(1,(H*dpr*0.45)|0);
+  }
+
+  function draw(){
+    var w=cv.width,h=cv.height;
+    ctx.globalCompositeOperation='source-over';
+    ctx.fillStyle='#050608'; ctx.fillRect(0,0,w,h);
+    ctx.globalCompositeOperation='lighter';
+    for(var i=0;i<lights.length;i++){
+      var L=lights[i];
+      var px=(L.x+Math.sin(t*0.00021*(i+1)+i)*0.05*L.sx)*w;
+      var py=(L.y+Math.cos(t*0.00017*(i+1)+i)*0.05*L.sy)*h;
+      var rad=L.r*w*(0.92+0.08*Math.sin(t*0.0006+i*1.7));
+      var g=ctx.createRadialGradient(px,py,0,px,py,rad);
+      g.addColorStop(0,'rgba('+L.c+','+L.a+')');
+      g.addColorStop(.45,'rgba('+L.c+','+(L.a*0.35).toFixed(3)+')');
+      g.addColorStop(1,'rgba('+L.c+',0)');
+      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(px,py,rad,0,6.2832); ctx.fill();
+    }
+    ctx.globalCompositeOperation='source-over';
+  }
+
+  // sparkline
+  var series=[]; for(var i=0;i<26;i++) series.push(10+Math.random()*14);
+  function spark(){
+    var d='',f='';
+    for(var i=0;i<series.length;i++){
+      var x=i/(series.length-1)*100, y=30-Math.max(1,Math.min(29,series[i]));
+      d+=(i?'L':'M')+x.toFixed(2)+' '+y.toFixed(2)+' ';
+    }
+    f='M0 30 '+d.replace(/^M/,'L')+'L100 30 Z';
+    sl.setAttribute('d',d); sf.setAttribute('d',f);
+  }
+  spark();
+
+  var last=0;
+  function step(ts){
+    if(!live) return;
+    t=ts;
+    if(ts-last>60){ last=ts; draw(); }
+    raf=requestAnimationFrame(step);
+  }
+
+  var dataTimer=null;
+  function dataTick(){
+    series.shift(); series.push(Math.max(3,Math.min(28,series[series.length-1]+(Math.random()*8-4))));
+    spark();
+    qEl.textContent=(12+Math.round(series[series.length-1]));
+    aEl.textContent=(38+Math.floor(Math.random()*9));
+    rEl.textContent=(36+Math.random()*5).toFixed(1)+'%';
+  }
+
+  function onMove(e){
+    var r=root.getBoundingClientRect();
+    var nx=((e.clientX-r.left)/r.width-.5), ny=((e.clientY-r.top)/r.height-.5);
+    deck.style.setProperty('--ry',(nx*9).toFixed(2)+'deg');
+    deck.style.setProperty('--rx',(-ny*6).toFixed(2)+'deg');
+  }
+  function onLeave(){ deck.style.setProperty('--ry','0deg'); deck.style.setProperty('--rx','0deg'); }
+
+  function start(){
+    if(live) return; live=true;
+    if(reduce){ draw(); live=false; return; }
+    raf=requestAnimationFrame(step);
+    dataTimer=setInterval(dataTick,1500);
+  }
+  function stop(){ live=false; cancelAnimationFrame(raf); clearInterval(dataTimer); }
+
+  size(); draw();
+  new ResizeObserver(function(){ size(); draw(); }).observe(root);
+  if(!reduce){
+    root.addEventListener('pointermove',onMove);
+    root.addEventListener('pointerleave',onLeave);
+  }
+  new IntersectionObserver(function(e){ e[0].isIntersecting?start():stop() },{threshold:.15}).observe(root);
+})();
+</script>
+</section>

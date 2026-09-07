@@ -1,0 +1,29 @@
+{
+  "slug": "insurance",
+  "name": "Insurance",
+  "order": 1,
+  "active": true,
+  "tagline": "High-intent insurance shoppers, delivered to licensed agents in real time.",
+  "description": "Customer acquisition programs for carriers, agencies and brokers across auto, health, Medicare, life, final expense, home, commercial and supplemental insurance.",
+  "intro": [
+    "Insurance is a permission-driven, compliance-heavy category where the difference between a good campaign and a great one is the quality of the consumer who reaches the agent. Altarious Global builds acquisition programs that meet insurance shoppers at the moment of comparison and route them to licensed teams as inbound calls, live transfers or web leads.",
+    "Every insurance sub-vertical below has its own dedicated product pages, because a Medicare Advantage shopper, a final expense buyer and a commercial policyholder behave nothing alike. Each program is configured for the states you are licensed in, the products you write and the hours your agents are available."
+  ],
+  "featuredImage": "/assets/img/photos/vertical-insurance.jpg",
+  "highlights": [
+    "State and ZIP-level geographic targeting",
+    "TCPA-consented, compliance-aware traffic sources",
+    "Filters for coverage status, age band and product appetite",
+    "Real-time delivery during your licensed agents' hours"
+  ],
+  "seo": {
+    "title": "Insurance Leads, Inbound Calls & Live Transfers",
+    "description": "Insurance customer acquisition programs: inbound calls, live transfers and web leads for auto, health, Medicare, life, final expense, home, commercial and supplemental insurance.",
+    "keywords": [
+      "insurance leads",
+      "insurance inbound calls",
+      "insurance live transfers",
+      "pay per call insurance"
+    ]
+  }
+}

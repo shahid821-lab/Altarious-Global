@@ -1,0 +1,59 @@
+{
+  "slug": "water-damage",
+  "vertical": "home-services",
+  "name": "Water Damage",
+  "active": true,
+  "order": 7,
+  "shortDescription": "Reach homeowners with active water damage from leaks, floods and appliance failures and connect them with mitigation companies ready to respond.",
+  "description": [
+    "Water damage is the most time-sensitive category in home services. A burst pipe, failed water heater, overflowing appliance, sewer backup or storm flooding leaves the homeowner facing standing water, soaked flooring and the threat of mould within days. They search immediately for someone who can extract water, dry the structure and document the loss for an insurance claim. Speed of response directly affects the extent of the damage and the size of the restoration job that follows.",
+    "Altarious Global runs always-on, geo-targeted campaigns that reach homeowners in these first critical hours and deliver them to water mitigation and restoration companies through Inbound Calls and Live Transfers. Screening confirms the property location, the source and extent of the water intrusion, homeownership and whether an insurance claim is likely, so crews can be dispatched quickly and claims handled correctly from the start."
+  ],
+  "consumerProfile": "Homeowners and property managers experiencing active or recent water intrusion, from single-room leaks to whole-floor flooding. The most valuable segments are insured homeowners with significant damage requiring extraction, drying and reconstruction, and multi-unit property owners where a single incident affects several units.",
+  "intentSignals": [
+    "Searching for water damage restoration or emergency water removal near me",
+    "Burst pipe, water heater failure or appliance overflow in the home",
+    "Sewer or drain backup affecting a basement or lower level",
+    "Storm, heavy rain or flooding has entered the home",
+    "Discovered hidden leak with wet drywall, warped flooring or musty odour",
+    "Insurance adjuster or plumber advised calling a mitigation company"
+  ],
+  "qualificationCriteria": [
+    "Property located within the company's emergency response area",
+    "Homeowner, property manager or authorised decision maker",
+    "Source and approximate extent of water damage described",
+    "Water intrusion is active or occurred recently, not a long-resolved event",
+    "Homeowners insurance status and whether a claim is expected",
+    "Requesting immediate or same-day service"
+  ],
+  "keywords": [
+    "water damage restoration near me",
+    "emergency water removal",
+    "flooded basement cleanup",
+    "water damage repair cost",
+    "burst pipe water damage",
+    "sewage cleanup services",
+    "water damage insurance claim"
+  ],
+  "marketContext": "Water damage is the most common homeowners insurance claim in the United States, and mitigation companies operate in a market shaped by insurer relationships, third-party administrator networks and rapid consolidation under national franchise brands. Aging plumbing, more intense rainfall events and the prevalence of finished basements have kept demand high year-round, with spikes during freezes and storms. Because the first company on site typically secures the mitigation and often the reconstruction work, response speed and 24/7 availability are decisive competitive factors, and direct customer acquisition reduces dependence on program work with compressed margins.",
+  "inboundCallsAngle": "A homeowner with water pouring into a basement will call, not fill out a form. Inbound Call programs place local water damage response offers in front of homeowners searching in the moment of crisis and connect them directly to the mitigation company's emergency line. The caller expects immediate dispatch, and companies that answer around the clock and commit to a rapid arrival time convert these calls at very high rates. Inbound programs also allow companies to build direct customer relationships outside insurer-managed networks, capturing full-margin mitigation and reconstruction work.",
+  "liveTransfersAngle": "Live Transfers ensure that emergency crews are dispatched to jobs that fit. Our team confirms the property location is within the response area, verifies homeownership or management authority, captures the source and scope of the water damage and asks about insurance coverage before warm-transferring to the company's dispatcher. This screening removes out-of-area calls, minor incidents below the company's minimum and long-resolved events, while flagging insured losses that will likely include reconstruction. Dispatchers receive concise, actionable information and can commit to an arrival window on the call.",
+  "faq": [
+    {
+      "q": "Are water damage calls delivered 24/7?",
+      "a": "Yes, if your company offers around-the-clock response. Delivery can follow any schedule you set, and most mitigation companies choose continuous coverage because incidents happen at all hours."
+    },
+    {
+      "q": "Do you screen for insurance coverage?",
+      "a": "Screening asks whether the homeowner has coverage and intends to file a claim, so you can prioritise insured losses and prepare documentation from the outset."
+    },
+    {
+      "q": "Can you filter out minor incidents?",
+      "a": "The extent of the damage is captured during screening, and thresholds can be set so that small, self-manageable incidents are excluded before transfer."
+    }
+  ],
+  "seo": {
+    "title": "Water Damage Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire emergency water damage customers in the first critical hours through geo-targeted performance marketing, 24/7 inbound calls and dispatch-ready live transfers."
+  }
+}

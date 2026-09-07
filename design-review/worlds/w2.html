@@ -1,0 +1,386 @@
+<section class="stage w2">
+  <canvas class="w2-terrain" aria-hidden="true"></canvas>
+  <div class="w2-sky" aria-hidden="true"></div>
+  <div class="w2-scan" aria-hidden="true"></div>
+  <div class="w2-grain" aria-hidden="true"></div>
+
+  <header class="w2-nav">
+    <span class="w2-brand"><i></i>Altarious&nbsp;Global</span>
+    <nav><a class="w2-on">Demand</a><a>Verticals</a><a>Products</a><a>Coverage</a></nav>
+    <span class="w2-cta">Request Volume</span>
+  </header>
+
+  <div class="w2-hero">
+    <div class="w2-kick"><em></em>Live demand surface</div>
+    <h1 class="w2-h1">Acquire high-intent<br>customers.</h1>
+    <p class="w2-sub">Inbound Calls, Live Transfers and Web Leads mapped to where intent is actually rising.</p>
+  </div>
+
+  <div class="w2-hud">
+    <div class="w2-stat"><b class="w2-sv1">18.4k</b><i>signals / day</i></div>
+    <div class="w2-stat"><b class="w2-sv2">6</b><i>sub-verticals</i></div>
+    <div class="w2-stat"><b class="w2-sv3">48</b><i>states live</i></div>
+  </div>
+
+  <div class="w2-ctrl">
+    <div class="w2-tabs" role="tablist">
+      <button class="w2-tab w2-sel" role="tab" data-i="0">Insurance</button>
+      <button class="w2-tab" role="tab" data-i="1">Home Services</button>
+      <button class="w2-tab" role="tab" data-i="2">Web Leads</button>
+    </div>
+    <input class="w2-slider" type="range" min="0" max="200" value="0" aria-label="Blend demand shape">
+  </div>
+
+<style>
+.w2{height:420px;position:relative;overflow:hidden;border-radius:10px;
+  background:#04060d;color:#dfe8f5;isolation:isolate;container-type:inline-size;
+  font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;}
+.w2 *{box-sizing:border-box;margin:0;}
+.w2 .w2-terrain{position:absolute;inset:0;width:100%;height:100%;z-index:2;display:block;}
+.w2 .w2-sky{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(90% 46% at 50% 46%, rgba(40,220,255,.16) 0%, rgba(40,220,255,0) 62%),
+    radial-gradient(70% 40% at 78% 34%, rgba(150,90,255,.16) 0%, rgba(150,90,255,0) 70%),
+    linear-gradient(180deg,#050810 0%,#070b18 46%,#03050b 100%);}
+.w2 .w2-scan{position:absolute;inset:0;z-index:6;pointer-events:none;
+  background:repeating-linear-gradient(180deg,rgba(255,255,255,.035) 0 1px,rgba(0,0,0,0) 1px 3px);
+  mix-blend-mode:overlay;}
+.w2 .w2-grain{position:absolute;inset:0;z-index:7;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 50%,rgba(0,0,0,0) 45%,rgba(0,0,0,.7) 100%);}
+.w2 .w2-nav{position:absolute;top:0;left:0;right:0;z-index:8;height:38px;display:flex;align-items:center;gap:12px;
+  padding:0 14px;border-bottom:1px solid rgba(120,200,255,.14);
+  background:linear-gradient(180deg,rgba(5,10,20,.9),rgba(5,10,20,.35));backdrop-filter:blur(6px);}
+.w2 .w2-brand{font-family:"Archivo",system-ui,sans-serif;font-weight:700;font-size:11.5px;
+  display:flex;align-items:center;gap:7px;white-space:nowrap;color:#eaf3ff;}
+.w2 .w2-brand i{width:8px;height:8px;border-radius:2px;transform:rotate(45deg);
+  background:linear-gradient(135deg,#57e8ff,#a06bff);box-shadow:0 0 10px rgba(87,232,255,.8);}
+.w2 .w2-nav nav{display:flex;gap:14px;margin-left:auto;}
+.w2 .w2-nav a{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#6d8099;white-space:nowrap;}
+.w2 .w2-nav a.w2-on{color:#7fe6ff;}
+.w2 .w2-cta{margin-left:12px;font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
+  padding:5px 9px;border-radius:4px;color:#03121a;white-space:nowrap;
+  background:linear-gradient(135deg,#67ecff,#9d7bff);box-shadow:0 4px 16px rgba(103,236,255,.28);}
+.w2 .w2-hero{position:absolute;top:54px;left:18px;z-index:8;max-width:60%;pointer-events:none;}
+.w2 .w2-kick{display:flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:#5fd8f5;}
+.w2 .w2-kick em{width:5px;height:5px;border-radius:50%;background:#57e8ff;box-shadow:0 0 8px #57e8ff;}
+.w2 .w2-h1{font-family:"Instrument Serif","Archivo",Georgia,serif;font-weight:400;font-size:34px;line-height:1.02;
+  margin:8px 0 8px;letter-spacing:-.015em;color:#f2f8ff;text-shadow:0 2px 26px rgba(0,0,0,.85);}
+.w2 .w2-sub{font-size:11.5px;line-height:1.5;color:#93a6bd;max-width:33ch;text-shadow:0 1px 12px rgba(0,0,0,.9);}
+.w2 .w2-hud{position:absolute;top:56px;right:14px;z-index:8;display:flex;flex-direction:column;gap:9px;
+  text-align:right;pointer-events:none;}
+.w2 .w2-stat b{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:15px;font-weight:500;
+  color:#a9f0ff;letter-spacing:-.02em;text-shadow:0 0 16px rgba(87,232,255,.35);}
+.w2 .w2-stat i{display:block;font-style:normal;font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:#61748d;white-space:nowrap;}
+.w2 .w2-ctrl{position:absolute;left:14px;right:14px;bottom:12px;z-index:8;display:flex;align-items:center;gap:12px;
+  padding:8px 10px;border-radius:8px;border:1px solid rgba(120,200,255,.16);
+  background:linear-gradient(180deg,rgba(8,14,26,.72),rgba(4,8,16,.82));backdrop-filter:blur(8px);}
+.w2 .w2-tabs{display:flex;gap:5px;flex:0 0 auto;}
+.w2 .w2-tab{font:inherit;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;
+  padding:5px 9px;border-radius:5px;white-space:nowrap;color:#7f93ab;
+  border:1px solid rgba(120,200,255,.16);background:rgba(120,200,255,.04);
+  transition:color .25s,border-color .25s,background .25s;}
+.w2 .w2-tab:hover{color:#cfe9ff;}
+.w2 .w2-tab.w2-sel{color:#04121a;border-color:transparent;font-weight:600;
+  background:linear-gradient(135deg,#67ecff,#9d7bff);}
+.w2 .w2-slider{flex:1;min-width:40px;-webkit-appearance:none;appearance:none;height:3px;border-radius:3px;
+  background:linear-gradient(90deg,#57e8ff,#9d7bff);outline:none;cursor:pointer;}
+.w2 .w2-slider::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;border-radius:50%;
+  background:#eafcff;box-shadow:0 0 10px rgba(103,236,255,.9);cursor:pointer;}
+.w2 .w2-slider::-moz-range-thumb{width:12px;height:12px;border:0;border-radius:50%;
+  background:#eafcff;box-shadow:0 0 10px rgba(103,236,255,.9);cursor:pointer;}
+@container (max-width:520px){
+  .w2 .w2-nav nav{display:none;}
+  .w2 .w2-h1{font-size:25px;}
+  .w2 .w2-hero{max-width:70%;}
+  .w2 .w2-stat b{font-size:12px;}
+}
+@container (max-width:380px){
+  .w2 .w2-cta{display:none;}
+  .w2 .w2-h1{font-size:21px;}
+  .w2 .w2-sub{font-size:10.5px;}
+  .w2 .w2-hud{display:none;}
+  .w2 .w2-slider{display:none;}
+  .w2 .w2-tab{padding:5px 7px;font-size:8.5px;}
+}
+</style>
+
+<script>
+(function(){
+  var stage = document.currentScript.closest('.w2');
+  if(!stage || stage.dataset.init) return; stage.dataset.init='1';
+
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  var canvas = stage.querySelector('.w2-terrain');
+  var ctx = canvas.getContext('2d');
+  var slider = stage.querySelector('.w2-slider');
+  var hero = stage.querySelector('.w2-hero');
+  var tabs = Array.prototype.slice.call(stage.querySelectorAll('.w2-tab'));
+  var stats = [stage.querySelector('.w2-sv1'),stage.querySelector('.w2-sv2'),stage.querySelector('.w2-sv3')];
+
+  /* three demand shapes; each is a set of gaussian peaks in normalised (u = across, v = depth) */
+  var SHAPES = [
+    { name:'Insurance', hue:[188, 268], stats:['18.4k','2','44'],
+      peaks:[{u:.22,v:.30,h:1.00,s:.13,l:'Auto Insurance'},{u:.62,v:.62,h:.82,s:.15,l:'Medicare'},
+             {u:.86,v:.20,h:.46,s:.18},{u:.42,v:.85,h:.38,s:.20}] },
+    { name:'Home Services', hue:[168, 296], stats:['11.9k','2','38'],
+      peaks:[{u:.30,v:.70,h:.95,s:.14,l:'HVAC'},{u:.72,v:.34,h:.88,s:.13,l:'Pest Control'},
+             {u:.10,v:.46,h:.42,s:.19},{u:.55,v:.10,h:.34,s:.17}] },
+    { name:'Web Leads', hue:[200, 316], stats:['31.2k','2','48'],
+      peaks:[{u:.18,v:.55,h:.78,s:.17,l:'Personal Loans'},{u:.52,v:.26,h:1.00,s:.12,l:'Legal'},
+             {u:.80,v:.72,h:.66,s:.16},{u:.92,v:.38,h:.40,s:.15}] }
+  ];
+
+  var blend = 0;          // continuous position across shapes, 0..3
+  var blendTarget = 0;
+  var autoCycle = true;
+  var camZ = 0;
+
+  function shapeAt(t){
+    var n = SHAPES.length;
+    var a = Math.floor(t) % n, b = (a+1)%n, f = t - Math.floor(t);
+    f = f*f*(3-2*f);
+    return {a:SHAPES[a], b:SHAPES[b], f:f};
+  }
+
+  function heightAt(u, v, s){
+    function ev(sh){
+      var h = 0;
+      for(var i=0;i<sh.peaks.length;i++){
+        var p = sh.peaks[i];
+        var du=(u-p.u), dv=(v-p.v);
+        h += p.h * Math.exp(-(du*du+dv*dv)/(2*p.s*p.s));
+      }
+      return h;
+    }
+    return ev(s.a)*(1-s.f) + ev(s.b)*s.f;
+  }
+
+  // deterministic ridge noise so terrain reads as landscape, not blobs
+  function ridge(u, v){
+    return 0.14*Math.sin(u*11.0 + v*4.0) * Math.cos(v*7.0 - u*2.0)
+         + 0.07*Math.sin(u*23.0 - v*13.0)
+         + 0.05*Math.cos(v*19.0 + u*5.0);
+  }
+
+  var W=0,H=0,dpr=1, HZ=0;
+  var COLS = 46, ROWS = 40, DEPTH = 26;
+
+  function measure(){
+    var r = stage.getBoundingClientRect();
+    W = Math.max(1,r.width); H = Math.max(1,r.height);
+    dpr = Math.min(2, window.devicePixelRatio||1);
+    canvas.width=Math.round(W*dpr); canvas.height=Math.round(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    HZ = H*0.40;
+    COLS = W < 420 ? 32 : 46;
+    ROWS = W < 420 ? 30 : 40;
+  }
+
+  function project(x, y, z){
+    // z: distance from camera (>0). simple perspective onto horizon.
+    var f = 1/(z*0.09 + 0.55);
+    return {x: W/2 + x*f*W*0.030, y: HZ + (H*0.60) * f * 0.42 - y*f*W*0.032, f:f};
+  }
+
+  function lerpHue(s){
+    return [
+      s.a.hue[0]*(1-s.f)+s.b.hue[0]*s.f,
+      s.a.hue[1]*(1-s.f)+s.b.hue[1]*s.f
+    ];
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    var s = shapeAt(blend), hues = lerpHue(s);
+    var sr = stage.getBoundingClientRect(), hb = hero.getBoundingClientRect();
+    var heroBox = {x0: hb.left-sr.left, x1: hb.right-sr.left, y1: hb.bottom-sr.top};
+
+    // horizon glow + scan line
+    var g = ctx.createLinearGradient(0, HZ-46, 0, HZ+22);
+    g.addColorStop(0,'rgba(0,0,0,0)');
+    g.addColorStop(.72,'hsla('+hues[0]+',100%,62%,.16)');
+    g.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.fillStyle=g; ctx.fillRect(0,HZ-46,W,68);
+    ctx.fillStyle='hsla('+hues[0]+',100%,78%,.55)';
+    ctx.fillRect(0, HZ-0.5, W, 1);
+    ctx.save(); ctx.filter='blur(0px)';
+    ctx.fillStyle='hsla('+hues[1]+',100%,70%,.10)';
+    ctx.fillRect(0, HZ-3, W, 6);
+    ctx.restore();
+
+    // build grid rows back -> front
+    var rows = [];
+    for(var j=ROWS-1;j>=0;j--){
+      var zBase = 0.7 + (j/ROWS)*DEPTH;
+      var vOff = (camZ*0.055) % (1/ROWS);
+      var z = zBase - camZ*0.0; // camera glide via v scroll below
+      var v = (j/ROWS) + ((camZ*0.035) % (1/ROWS)) ;
+      var pts = [];
+      for(var i=0;i<=COLS;i++){
+        var u = i/COLS;
+        var world = ((camZ*0.035) + j/ROWS) % 1;
+        var hgt = heightAt(u, world, s) + ridge(u*1.0, world*1.0)*(0.6);
+        var x = (u-0.5)*22;
+        var y = hgt*7.6;
+        var p = project(x, y, z);
+        p.h = hgt; p.u = u; p.world = world;
+        pts.push(p);
+      }
+      rows.push({pts:pts, z:z, j:j});
+    }
+
+    // painter: far first (already back->front in array order since j desc = far first)
+    for(var r0=0;r0<rows.length;r0++){
+      var row = rows[r0], next = rows[r0+1];
+      var t = 1 - row.z/(DEPTH+1);          // 0 far, 1 near
+      var fog = Math.pow(Math.max(0, t), 1.5);
+      var hue = hues[0] + (hues[1]-hues[0])*(1-t);
+      var alpha = 0.06 + fog*0.62;
+
+      // subtle filled band under ridge for solidity
+      if(next){
+        ctx.beginPath();
+        ctx.moveTo(row.pts[0].x, row.pts[0].y);
+        for(var i2=1;i2<row.pts.length;i2++) ctx.lineTo(row.pts[i2].x, row.pts[i2].y);
+        for(var i3=next.pts.length-1;i3>=0;i3--) ctx.lineTo(next.pts[i3].x, next.pts[i3].y);
+        ctx.closePath();
+        ctx.fillStyle='hsla('+hue+',80%,'+(6+fog*7)+'%,'+(0.35+fog*0.45)+')';
+        ctx.fill();
+      }
+
+      // ridge line, brighter on peaks
+      ctx.beginPath();
+      ctx.moveTo(row.pts[0].x, row.pts[0].y);
+      for(var i4=1;i4<row.pts.length;i4++) ctx.lineTo(row.pts[i4].x, row.pts[i4].y);
+      ctx.strokeStyle='hsla('+hue+',100%,'+(58+fog*14)+'%,'+alpha+')';
+      ctx.lineWidth = 0.7 + fog*1.1;
+      ctx.stroke();
+    }
+
+    // longitudinal lines (every 4th column) for wireframe read
+    for(var c=0;c<=COLS;c+=4){
+      ctx.beginPath();
+      for(var r1=0;r1<rows.length;r1++){
+        var p = rows[r1].pts[c];
+        r1===0 ? ctx.moveTo(p.x,p.y) : ctx.lineTo(p.x,p.y);
+      }
+      ctx.strokeStyle='hsla('+hues[1]+',95%,66%,.13)';
+      ctx.lineWidth=0.7; ctx.stroke();
+    }
+
+    // peak labels — sit on the highest peaks and drift with them
+    var labels = [];
+    [[s.a, 1-s.f],[s.b, s.f]].forEach(function(pair){
+      var sh=pair[0], w=pair[1];
+      if(w < 0.12) return;
+      sh.peaks.forEach(function(p){
+        if(!p.l) return;
+        // find nearest rendered row to this peak's world v
+        var best=null, bd=9;
+        for(var r2=0;r2<rows.length;r2++){
+          var wv = rows[r2].pts[0].world;
+          var d = Math.abs(wv - p.v);
+          d = Math.min(d, 1-d);
+          if(d<bd){ bd=d; best=rows[r2]; }
+        }
+        if(!best || bd>0.06) return;
+        var idx = Math.round(p.u*COLS);
+        var pt = best.pts[Math.max(0,Math.min(COLS,idx))];
+        var t = 1 - best.z/(DEPTH+1);
+        labels.push({x:pt.x, y:pt.y, txt:p.l, a:w*Math.min(1, 0.25+t*1.3), t:t, hue:hues[1]});
+      });
+    });
+    labels.sort(function(a,b){return a.t-b.t;});
+    labels.forEach(function(L){
+      if(L.x<8 || L.x>W-8 || L.y<HZ-40 || L.y>H-52) return;
+      if(heroBox && L.x > heroBox.x0-30 && L.x < heroBox.x1+8 && L.y < heroBox.y1+22) return;
+      var a = Math.max(0,Math.min(1,L.a));
+      ctx.save();
+      ctx.globalAlpha = a;
+      ctx.beginPath(); ctx.moveTo(L.x, L.y); ctx.lineTo(L.x, L.y-16-L.t*8);
+      ctx.strokeStyle='hsla('+L.hue+',100%,78%,.6)'; ctx.lineWidth=1; ctx.stroke();
+      ctx.beginPath(); ctx.arc(L.x, L.y, 2.4, 0, 6.2832);
+      ctx.fillStyle='#eafcff'; ctx.fill();
+      var fs = 8.5 + L.t*2.2;
+      ctx.font='500 '+fs.toFixed(1)+'px "IBM Plex Mono", ui-monospace, monospace';
+      var tw = ctx.measureText(L.txt).width;
+      var bx = Math.min(W-tw-12, Math.max(4, L.x - tw/2 - 5));
+      var by = L.y-16-L.t*8-fs-6;
+      ctx.fillStyle='rgba(4,9,18,.78)';
+      ctx.fillRect(bx, by, tw+10, fs+8);
+      ctx.strokeStyle='hsla('+L.hue+',90%,70%,.35)'; ctx.lineWidth=1;
+      ctx.strokeRect(bx+.5, by+.5, tw+9, fs+7);
+      ctx.fillStyle='#dff6ff';
+      ctx.textBaseline='middle';
+      ctx.fillText(L.txt, bx+5, by+(fs+8)/2);
+      ctx.restore();
+    });
+  }
+
+  function applyStats(){
+    var s = shapeAt(blend);
+    var src = s.f < .5 ? s.a : s.b;
+    stats.forEach(function(el,i){ el.textContent = src.stats[i]; });
+    var sel = SHAPES.indexOf(src);
+    tabs.forEach(function(t,i){ t.classList.toggle('w2-sel', i===sel); });
+  }
+
+  /* controls */
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      autoCycle = false;
+      blendTarget = +t.dataset.i;
+      slider.value = String(Math.round(blendTarget/SHAPES.length*200));
+    });
+  });
+  slider.addEventListener('input', function(){
+    autoCycle = false;
+    blendTarget = (+slider.value/200)*SHAPES.length;
+    blend = blendTarget;
+    applyStats();
+    if(reduced.matches) draw();
+  });
+
+  /* loop */
+  var raf=0, running=false, last=0, cycleT=0;
+  function frame(ts){
+    if(!running) return;
+    var dt = Math.min(0.05,(ts-last)/1000||0.016); last=ts;
+    camZ += dt*1.35;
+    if(autoCycle){
+      cycleT += dt;
+      if(cycleT > 5.5){ cycleT = 0; blendTarget = Math.round(blend) + 1; }
+    }
+    var d = blendTarget - blend;
+    if(Math.abs(d) > 0.0005){
+      blend += d * Math.min(1, dt*2.2);
+      slider.value = String(Math.round(((blend % SHAPES.length)/SHAPES.length)*200));
+      applyStats();
+    } else if (blend >= SHAPES.length){
+      blend -= SHAPES.length; blendTarget -= SHAPES.length;
+    }
+    draw();
+    raf = requestAnimationFrame(frame);
+  }
+  function start(){ if(running||reduced.matches) return; running=true; last=performance.now(); raf=requestAnimationFrame(frame); }
+  function stop(){ running=false; cancelAnimationFrame(raf); }
+
+  measure();
+  camZ = 3.2;           // start mid-glide so it is a complete composition at rest
+  applyStats(); draw();
+
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ e.isIntersecting ? start() : stop(); });
+  },{threshold:0.01});
+  io.observe(stage);
+
+  var ro = new ResizeObserver(function(){ measure(); draw(); });
+  ro.observe(stage);
+
+  document.addEventListener('visibilitychange', function(){ document.hidden ? stop() : start(); });
+  reduced.addEventListener('change', function(){ reduced.matches ? (stop(), draw()) : start(); });
+  window.addEventListener('pagehide', function(){ stop(); io.disconnect(); ro.disconnect(); });
+})();
+</script>
+</section>

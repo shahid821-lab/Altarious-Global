@@ -1,0 +1,59 @@
+{
+  "slug": "business-insurance",
+  "vertical": "insurance",
+  "name": "Business Insurance",
+  "active": true,
+  "order": 9,
+  "shortDescription": "Connect small business owners and self-employed professionals buying their first or replacement business coverage with licensed agents.",
+  "description": [
+    "Small business insurance is purchased by owners who are usually not insurance experts and are responding to a requirement: a client contract that demands general liability, a landlord asking for proof of coverage, a state licensing board requiring a bond or professional liability, or a platform that will not onboard a vendor without a certificate. Freelancers, consultants, tradespeople, online sellers and home-based businesses make up a large and growing share of this demand, and they typically want a simple policy at a clear price with minimal paperwork.",
+    "Altarious Global reaches these owners through search and social campaigns that speak to their specific trade or situation, then delivers them to agencies, digital brokers and carriers through Inbound Calls and Live Transfers. Screening captures business type, size and coverage need so that agents can recommend a business owners policy, general liability or professional liability solution and often bind coverage during the first conversation."
+  ],
+  "consumerProfile": "Sole proprietors, freelancers and owners of businesses with fewer than twenty employees, spanning consultants, cleaners, handymen, personal trainers, photographers, e-commerce sellers, salons and food vendors. The most valuable segments are newly formed businesses placing their first policy and established micro-businesses that need proof of coverage to win a contract.",
+  "intentSignals": [
+    "Searching for small business insurance or business liability insurance cost",
+    "Recently registered an LLC or obtained a business license",
+    "Client, landlord or platform requesting a certificate of insurance",
+    "Applying for a professional license that requires liability coverage or a bond",
+    "Hired a first employee and needs workers' compensation",
+    "Started selling products or services online or at events"
+  ],
+  "qualificationCriteria": [
+    "Operating or launching a business in a state the agency is licensed to write",
+    "Business type and primary services or products confirmed",
+    "Number of employees and approximate annual revenue stated",
+    "Coverage need identified, such as general liability, professional liability, BOP or workers' comp",
+    "Timeline for needing coverage or a certificate captured",
+    "Owner or decision maker interested in a quote today"
+  ],
+  "keywords": [
+    "small business insurance",
+    "business liability insurance cost",
+    "general liability insurance for small business",
+    "professional liability insurance",
+    "LLC insurance",
+    "insurance for self employed",
+    "business insurance quotes online"
+  ],
+  "marketContext": "New business formation in the United States has remained strong, and the rise of independent work has created millions of micro-businesses that need coverage for the first time. Carriers and insurtechs have responded with streamlined small business products that can be quoted and bound in minutes, and competition for these accounts is intense. Owners often begin their search when a contract or licensing requirement creates urgency, which compresses the decision into days. Agencies that engage promptly, explain coverage in plain terms and deliver certificates fast are capturing a disproportionate share of this growing segment.",
+  "inboundCallsAngle": "Small business owners frequently do not know which policy they need and prefer to describe their situation to a person. Inbound Call programs place business insurance messaging in front of owners searching for coverage and invite them to call a licensed agent directly. Callers arrive with a specific trigger, such as a client asking for a certificate, and the agent can quickly identify the appropriate product, quote it and issue documents. This immediacy is a significant advantage in a category where owners often need proof of coverage within a day or two.",
+  "liveTransfersAngle": "Live Transfers help agencies focus producers on accounts that fit their small business appetite. Our team confirms the state, business type, employee count, revenue range and the coverages the owner is seeking before warm-transferring the call. This screening filters out excluded classes and larger accounts that belong in a commercial lines department, and identifies owners with multiple coverage needs who represent higher lifetime value. Producers receive a prepared conversation and can move directly to recommending and binding the right policy.",
+  "faq": [
+    {
+      "q": "Which types of businesses do these programs reach?",
+      "a": "Primarily micro and small businesses such as contractors, consultants, service providers, online sellers and home-based businesses. Targeting can be narrowed to the trades and professions you prefer."
+    },
+    {
+      "q": "Can you screen out businesses outside our appetite?",
+      "a": "Yes. Excluded classes, employee counts and revenue thresholds can be built into the screening so that transfers match what your carriers will write."
+    },
+    {
+      "q": "How urgent are these consumers typically?",
+      "a": "Many are responding to a contract, lease or licensing requirement and need coverage quickly, which favours agencies with same-day quote and bind capability."
+    }
+  ],
+  "seo": {
+    "title": "Business Insurance Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire small business and self-employed insurance customers through performance marketing, inbound calls and pre-screened live transfers for licensed agents."
+  }
+}

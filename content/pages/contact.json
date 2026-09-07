@@ -1,0 +1,16 @@
+{
+  "seo": {
+    "title": "Contact Altarious Global | Request a Proposal",
+    "description": "Request a proposal or talk to the Altarious Global team about inbound calls, live transfers, web leads and performance marketing for your business."
+  },
+  "hero": {
+    "eyebrow": "Contact",
+    "headline": "Let's build your acquisition program.",
+    "subheadline": "Tell us about your business, the products you sell, the verticals and geographies you serve, and the volume you need. Our team typically responds within one business day."
+  },
+  "reasons": [
+    { "title": "Request a proposal", "text": "Get a scoped program with recommended products, qualification and volume." },
+    { "title": "Talk to our team", "text": "Discuss whether inbound calls, live transfers or web leads fit your operation." },
+    { "title": "Partner enquiries", "text": "Traffic partners and call centers interested in working with us." }
+  ]
+}

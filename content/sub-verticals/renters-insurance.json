@@ -1,0 +1,59 @@
+{
+  "slug": "renters-insurance",
+  "vertical": "insurance",
+  "name": "Renters Insurance",
+  "active": true,
+  "order": 8,
+  "shortDescription": "Reach tenants who need renters coverage for a new lease or landlord requirement and connect them with licensed agents who can bind quickly.",
+  "description": [
+    "Renters insurance is most often purchased under a deadline. Property managers and landlords increasingly require proof of a renters policy before handing over keys, and tenants search for coverage in the days around a move. Other triggers include a roommate change, acquiring valuable electronics or jewellery, a neighbour's fire or water leak that highlights the risk, or a bundling opportunity when the tenant shops for auto insurance and discovers a multi-policy discount.",
+    "Altarious Global reaches renters at these moments through search and social campaigns and routes them into Inbound Call and Live Transfer programs for carriers and agencies. Because renters policies are inexpensive and quick to issue, programs are designed around speed and bundling: agents can bind the renters policy on the first call and open the door to auto, life and future homeowners business."
+  ],
+  "consumerProfile": "Tenants aged 18 to 45 in apartments, condos and single-family rentals, including students, young professionals and families. High-value segments are tenants signing a new lease with a landlord requirement, renters who also own a vehicle and can bundle, and higher-income renters with valuables that exceed basic policy limits.",
+  "intentSignals": [
+    "Searching for renters insurance quotes or cost",
+    "Signing a new lease with a landlord proof-of-insurance requirement",
+    "Moving into a new apartment within the next few weeks",
+    "Shopping auto insurance and looking for a bundle discount",
+    "Recently acquired high-value items such as electronics, bikes or jewellery",
+    "Experienced or witnessed a theft, fire or water damage incident in their building"
+  ],
+  "qualificationCriteria": [
+    "Currently renting or about to sign a lease in a state the buyer writes",
+    "Age 18 or older and the named tenant on the lease",
+    "Rental address and move-in date confirmed",
+    "Approximate personal property value discussed",
+    "Interest in bundling with auto or other policies noted",
+    "Ready to purchase or receive a quote today"
+  ],
+  "keywords": [
+    "renters insurance quotes",
+    "cheap renters insurance",
+    "renters insurance near me",
+    "how much is renters insurance",
+    "apartment insurance",
+    "renters and auto insurance bundle",
+    "renters insurance required by landlord"
+  ],
+  "marketContext": "The share of American households renting has remained elevated, and landlord mandates for renters insurance have become standard across professionally managed properties. This has turned a once-optional product into a compliance purchase made under time pressure. While premiums are low, carriers value renters policies as an entry point to multi-line relationships and future homeowners business, and retention tends to be strong once a policy is bundled. Agencies that can issue a policy quickly and immediately cross-sell auto coverage see the best economics from renters acquisition.",
+  "inboundCallsAngle": "Renters who need proof of insurance before a move-in date want the fastest possible route to a policy document. Inbound Call programs let tenants call a licensed agent directly after seeing a renters insurance offer, and because the product is simple, agents can quote, bind and email proof of coverage in a single conversation. The call also creates a natural opening to review the tenant's auto coverage and offer a bundle, which is where much of the long-term value in renters acquisition is realised.",
+  "liveTransfersAngle": "Live Transfers keep renters programs efficient at scale. Our team confirms the tenant's state, rental address, move-in timing and whether they own a vehicle before warm-transferring to an agent, so the agent knows immediately whether a bundle opportunity exists. Pre-screening also removes homeowners who searched for the wrong product and consumers outside the licensed footprint. For agencies running multi-line growth strategies, transfers flagged with an auto bundle opportunity can be routed to producers focused on higher-value accounts.",
+  "faq": [
+    {
+      "q": "Can programs prioritise renters who also need auto insurance?",
+      "a": "Yes. Screening captures vehicle ownership and current auto coverage so that bundle-ready transfers can be identified and routed accordingly."
+    },
+    {
+      "q": "How quickly do renters typically need coverage?",
+      "a": "Most callers need proof of insurance within days for a lease signing or move-in, so programs work best for agencies that can bind and deliver documents on the same call."
+    },
+    {
+      "q": "Can you target specific metro areas or ZIP codes?",
+      "a": "Targeting can be set at the state, metro or ZIP level to align with your licensing and the rental markets you want to grow in."
+    }
+  ],
+  "seo": {
+    "title": "Renters Insurance Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire renters insurance customers under lease deadlines through performance marketing, inbound calls and live transfers, with bundle-ready screening for auto cross-sell."
+  }
+}

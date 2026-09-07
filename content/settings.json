@@ -1,0 +1,38 @@
+{
+  "_comment": "Operational facts shown on the public site. Everything here is a claim about the business, so nothing is invented: a section only renders once it is filled in from the admin. Empty means the site stays silent rather than guessing.",
+
+  "coverage": {
+    "enabled": false,
+    "note": "Set enabled to true once the state list is accurate. Statuses: high, active, limited, none. Any state left out is treated as 'none'.",
+    "inbound-calls": {},
+    "live-transfers": {}
+  },
+
+  "hours": {
+    "enabled": true,
+    "timezone": "America/New_York",
+    "timezoneLabel": "ET",
+    "weekdays": { "open": "08:00", "close": "20:00" },
+    "saturday": { "open": "09:00", "close": "17:00" },
+    "sunday": null
+  },
+
+  "metrics": {
+    "enabled": false,
+    "note": "Case-study ribbon. Only publish figures you can evidence. bar is 0..1 and sets the bar length.",
+    "items": []
+  },
+
+  "liveFeed": {
+    "enabled": true,
+    "mode": "simulated",
+    "note": "The delivery feed on the home page. mode 'simulated' shows illustrative, clearly-labelled activity; 'off' hides the panel. It never claims to be live data.",
+    "label": "Illustrative delivery activity"
+  },
+
+  "calculator": {
+    "enabled": true,
+    "note": "Defaults for the volume model. It is a model, not a promise, and is labelled as such.",
+    "defaultAvgValue": 900
+  }
+}

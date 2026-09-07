@@ -1,0 +1,103 @@
+<div class="demo c15">
+  <article class="wrap">
+    <span class="eyebrow">Glossary in context</span>
+    <p class="copy">
+      A caller who reaches our
+      <button type="button" class="term" data-t="ivr">IVR</button>
+      is routed by state and product before an agent ever picks up. Our screeners confirm
+      <button type="button" class="term" data-t="tcpa">TCPA</button>
+      consent on the recording, then hand the caller over on a
+      <button type="button" class="term" data-t="bridge">warm bridge</button>
+      rather than a cold drop. Every minute of that call is scored by
+      <button type="button" class="term" data-t="asr">ASR</button>,
+      so an Auto Insurance or Medicare buyer can audit exactly why a transfer was accepted or billed back.
+    </p>
+    <p class="tip">Hover, tap or tab to a highlighted term for its definition.</p>
+    <div class="pop" role="tooltip" hidden>
+      <span class="pk"></span>
+      <b class="pt"></b>
+      <span class="pd"></span>
+      <i class="arw" aria-hidden="true"></i>
+    </div>
+    <span class="sr" aria-live="polite"></span>
+  </article>
+
+  <style>
+    .c15{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--fg-2,#3D4757)}
+    .c15 *{box-sizing:border-box}
+    .c15 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    .c15 .wrap{position:relative;border:1px solid var(--line,#E2E6EC);border-radius:14px;background:var(--panel,#fff);padding:16px;display:flex;flex-direction:column;gap:9px;min-height:230px}
+    .c15 .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c15 .copy{margin:0;font-size:14px;line-height:1.78;color:var(--fg-2,#3D4757)}
+    .c15 .term{font:inherit;padding:0 1px;margin:0;border:0;background:none;cursor:help;color:var(--fg,#141A22);font-weight:600;border-bottom:1.5px dashed var(--signal,#E8A33D);border-radius:2px;transition:.15s}
+    .c15 .term:hover,.c15 .term.on{background:color-mix(in srgb,var(--signal,#E8A33D) 18%,transparent);border-bottom-style:solid}
+    .c15 .term:focus-visible{outline:2px solid var(--signal,#E8A33D);outline-offset:2px}
+    .c15 .tip{margin:0;font-size:10.5px;font-family:"IBM Plex Mono",monospace;color:var(--fg-3,#7A8798);border-top:1px solid var(--line,#E2E6EC);padding-top:9px;margin-top:auto}
+    .c15 .pop{position:absolute;z-index:5;width:min(272px,calc(100% - 24px));padding:10px 12px;border-radius:10px;border:1px solid var(--line,#E2E6EC);background:var(--panel-2,#F3F5F8);box-shadow:0 10px 26px -14px rgba(10,16,24,.5);display:flex;flex-direction:column;gap:3px;animation:c15in .16s ease both}
+    @keyframes c15in{from{opacity:0;transform:translateY(4px)}}
+    .c15 .pk{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--live,#1FA9A0)}
+    .c15 .pt{font-family:Archivo,system-ui,sans-serif;font-size:13px;color:var(--fg,#141A22)}
+    .c15 .pd{font-size:11.5px;line-height:1.55;color:var(--fg-2,#3D4757)}
+    .c15 .arw{position:absolute;width:9px;height:9px;background:var(--panel-2,#F3F5F8);border:1px solid var(--line,#E2E6EC);transform:rotate(45deg)}
+    .c15 .pop.below .arw{top:-5.5px;border-right:0;border-bottom:0}
+    .c15 .pop.above .arw{bottom:-5.5px;border-left:0;border-top:0}
+    @media (prefers-reduced-motion:reduce){.c15 *{animation:none!important;transition:none!important}}
+  </style>
+
+  <script>
+  (function(){
+    var r=document.currentScript.closest('.c15');
+    var wrap=r.querySelector('.wrap'),pop=r.querySelector('.pop'),arw=pop.querySelector('.arw');
+    var live=r.querySelector('.sr'),cur=null,hideT;
+    var DEF={
+      ivr:{k:'Routing',t:'IVR — Interactive Voice Response',d:'The automated menu that greets a caller and routes them by state, product and eligibility before a human is engaged. Good IVR design is the difference between a 20-second and a 90-second handling cost.'},
+      tcpa:{k:'Compliance',t:'TCPA',d:'The US Telephone Consumer Protection Act. It governs how a consumer must consent to be contacted. One-to-one written consent, captured and stored, is what makes a lead legally sellable.'},
+      bridge:{k:'Live Transfers',t:'Warm bridge',d:'The screener stays on the line and introduces the qualified caller to the buying agent before dropping off, instead of blind-transferring. It lifts acceptance rates and cuts billbacks.'},
+      asr:{k:'Quality',t:'ASR — Automatic Speech Recognition',d:'Machine transcription of the call, used to score qualification criteria, verify consent language and flag disputed transfers without anyone re-listening to the audio.'}
+    };
+    function place(el){
+      var wr=wrap.getBoundingClientRect(),tr=el.getBoundingClientRect();
+      pop.hidden=false;pop.classList.remove('above','below');
+      var pw=pop.offsetWidth,ph=pop.offsetHeight,pad=10;
+      var cx=tr.left-wr.left+tr.width/2;
+      var left=Math.min(Math.max(pad,cx-pw/2),wr.width-pw-pad);
+      var below=(tr.bottom-wr.top)+ph+12<wr.height;
+      var top=below?(tr.bottom-wr.top)+8:(tr.top-wr.top)-ph-8;
+      top=Math.max(pad,Math.min(top,wr.height-ph-pad));
+      pop.style.left=left+'px';pop.style.top=top+'px';
+      pop.classList.add(below?'below':'above');
+      arw.style.left=Math.min(Math.max(8,cx-left-4.5),pw-17)+'px';
+    }
+    function show(el){
+      clearTimeout(hideT);
+      var d=DEF[el.dataset.t];if(!d)return;
+      if(cur&&cur!==el)cur.classList.remove('on');
+      cur=el;el.classList.add('on');
+      pop.querySelector('.pk').textContent=d.k;
+      pop.querySelector('.pt').textContent=d.t;
+      pop.querySelector('.pd').textContent=d.d;
+      pop.hidden=false;place(el);
+      el.setAttribute('aria-expanded','true');
+      live.textContent=d.t+': '+d.d;
+    }
+    function hide(){
+      hideT=setTimeout(function(){
+        pop.hidden=true;live.textContent='';
+        if(cur){cur.classList.remove('on');cur.removeAttribute('aria-expanded');cur=null;}
+      },90);
+    }
+    r.querySelectorAll('.term').forEach(function(el){
+      el.setAttribute('aria-describedby','');
+      el.addEventListener('mouseenter',function(){show(el);});
+      el.addEventListener('mouseleave',hide);
+      el.addEventListener('focus',function(){show(el);});
+      el.addEventListener('blur',hide);
+      el.addEventListener('click',function(e){e.preventDefault();cur===el&&!pop.hidden?(clearTimeout(hideT),pop.hidden=true,el.classList.remove('on'),cur=null):show(el);});
+    });
+    pop.addEventListener('mouseenter',function(){clearTimeout(hideT);});
+    pop.addEventListener('mouseleave',hide);
+    r.addEventListener('keydown',function(e){if(e.key==='Escape'&&!pop.hidden){pop.hidden=true;if(cur){cur.classList.remove('on');cur.focus();cur=null;}}});
+    addEventListener('resize',function(){if(cur&&!pop.hidden)place(cur);});
+  })();
+  </script>
+</div>

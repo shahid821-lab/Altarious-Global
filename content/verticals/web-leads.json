@@ -1,0 +1,30 @@
+{
+  "slug": "web-leads",
+  "name": "Web Leads",
+  "order": 3,
+  "active": true,
+  "tagline": "Web-generated demand for financial, legal, education and consumer service brands.",
+  "description": "Lead generation verticals where acquisition is driven primarily by web leads, complemented by inbound calls and live transfers for financial services, loans, debt relief, credit repair, legal, education, mortgage, real estate and business services.",
+  "intro": [
+    "Some categories are shopped online first. Consumers researching a personal loan, a debt relief plan, a degree program or a mortgage complete forms, compare options and expect a fast, relevant follow-up. Altarious Global generates these web leads through performance campaigns and delivers them in real time, validated and matched to your acceptance criteria.",
+    "For buyers who also want voice contact, every web lead vertical has dedicated Inbound Call and Live Transfer products, so the same campaign infrastructure can feed your call center as well as your CRM."
+  ],
+  "featuredImage": "/assets/img/photos/vertical-web-leads.jpg",
+  "highlights": [
+    "Real-time lead posting to your CRM or dialer",
+    "Field-level validation and duplicate suppression",
+    "Consent capture and documentation on every lead",
+    "Inbound call and live transfer options for every category"
+  ],
+  "seo": {
+    "title": "Web Lead Generation, Inbound Calls & Live Transfers",
+    "description": "Web lead generation for financial services, personal loans, debt relief, credit repair, legal, education, mortgage, real estate and business services, with inbound call and live transfer options.",
+    "keywords": [
+      "web leads",
+      "lead generation company",
+      "real-time leads",
+      "financial services leads",
+      "legal leads"
+    ]
+  }
+}

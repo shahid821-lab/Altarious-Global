@@ -1,0 +1,128 @@
+<div class="demo c17">
+  <div class="wrap">
+    <div class="hd">
+      <span class="eyebrow">Drag to compare</span>
+      <div class="keys"><span class="k raw">Raw lead list</span><span class="k ok">Qualified transfer</span></div>
+    </div>
+
+    <div class="stage">
+      <div class="layer raw" aria-hidden="false">
+        <div class="lbl">RAW · 312 rows · unverified</div>
+        <table>
+          <thead><tr><th>Name</th><th>Phone</th><th>State</th><th>Consent</th></tr></thead>
+          <tbody>
+            <tr><td>j. m.</td><td>555-01••</td><td>—</td><td class="bad">none</td></tr>
+            <tr><td>TEST TEST</td><td>000-0000</td><td>ZZ</td><td class="bad">none</td></tr>
+            <tr><td>maria l</td><td>555-0188</td><td>TX</td><td class="warn">expired</td></tr>
+            <tr><td>(blank)</td><td>—</td><td>FL</td><td class="bad">none</td></tr>
+            <tr><td>d. okafor</td><td>555-0143</td><td>OH</td><td class="warn">unclear</td></tr>
+            <tr><td>asdf</td><td>555-9999</td><td>CA</td><td class="bad">none</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="layer ok" style="clip-path:inset(0 0 0 50%)">
+        <div class="lbl">QUALIFIED · 1 record · billable</div>
+        <div class="rec">
+          <div class="rtop">
+            <b>Maria Delgado</b>
+            <span class="badge"><i></i>Accepted</span>
+          </div>
+          <dl>
+            <div><dt>Vertical</dt><dd>Insurance · Medicare</dd></div>
+            <div><dt>Product</dt><dd>Live Transfer</dd></div>
+            <div><dt>State / age</dt><dd>TX · 67</dd></div>
+            <div><dt>Consent</dt><dd class="good">TCPA 1:1 · recorded 00:41</dd></div>
+            <div><dt>Screened</dt><dd>Coverage, zip, callback confirmed</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="handle" role="slider" tabindex="0" aria-label="Comparison position"
+           aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50 percent"
+           style="left:50%">
+        <span class="line"></span>
+        <span class="grip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7 6 12l4 5M14 7l4 5-4 5"/></svg></span>
+      </div>
+    </div>
+    <p class="hint">Use ← → (or Home / End) when focused.</p>
+  </div>
+
+  <style>
+    .c17{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--fg-2,#3D4757)}
+    .c17 *{box-sizing:border-box}
+    .c17 .wrap{display:flex;flex-direction:column;gap:9px}
+    .c17 .hd{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+    .c17 .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c17 .keys{display:flex;gap:10px}
+    .c17 .k{display:inline-flex;align-items:center;gap:5px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3,#7A8798)}
+    .c17 .k::before{content:"";width:7px;height:7px;border-radius:2px}
+    .c17 .k.raw::before{background:var(--fg-3,#7A8798)}
+    .c17 .k.ok::before{background:var(--live,#1FA9A0)}
+    .c17 .stage{position:relative;height:238px;border:1px solid var(--line,#E2E6EC);border-radius:12px;overflow:hidden;background:var(--panel,#fff);touch-action:none;user-select:none}
+    .c17 .layer{position:absolute;inset:0;padding:10px 12px;display:flex;flex-direction:column;gap:7px}
+    .c17 .layer.ok{background:var(--panel-2,#F3F5F8)}
+    .c17 .lbl{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.12em;color:var(--fg-3,#7A8798)}
+    .c17 .layer.ok .lbl{color:var(--live,#1FA9A0)}
+    .c17 table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:10.5px}
+    .c17 th{text-align:left;font-weight:500;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3,#7A8798);padding:4px 6px 4px 0;border-bottom:1px solid var(--line,#E2E6EC)}
+    .c17 td{padding:5px 6px 5px 0;border-bottom:1px solid var(--line,#E2E6EC);color:var(--fg-3,#7A8798);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px}
+    .c17 td.bad{color:#d4553f}
+    .c17 td.warn{color:var(--signal,#E8A33D)}
+    .c17 .rec{border:1px solid var(--line,#E2E6EC);border-radius:10px;background:var(--panel,#fff);padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+    .c17 .rtop{display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .c17 .rtop b{font-family:Archivo,system-ui,sans-serif;font-size:15px;color:var(--fg,#141A22);white-space:nowrap}
+    .c17 .badge{display:inline-flex;align-items:center;gap:5px;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:99px;color:var(--live,#1FA9A0);border:1px solid var(--live,#1FA9A0)}
+    .c17 .badge i{width:5px;height:5px;border-radius:50%;background:var(--live,#1FA9A0)}
+    .c17 .rec dl{margin:0;display:flex;flex-direction:column;gap:5px}
+    .c17 .rec dl>div{display:flex;justify-content:space-between;gap:10px;align-items:baseline;border-bottom:1px dotted var(--line,#E2E6EC);padding-bottom:4px}
+    .c17 dt{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3,#7A8798);flex:0 0 auto}
+    .c17 dd{margin:0;font-size:11px;color:var(--fg-2,#3D4757);text-align:right}
+    .c17 dd.good{color:var(--live,#1FA9A0)}
+    .c17 .handle{position:absolute;top:0;bottom:0;width:38px;margin-left:-19px;cursor:ew-resize;display:grid;place-items:center;z-index:3}
+    .c17 .handle:focus-visible{outline:none}
+    .c17 .handle:focus-visible .grip{outline:2px solid var(--signal,#E8A33D);outline-offset:3px}
+    .c17 .line{position:absolute;top:0;bottom:0;left:50%;width:2px;margin-left:-1px;background:var(--signal,#E8A33D)}
+    .c17 .grip{width:30px;height:30px;border-radius:50%;background:var(--signal,#E8A33D);display:grid;place-items:center;box-shadow:0 4px 14px -4px rgba(10,16,24,.45)}
+    .c17 .grip svg{width:16px;height:16px;fill:none;stroke:#1b1206;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+    .c17 .hint{margin:0;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--fg-3,#7A8798)}
+    @media (prefers-reduced-motion:reduce){.c17 *{transition:none!important}}
+  </style>
+
+  <script>
+  (function(){
+    var r=document.currentScript.closest('.c17');
+    var stage=r.querySelector('.stage'),ok=r.querySelector('.layer.ok'),h=r.querySelector('.handle');
+    var p=50,drag=false;
+    function set(v){
+      p=Math.max(0,Math.min(100,v));
+      ok.style.clipPath='inset(0 0 0 '+p+'%)';
+      h.style.left=p+'%';
+      h.setAttribute('aria-valuenow',Math.round(p));
+      h.setAttribute('aria-valuetext',Math.round(p)+' percent raw list shown');
+    }
+    function fromX(x){
+      var b=stage.getBoundingClientRect();
+      set(((x-b.left)/b.width)*100);
+    }
+    stage.addEventListener('pointerdown',function(e){
+      drag=true;stage.setPointerCapture(e.pointerId);fromX(e.clientX);h.focus();e.preventDefault();
+    });
+    stage.addEventListener('pointermove',function(e){if(drag)fromX(e.clientX);});
+    function end(e){drag=false;try{stage.releasePointerCapture(e.pointerId);}catch(x){}}
+    stage.addEventListener('pointerup',end);stage.addEventListener('pointercancel',end);
+    h.addEventListener('keydown',function(e){
+      var s=e.shiftKey?10:2,k=e.key;
+      if(k==='ArrowLeft'||k==='ArrowDown')set(p-s);
+      else if(k==='ArrowRight'||k==='ArrowUp')set(p+s);
+      else if(k==='Home')set(0);
+      else if(k==='End')set(100);
+      else if(k==='PageDown')set(p-10);
+      else if(k==='PageUp')set(p+10);
+      else return;
+      e.preventDefault();
+    });
+    set(50);
+  })();
+  </script>
+</div>

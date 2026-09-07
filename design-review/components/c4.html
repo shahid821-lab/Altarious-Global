@@ -1,0 +1,136 @@
+<div class="demo c4">
+  <div class="c4-head">
+    <span class="c4-eyebrow">Auto Insurance · Inbound Calls</span>
+    <h3 class="c4-title">Volume calculator</h3>
+  </div>
+
+  <div class="c4-body">
+    <div class="c4-controls">
+      <div class="c4-field">
+        <label for="c4-calls">Calls per day <output id="c4-calls-out" for="c4-calls">40</output></label>
+        <input id="c4-calls" class="c4-range" type="range" min="5" max="200" step="5" value="40">
+        <div class="c4-scale"><span>5</span><span>200</span></div>
+      </div>
+      <div class="c4-field">
+        <label for="c4-close">Close rate <output id="c4-close-out" for="c4-close">12%</output></label>
+        <input id="c4-close" class="c4-range" type="range" min="2" max="40" step="1" value="12">
+        <div class="c4-scale"><span>2%</span><span>40%</span></div>
+      </div>
+      <div class="c4-field">
+        <label for="c4-value">Avg. policy value <output id="c4-value-out" for="c4-value">$780</output></label>
+        <input id="c4-value" class="c4-range" type="range" min="200" max="3000" step="20" value="780">
+        <div class="c4-scale"><span>$200</span><span>$3,000</span></div>
+      </div>
+    </div>
+
+    <div class="c4-out" aria-live="polite">
+      <div class="c4-stat">
+        <span class="c4-k">Monthly customers</span>
+        <strong class="c4-v" data-out="cust">0</strong>
+      </div>
+      <div class="c4-stat">
+        <span class="c4-k">Cost per acquisition</span>
+        <strong class="c4-v c4-accent" data-out="cpa">$0</strong>
+      </div>
+      <div class="c4-stat">
+        <span class="c4-k">Monthly revenue</span>
+        <strong class="c4-v" data-out="rev">$0</strong>
+      </div>
+      <p class="c4-note">Modelled at <span data-out="ppc">$38</span> per billable call, 22 working days.</p>
+    </div>
+  </div>
+
+  <style>
+    .c4 { font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg-2, #3D4757); }
+    .c4 *, .c4 *::before, .c4 *::after { box-sizing: border-box; }
+    .c4 .c4-head { margin-bottom: 12px; }
+    .c4 .c4-eyebrow { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c4 .c4-title { margin: 3px 0 0; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 16px; font-weight: 650; letter-spacing: -.01em; color: var(--fg, #10151C); }
+    .c4 .c4-body { display: grid; grid-template-columns: 1fr 200px; gap: 20px; align-items: start; }
+    .c4 .c4-field { margin-bottom: 14px; }
+    .c4 .c4-field:last-child { margin-bottom: 0; }
+    .c4 .c4-field label { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-size: 12px; color: var(--fg-2, #3D4757); margin-bottom: 6px; }
+    .c4 .c4-field output { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; font-weight: 600; color: var(--fg, #10151C); }
+    .c4 .c4-scale { display: flex; justify-content: space-between; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 9.5px; color: var(--fg-3, #7A8494); margin-top: 3px; }
+    .c4 .c4-range { -webkit-appearance: none; appearance: none; width: 100%; height: 18px; background: transparent; margin: 0; cursor: pointer; display: block; }
+    .c4 .c4-range::-webkit-slider-runnable-track { height: 4px; border-radius: 3px; background: linear-gradient(to right, var(--signal, #E0A02A) 0 var(--fill, 20%), var(--line, #DDE2E8) var(--fill, 20%) 100%); }
+    .c4 .c4-range::-moz-range-track { height: 4px; border-radius: 3px; background: var(--line, #DDE2E8); }
+    .c4 .c4-range::-moz-range-progress { height: 4px; border-radius: 3px; background: var(--signal, #E0A02A); }
+    .c4 .c4-range::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 14px; height: 14px; margin-top: -5px; border-radius: 50%; background: var(--panel, #FFF); border: 2px solid var(--signal, #E0A02A); box-shadow: 0 1px 3px rgba(0,0,0,.22); }
+    .c4 .c4-range::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--panel, #FFF); border: 2px solid var(--signal, #E0A02A); box-shadow: 0 1px 3px rgba(0,0,0,.22); }
+    .c4 .c4-range:focus-visible { outline: 2px solid var(--signal, #E0A02A); outline-offset: 4px; border-radius: 4px; }
+    .c4 .c4-out { border: 1px solid var(--line, #DDE2E8); border-radius: 8px; background: var(--panel-2, #F3F5F8); padding: 12px 14px; }
+    .c4 .c4-stat { padding: 7px 0; border-bottom: 1px dashed var(--line, #DDE2E8); }
+    .c4 .c4-stat:first-child { padding-top: 0; }
+    .c4 .c4-k { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--fg-3, #7A8494); }
+    .c4 .c4-v { display: block; font-family: "Archivo", "IBM Plex Sans", system-ui, sans-serif; font-size: 21px; font-weight: 700; letter-spacing: -.02em; color: var(--fg, #10151C); font-variant-numeric: tabular-nums; line-height: 1.25; }
+    .c4 .c4-v.c4-accent { color: var(--live, #128C7E); }
+    .c4 .c4-note { margin: 9px 0 0; font-size: 10.5px; line-height: 1.5; color: var(--fg-3, #7A8494); }
+    .c4 .c4-note span { font-family: "IBM Plex Mono", ui-monospace, monospace; color: var(--fg-2, #3D4757); }
+    @media (max-width: 470px) { .c4 .c4-body { grid-template-columns: 1fr; gap: 14px; } }
+  </style>
+
+  <script>
+    (function () {
+      var root = document.currentScript.closest('.c4');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var PPC = 38, DAYS = 22;
+      var inputs = {
+        calls: root.querySelector('#c4-calls'),
+        close: root.querySelector('#c4-close'),
+        value: root.querySelector('#c4-value')
+      };
+      var outs = {};
+      root.querySelectorAll('[data-out]').forEach(function (el) { outs[el.dataset.out] = el; });
+      outs.ppc.textContent = '$' + PPC;
+
+      function money(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+      function fmt(key, n) { return key === 'cust' ? Math.round(n).toLocaleString('en-US') : money(n); }
+
+      var anim = {};
+      function animate(key, target) {
+        var el = outs[key];
+        var from = anim[key] === undefined ? 0 : anim[key];
+        if (reduce) { anim[key] = target; el.textContent = fmt(key, target); return; }
+        if (el._raf) cancelAnimationFrame(el._raf);
+        if (el._t) clearTimeout(el._t);
+        // Safety net: settle on the exact value even if frames are throttled.
+        el._t = setTimeout(function () { anim[key] = target; el.textContent = fmt(key, target); }, 500);
+        var start = performance.now(), dur = 420;
+        (function step(t) {
+          var p = Math.min(1, (t - start) / dur);
+          var e = 1 - Math.pow(1 - p, 3);
+          var v = from + (target - from) * e;
+          anim[key] = v;
+          el.textContent = fmt(key, v);
+          if (p < 1) el._raf = requestAnimationFrame(step); else anim[key] = target;
+        })(start);
+      }
+
+      function fill(inp) {
+        var pct = (inp.value - inp.min) / (inp.max - inp.min) * 100;
+        inp.style.setProperty('--fill', pct + '%');
+      }
+
+      function update() {
+        var calls = +inputs.calls.value, close = +inputs.close.value, value = +inputs.value.value;
+        root.querySelector('#c4-calls-out').textContent = calls;
+        root.querySelector('#c4-close-out').textContent = close + '%';
+        root.querySelector('#c4-value-out').textContent = money(value);
+        Object.keys(inputs).forEach(function (k) { fill(inputs[k]); });
+
+        var monthlyCalls = calls * DAYS;
+        var cust = monthlyCalls * (close / 100);
+        var spend = monthlyCalls * PPC;
+        animate('cust', cust);
+        animate('cpa', cust > 0 ? spend / cust : 0);
+        animate('rev', cust * value);
+      }
+
+      Object.keys(inputs).forEach(function (k) {
+        inputs[k].addEventListener('input', update);
+      });
+      update();
+    })();
+  </script>
+</div>
