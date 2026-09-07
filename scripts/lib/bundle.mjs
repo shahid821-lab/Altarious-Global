@@ -9,7 +9,7 @@ import { createHash } from 'node:crypto';
 import { ROOT } from './util.mjs';
 
 /* Order matters: site.css defines the tokens every later file consumes. */
-const CSS_PARTS = ['assets/css/site.css', 'assets/css/terrain.css', 'assets/css/comp-a.css', 'assets/css/comp-b.css'];
+const CSS_PARTS = ['assets/css/site.css', 'assets/css/icons.css', 'assets/css/terrain.css', 'assets/css/comp-a.css', 'assets/css/comp-b.css'];
 const JS_PARTS = ['assets/js/site.js', 'assets/js/terrain.js', 'assets/js/comp-a.js', 'assets/js/comp-b.js'];
 
 function concat(parts, dist, label) {

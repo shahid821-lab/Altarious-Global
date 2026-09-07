@@ -56,6 +56,15 @@ const bundle = bundleAssets(DIST);
 ctx.assets = bundle.assets;
 console.log(bundle.report);
 
+/* icon manifest for the admin widget icon picker */
+try {
+  const iconMod = await import('./lib/icons.mjs');
+  const keys = iconMod.ICON_KEYS || [];
+  writeFile(path.join(DIST, 'admin', 'icons.json'), JSON.stringify(keys.map((k) => ({ key: k, svg: iconMod.icon(k, { size: 40 }) }))));
+} catch (e) {
+  console.warn('! icon manifest not written:', e.message);
+}
+
 /* index consumed by the command palette */
 writeFile(path.join(DIST, 'search-index.json'), JSON.stringify(searchIndex(ctx)));
 

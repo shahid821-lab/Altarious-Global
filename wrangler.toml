@@ -9,7 +9,7 @@ compatibility_date = "2025-06-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "altarious"
-database_id = "00000000-0000-0000-0000-000000000000" # REPLACE with the id printed by `wrangler d1 create altarious`
+database_id = "f373546d-ccec-4498-a835-3753b28a9f4f"
 
 # Non-secret vars. Secrets (ADMIN_PASSWORD, SESSION_SECRET, TURNSTILE_SECRET_KEY, RESEND_API_KEY,
 # NOTIFY_WEBHOOK_URL, DEPLOY_HOOK_URL) are set in the Pages dashboard → Settings → Variables and Secrets.

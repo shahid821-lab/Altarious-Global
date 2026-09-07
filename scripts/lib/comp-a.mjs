@@ -179,15 +179,43 @@ const COMPARE_ROWS = [
   { label: 'Best-fit buyer', cells: { 'web-leads': 'Volume dialler teams', 'inbound-calls': 'Agencies & contractors', 'live-transfers': 'Carriers & law firms' } }
 ];
 
+/* Map a CMS comparison row {attribute, webLeads, inboundCalls, liveTransfers}
+   onto the internal shape. Rows missing an attribute label are dropped. */
+function normaliseCompareRows(rows) {
+  return (Array.isArray(rows) ? rows : [])
+    .map((r) => {
+      if (!r || typeof r !== 'object') return null;
+      const label = String(r.attribute == null ? '' : r.attribute).trim();
+      if (!label) return null;
+      return {
+        label,
+        cells: {
+          'web-leads': String(r.webLeads == null ? '' : r.webLeads),
+          'inbound-calls': String(r.inboundCalls == null ? '' : r.inboundCalls),
+          'live-transfers': String(r.liveTransfers == null ? '' : r.liveTransfers)
+        }
+      };
+    })
+    .filter(Boolean);
+}
+
 export function productComparison(opts) {
   const o = opts || {};
   const hot = PRODUCTS[o.highlight] ? o.highlight : null;
+
+  /* CMS rows are the source of truth when the option is present. A present but
+     empty source renders nothing rather than falling back to invented rows. */
+  let rows = COMPARE_ROWS;
+  if (o.rows != null) {
+    rows = normaliseCompareRows(o.rows);
+    if (!rows.length) return '';
+  }
 
   const heads = PRODUCT_ORDER.map((p) =>
     '<th scope="col" data-col="' + p + '"' + (p === hot ? ' class="is-hot"' : '') + '>' + esc(PRODUCTS[p].name) + '</th>'
   ).join('');
 
-  const body = COMPARE_ROWS.map((row) => {
+  const body = rows.map((row) => {
     const tds = PRODUCT_ORDER.map((p) => {
       const meter = row.meter
         ? '<i class="ag-compare__meter" style="--ag-meter:' + row.meter[p] + '%" aria-hidden="true"></i>'
@@ -208,7 +236,8 @@ export function productComparison(opts) {
       '</header>' +
       '<div class="ag-compare__scroll">' +
         '<table class="ag-compare__table">' +
-          '<caption class="ag-compare__sr">Web Leads, Inbound Calls and Live Transfers compared across five attributes</caption>' +
+          '<caption class="ag-compare__sr">Web Leads, Inbound Calls and Live Transfers compared across ' +
+            rows.length + ' attributes</caption>' +
           '<thead><tr><th scope="col" class="ag-compare__rowhead"><span class="ag-compare__sr">Attribute</span></th>' + heads + '</tr></thead>' +
           '<tbody>' + body + '</tbody>' +
         '</table>' +
@@ -223,8 +252,31 @@ export function productComparison(opts) {
    ============================================================ */
 const UNIT_PRICE = { 'web-leads': 9, 'inbound-calls': 38, 'live-transfers': 62 };
 
+/* Slider bounds. CMS values win; anything missing or non-numeric falls back to
+   the built-in range so the control always renders a usable slider. */
+function rangeOf(src, fb) {
+  const s = (src && typeof src === 'object') ? src : {};
+  const num = (v, d) => (Number.isFinite(Number(v)) ? Number(v) : d);
+  let min = num(s.min, fb.min);
+  let max = num(s.max, fb.max);
+  if (max <= min) { min = fb.min; max = fb.max; }
+  const def = Math.min(max, Math.max(min, num(s.default, fb.default)));
+  return { min, max, default: def, step: fb.step };
+}
+
+const CALC_FALLBACK = {
+  callsPerDay: { min: 5, max: 200, default: 40, step: 5 },
+  closeRate: { min: 2, max: 40, default: 12, step: 1 },
+  avgValue: { min: 200, max: 3000, default: 780, step: 20 }
+};
+
 export function volumeCalculator(opts) {
   const o = opts || {};
+  const r = (o.ranges && typeof o.ranges === 'object') ? o.ranges : {};
+  const volRange = rangeOf(r.callsPerDay, CALC_FALLBACK.callsPerDay);
+  const closeRange = rangeOf(r.closeRate, CALC_FALLBACK.closeRate);
+  const valueRange = rangeOf(r.avgValue, CALC_FALLBACK.avgValue);
+  const disclaimer = o.disclaimer == null ? '' : String(o.disclaimer).trim();
   const product = PRODUCTS[o.product] ? o.product : 'inbound-calls';
   const price = UNIT_PRICE[product];
   const unit = PRODUCTS[product].short;
@@ -235,9 +287,10 @@ export function volumeCalculator(opts) {
   if (o.subVertical) eyebrowParts.push(String(o.subVertical));
   eyebrowParts.push(PRODUCTS[product].name);
 
-  const avg = Math.min(3000, Math.max(200, Math.round(Number(o.avgValue) || 780)));
-  const volume = 40;
-  const close = 12;
+  const avg = Math.min(valueRange.max, Math.max(valueRange.min,
+    Math.round(Number(o.avgValue) || valueRange.default)));
+  const volume = volRange.default;
+  const close = closeRange.default;
 
   const monthly = volume * days;
   const cust = monthly * (close / 100);
@@ -257,18 +310,21 @@ export function volumeCalculator(opts) {
           '<div class="ag-calc__field">' +
             '<label for="ag-calc-vol">' + esc(unitPlural.charAt(0).toUpperCase() + unitPlural.slice(1)) + ' per day ' +
               '<output id="ag-calc-vol-out" for="ag-calc-vol">' + volume + '</output></label>' +
-            '<input id="ag-calc-vol" class="ag-calc__range" type="range" min="5" max="200" step="5" value="' + volume + '" data-ag-input="vol">' +
-            '<div class="ag-calc__scale"><span>5</span><span>200</span></div>' +
+            '<input id="ag-calc-vol" class="ag-calc__range" type="range" min="' + volRange.min + '" max="' + volRange.max +
+              '" step="' + volRange.step + '" value="' + volume + '" data-ag-input="vol">' +
+            '<div class="ag-calc__scale"><span>' + volRange.min + '</span><span>' + volRange.max + '</span></div>' +
           '</div>' +
           '<div class="ag-calc__field">' +
             '<label for="ag-calc-close">Close rate <output id="ag-calc-close-out" for="ag-calc-close">' + close + '%</output></label>' +
-            '<input id="ag-calc-close" class="ag-calc__range" type="range" min="2" max="40" step="1" value="' + close + '" data-ag-input="close">' +
-            '<div class="ag-calc__scale"><span>2%</span><span>40%</span></div>' +
+            '<input id="ag-calc-close" class="ag-calc__range" type="range" min="' + closeRange.min + '" max="' + closeRange.max +
+              '" step="' + closeRange.step + '" value="' + close + '" data-ag-input="close">' +
+            '<div class="ag-calc__scale"><span>' + closeRange.min + '%</span><span>' + closeRange.max + '%</span></div>' +
           '</div>' +
           '<div class="ag-calc__field">' +
             '<label for="ag-calc-value">Avg. policy value <output id="ag-calc-value-out" for="ag-calc-value">' + esc(money(avg)) + '</output></label>' +
-            '<input id="ag-calc-value" class="ag-calc__range" type="range" min="200" max="3000" step="20" value="' + avg + '" data-ag-input="value">' +
-            '<div class="ag-calc__scale"><span>$200</span><span>$3,000</span></div>' +
+            '<input id="ag-calc-value" class="ag-calc__range" type="range" min="' + valueRange.min + '" max="' + valueRange.max +
+              '" step="' + valueRange.step + '" value="' + avg + '" data-ag-input="value">' +
+            '<div class="ag-calc__scale"><span>' + esc(money(valueRange.min)) + '</span><span>' + esc(money(valueRange.max)) + '</span></div>' +
           '</div>' +
         '</div>' +
         '<div class="ag-calc__out" aria-live="polite">' +
@@ -280,6 +336,7 @@ export function volumeCalculator(opts) {
             '<strong class="ag-calc__v" data-ag-out="rev">' + esc(money(cust * avg)) + '</strong></div>' +
           '<p class="ag-calc__note">Modelled at <span>' + esc(money(price)) + '</span> per billable ' + esc(unit) +
             ', ' + days + ' working days.</p>' +
+          (disclaimer ? '<p class="ag-calc__note is-disclaimer">' + esc(disclaimer) + '</p>' : '') +
         '</div>' +
       '</div>' +
     '</section>'
@@ -292,14 +349,34 @@ export function volumeCalculator(opts) {
 const CRITERIA_FACTORS = [0.72, 0.55, 0.68, 0.63, 0.8, 0.75, 0.7];
 const BASE_VOLUME = 1850;
 
-export function criteriaBuilder(sv) {
+function labelsOf(list) {
+  return (Array.isArray(list) ? list : [])
+    .map((c) => (c && typeof c === 'object' ? (c.label || c.name || c.text || '') : c))
+    .map((c) => String(c == null ? '' : c).trim())
+    .filter(Boolean);
+}
+
+export function criteriaBuilder(sv, opts) {
   const rec = sv || {};
+  const o = opts || {};
   const name = rec.name ? String(rec.name) : 'This sub-vertical';
-  const raw = Array.isArray(rec.qualificationCriteria) ? rec.qualificationCriteria : [];
-  const criteria = raw.map((c) => (c && typeof c === 'object' ? (c.label || c.name || c.text || '') : c))
-    .map((c) => String(c || '').trim())
-    .filter(Boolean)
-    .slice(0, 7);
+  const own = labelsOf(rec.qualificationCriteria);
+
+  /* CMS chips lead, the record's own criteria are appended after them. */
+  let criteria;
+  if (o.chips != null) {
+    const seen = new Set();
+    criteria = labelsOf(o.chips).concat(own)
+      .filter((c) => {
+        const k = c.toLowerCase();
+        if (seen.has(k)) return false;
+        seen.add(k);
+        return true;
+      })
+      .slice(0, 10);
+  } else {
+    criteria = own.slice(0, 7);
+  }
 
   if (!criteria.length) return '';
 
@@ -349,8 +426,36 @@ const TIMELINE = [
     body: 'Campaigns switch on at a capped daily volume. Daily reporting from call one, with pacing reviewed at the end of week one.' }
 ];
 
-export function onboardingTimeline() {
-  const tabs = TIMELINE.map((s, i) => {
+/* CMS step: { day, title, text }. The short tab label is the title itself and
+   the owner line is only shown when the source supplies one. */
+function normaliseSteps(steps) {
+  return (Array.isArray(steps) ? steps : [])
+    .map((s) => {
+      if (!s || typeof s !== 'object') return null;
+      const title = String(s.title == null ? '' : s.title).trim();
+      const body = String(s.text == null ? '' : s.text).trim();
+      if (!title && !body) return null;
+      return {
+        day: String(s.day == null ? '' : s.day).trim(),
+        label: String(s.label == null ? title : s.label).trim(),
+        title: title || String(s.day || ''),
+        body,
+        owner: String(s.owner == null ? '' : s.owner).trim()
+      };
+    })
+    .filter(Boolean);
+}
+
+export function onboardingTimeline(opts) {
+  const o = opts || {};
+
+  let TIMELINE_ROWS = TIMELINE;
+  if (o.steps != null) {
+    TIMELINE_ROWS = normaliseSteps(o.steps);
+    if (!TIMELINE_ROWS.length) return '';
+  }
+
+  const tabs = TIMELINE_ROWS.map((s, i) => {
     const on = i === 0;
     return (
       '<button type="button" class="ag-timeline__day' + (on ? ' is-on' : '') + '" role="tab"' +

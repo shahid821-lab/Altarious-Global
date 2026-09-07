@@ -68,3 +68,32 @@ These were built earlier and must not be duplicated by a new component:
 
 - **C17 before/after slider** — not approved.
 - C4 on 140 article pages, C2 on every page, C18 alongside D9: all rejected as repetition.
+
+
+## CMS-controlled data (nothing on the site is invented)
+
+Every figure, row and label a widget displays comes from `content/settings.json`, editable at
+**Admin → Widgets** (a card per widget) or **Admin → Operational Settings** (the raw record).
+Both views write the same single `settings` record.
+
+| Widget | What the admin controls | If left empty |
+|---|---|---|
+| Coverage map | Per-state status per product (high / active / limited / none) | Section is omitted entirely |
+| Results ribbon | The published figures and bar lengths | Section is omitted entirely |
+| Operating hours | Timezone, weekday and weekend hours | Widget hides its hours block |
+| Delivery activity | Panel label and the rows it cycles | Panel hidden; always labelled illustrative |
+| Operations board | Tile labels and values (`auto:verticals` resolves to the real count) | Tile omitted |
+| Volume calculator | Slider ranges, defaults and disclaimer | Falls back to shipped defaults |
+| Product comparison | Every row of the three-product table | Table omitted |
+| Qualification chips | The shared chip list, merged with each sub-vertical's own criteria | Only sub-vertical criteria show |
+| Onboarding timeline | Day, title and text per step | Section omitted |
+| Commercial models | The three pricing cards and which is recommended | Section omitted |
+| Glossary | Term and definition pairs used by the inline tooltips | No tooltips are attached |
+
+Two rules hold everywhere:
+
+1. **A claim about the business only appears once it is entered.** Coverage and results start
+   switched off, so the site says nothing about where it delivers or what it achieves until
+   someone fills that in.
+2. **Derived counts cannot be faked.** Tiles marked `auto:` read the live content — the number of
+   verticals or sub-verticals is counted at build time, not typed in.

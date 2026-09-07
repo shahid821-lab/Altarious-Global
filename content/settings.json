@@ -1,9 +1,9 @@
 {
-  "_comment": "Operational facts shown on the public site. Everything here is a claim about the business, so nothing is invented: a section only renders once it is filled in from the admin. Empty means the site stays silent rather than guessing.",
+  "_comment": "Every number, label and row shown by a widget on the public site lives here and is editable in Admin → Operational Settings. Anything that asserts a fact about the business stays switched off until it is filled in, so the site never invents figures.",
 
   "coverage": {
     "enabled": false,
-    "note": "Set enabled to true once the state list is accurate. Statuses: high, active, limited, none. Any state left out is treated as 'none'.",
+    "note": "Statuses: high, active, limited, none. States left out are treated as not live. The map does not render at all until enabled.",
     "inbound-calls": {},
     "live-transfers": {}
   },
@@ -13,26 +13,112 @@
     "timezone": "America/New_York",
     "timezoneLabel": "ET",
     "weekdays": { "open": "08:00", "close": "20:00" },
-    "saturday": { "open": "09:00", "close": "17:00" },
+    "saturday": null,
     "sunday": null
   },
 
   "metrics": {
     "enabled": false,
-    "note": "Case-study ribbon. Only publish figures you can evidence. bar is 0..1 and sets the bar length.",
+    "note": "Results ribbon on Case Studies. Publish only figures you can evidence.",
     "items": []
   },
 
   "liveFeed": {
     "enabled": true,
     "mode": "simulated",
-    "note": "The delivery feed on the home page. mode 'simulated' shows illustrative, clearly-labelled activity; 'off' hides the panel. It never claims to be live data.",
-    "label": "Illustrative delivery activity"
+    "note": "Delivery activity panel on the home page. mode: 'simulated' cycles the rows below and is labelled illustrative; 'static' shows them without cycling; 'off' hides the panel.",
+    "label": "Illustrative delivery activity",
+    "rows": [
+      ["Auto Insurance", "Quoted"],
+      ["Medicare", "Transferred"],
+      ["Pest Control", "Booked"],
+      ["HVAC", "Dispatched"],
+      ["Personal Loans", "Pre-qualified"],
+      ["Roofing", "Inspection set"],
+      ["Final Expense", "Application"],
+      ["Solar", "Site survey"],
+      ["Legal", "Case review"]
+    ]
+  },
+
+  "board": {
+    "enabled": true,
+    "note": "Tiles on the home operations board. Counts marked auto are derived from live content and cannot be faked.",
+    "tiles": [
+      { "label": "Vertical groups", "value": "auto:verticals" },
+      { "label": "Sub-vertical programs", "value": "auto:subVerticals" },
+      { "label": "Delivery", "value": "Real-time" },
+      { "label": "Product types", "value": "3" }
+    ]
   },
 
   "calculator": {
     "enabled": true,
-    "note": "Defaults for the volume model. It is a model, not a promise, and is labelled as such.",
-    "defaultAvgValue": 900
+    "note": "Ranges and defaults for the volume model. It is a model, labelled as such, not a promise.",
+    "defaultAvgValue": 900,
+    "callsPerDay": { "min": 5, "max": 200, "default": 40 },
+    "closeRate": { "min": 5, "max": 60, "default": 22 },
+    "avgValue": { "min": 200, "max": 5000, "default": 900 },
+    "disclaimer": "An illustrative model using your own inputs. Actual performance depends on vertical, geography and how your team works the calls."
+  },
+
+  "comparison": {
+    "enabled": true,
+    "note": "The Web Leads / Inbound Calls / Live Transfers comparison table. Each row is one attribute across the three products.",
+    "rows": [
+      { "attribute": "Cost model", "webLeads": "Per lead", "inboundCalls": "Per qualified call", "liveTransfers": "Per accepted transfer" },
+      { "attribute": "Consumer intent", "webLeads": "Requested information", "inboundCalls": "Chose to call", "liveTransfers": "Screened and on the line" },
+      { "attribute": "Speed to contact", "webLeads": "Minutes, if you call fast", "inboundCalls": "Immediate", "liveTransfers": "Immediate, already talking" },
+      { "attribute": "Agent effort", "webLeads": "Dialling and follow-up", "inboundCalls": "Answer the phone", "liveTransfers": "Take the handover" },
+      { "attribute": "Best fit", "webLeads": "CRM-driven teams with capacity to work records", "inboundCalls": "Licensed desks that close on the first call", "liveTransfers": "Small teams that need only qualified conversations" }
+    ]
+  },
+
+  "criteria": {
+    "enabled": true,
+    "note": "Chips in the qualification builder on sub-vertical and product pages. Sub-vertical criteria are appended automatically.",
+    "chips": [
+      "Licensed in the state",
+      "Within your service area",
+      "Decision maker on the call",
+      "Meets the age band",
+      "Currently insured status confirmed",
+      "Consented to be contacted"
+    ]
+  },
+
+  "onboarding": {
+    "enabled": true,
+    "note": "Timeline shown on the services index and the contact page.",
+    "steps": [
+      { "day": "Day 1", "title": "Scoping call", "text": "We agree vertical, geography, qualification criteria, hours and the volume you can absorb." },
+      { "day": "Day 2", "title": "Program build", "text": "Campaigns, routing and delivery are configured against your criteria." },
+      { "day": "Day 3", "title": "Delivery test", "text": "Test calls and records run into your phone system or CRM until the handover is clean." },
+      { "day": "Day 4", "title": "Controlled launch", "text": "Live at a capped volume so quality can be checked against real outcomes." },
+      { "day": "Day 5", "title": "Scale", "text": "Caps lift against proven performance, with source-level reporting from the first day." }
+    ]
+  },
+
+  "commercial": {
+    "enabled": true,
+    "note": "Pricing model cards. Set recommended to per-call, per-lead, per-transfer or empty for none.",
+    "recommended": "per-call",
+    "models": [
+      { "id": "per-lead", "name": "Per lead", "how": "You pay for each validated record delivered to your CRM in real time.", "bestFor": "Teams with dialling capacity that want volume and control their own follow-up." },
+      { "id": "per-call", "name": "Per call", "how": "You pay for calls that reach your line and pass the agreed billable duration.", "bestFor": "Licensed desks that convert on the first conversation." },
+      { "id": "per-transfer", "name": "Per transfer", "how": "You pay only for transfers our team has screened against your criteria and warm-handed over.", "bestFor": "Small teams whose agent time is the scarce resource." }
+    ]
+  },
+
+  "glossary": {
+    "enabled": true,
+    "note": "Terms defined inline wherever they appear in body copy.",
+    "terms": [
+      { "term": "IVR", "definition": "Interactive Voice Response — the automated prompt a caller answers before routing, used to screen for state, product or intent." },
+      { "term": "TCPA", "definition": "The US Telephone Consumer Protection Act. It governs consented contact; every record we deliver carries its consent trail." },
+      { "term": "warm bridge", "definition": "A live handover where our agent stays on the line to introduce the consumer to yours, rather than transferring blind." },
+      { "term": "ASR", "definition": "Answer-Seizure Ratio — the share of routed calls actually answered, the basic health measure of a call program." },
+      { "term": "billable duration", "definition": "The minimum connected time before a call counts commercially, agreed up front and used to settle disputes." }
+    ]
   }
 }

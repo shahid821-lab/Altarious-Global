@@ -71,11 +71,14 @@
     if ($('#shell').hidden) return;
     const h = location.hash.replace(/^#\/?/, '') || 'dashboard';
     const [view, a, b] = h.split('/');
-    $$('#side-nav a').forEach((el) => el.classList.toggle('on', el.dataset.view === (view === 'list' ? `list:${a}` : view === 'edit' && a === 'site' ? 'site' : view)));
+    const navKey = view === 'list' ? `list:${a}` : view === 'edit' && a === 'site' ? 'site' : view === 'widget' ? 'widgets' : view;
+    $$('#side-nav a').forEach((el) => el.classList.toggle('on', el.dataset.view === navKey));
     main.innerHTML = '<p class="muted">Loading…</p>';
     try {
       if (view === 'dashboard') await dashboard();
       else if (view === 'inquiries') await inquiries();
+      else if (view === 'widgets') await widgetsIndex();
+      else if (view === 'widget') await widgetEditor(a);
       else if (view === 'list') await list(a);
       else if (view === 'edit') await editor(a, b ? decodeURIComponent(b) : null);
       else if (view === 'new') await editor(a, null, Object.fromEntries(new URLSearchParams(b || '')));
