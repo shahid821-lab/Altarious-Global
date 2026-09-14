@@ -576,19 +576,19 @@ export function faqSearch(faq) {
    ============================================================ */
 const MODELS = [
   {
-    key: 'web-leads', price: 'from $9 / lead',
+    key: 'web-leads', price: '',
     how: 'Consumers complete a form on a compliant landing page. The record posts to your CRM in real time with consent, timestamp and source.',
     best: 'Dialler teams with spare outbound capacity who want the lowest entry cost per record and can work volume quickly.',
     meta: 'Personal Loans · Debt Relief · Legal'
   },
   {
-    key: 'inbound-calls', price: 'from $28 / call',
+    key: 'inbound-calls', price: '',
     how: 'Paid search sends the consumer straight to your queue after an IVR screen. Billing starts once the call passes the agreed buffer.',
     best: 'Independent agencies and contractors with agents on the phones during set hours who want intent without the dial time.',
     meta: 'Auto Insurance · HVAC · Pest Control'
   },
   {
-    key: 'live-transfers', price: 'from $62 / transfer',
+    key: 'live-transfers', price: '',
     how: 'Our agent screens against your criteria, then warm-transfers the consumer and introduces them before dropping off the line.',
     best: 'Carriers, law firms and lenders where agent time is expensive and only fully qualified conversations are worth taking.',
     meta: 'Medicare · Final Expense · Legal'

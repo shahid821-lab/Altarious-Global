@@ -2,7 +2,7 @@
   "slug": "hvac",
   "vertical": "home-services",
   "name": "HVAC",
-  "active": true,
+  "active": false,
   "order": 3,
   "shortDescription": "Connect homeowners needing heating and cooling repair, replacement or installation with licensed HVAC contractors in their service area.",
   "description": [

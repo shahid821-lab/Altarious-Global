@@ -14,6 +14,39 @@ const t0 = Date.now();
 const today = new Date().toISOString().slice(0, 10);
 const ctx = await loadContentAny();
 console.log(`content source: ${ctx.source}`);
+
+/* ---------- visibility cascade ----------
+   A switched-off vertical takes its sub-verticals, products and articles with it; a
+   switched-off sub-vertical takes its products and articles. Pruning here, once, means
+   every template, the nav, the search index and the sitemap see only what is live —
+   no downstream filter can forget to check a parent. */
+{
+  const allV = new Map(ctx.verticals.map((v) => [v.slug, v]));
+  const liveV = ctx.verticals.filter((v) => v.active !== false);
+  const liveVS = new Set(liveV.map((v) => v.slug));
+  const liveS = ctx.subVerticals.filter((s) => s.active !== false && liveVS.has(s.vertical));
+  const liveSS = new Set(liveS.map((s) => s.slug));
+  const liveP = ctx.products.filter((p) => p.active !== false && liveVS.has(p.vertical) && liveSS.has(p.subVertical));
+  const liveA = ctx.articles.filter((a) => a.active !== false && liveVS.has(a.vertical) && liveSS.has(a.subVertical));
+  const hidden = {
+    verticals: ctx.verticals.length - liveV.length,
+    subVerticals: ctx.subVerticals.length - liveS.length,
+    products: ctx.products.length - liveP.length,
+    articles: ctx.articles.length - liveA.length,
+  };
+  if (Object.values(hidden).some(Boolean)) {
+    const offV = ctx.verticals.filter((v) => !liveVS.has(v.slug)).map((v) => v.name);
+    const offS = ctx.subVerticals.filter((s) => s.active === false && liveVS.has(s.vertical)).map((s) => `${allV.get(s.vertical)?.name || s.vertical} › ${s.name}`);
+    console.log(`hidden by toggle: ${hidden.verticals} vertical(s), ${hidden.subVerticals} sub-vertical(s), ${hidden.products} product(s), ${hidden.articles} article(s)`);
+    if (offV.length) console.log(`  verticals off: ${offV.join(', ')}`);
+    if (offS.length) console.log(`  sub-verticals off: ${offS.join(', ')}`);
+  }
+  ctx.verticals = liveV;
+  ctx.subVerticals = liveS;
+  ctx.products = liveP;
+  ctx.articles = liveA;
+}
+
 const { site, verticals, subVerticals, products, articles, pages } = ctx;
 
 /* ---------- validation ---------- */

@@ -2,7 +2,7 @@
   "slug": "home-improvement",
   "vertical": "home-services",
   "name": "Home Improvement",
-  "active": true,
+  "active": false,
   "order": 9,
   "shortDescription": "Reach homeowners planning exterior and interior improvement projects and connect them with contractors ready to provide in-home estimates.",
   "description": [

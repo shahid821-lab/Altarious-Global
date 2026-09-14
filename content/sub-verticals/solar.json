@@ -2,7 +2,7 @@
   "slug": "solar",
   "vertical": "home-services",
   "name": "Solar",
-  "active": true,
+  "active": false,
   "order": 6,
   "shortDescription": "Reach homeowners evaluating rooftop solar and battery storage and connect them with installers and dealers ready to schedule a consultation.",
   "description": [

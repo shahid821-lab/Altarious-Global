@@ -2,7 +2,7 @@
   "slug": "life-insurance",
   "vertical": "insurance",
   "name": "Life Insurance",
-  "active": true,
+  "active": false,
   "order": 4,
   "shortDescription": "Reach consumers protecting their families with term and permanent life coverage and connect them with licensed life agents.",
   "description": [

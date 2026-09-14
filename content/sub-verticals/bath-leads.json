@@ -1,0 +1,59 @@
+{
+  "slug": "bath-leads",
+  "vertical": "web-leads",
+  "name": "Bath Remodeling",
+  "active": true,
+  "order": 3,
+  "shortDescription": "Real-time bath remodeling web leads delivered to your CRM the moment a homeowner requests an estimate, with inbound call and live transfer options.",
+  "description": [
+    "Bath remodeling is a high-consideration home improvement category, and web leads let remodelers reach homeowners the instant they begin planning a project. Demand spans quick shower replacements, full bath renovations, walk-in tub installations and tub-to-shower conversions. Each project starts with a homeowner researching options online and submitting a request for an estimate or design consultation, creating a real-time lead that can be delivered to a remodeler while the homeowner is actively evaluating companies.",
+    "Altarious Global runs performance marketing across search, social and comparison placements to generate these submissions, then delivers them as real-time web leads through CRM and API integration with consent capture. Inbound Call and Live Transfer programs are available alongside the web-lead flow for buyers who want phone-based options, so remodelers can combine real-time leads with live phone connections in a single acquisition strategy."
+  ],
+  "consumerProfile": "Homeowners aged 35 and older who own a single-family home and are planning a bath or shower project. The strongest segments are owners of older homes with dated bathrooms, households seeking safer, more accessible bathing such as walk-in tubs, and homeowners wanting a tub-to-shower conversion who submit an online request and have budget set aside.",
+  "intentSignals": [
+    "Submitted an online bath or shower remodel request",
+    "Interested in a walk-in tub or accessible bathing",
+    "Wants a tub-to-shower conversion",
+    "Has an outdated bathroom in need of renovation",
+    "Requesting an in-home estimate or design consultation",
+    "Comparing local bath remodeling companies online"
+  ],
+  "qualificationCriteria": [
+    "Owns the home where the work will be performed",
+    "Located in the remodeler's service area",
+    "Has a defined bath or shower project scope",
+    "Has budget available and is planning to move forward",
+    "Age 18 or older and a decision maker for the household",
+    "Provided TCPA consent for follow-up contact"
+  ],
+  "keywords": [
+    "bathroom remodel quote",
+    "walk in tub installation",
+    "tub to shower conversion",
+    "shower replacement estimate",
+    "bath remodeling companies near me",
+    "one day bath remodel",
+    "accessible bathroom remodel"
+  ],
+  "marketContext": "Bathroom remodeling is one of the most popular home improvement investments in the United States, supported by an aging housing stock, homeowners staying in place longer, and rising demand for safer, more accessible bathing. Many homeowners begin online by requesting an estimate or consultation, and projects range from fast shower replacements to premium accessibility conversions, so demand is broad across segments. Remodelers compete to reach these homeowners quickly, which makes real-time bath web leads a strong acquisition foundation, with phone-based options layered on for buyers who want them.",
+  "inboundCallsAngle": "Homeowners planning a bath remodel often want to talk through options and timelines before committing to an in-home visit, and some prefer to call rather than wait for a callback. Inbound calls complement the web-lead flow by capturing homeowners who choose to dial in from the same campaigns, reaching a representative ready to discuss the project and book a consultation. Buyers running bath web leads can add inbound calls to serve homeowners who convert better by phone without changing their core lead delivery setup.",
+  "liveTransfersAngle": "Live transfers extend the web-lead program with a fully qualified phone connection. Where a web lead is delivered for the sales team to work, a live transfer is pre-screened by our team, which confirms property ownership, service area, project scope and budget before warm-transferring the call. Remodelers often pair the two: web leads for volume across a market, and live transfers for the highest-intent homeowners who are ready to schedule an in-home estimate right away.",
+  "faq": [
+    {
+      "q": "How fast are bath remodeling web leads delivered?",
+      "a": "Leads are delivered in real time through direct CRM or API integration, so a homeowner's request reaches your system within seconds of submission while they are still comparing companies."
+    },
+    {
+      "q": "Can leads be focused on a specific project type?",
+      "a": "Yes. Delivery can prioritise walk-in tubs, tub-to-shower conversions, full renovations or shower replacements, and can be filtered to the ZIP codes your crews serve."
+    },
+    {
+      "q": "Can I combine web leads with calls and transfers?",
+      "a": "Yes. Web leads are the core product, and inbound calls and live transfers can be added alongside them so you blend real-time leads with live phone connections in one program."
+    }
+  ],
+  "seo": {
+    "title": "Bath Remodeling Web Leads, Inbound Calls & Live Transfers",
+    "description": "Real-time bath and shower remodeling web leads delivered to your CRM with consent capture, plus optional inbound calls and live transfers. Area-targeted and property-qualified."
+  }
+}

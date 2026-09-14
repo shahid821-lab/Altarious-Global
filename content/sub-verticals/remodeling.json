@@ -2,7 +2,7 @@
   "slug": "remodeling",
   "vertical": "home-services",
   "name": "Remodeling",
-  "active": true,
+  "active": false,
   "order": 11,
   "shortDescription": "Connect homeowners planning kitchen, bathroom and whole-home remodels with remodeling contractors and design-build firms.",
   "description": [

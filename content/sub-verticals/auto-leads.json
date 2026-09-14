@@ -1,0 +1,59 @@
+{
+  "slug": "auto-leads",
+  "vertical": "web-leads",
+  "name": "Auto Insurance",
+  "active": true,
+  "order": 1,
+  "shortDescription": "Real-time auto insurance web leads delivered to your CRM the moment a driver requests a quote, with inbound call and live transfer options.",
+  "description": [
+    "Auto insurance is one of the highest-volume consumer insurance categories, and web leads are the most scalable way to reach drivers the instant they start comparing rates. Shoppers request quotes when premiums rise at renewal, after buying a vehicle, after moving, or when a change in driving record forces a fresh comparison. Each of these moments produces a form submission that can be delivered to a carrier or agency in real time, while the driver is still actively evaluating options.",
+    "Altarious Global runs performance marketing across search, social and comparison placements to generate these submissions, then delivers them as real-time web leads through CRM and API integration with full consent capture. Inbound Call and Live Transfer programs are available alongside the web-lead flow for buyers who want a phone-based option, so agencies can blend real-time leads with live phone connections in a single acquisition strategy."
+  ],
+  "consumerProfile": "Licensed drivers aged 18 to 70 who own or lease at least one vehicle and are currently uninsured, approaching renewal, or dissatisfied with their premium. The strongest segments are multi-vehicle households, recent movers, and drivers whose rates increased after a claim or ticket and who submit an online quote request to compare options.",
+  "intentSignals": [
+    "Submitted an online auto insurance quote request",
+    "Comparing car insurance rates across providers",
+    "Renewal notice received with a premium increase",
+    "Recently purchased, financed or leased a vehicle",
+    "Moved to a new state or ZIP code",
+    "Currently uninsured and needs proof of coverage"
+  ],
+  "qualificationCriteria": [
+    "Valid driver's license and vehicle to insure",
+    "Located in a state the buyer is licensed to write",
+    "Currently insured or uninsured status captured on the form",
+    "Requesting a quote and open to contact",
+    "Age 18 or older and the policy decision maker",
+    "Provided TCPA consent for follow-up contact"
+  ],
+  "keywords": [
+    "auto insurance quotes online",
+    "compare car insurance rates",
+    "cheap car insurance",
+    "car insurance quote",
+    "full coverage car insurance",
+    "auto insurance near me",
+    "SR-22 insurance quote"
+  ],
+  "marketContext": "Auto insurance premiums have risen sharply across the United States, driving record numbers of drivers to shop coverage every renewal cycle, and a large share begin by requesting quotes online. Because coverage is mandatory in almost every state, demand is constant and geographically broad. Carriers and agencies compete to reach these shoppers within minutes of the form submission, which makes real-time auto web leads an ideal foundation for scalable acquisition, with phone-based options layered on top for buyers who want them.",
+  "inboundCallsAngle": "Not every shopper wants to wait for a callback after submitting a form, and some prefer to speak with an agent immediately. Inbound calls complement the web-lead flow by capturing drivers who choose to dial in from the same campaigns, arriving on the agent's line ready to get a quote. Buyers running web leads can add inbound calls to reach consumers who convert better by phone, especially those with complex situations such as an SR-22 requirement or multiple vehicles, without changing their core lead delivery setup.",
+  "liveTransfersAngle": "Live transfers extend the web-lead program with a fully qualified phone connection. Where a web lead is delivered for the agent to work, a live transfer is pre-screened by our team, which confirms the driver's state, vehicle, coverage status and interest before warm-transferring the call. Buyers often pair the two: web leads for volume and speed, live transfers for the highest-intent drivers who want to talk to an agent right away, giving captive and independent agencies a blended pipeline from a single source.",
+  "faq": [
+    {
+      "q": "How fast are auto web leads delivered?",
+      "a": "Leads are delivered in real time through direct CRM or API integration, so a driver's quote request reaches your system within seconds of submission while their intent is still fresh."
+    },
+    {
+      "q": "Is consent captured on every web lead?",
+      "a": "Yes. Consent is captured at the point of submission and passed with each lead record, and delivery can be filtered to the states and ZIP codes your agency or carrier is licensed to write."
+    },
+    {
+      "q": "Can I combine web leads with calls and transfers?",
+      "a": "Yes. Web leads are the core product, and inbound calls and live transfers can be added alongside them so you blend real-time leads with live phone connections in one program."
+    }
+  ],
+  "seo": {
+    "title": "Auto Insurance Web Leads, Inbound Calls & Live Transfers",
+    "description": "Real-time auto insurance web leads delivered to your CRM with full consent capture, plus optional inbound calls and live transfers. State-targeted and high intent."
+  }
+}

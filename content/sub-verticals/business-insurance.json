@@ -2,7 +2,7 @@
   "slug": "business-insurance",
   "vertical": "insurance",
   "name": "Business Insurance",
-  "active": true,
+  "active": false,
   "order": 9,
   "shortDescription": "Connect small business owners and self-employed professionals buying their first or replacement business coverage with licensed agents.",
   "description": [

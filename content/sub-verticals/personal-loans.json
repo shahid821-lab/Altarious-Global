@@ -2,7 +2,7 @@
   "slug": "personal-loans",
   "vertical": "web-leads",
   "name": "Personal Loans",
-  "active": true,
+  "active": false,
   "order": 2,
   "shortDescription": "Deliver real-time personal loan applicants and calls from consumers seeking to consolidate debt, cover expenses or finance major purchases.",
   "description": [

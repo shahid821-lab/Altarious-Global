@@ -2,7 +2,7 @@
   "slug": "restoration",
   "vertical": "home-services",
   "name": "Restoration",
-  "active": true,
+  "active": false,
   "order": 8,
   "shortDescription": "Connect property owners recovering from fire, smoke, mould, storm and water events with full-service restoration contractors.",
   "description": [

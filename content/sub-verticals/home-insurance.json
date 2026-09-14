@@ -2,7 +2,7 @@
   "slug": "home-insurance",
   "vertical": "insurance",
   "name": "Home Insurance",
-  "active": true,
+  "active": false,
   "order": 6,
   "shortDescription": "Reach homeowners comparing homeowners insurance at purchase, renewal or after a non-renewal notice, and connect them with licensed agents.",
   "description": [

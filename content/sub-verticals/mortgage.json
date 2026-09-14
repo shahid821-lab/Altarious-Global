@@ -2,7 +2,7 @@
   "slug": "mortgage",
   "vertical": "web-leads",
   "name": "Mortgage",
-  "active": true,
+  "active": false,
   "order": 7,
   "shortDescription": "Deliver real-time purchase, refinance and home equity leads and calls to lenders, brokers and loan officers.",
   "description": [

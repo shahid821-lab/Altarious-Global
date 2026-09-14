@@ -2,7 +2,7 @@
   "slug": "education",
   "vertical": "web-leads",
   "name": "Education",
-  "active": true,
+  "active": false,
   "order": 6,
   "shortDescription": "Deliver consented inquiries and calls from adult learners exploring degree programs, certifications, trade schools and online courses.",
   "description": [

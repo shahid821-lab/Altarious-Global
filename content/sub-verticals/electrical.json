@@ -2,7 +2,7 @@
   "slug": "electrical",
   "vertical": "home-services",
   "name": "Electrical",
-  "active": true,
+  "active": false,
   "order": 5,
   "shortDescription": "Connect homeowners needing electrical repairs, panel upgrades and EV charger installation with licensed electricians in their service area.",
   "description": [

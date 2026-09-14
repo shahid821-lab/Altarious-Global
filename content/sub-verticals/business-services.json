@@ -2,7 +2,7 @@
   "slug": "business-services",
   "vertical": "web-leads",
   "name": "Business Services",
-  "active": true,
+  "active": false,
   "order": 9,
   "shortDescription": "Deliver B2B leads and calls from business owners seeking financing, payroll, merchant services, software and professional support.",
   "description": [

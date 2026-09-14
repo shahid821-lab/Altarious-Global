@@ -1,0 +1,59 @@
+{
+  "slug": "ssdi",
+  "vertical": "insurance",
+  "name": "SSDI",
+  "active": true,
+  "order": 3,
+  "shortDescription": "Connect people who can no longer work due to a medical condition with advocates who help pursue Social Security Disability benefits.",
+  "description": [
+    "Social Security Disability Insurance is a benefits-acquisition category built around consumers who are unable to work because of a medical condition and need help pursuing the benefits they may be entitled to. The process is complex, initial claims are frequently denied, and appeals have strict deadlines, which is why so many claimants look for experienced help with applications, reconsiderations and hearings. Each of these situations creates a clear moment of intent where the person is actively seeking assistance and wants to speak with someone who understands the process.",
+    "Altarious Global runs performance marketing across search and social to reach these claimants when they are searching for help, then routes them into Inbound Call and Live Transfer programs for advocates and authorized representatives. Every consumer is contacted on a TCPA-consented basis and connected only with representatives authorized to assist with disability claims, with no misleading government-affiliation claims and no promises of guaranteed approval."
+  ],
+  "consumerProfile": "Adults who are unable to work due to a physical or mental medical condition expected to last twelve months or longer, and who are either preparing an initial application or appealing a denial. The strongest segments are claimants with a recent work history, those who have already been denied once and face an appeal deadline, and people who feel overwhelmed by the paperwork and want representation.",
+  "intentSignals": [
+    "Searching for help applying for disability benefits",
+    "Unable to work due to a medical condition",
+    "Received a denial and wants to file an appeal",
+    "Approaching an appeal or reconsideration deadline",
+    "Unsure whether they qualify and wants an evaluation",
+    "Looking for a representative or advocate to handle the claim"
+  ],
+  "qualificationCriteria": [
+    "Currently unable to work due to a medical condition",
+    "Condition expected to last twelve months or longer",
+    "Has a qualifying work history or is exploring eligibility",
+    "Located in the United States",
+    "Seeking help with an initial application or an appeal",
+    "Provided TCPA consent to be contacted about disability assistance"
+  ],
+  "keywords": [
+    "SSDI benefits help",
+    "social security disability application",
+    "disability appeal help",
+    "how to qualify for disability",
+    "disability claim denied",
+    "disability advocate near me",
+    "apply for disability benefits"
+  ],
+  "marketContext": "Every year large numbers of Americans stop working because of a serious medical condition and turn to Social Security Disability for support. Because initial applications are commonly denied and the appeals process is time-sensitive and document-heavy, demand for experienced help remains steady and nationwide. Advocates and authorized representatives compete to reach claimants at the point of need, which makes SSDI a strong benefits-acquisition vertical for compliant call and transfer programs that respect consumer consent and set realistic expectations about the process.",
+  "inboundCallsAngle": "People pursuing disability benefits often prefer to explain their situation by phone, especially when a condition makes forms difficult or when they are anxious about a looming appeal deadline. Inbound calls capture that preference: the consumer sees an offer to help with disability benefits, chooses to call, and reaches a representative who can assess the situation and explain next steps. For advocacy firms staffed with authorized representatives, an inbound call is often the fastest path from first contact to a signed representation agreement, as long as contact is TCPA-consented and free of government-affiliation or guaranteed-approval claims.",
+  "liveTransfersAngle": "Live transfers add a qualification layer before the representative engages. Our team confirms that the person is unable to work, that the condition is expected to be long-term, and that they are seeking help with an application or appeal, and verifies TCPA consent before warm-transferring the call. This is especially valuable for advocacy firms with limited intake capacity, because the pre-screen filters out consumers who are already working or clearly outside the program before they reach an authorized representative.",
+  "faq": [
+    {
+      "q": "Are SSDI consumers contacted compliantly?",
+      "a": "Yes. Every consumer provides TCPA consent before contact and is connected only with advocates or authorized representatives. Programs make no claim of government affiliation and never promise guaranteed approval of a claim."
+    },
+    {
+      "q": "Can claimants be filtered by stage of the process?",
+      "a": "Yes. Delivery can prioritise initial applicants, consumers facing a denial or appeal, or both, so your intake team receives the situations your representatives are best equipped to handle."
+    },
+    {
+      "q": "How are expectations managed with claimants?",
+      "a": "Messaging focuses on helping the consumer pursue the benefits they may be entitled to. It does not promise a specific outcome, and consumers understand they are being connected with a representative, not a government agency."
+    }
+  ],
+  "seo": {
+    "title": "SSDI Leads, Inbound Calls & Live Transfers",
+    "description": "Connect with people seeking help on Social Security Disability applications and appeals. TCPA-consented, US-wide and routed to advocates and authorized representatives."
+  }
+}

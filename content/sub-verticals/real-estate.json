@@ -2,7 +2,7 @@
   "slug": "real-estate",
   "vertical": "web-leads",
   "name": "Real Estate",
-  "active": true,
+  "active": false,
   "order": 8,
   "shortDescription": "Deliver buyer, seller and investor leads and calls to real estate brokerages, agents and home-buying companies.",
   "description": [

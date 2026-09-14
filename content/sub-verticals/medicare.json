@@ -2,7 +2,7 @@
   "slug": "medicare",
   "vertical": "insurance",
   "name": "Medicare",
-  "active": true,
+  "active": false,
   "order": 3,
   "shortDescription": "Connect Medicare-eligible beneficiaries reviewing Advantage, Supplement and Part D options with licensed, compliant agents.",
   "description": [

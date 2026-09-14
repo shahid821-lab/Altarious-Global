@@ -130,7 +130,7 @@ ${page.seo?.keywords?.length ? `<meta name="keywords" content="${esc(page.seo.ke
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <script>(function(){var d=document.documentElement;try{var t=localStorage.getItem('ag-theme');if(t)d.setAttribute('data-theme',t);}catch(e){}if(window.IntersectionObserver&&!matchMedia('(prefers-reduced-motion: reduce)').matches)d.className+=' js';})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="${ctx.assets?.css || '/assets/css/site.css'}">
 <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
 </head>

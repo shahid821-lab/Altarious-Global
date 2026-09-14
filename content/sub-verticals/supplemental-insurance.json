@@ -2,7 +2,7 @@
   "slug": "supplemental-insurance",
   "vertical": "insurance",
   "name": "Supplemental Insurance",
-  "active": true,
+  "active": false,
   "order": 10,
   "shortDescription": "Reach consumers seeking dental, vision, accident, critical illness and hospital indemnity coverage to fill gaps in their primary plan.",
   "description": [

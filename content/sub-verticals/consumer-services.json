@@ -2,7 +2,7 @@
   "slug": "consumer-services",
   "vertical": "web-leads",
   "name": "Consumer Services",
-  "active": true,
+  "active": false,
   "order": 10,
   "shortDescription": "Deliver consented web leads and calls for subscription, home, lifestyle and household services sold directly to consumers.",
   "description": [

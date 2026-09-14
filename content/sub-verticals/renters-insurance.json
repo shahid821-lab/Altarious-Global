@@ -2,7 +2,7 @@
   "slug": "renters-insurance",
   "vertical": "insurance",
   "name": "Renters Insurance",
-  "active": true,
+  "active": false,
   "order": 8,
   "shortDescription": "Reach tenants who need renters coverage for a new lease or landlord requirement and connect them with licensed agents who can bind quickly.",
   "description": [

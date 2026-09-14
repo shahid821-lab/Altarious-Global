@@ -2,7 +2,7 @@
   "slug": "financial-services",
   "vertical": "web-leads",
   "name": "Financial Services",
-  "active": true,
+  "active": false,
   "order": 1,
   "shortDescription": "Generate real-time web leads and calls from consumers seeking banking, investment, tax and financial planning services.",
   "description": [

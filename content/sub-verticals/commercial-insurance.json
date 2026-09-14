@@ -2,7 +2,7 @@
   "slug": "commercial-insurance",
   "vertical": "insurance",
   "name": "Commercial Insurance",
-  "active": true,
+  "active": false,
   "order": 7,
   "shortDescription": "Connect business owners seeking commercial property, liability, auto and workers' compensation coverage with licensed commercial agents.",
   "description": [

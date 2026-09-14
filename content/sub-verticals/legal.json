@@ -2,7 +2,7 @@
   "slug": "legal",
   "vertical": "web-leads",
   "name": "Legal",
-  "active": true,
+  "active": false,
   "order": 5,
   "shortDescription": "Deliver case inquiries and calls from individuals seeking legal representation in personal injury, mass tort, family law and other practice areas.",
   "description": [

@@ -2,7 +2,7 @@
   "slug": "cleaning-services",
   "vertical": "home-services",
   "name": "Cleaning Services",
-  "active": true,
+  "active": false,
   "order": 13,
   "shortDescription": "Connect households seeking recurring house cleaning, deep cleaning and move-out cleaning with professional cleaning companies.",
   "description": [

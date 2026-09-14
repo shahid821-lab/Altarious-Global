@@ -2,7 +2,7 @@
   "slug": "appliance-repair",
   "vertical": "home-services",
   "name": "Appliance Repair",
-  "active": true,
+  "active": false,
   "order": 14,
   "shortDescription": "Reach households with broken refrigerators, washers, dryers, ovens and dishwashers and connect them with appliance repair technicians.",
   "description": [

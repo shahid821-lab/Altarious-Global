@@ -1,0 +1,59 @@
+{
+  "slug": "aca",
+  "vertical": "insurance",
+  "name": "ACA Health Insurance",
+  "active": true,
+  "order": 1,
+  "shortDescription": "Reach consumers shopping Affordable Care Act marketplace plans and connect them with a licensed health agent.",
+  "description": [
+    "ACA marketplace health insurance is a high-volume, seasonally driven category with strong year-round demand from consumers experiencing qualifying life events. Shoppers look for coverage during Open Enrollment, after losing employer-sponsored insurance, following a move, marriage, birth or income change, and whenever they want to understand whether they qualify for premium subsidies. Each of these moments creates a clear window of intent where the consumer is actively seeking a plan and wants to talk to someone who can explain their options.",
+    "Altarious Global runs performance marketing across search, social and comparison placements to reach these shoppers at the moment they are evaluating coverage, then routes them into Inbound Call and Live Transfer programs. Every consumer is contacted on a TCPA-consented basis and delivered to licensed health agents, with no misleading government-affiliation claims and no guarantees of approval or specific plan outcomes."
+  ],
+  "consumerProfile": "Adults aged 18 to 64 who are uninsured, losing coverage, or shopping the marketplace during an enrollment window. The strongest segments are consumers experiencing a qualifying life event, self-employed individuals, part-time and gig workers without employer coverage, and households likely to qualify for premium tax credits based on income.",
+  "intentSignals": [
+    "Searching for ACA or marketplace health plans",
+    "Currently uninsured and seeking coverage options",
+    "Lost or losing employer-sponsored insurance",
+    "Shopping during Open Enrollment or a Special Enrollment Period",
+    "Wants to check subsidy or premium tax credit eligibility",
+    "Recent qualifying life event such as move, marriage or new child"
+  ],
+  "qualificationCriteria": [
+    "Located in a state the agent is licensed to sell in",
+    "Age 18 or older and the decision maker for the household plan",
+    "Not currently enrolled in Medicare or Medicaid",
+    "Uninsured or seeking to change existing marketplace coverage",
+    "Enrolling within Open Enrollment or a valid Special Enrollment Period",
+    "Provided TCPA consent to be contacted about health coverage"
+  ],
+  "keywords": [
+    "ACA health insurance",
+    "affordable care act plans",
+    "obamacare enrollment",
+    "marketplace health insurance",
+    "health insurance subsidies",
+    "open enrollment health plans",
+    "special enrollment health insurance"
+  ],
+  "marketContext": "The ACA marketplace serves millions of Americans who buy coverage on their own rather than through an employer, and enrollment has grown as subsidy access expanded and more workers moved to self-employment and gig work. Demand concentrates heavily around Open Enrollment but continues year-round through Special Enrollment Periods triggered by qualifying life events. Licensed agents and agencies compete to reach these shoppers while their intent is fresh, which makes ACA a strong vertical for compliant, high-volume call and transfer programs that respect enrollment rules and consumer consent.",
+  "inboundCallsAngle": "ACA shoppers often have questions that are easier to answer by phone than through a form, such as whether they qualify for a subsidy, which doctors are in network, or whether a life event opens a Special Enrollment Period. Inbound calls capture that preference: the consumer sees a health coverage offer, chooses to dial in, and reaches a licensed agent ready to explain plan options. For agencies staffed with licensed health agents, an inbound call is often the fastest path from first contact to a completed enrollment, provided all contact is TCPA-consented and free of government-affiliation or guaranteed-approval claims.",
+  "liveTransfersAngle": "Live transfers add a screening layer before the agent picks up. Our team confirms the consumer's state, age, insurance status and enrollment eligibility, verifies TCPA consent, and warm-transfers only those who match the agent's licensed footprint and appetite. This is especially valuable for licensed agencies with strict compliance standards, because the pre-screen filters out consumers already on Medicare or Medicaid and those outside a valid enrollment window before they reach a licensed representative.",
+  "faq": [
+    {
+      "q": "Are ACA consumers contacted in a compliant way?",
+      "a": "Yes. Every consumer provides TCPA consent to be contacted about health coverage, and consumers are connected only with licensed health agents. Programs avoid any suggestion of government affiliation or guaranteed approval."
+    },
+    {
+      "q": "Can programs run outside Open Enrollment?",
+      "a": "Yes. In addition to Open Enrollment, campaigns can target consumers who qualify for a Special Enrollment Period after events such as losing coverage, moving, marriage or a new child, keeping demand active year-round."
+    },
+    {
+      "q": "Can consumers be filtered by state and eligibility?",
+      "a": "Yes. Delivery can be filtered to the states where your agents hold a license and screened for likely subsidy eligibility and enrollment status, so you receive consumers you can actually help enroll."
+    }
+  ],
+  "seo": {
+    "title": "ACA Health Insurance Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire high-intent ACA marketplace shoppers through performance marketing, inbound calls and live transfers. TCPA-consented, state-targeted and routed to licensed health agents."
+  }
+}

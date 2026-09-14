@@ -1,0 +1,59 @@
+{
+  "slug": "roofing-leads",
+  "vertical": "web-leads",
+  "name": "Roofing",
+  "active": true,
+  "order": 2,
+  "shortDescription": "Real-time roofing web leads delivered to your CRM the moment a homeowner requests repair or replacement, with inbound call and live transfer options.",
+  "description": [
+    "Roofing is a high-value home improvement category where web leads let contractors reach homeowners the instant they start looking for repair or replacement. Demand spikes after storms and hail events, rises as roofs reach the end of their service life, and continues year-round from homeowners dealing with leaks, missing shingles or insurance claims. Each of these situations produces an online request that can be delivered to a roofing company in real time, while the homeowner is actively seeking a contractor.",
+    "Altarious Global runs performance marketing across search, social and comparison placements to generate these submissions, then delivers them as real-time web leads through CRM and API integration with consent capture. Inbound Call and Live Transfer programs are available alongside the web-lead flow for contractors who want phone-based options, so roofers can combine real-time leads with live phone connections in one acquisition strategy."
+  ],
+  "consumerProfile": "Homeowners aged 30 and older who own a single-family home and need roof repair or replacement. The strongest segments are owners of older roofs nearing replacement age, homeowners in regions recently hit by storms or hail, and those pursuing an insurance claim for roof damage who submit an online request for an inspection or estimate.",
+  "intentSignals": [
+    "Submitted an online roof repair or replacement request",
+    "Roof damaged by a recent storm or hail event",
+    "Roof is aging or nearing the end of its service life",
+    "Experiencing leaks or missing shingles",
+    "Filing or considering an insurance claim for roof damage",
+    "Requesting a roof inspection or estimate"
+  ],
+  "qualificationCriteria": [
+    "Owns the home where the work will be performed",
+    "Located in the contractor's service area",
+    "Has a defined roofing need such as repair or replacement",
+    "Planning to move forward, with insurance or budget in place",
+    "Age 18 or older and a decision maker for the household",
+    "Provided TCPA consent for follow-up contact"
+  ],
+  "keywords": [
+    "roof replacement quote",
+    "roof repair near me",
+    "roofing contractors near me",
+    "storm damage roof repair",
+    "roof inspection estimate",
+    "new roof cost",
+    "insurance claim roof replacement"
+  ],
+  "marketContext": "Roofing demand in the United States is driven by an aging housing stock and frequent severe-weather events that damage roofs across large regions at once. Many homeowners begin the process online by requesting an inspection or estimate, often while an insurance claim is in play. Contractors compete to reach these homeowners quickly, since the first credible company to respond frequently wins the job. That urgency makes real-time roofing web leads a strong acquisition foundation, with phone-based options layered on for buyers who want them.",
+  "inboundCallsAngle": "Homeowners with an active leak or storm damage often want to talk to a contractor immediately rather than wait for a callback. Inbound calls complement the web-lead flow by capturing homeowners who choose to dial in from the same campaigns, reaching the contractor ready to describe the damage and schedule an inspection. Buyers running roofing web leads can add inbound calls to serve urgent, high-intent situations by phone without changing their core lead delivery setup.",
+  "liveTransfersAngle": "Live transfers extend the web-lead program with a fully qualified phone connection. Where a web lead is delivered for the contractor to work, a live transfer is pre-screened by our team, which confirms property ownership, service area and the roofing need before warm-transferring the call. Roofers often pair the two: web leads for volume across a market, and live transfers for the highest-intent homeowners, including storm and claim situations, who want to speak with a contractor right away.",
+  "faq": [
+    {
+      "q": "How fast are roofing web leads delivered?",
+      "a": "Leads are delivered in real time through direct CRM or API integration, so a homeowner's request reaches your system within seconds of submission while they are still comparing contractors."
+    },
+    {
+      "q": "Can leads be filtered to storm-affected areas?",
+      "a": "Yes. Campaigns can be targeted to specific ZIP codes and regions, including areas recently affected by storms or hail, and to homeowners pursuing an insurance claim."
+    },
+    {
+      "q": "Can I combine web leads with calls and transfers?",
+      "a": "Yes. Web leads are the core product, and inbound calls and live transfers can be added alongside them so you blend real-time leads with live phone connections in one program."
+    }
+  ],
+  "seo": {
+    "title": "Roofing Web Leads, Inbound Calls & Live Transfers",
+    "description": "Real-time roofing web leads delivered to your CRM with consent capture, plus optional inbound calls and live transfers. Area-targeted for repair, replacement and storm damage."
+  }
+}

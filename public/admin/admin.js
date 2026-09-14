@@ -79,6 +79,7 @@
       else if (view === 'inquiries') await inquiries();
       else if (view === 'widgets') await widgetsIndex();
       else if (view === 'widget') await widgetEditor(a);
+      else if (view === 'visibility') await visibility();
       else if (view === 'list') await list(a);
       else if (view === 'edit') await editor(a, b ? decodeURIComponent(b) : null);
       else if (view === 'new') await editor(a, null, Object.fromEntries(new URLSearchParams(b || '')));
@@ -196,9 +197,21 @@
     }[kind];
     const row = (r) => {
       const d = r.data;
-      const act = `<span class="pill ${d.active === false ? 'off' : 'qualified'}">${d.active === false ? 'inactive' : 'active'}</span>`;
-      if (kind === 'vertical') return [d.order ?? '', `<b>${esc(d.name)}</b><br><code class="tiny">/${r.slug}/</code>`, esc(d.tagline || ''), subs.filter((s) => s.data.vertical === r.slug).length, act];
-      if (kind === 'sub-vertical') { const np = byKind('product').filter((p) => p.data.subVertical === r.slug).length, na = byKind('article').filter((a) => a.data.subVertical === r.slug).length; return [d.order ?? '', `<b>${esc(d.name)}</b><br><code class="tiny">/${d.vertical}/${r.slug}/</code>`, esc(vName(d.vertical)), `${np} / ${na}${np < 2 ? ' <span class="pill off">missing product</span>' : ''}`, act]; }
+      const on = d.active !== false;
+      const act = `<span class="pill ${on ? 'qualified' : 'off'}">${on ? 'active' : 'inactive'}</span>`;
+      /* Verticals and sub-verticals get a one-click switch. Turning one off takes
+         everything beneath it off the public site at the next publish. */
+      const toggle = (hint) => `<label class="toggle" title="${esc(hint)}"><input type="checkbox" data-toggle="${kind}" data-slug="${esc(r.slug)}" ${on ? 'checked' : ''}><span class="toggle-track"></span><span class="toggle-text">${on ? 'Live' : 'Hidden'}</span></label><span class="help tiny">${esc(hint)}</span>`;
+      if (kind === 'vertical') {
+        const mySubs = subs.filter((s) => s.data.vertical === r.slug);
+        const np = byKind('product').filter((p) => p.data.vertical === r.slug).length, na = byKind('article').filter((a) => a.data.vertical === r.slug).length;
+        return [d.order ?? '', `<b>${esc(d.name)}</b><br><code class="tiny">/${r.slug}/</code>`, esc(d.tagline || ''), mySubs.length, toggle(`Off hides ${mySubs.length} sub-verticals, ${np} product pages and ${na} articles`)];
+      }
+      if (kind === 'sub-vertical') {
+        const np = byKind('product').filter((p) => p.data.subVertical === r.slug).length, na = byKind('article').filter((a) => a.data.subVertical === r.slug).length;
+        const parentOff = find('vertical', d.vertical)?.data.active === false;
+        return [d.order ?? '', `<b>${esc(d.name)}</b><br><code class="tiny">/${d.vertical}/${r.slug}/</code>`, esc(vName(d.vertical)), `${np} / ${na}${np < 2 ? ' <span class="pill off">missing product</span>' : ''}`, toggle(parentOff ? `Parent vertical is off — this stays hidden until it is switched back on` : `Off hides this sub-vertical, ${np} product pages and ${na} articles`)];
+      }
       if (kind === 'product') { const na = byKind('article').filter((a) => a.data.subVertical === d.subVertical && a.data.product === d.type).length; return [`<b>${esc(d.name)}</b><br><code class="tiny">/${d.vertical}/${d.subVertical}/${d.type}/</code>`, `<span class="pill ${d.type}">${TYPE_NAME[d.type]}</span>`, esc(vName(d.vertical)), esc(sName(d.subVertical)), `${na}${na < 2 ? ' <span class="pill off">needs 2</span>' : ''}`, act]; }
       if (kind === 'article') return [`<b>${esc(d.title)}</b><br><code class="tiny">${r.slug}</code>`, `${esc(vName(d.vertical))} → ${esc(sName(d.subVertical))} → <span class="pill ${d.product}">${TYPE_NAME[d.product] || d.product}</span>`, d.publishedAt, esc(d.author || ''), act];
       return [`<b>${esc(r.slug)}</b>`, esc(d.seo?.title || d.index?.seo?.title || '')];
@@ -210,6 +223,24 @@
       <table><thead><tr>${cols.map((c) => `<th>${c}</th>`).join('')}<th></th></tr></thead><tbody>${items.map((r) => `<tr>${row(r).map((c) => `<td>${c}</td>`).join('')}<td><a class="btn sm" href="#/edit/${kind}/${encodeURIComponent(r.slug)}">Edit</a></td></tr>`).join('')}</tbody></table>
       ${!items.length ? '<p class="muted" style="margin-top:12px">Nothing here yet.</p>' : ''}`;
     $('#list-filter').addEventListener('submit', (e) => { e.preventDefault(); location.hash = `#/list/${kind}?` + new URLSearchParams(Object.fromEntries(new FormData(e.target))); });
+    /* live/hidden switches: read the full record, flip one flag, write it back */
+    $$('input[data-toggle]').forEach((box) => box.addEventListener('change', async () => {
+      const k = box.dataset.toggle, slug = box.dataset.slug, want = box.checked;
+      box.disabled = true;
+      try {
+        const r = await api(`/api/admin/content?kind=${k}&slug=${encodeURIComponent(slug)}`);
+        const data = { ...r.data, active: want };
+        await api('/api/admin/content', { method: 'PUT', body: { kind: k, slug, prevSlug: slug, data } });
+        toast(`${data.name || slug} is now ${want ? 'live' : 'hidden'}. Press "Publish site" to update the website.`, 'ok');
+        refreshPublish();
+        await loadAll(true);
+        list(kind);
+      } catch (err) {
+        box.checked = !want;
+        box.disabled = false;
+        toast(err.message, 'err');
+      }
+    }));
   }
 
   /* ---------------- editor ---------------- */
@@ -790,6 +821,89 @@
   }
 
   /* ----- widgets index ----- */
+  /* ---------------- visibility manager ----------------
+     Toggle whole verticals or individual sub-verticals on/off. Turning a vertical
+     off cascades: every sub-vertical, product and article under it disappears from
+     the public site on the next Publish. This view shows exactly what is live. */
+  async function toggleActive(kind, slug, next) {
+    const r = await api(`/api/admin/content?kind=${kind}&slug=${encodeURIComponent(slug)}`);
+    const data = r.data;
+    data.active = next;
+    await api('/api/admin/content', { method: 'PUT', body: { kind, slug, prevSlug: slug, data } });
+  }
+
+  async function visibility() {
+    await loadAll(true);
+    const verts = byKind('vertical').slice().sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+    const subs = byKind('sub-vertical');
+    const prods = byKind('product');
+    const arts = byKind('article');
+    const on = (r) => r.data.active !== false;
+
+    // live counts respect the cascade: a child only counts if its parent vertical is on
+    const liveV = verts.filter(on).map((v) => v.slug);
+    const liveVset = new Set(liveV);
+    const liveSubs = subs.filter((s) => on(s) && liveVset.has(s.data.vertical));
+    const liveSset = new Set(liveSubs.map((s) => s.slug));
+    const liveProds = prods.filter((p) => on(p) && liveVset.has(p.data.vertical) && liveSset.has(p.data.subVertical));
+    const liveArts = arts.filter((a) => on(a) && liveVset.has(a.data.vertical) && liveSset.has(a.data.subVertical));
+
+    const sw = (kind, slug, active, disabled, label) =>
+      `<button class="vis-sw ${active ? 'on' : 'off'}" role="switch" aria-checked="${active}" aria-label="${esc(label)}"
+        data-kind="${kind}" data-slug="${esc(slug)}" ${disabled ? 'disabled' : ''}><span></span></button>`;
+
+    const rows = verts.map((v) => {
+      const vOn = on(v);
+      const vSubs = subs.filter((s) => s.data.vertical === v.slug).sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+      const subRows = vSubs.map((s) => {
+        const sOn = on(s);
+        const np = prods.filter((p) => p.data.subVertical === s.slug).length;
+        const na = arts.filter((a) => a.data.subVertical === s.slug).length;
+        const hiddenByParent = vOn && sOn ? false : !vOn;
+        const state = !vOn ? 'Hidden — vertical is off' : sOn ? 'Published' : 'Hidden';
+        return `<div class="vis-sub ${!vOn ? 'muted' : sOn ? '' : 'muted'}">
+          ${sw('sub-vertical', s.slug, sOn && vOn, !vOn, 'Toggle ' + s.data.name)}
+          <div class="vis-name"><b>${esc(s.data.name)}</b><span>${np} products · ${na} articles</span></div>
+          <span class="vis-state ${sOn && vOn ? 'live' : 'off'}">${state}</span>
+          <a class="vis-edit" href="#/edit/sub-vertical/${encodeURIComponent(s.slug)}">Edit</a>
+        </div>`;
+      }).join('');
+      return `<section class="vis-vert ${vOn ? '' : 'muted'}">
+        <header>
+          ${sw('vertical', v.slug, vOn, false, 'Toggle ' + v.data.name)}
+          <div class="vis-name"><b>${esc(v.data.name)}</b><span>${vSubs.filter(on).length} of ${vSubs.length} sub-verticals on</span></div>
+          <span class="vis-state ${vOn ? 'live' : 'off'}">${vOn ? 'Published' : 'Hidden'}</span>
+          <a class="vis-edit" href="#/edit/vertical/${encodeURIComponent(v.slug)}">Edit</a>
+        </header>
+        <div class="vis-subs">${subRows || '<p class="muted tiny">No sub-verticals.</p>'}</div>
+      </section>`;
+    }).join('');
+
+    main.innerHTML = `
+      <div class="page-head"><div><h1>Visibility</h1><p class="muted tiny">Toggle what appears on the public site. Turning a vertical off hides every sub-vertical, product and article beneath it.</p></div></div>
+      <div class="cards">
+        ${stat(liveV.length + ' / ' + verts.length, 'Verticals live', '#/visibility')}
+        ${stat(liveSubs.length + ' / ' + subs.length, 'Sub-verticals live', '#/visibility')}
+        ${stat(liveProds.length, 'Product pages live', '#/visibility')}
+        ${stat(liveArts.length, 'Articles live', '#/visibility')}
+      </div>
+      <div class="notice"><b>Changes save immediately.</b> The public site updates when you press <b>Publish site</b>.</div>
+      <div class="vis-tree">${rows}</div>`;
+
+    $$('.vis-sw', main).forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        if (btn.disabled) return;
+        const kind = btn.dataset.kind, slug = btn.dataset.slug, next = btn.classList.contains('off');
+        btn.disabled = true;
+        try {
+          await toggleActive(kind, slug, next);
+          toast((next ? 'Shown' : 'Hidden') + ' — press Publish site to update', 'ok');
+          all = null; await visibility(); refreshPublish();
+        } catch (e) { toast(e.message, 'err'); btn.disabled = false; }
+      });
+    });
+  }
+
   async function widgetsIndex() {
     const s = await loadSettings();
     main.innerHTML = `

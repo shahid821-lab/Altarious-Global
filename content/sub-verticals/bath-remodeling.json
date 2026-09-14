@@ -1,0 +1,59 @@
+{
+  "slug": "bath-remodeling",
+  "vertical": "home-services",
+  "name": "Bath Remodeling",
+  "active": true,
+  "order": 3,
+  "shortDescription": "Connect with homeowners planning bath and shower remodels and route them to remodelers ready to quote the project.",
+  "description": [
+    "Bath remodeling is a high-consideration home improvement category driven by homeowners who want to update an aging bathroom, improve safety and accessibility, or convert a dated tub into a modern walk-in shower. Demand spans quick refresh projects, full bath renovations, walk-in tub installations for aging-in-place, and tub-to-shower conversions. Each of these projects begins with a homeowner actively researching options and looking for a qualified remodeler to assess the space and provide an estimate.",
+    "Altarious Global runs performance marketing across search, social and comparison placements to reach homeowners while they are planning the project, then routes them into Inbound Call and Live Transfer programs. Remodelers, dealers and installers plug these programs directly into their sales operations and receive homeowners who own their property, have a defined project in mind, and are ready to schedule an in-home consultation."
+  ],
+  "consumerProfile": "Homeowners aged 35 and older who own a single-family home and are planning a bath or shower project. The strongest segments are owners of older homes with dated bathrooms, households looking for safer, more accessible bathing such as walk-in tubs, and homeowners who want a tub-to-shower conversion and have budget set aside for the work.",
+  "intentSignals": [
+    "Searching for bathroom or shower remodel options",
+    "Interested in a walk-in tub or accessible bathing",
+    "Wants a tub-to-shower conversion",
+    "Has an outdated bathroom in need of renovation",
+    "Requesting an in-home estimate or design consultation",
+    "Comparing local bath remodeling companies"
+  ],
+  "qualificationCriteria": [
+    "Owns the home where the work will be performed",
+    "Located in the remodeler's service area",
+    "Has a defined bath or shower project in mind",
+    "Has budget available and is planning to move forward",
+    "Age 18 or older and a decision maker for the household",
+    "Willing to schedule an in-home consultation or estimate"
+  ],
+  "keywords": [
+    "bathroom remodel near me",
+    "walk in tub installation",
+    "tub to shower conversion",
+    "shower replacement cost",
+    "bath remodeling companies",
+    "one day bath remodel",
+    "accessible bathroom remodel"
+  ],
+  "marketContext": "Bathroom remodeling remains one of the most popular home improvement investments in the United States, supported by an aging housing stock, homeowners staying in place longer, and growing demand for safer, more accessible bathing. Projects range from fast shower replacements to full accessibility conversions, so demand is broad across both value and premium segments. Remodelers and dealers compete for homeowners with genuine project intent, which makes bath remodeling a strong vertical for call and transfer programs that deliver property-qualified, in-market homeowners.",
+  "inboundCallsAngle": "Homeowners planning a bath remodel often want to talk through options such as walk-in tubs, conversions and timelines before committing to an in-home visit, and many prefer to call rather than complete a long form. Inbound calls capture that preference: the homeowner sees a bath remodeling offer, dials in, and reaches a representative ready to discuss the project and book a consultation. For remodelers with sales staff who set appointments, an inbound call is often the shortest path from first contact to a scheduled in-home estimate.",
+  "liveTransfersAngle": "Live transfers add a qualification layer before the call reaches the sales team. Our team confirms the homeowner owns the property, is within the service area, and has a defined project and budget before warm-transferring the call, so appointment setters spend time only with homeowners who can actually move forward. This is especially valuable for remodelers with limited install capacity, because the pre-screen removes renters and out-of-area homeowners before they consume sales time.",
+  "faq": [
+    {
+      "q": "Can bath remodeling calls be limited to my service area?",
+      "a": "Yes. Campaigns can be filtered to the specific ZIP codes and regions your crews serve, so you only receive homeowners you can actually schedule and complete."
+    },
+    {
+      "q": "Can programs focus on a specific project type?",
+      "a": "Yes. Delivery can prioritise walk-in tubs, tub-to-shower conversions, full bath renovations or shower replacements, depending on the projects your business specialises in."
+    },
+    {
+      "q": "Are homeowners screened for ownership and budget?",
+      "a": "Yes. Programs confirm property ownership and a defined project with available budget so your team spends time with homeowners who are prepared to schedule an in-home consultation."
+    }
+  ],
+  "seo": {
+    "title": "Bath Remodeling Leads, Inbound Calls & Live Transfers",
+    "description": "Acquire in-market bath and shower remodeling customers through performance marketing, inbound calls and live transfers. Area-targeted, property-qualified and delivered in real time."
+  }
+}
