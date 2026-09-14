@@ -250,8 +250,6 @@ export function productComparison(opts) {
    C4 · volumeCalculator(opts)
    opts: { vertical, subVertical, product, avgValue }
    ============================================================ */
-const UNIT_PRICE = { 'web-leads': 9, 'inbound-calls': 38, 'live-transfers': 62 };
-
 /* Slider bounds. CMS values win; anything missing or non-numeric falls back to
    the built-in range so the control always renders a usable slider. */
 function rangeOf(src, fb) {
@@ -278,7 +276,6 @@ export function volumeCalculator(opts) {
   const valueRange = rangeOf(r.avgValue, CALC_FALLBACK.avgValue);
   const disclaimer = o.disclaimer == null ? '' : String(o.disclaimer).trim();
   const product = PRODUCTS[o.product] ? o.product : 'inbound-calls';
-  const price = UNIT_PRICE[product];
   const unit = PRODUCTS[product].short;
   const days = 22;
 
@@ -294,12 +291,11 @@ export function volumeCalculator(opts) {
 
   const monthly = volume * days;
   const cust = monthly * (close / 100);
-  const spend = monthly * price;
 
   const unitPlural = unit === 'lead' ? 'leads' : unit === 'call' ? 'calls' : 'transfers';
 
   return (
-    '<section class="ag-calc" data-ag-calc data-price="' + price + '" data-days="' + days + '"' +
+    '<section class="ag-calc" data-ag-calc data-days="' + days + '"' +
       ' data-unit="' + attr(unitPlural) + '">' +
       '<header class="ag-calc__head">' +
         '<span class="ag-calc__eyebrow">' + esc(eyebrowParts.join(' · ')) + '</span>' +
@@ -328,14 +324,11 @@ export function volumeCalculator(opts) {
           '</div>' +
         '</div>' +
         '<div class="ag-calc__out" aria-live="polite">' +
-          '<div class="ag-calc__stat"><span class="ag-calc__k">Monthly customers</span>' +
-            '<strong class="ag-calc__v" data-ag-out="cust">' + esc(Math.round(cust).toLocaleString('en-US')) + '</strong></div>' +
-          '<div class="ag-calc__stat"><span class="ag-calc__k">Cost per acquisition</span>' +
-            '<strong class="ag-calc__v is-accent" data-ag-out="cpa">' + esc(money(cust > 0 ? spend / cust : 0)) + '</strong></div>' +
-          '<div class="ag-calc__stat"><span class="ag-calc__k">Monthly revenue</span>' +
+          '<div class="ag-calc__stat"><span class="ag-calc__k">Monthly customers won</span>' +
+            '<strong class="ag-calc__v is-accent" data-ag-out="cust">' + esc(Math.round(cust).toLocaleString('en-US')) + '</strong></div>' +
+          '<div class="ag-calc__stat"><span class="ag-calc__k">Potential monthly revenue</span>' +
             '<strong class="ag-calc__v" data-ag-out="rev">' + esc(money(cust * avg)) + '</strong></div>' +
-          '<p class="ag-calc__note">Modelled at <span>' + esc(money(price)) + '</span> per billable ' + esc(unit) +
-            ', ' + days + ' working days.</p>' +
+          '<p class="ag-calc__note">Your upside from your own inputs, across ' + days + ' working days a month. Program pricing is scoped to your criteria and shared in a proposal.</p>' +
           (disclaimer ? '<p class="ag-calc__note is-disclaimer">' + esc(disclaimer) + '</p>' : '') +
         '</div>' +
       '</div>' +

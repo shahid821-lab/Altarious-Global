@@ -221,7 +221,6 @@
 
   /* ---------- C4 · .ag-calc ---------- */
   all('[data-ag-calc]').forEach(function (root) {
-    var price = parseFloat(root.getAttribute('data-price')) || 38;
     var days = parseFloat(root.getAttribute('data-days')) || 22;
     var vol = one('[data-ag-input="vol"]', root);
     var close = one('[data-ag-input="close"]', root);
@@ -230,7 +229,7 @@
 
     var outs = {};
     all('[data-ag-out]', root).forEach(function (el) { outs[el.getAttribute('data-ag-out')] = el; });
-    var prev = { cust: null, cpa: null, rev: null };
+    var prev = { cust: null, rev: null };
 
     function fill(inp) {
       var min = parseFloat(inp.min), max = parseFloat(inp.max);
@@ -248,10 +247,9 @@
 
       var monthly = v * days;
       var cust = monthly * (c / 100);
-      var spend = monthly * price;
-      var targets = { cust: cust, cpa: cust > 0 ? spend / cust : 0, rev: cust * av };
+      var targets = { cust: cust, rev: cust * av };
 
-      ['cust', 'cpa', 'rev'].forEach(function (k) {
+      ['cust', 'rev'].forEach(function (k) {
         var el = outs[k];
         if (!el) return;
         var from = prev[k] === null ? targets[k] : prev[k];
