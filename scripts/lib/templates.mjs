@@ -420,17 +420,21 @@ export function homePage(ctx) {
   const used = new Set();
   const { site, verticals, subVerticals, pages, articles } = ctx;
   const h = pages.home;
+  /* live counts, derived from the published tree so no stale number is shown */
+  const liveVset = new Set(verticals.filter((v) => v.active !== false).map((v) => v.slug));
+  const liveSubCount = subVerticals.filter((s) => s.active !== false && liveVset.has(s.vertical)).length;
+  const stats = h.stats.map((s) => (/sub-vertical/i.test(s.label) ? { ...s, value: String(liveSubCount) } : s));
   const heroImg = photo(ctx, h.hero?.image, 'brand-hero-office', 'brand-data-analytics');
   const figureImg = photo(ctx, h.hero?.figure, 'brand-callcenter-agent', 'service-inbound-calls');
   const figure = `<div class="hero-figure" data-reveal="right">
     <div class="media-frame ratio-4-3">${img(figureImg, 'Acquisition team at work', { w: 760, h: 570 })}</div>
-    <div class="float-card tl" data-parallax="-0.05"><div><strong class="count-up" data-count="35" data-suffix="+">0</strong><span>Sub-vertical programs</span></div></div>
+    <div class="float-card tl" data-parallax="-0.05"><div><strong class="count-up" data-count="${liveSubCount}">0</strong><span>Sub-vertical programs</span></div></div>
     <div class="float-card br" data-parallax="0.05"><div><strong>Real-time</strong><span>Call &amp; lead delivery</span></div></div>
   </div>`;
   const body = `
 ${hero({ eyebrow: h.hero.eyebrow, headline: h.hero.headline, subheadline: h.hero.subheadline, primary: { label: h.hero.primaryCta, href: '/contact/' }, secondary: { label: h.hero.secondaryCta, href: '/verticals/' }, terrain: 'home', terrainSeed: 'altarious-home', terrainPeaks: verticals.filter((v) => v.active !== false).map((v, i) => ({ label: v.name, x: 0.22 + i * 0.28, h: 0.9 - i * 0.12 })), figure })}
 ${buyerMarquee(h.trustBar)}
-${statsBand(h.stats)}
+${statsBand(stats)}
 
 <section class="section"><div class="container">
   <div class="section-head"><div data-reveal><p class="eyebrow">Acquisition products</p><h2 class="section-title">Four ways to put customers in front of your team</h2><p class="section-sub">${esc(site.positioning)}</p></div><a class="link-arrow" href="/services/">All services</a></div>
