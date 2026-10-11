@@ -1,0 +1,36 @@
+{
+  "seo": {
+    "title": "Leadership Team",
+    "description": "Meet the leadership team behind Altarious Global: the founder, chief executive and managing director guiding our performance marketing, inbound call and live transfer programs."
+  },
+  "hero": {
+    "eyebrow": "Our Team",
+    "headline": "The leadership behind Altarious Global.",
+    "subheadline": "A focused leadership team accountable for strategy, client outcomes and the operational discipline behind every program we run."
+  },
+  "members": [
+    {
+      "name": "Shahid Khan",
+      "role": "Founder & Director",
+      "photo": "/assets/img/team/shahid-khan.jpg",
+      "bio": "Founded Altarious Global and sets the company's direction, partnerships and long-term growth strategy."
+    },
+    {
+      "name": "Sajid Khan",
+      "role": "Chief Executive Officer",
+      "photo": "/assets/img/team/sajid-khan.jpg",
+      "bio": "Leads the business day to day, with responsibility for commercial performance, client relationships and the standards every program is held to."
+    },
+    {
+      "name": "Rohan Jha",
+      "role": "Managing Director",
+      "photo": "/assets/img/team/rohan-jha.jpg",
+      "bio": "Oversees operations and delivery, ensuring campaigns, qualification and routing run to plan across every vertical we serve."
+    }
+  ],
+  "cta": {
+    "headline": "Talk to the team directly.",
+    "text": "Tell us about your acquisition goals and a member of our leadership team will scope the right program with you.",
+    "button": "Talk to Our Team"
+  }
+}

@@ -398,7 +398,7 @@
     if (kind === 'sub-vertical') return `/${d.vertical}/${slug}/`;
     if (kind === 'product') return `/${d.vertical}/${d.subVertical}/${d.type}/`;
     if (kind === 'article') return `/resources/${d.vertical}/${d.subVertical}/${d.product}/${slug}/`;
-    if (kind === 'page') return { home: '/', about: '/about/', services: '/services/', 'case-studies': '/case-studies/', contact: '/contact/' }[slug] || '';
+    if (kind === 'page') return { home: '/', about: '/about/', team: '/team/', services: '/services/', 'case-studies': '/case-studies/', contact: '/contact/' }[slug] || '';
     return '/';
   }
 
@@ -1235,7 +1235,7 @@
     for (const s of byKind('sub-vertical')) options.push({ label: s.data.name, url: `/${s.data.vertical}/${s.slug}/`, kind: 'Sub-vertical' });
     for (const p of byKind('product')) options.push({ label: p.data.name, url: `/${p.data.vertical}/${p.data.subVertical}/${p.data.type}/`, kind: 'Product' });
     for (const a of byKind('article')) options.push({ label: a.data.title, url: `/resources/${a.data.vertical}/${a.data.subVertical}/${a.data.product}/${a.slug}/`, kind: 'Article' });
-    for (const [l, u] of [['Services', '/services/'], ['PPC / Performance Marketing', '/services/ppc-performance-marketing/'], ['Web Lead Generation', '/services/web-lead-generation/'], ['Inbound Calls (service)', '/services/inbound-calls/'], ['Live Transfers (service)', '/services/live-transfers/'], ['Contact', '/contact/'], ['About', '/about/'], ['Case Studies', '/case-studies/']]) options.push({ label: l, url: u, kind: 'Page' });
+    for (const [l, u] of [['Services', '/services/'], ['PPC / Performance Marketing', '/services/ppc-performance-marketing/'], ['Web Lead Generation', '/services/web-lead-generation/'], ['Inbound Calls (service)', '/services/inbound-calls/'], ['Live Transfers (service)', '/services/live-transfers/'], ['Contact', '/contact/'], ['About', '/about/'], ['Our Team', '/team/'], ['Case Studies', '/case-studies/']]) options.push({ label: l, url: u, kind: 'Page' });
     const modal = $('#modal'), body = $('#modal-body');
     $('#modal-title').textContent = 'Insert internal link';
     modal.hidden = false;

@@ -1,4 +1,4 @@
-import { esc, md, fmtDate } from './util.mjs';
+import { esc, md, fmtDate, assetUrl } from './util.mjs';
 import { headlineLines, signalSection, boardSection, explorerSection, transferSection, articleToc, sparkline, faqSet, widgetEnabled } from './blocks.mjs';
 import { icon, SERVICE_ICON } from './icons.mjs';
 import { anchorRail, coverageGrid, productComparison, volumeCalculator, criteriaBuilder, onboardingTimeline, buyerMarquee, faqSearch, commercialModels, stickyEnquiryBar } from './comp-a.mjs';
@@ -175,6 +175,7 @@ function header(ctx) {
       <li class="nav-optional"><a href="/resources/">Resources</a></li>
       <li class="nav-optional"><a href="/case-studies/">Case Studies</a></li>
       <li><a href="/about/">About</a></li>
+      <li class="nav-optional"><a href="/team/">Team</a></li>
       <li><a href="/contact/">Contact</a></li>
     </ul>
     <a class="btn btn-primary nav-cta" href="/contact/">${esc(site.ctas.primary)}</a>
@@ -212,7 +213,7 @@ function footer(ctx) {
     </div>
     <div><h4>Services</h4><ul>${site.services.map((s) => `<li><a href="/services/${s.slug}/">${esc(s.name)}</a></li>`).join('')}</ul></div>
     ${cols}
-    <div><h4>Company</h4><ul><li><a href="/about/">About Us</a></li><li><a href="/case-studies/">Case Studies</a></li><li><a href="/resources/">Resources</a></li><li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Service</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="/about/">About Us</a></li><li><a href="/team/">Our Team</a></li><li><a href="/case-studies/">Case Studies</a></li><li><a href="/resources/">Resources</a></li><li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Service</a></li></ul></div>
   </div>
   <div class="footer-bottom">
     <p>${esc(site.footerNote)}</p>
@@ -478,6 +479,28 @@ ${hero({ ...a.hero, compact: true, terrain: 'page', terrainSeed: 'about', crumbs
 ${featureGrid(a.values, 'What we stand for', '', { alt: true, eyebrow: 'Values' })}
 ${ctaBand(a.cta)}`;
   return layout(ctx, { path: '/about/', seo: a.seo, body, image: heroImg, crumbsInHero: true, breadcrumbs: [{ name: 'Home', href: '/' }, { name: 'About Us', href: '/about/' }] });
+}
+
+export function teamPage(ctx) {
+  const t = ctx.pages.team;
+  const crumbs = [{ name: 'Home', href: '/' }, { name: 'Our Team', href: '/team/' }];
+  const members = (t.members || []).filter((m) => m && m.name);
+  const base = ctx.site.domain.replace(/\/$/, '');
+  const body = `
+${hero({ ...t.hero, compact: true, terrain: 'page', terrainSeed: 'team', crumbs })}
+<section class="section"><div class="container">
+  <div data-reveal><p class="eyebrow">Leadership</p><h2 class="section-title">Meet the team</h2></div>
+  <div class="grid grid-3 team-grid">${members
+    .map((m, i) => `<article class="card team-card" data-reveal style="--i:${i}">
+    <div class="team-photo">${m.photo ? img(m.photo.startsWith('/assets/') ? assetUrl(m.photo) : m.photo, `${m.name}, ${m.role}`, { w: 600, h: 750 }) : ''}</div>
+    <div class="card-body"><span class="pill">${esc(m.role)}</span><h3 style="margin-top:14px">${esc(m.name)}</h3>${m.bio ? `<p>${esc(m.bio)}</p>` : ''}</div>
+  </article>`)
+    .join('')}</div>
+</div></section>
+${t.cta ? ctaBand(t.cta) : ''}`;
+  const jsonld = members.map((m) => ({ '@context': 'https://schema.org', '@type': 'Person', name: m.name, jobTitle: m.role, ...(m.photo ? { image: m.photo.startsWith('/') ? base + m.photo : m.photo } : {}), worksFor: { '@type': 'Organization', name: ctx.site.name, url: ctx.site.domain } }));
+  const ogImage = members.find((m) => m.photo?.startsWith('/'))?.photo;
+  return layout(ctx, { path: '/team/', seo: t.seo, body, image: ogImage, jsonld, crumbsInHero: true, breadcrumbs: crumbs });
 }
 
 export function servicesIndexPage(ctx) {

@@ -830,3 +830,11 @@ html.js .hero.seq h1 .line:nth-child(4) > i { transition-delay: .27s; }
   color: var(--muted); border: 1px solid var(--line); border-radius: var(--radius-pill);
   padding: 2px 7px; margin-left: 6px; vertical-align: middle; white-space: nowrap;
 }
+
+/* ---------- team ---------- */
+.team-grid { align-items: stretch; }
+.team-photo { aspect-ratio: 4/5; overflow: hidden; background: var(--bg-deep); }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; transition: transform 1.1s var(--ease-out); }
+.team-card .pill { align-self: flex-start; }
+.team-card:hover .team-photo img { transform: scale(1.03); }
+@media (prefers-reduced-motion: reduce) { .team-card:hover .team-photo img { transform: none; } }

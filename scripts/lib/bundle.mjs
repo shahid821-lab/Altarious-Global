@@ -55,6 +55,6 @@ export function searchIndex(ctx) {
   }
   for (const p of products.filter((p) => p.active !== false)) rows.push({ t: p.name, u: `/${p.vertical}/${p.subVertical}/${p.type}/`, g: TYPE[p.type] || 'Product' });
   for (const a of articles.filter((a) => a.active !== false)) rows.push({ t: a.title, u: `/resources/${a.vertical}/${a.subVertical}/${a.product}/${a.slug}/`, g: 'Article' });
-  for (const [t, u] of [['About Us', '/about/'], ['Case Studies', '/case-studies/'], ['Contact', '/contact/'], ['Resources', '/resources/'], ['All verticals', '/verticals/']]) rows.push({ t, u, g: 'Page' });
+  for (const [t, u] of [['About Us', '/about/'], ['Our Team', '/team/'], ['Case Studies', '/case-studies/'], ['Contact', '/contact/'], ['Resources', '/resources/'], ['All verticals', '/verticals/']]) rows.push({ t, u, g: 'Page' });
   return rows;
 }

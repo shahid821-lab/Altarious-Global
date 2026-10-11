@@ -249,3 +249,11 @@ export function assetVersions() {
   }
   return v;
 }
+
+/** Cache-busted URL for any file under public/ (e.g. "/assets/img/team/x.jpg" → "...?v=<hash>"). */
+export function assetUrl(rel) {
+  const clean = String(rel).replace(/^\//, '');
+  const f = path.join(ROOT, 'public', clean);
+  const hash = fs.existsSync(f) ? createHash('sha256').update(fs.readFileSync(f)).digest('hex').slice(0, 8) : '0';
+  return '/' + clean + '?v=' + hash;
+}

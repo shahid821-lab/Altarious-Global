@@ -110,6 +110,7 @@ function page(urlPath, html, priority = 0.6) {
 
 page('/', T.homePage(ctx), 1.0);
 page('/about/', T.aboutPage(ctx), 0.7);
+if (pages.team) page('/team/', T.teamPage(ctx), 0.6);
 page('/services/', T.servicesIndexPage(ctx), 0.8);
 for (const s of site.services) page(`/services/${s.slug}/`, T.servicePage(ctx, s.slug), 0.8);
 page('/verticals/', T.verticalsIndexPage(ctx), 0.8);
