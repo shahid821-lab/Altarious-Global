@@ -103,7 +103,7 @@ export function layout(ctx, page) {
   const desc = page.seo?.description || site.positioning;
   const ogImage = base + (page.image || '/assets/img/og-default.svg');
   const jsonld = [
-    { '@context': 'https://schema.org', '@type': 'Organization', name: site.name, url: site.domain, description: site.positioning, logo: base + '/assets/img/favicon.svg', contactPoint: { '@type': 'ContactPoint', email: site.contact.email, contactType: 'sales' } },
+    { '@context': 'https://schema.org', '@type': 'Organization', name: site.name, url: site.domain, description: site.positioning, logo: base + '/assets/img/favicon.svg', contactPoint: { '@type': 'ContactPoint', email: site.contact.email, ...(site.contact.phone ? { telephone: String(site.contact.phone).replace(/[^\d+]/g, '') } : {}), contactType: 'sales' } },
     ...(page.jsonld || []),
   ];
   if (page.breadcrumbs?.length) {
@@ -209,6 +209,7 @@ function footer(ctx) {
       <a class="brand" href="/">${logoSvg()}<span>${esc(site.name)}</span></a>
       <p style="margin-top:16px">${esc(site.positioning)}</p>
       <p><a href="mailto:${esc(site.contact.email)}">${esc(site.contact.email)}</a></p>
+      ${site.contact.phone ? `<p><a href="tel:${esc(String(site.contact.phone).replace(/[^\d+]/g, ''))}">${esc(site.contact.phone)}</a></p>` : ''}
       <a class="btn btn-primary" href="/contact/" style="margin-top:8px">${esc(site.ctas.primary)}</a>
     </div>
     <div><h4>Services</h4><ul>${site.services.map((s) => `<li><a href="/services/${s.slug}/">${esc(s.name)}</a></li>`).join('')}</ul></div>
@@ -818,7 +819,7 @@ ${hero({ ...c.hero, compact: true, terrain: 'page', terrainSeed: 'contact', crum
 <section class="section"><div class="container split">
   <div>
     <div class="grid" style="gap:16px">${c.reasons.map((r, i) => `<div class="feature" data-reveal style="--i:${i}"><span class="feature-icon">${icon(r.title, { size: 20 })}</span><h3>${esc(r.title)}</h3><p>${esc(r.text)}</p></div>`).join('')}</div>
-    <div class="side-card" style="margin-top:24px" data-reveal><h3>Direct</h3><p><a href="mailto:${esc(ctx.site.contact.email)}">${esc(ctx.site.contact.email)}</a></p><p>${esc(ctx.site.contact.phone)}</p><p class="muted small">${esc(ctx.site.contact.address)}</p></div>
+    <div class="side-card" style="margin-top:24px" data-reveal><h3>Direct</h3><p><a href="mailto:${esc(ctx.site.contact.email)}">${esc(ctx.site.contact.email)}</a></p>${ctx.site.contact.phone ? `<p><a href="tel:${esc(String(ctx.site.contact.phone).replace(/[^\d+]/g, ''))}">${esc(ctx.site.contact.phone)}</a></p>` : ''}<p class="muted small">${esc(ctx.site.contact.address)}</p></div>
   </div>
   <div class="form-card" id="inquiry" data-reveal="right">${multiStepEnquiry(ctx, { sourcePage: 'Contact', sourceUrl: '/contact/' }, {})}</div>
 </div></section>

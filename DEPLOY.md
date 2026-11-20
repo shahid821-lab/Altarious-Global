@@ -85,3 +85,13 @@ The build refuses to publish a product page with fewer than 2 articles, and the 
 - Pages: 500 builds/month, unlimited requests and bandwidth for static assets.
 - Pages Functions: 100,000 requests/day (only form submissions and admin use functions; public pages do not).
 - D1: 5 GB storage, 5 million rows read/day, 100,000 rows written/day.
+
+## 7. Email (Cloudflare Email Routing in, Brevo out)
+Mailbox: `shahidkhan@altariousglobal.com` (sender is active in Brevo; domain authenticated with DKIM `brevo1/brevo2._domainkey`, `brevo-code` TXT, DMARC).
+
+**Inbound.** Cloudflare → altariousglobal.com → Email → Email Routing is enabled (MX `route1/2/3.mx.cloudflare.net`). Custom addresses `shahidkhan@` and `hello@` forward to the team Gmail (destination must be verified once from the link Cloudflare emails).
+SPF: `v=spf1 include:_spf.mx.cloudflare.net include:spf.brevo.com ~all`.
+
+**Replying as shahidkhan@ from Gmail.** Gmail → Settings → Accounts → Send mail as → Add another email address → `Shahid Khan` / `shahidkhan@altariousglobal.com`, untick "Treat as alias" → SMTP server `smtp-relay.brevo.com`, port `587`, TLS, username = the Brevo SMTP login (Brevo → SMTP & API → SMTP), password = the Brevo SMTP key. Confirm with the code Gmail sends (it arrives via routing). Set "Reply from the same address the message was sent to".
+
+**Website inquiries.** `functions/api/inquiries.js` sends through the Brevo API when `BREVO_API_KEY` and `NOTIFY_EMAIL_TO` are set: a notification to `NOTIFY_EMAIL_TO` (Reply-To = the prospect) and an acknowledgement to the prospect from `NOTIFY_EMAIL_FROM` (disable with `INQUIRY_AUTOREPLY=off`). Optional `CONTACT_PHONE` is added to the acknowledgement signature. Resend is used only if Brevo is not configured. Brevo free plan: 300 emails/day.

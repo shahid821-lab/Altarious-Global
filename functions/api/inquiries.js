@@ -93,7 +93,23 @@ async function notify(env, r) {
   ];
   const text = lines.join('\n');
   const tasks = [];
-  if (env.RESEND_API_KEY && env.NOTIFY_EMAIL_TO) {
+  const to = (env.NOTIFY_EMAIL_TO || '').split(',').map((s) => s.trim()).filter(Boolean);
+  if (env.BREVO_API_KEY && to.length) {
+    const sender = parseSender(env.NOTIFY_EMAIL_FROM, 'Altarious Global', 'shahidkhan@altariousglobal.com');
+    /* internal notification — Reply goes straight to the prospect */
+    tasks.push(brevoSend(env, { sender, to: to.map((email) => ({ email })), replyTo: { email: r.email, name: r.full_name }, subject, textContent: text, tags: ['inquiry'] }));
+    /* acknowledgement to the prospect — Reply comes back to our inbox */
+    if (env.INQUIRY_AUTOREPLY !== 'off') {
+      const first = String(r.full_name || '').trim().split(/\s+/)[0] || 'there';
+      const ack = [
+        `Hi ${first},`, '',
+        `Thank you for contacting Altarious Global. We have received your inquiry about ${r.service_interest} for ${r.vertical_interest}, and a member of our team will respond within one business day.`, '',
+        'If you would like to add detail in the meantime — target geographies, volume goals or timing — simply reply to this email.', '',
+        'Kind regards,', `${sender.name}`, 'Altarious Global', env.CONTACT_PHONE || '', 'https://altariousglobal.com',
+      ].filter((l, i, a) => l !== '' || a[i - 1] !== '').join('\n');
+      tasks.push(brevoSend(env, { sender, to: [{ email: r.email, name: r.full_name }], replyTo: { email: sender.email, name: sender.name }, subject: 'We received your inquiry — Altarious Global', textContent: ack, tags: ['inquiry-ack'] }));
+    }
+  } else if (env.RESEND_API_KEY && env.NOTIFY_EMAIL_TO) {
     tasks.push(fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
@@ -104,4 +120,22 @@ async function notify(env, r) {
     tasks.push(fetch(env.NOTIFY_WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: `*${subject}*\n${text}`, content: `**${subject}**\n${text}`, inquiry: r }) }));
   }
   await Promise.all(tasks);
+}
+
+/** "Name <email>" → {name, email}; falls back to defaults. */
+function parseSender(raw, defName, defEmail) {
+  const m = String(raw || '').match(/^\s*(.*?)\s*<([^>]+)>\s*$/);
+  if (m) return { name: m[1] || defName, email: m[2].trim() };
+  if (raw && raw.includes('@')) return { name: defName, email: raw.trim() };
+  return { name: defName, email: defEmail };
+}
+
+/** Brevo transactional email API (sender domain is authenticated in Brevo). */
+async function brevoSend(env, payload) {
+  const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+    method: 'POST',
+    headers: { 'api-key': env.BREVO_API_KEY, 'Content-Type': 'application/json', accept: 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error(`Brevo ${res.status}: ${(await res.text()).slice(0, 300)}`);
 }
